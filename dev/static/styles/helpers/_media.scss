@@ -1,0 +1,8 @@
+$xs-width: 320px;
+$sm-width: 360px;
+
+@mixin xs {
+  @media (min-width: #{$xs-width}) and (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}

@@ -1,1 +1,53 @@
 header.header
+    .container.header__container
+        .row
+            .header__top
+                .header__top-left
+                    a(href="#").header__cart
+                            +icon('cart', 'header__cart-icon')
+                            .header__cart-counter 2
+                    a(href="#").header__favorite
+                            +icon('favorite', 'header__favorite-icon')
+                    a(href="#").header__search
+                            +icon('search', 'header__search-icon')
+                    a(href="#").header__menu
+                        include ../../../static/images/svg/burger.svg
+                a(href="#").header__logo
+                    include ../../../static/images/svg/logo.svg
+
+                .header__top-right
+                    a(href='tel:+375291384963').header__phone +375 29 138-49-63
+
+
+            .header__bottom
+                nav.header__nav
+                    ul.header__list
+                        li.header__item
+                            a(href='#').header__link входные двери
+                        li.header__item
+                            a(href='#').header__link межкомнатные
+                        li.header__item
+                            a(href='#').header__link комплексные решения
+                        li.header__item.header__item--hidden
+                            a(href='#').header__link замер
+                        li.header__item.header__item--hidden
+                            a(href='#').header__link акции
+                            +icon('percent', 'header__link-percent')
+                        li.header__item.header__item--hidden
+                            a(href='#').header__link оплата
+                        li.header__item
+                            a(href='#').header__link доставка и установка
+                        li.header__item.header__item--hidden
+                            a(href='#').header__link  контакты
+                        li.header__item.header__item-dropdown
+                            a(href='#').header__link ещё
+                            include ../../../static/images/svg/arrow-down.svg
+                            ul.header__item-block
+                                li.header__item-block__item
+                                    a(href='#').header__item-block__link замер
+                                li.header__item-block__item
+                                    a(href='#').header__item-block__link акции
+                                li.header__item-block__item
+                                    a(href='#').header__item-block__link оплата
+                                li.header__item-block__item
+                                    a(href='#').header__item-block__link контакты

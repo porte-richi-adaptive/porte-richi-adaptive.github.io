@@ -1,0 +1,52 @@
+@mixin links-hover ($link: $black, $visit: inherit, $hover:$gold, $active: $black, $line: none) {
+    color: $link;
+    text-decoration: $line;
+    transition: $animation-default-time;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active {
+      color: $active;
+    }
+}
+
+@mixin icon-hover ($color, $hover) {
+  fill: $color;
+  transition: $animation-default-time;
+  &:hover {
+    fill: $hover;
+  }
+}
+
+@mixin links-hover-to-icon ($hover) {
+  svg {
+    transition: $animation-default-time;
+  }
+  &:hover svg {
+    fill: $hover;
+  }
+}
+
+@mixin upperlink {
+  font-family: $rft-font;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $black;
+  transition: $animation-default-time;
+  cursor: pointer;
+  &:hover {
+    color: $gold;
+  }
+}
+@mixin upperlink-title {
+  font-family: $rft-font;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $black;
+  transition: $animation-default-time;
+}

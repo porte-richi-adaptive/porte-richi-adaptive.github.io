@@ -1,0 +1,97 @@
+.view-instagram {
+  margin-top: 152px;
+  background-color: $black-1;
+  overflow: hidden;
+
+  .row {
+    flex-wrap: nowrap;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__right {
+    display: flex;
+    background-color: $white;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    &-link {
+      width: 236px;
+      height: 236px;
+      margin-left: 2px;
+      @include media-breakpoint-down(md) {
+        width: 145px;
+        height: 145px;
+      }
+      @media (min-width: 361px) and (max-width: 855px) {
+        width: 30vw;
+        height: 30vw;
+      }
+
+    }
+  }
+
+  &__long-arrow {
+    width: 107px;
+    height: 16px;
+    fill: $white;
+    margin-left: 129px;
+    @include media-breakpoint-down(lg) {
+      width: 70px;
+      margin-left: 59px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 35px;
+      margin-left: 46px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-left: 26%;
+    }
+  }
+
+  &__link {
+    @include upperlink;
+    @include links-hover-to-icon($gold);
+    color: $white;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      font-size: 10px;
+    }
+  }
+
+  &__left {
+    padding-top: 26px;
+    background-color: $black-1;
+    color: $white;
+    padding-bottom: 40px;
+    @include media-breakpoint-down(md) {
+      padding-top: 16px;
+      padding-bottom: 26px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 19px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 33px;
+    }
+  }
+
+  &__title {
+    width: 271px;
+    padding-bottom: 42px;
+    @include media-breakpoint-down(md) {
+      font-size: 27px;
+      line-height: 36px;
+      padding-bottom: 14px;
+    }
+  }
+
+}

@@ -1,0 +1,54 @@
+.footer {
+  padding-top: 73px;
+  background-color: $white-1;
+
+  &__block {
+    margin-bottom: 54px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__title {
+    @include upperlink-title;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 13px;
+    }
+  }
+  &__link {
+    font-size: 20px;
+    color: $black;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    display: inline-flex;
+    @include links-hover;
+
+  }
+  &__item {
+    &-phone {
+      margin-top: 19px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid $gray;
+
+    &-copyright {
+      font-size: 16px;
+      color: $gray;
+    }
+    &-company {
+      font-size: 16px;
+      @include links-hover($gray, $gray, $gold);
+      letter-spacing: -0.2px;
+
+    }
+  }
+
+}

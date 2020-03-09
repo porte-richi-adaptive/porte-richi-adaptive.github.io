@@ -1,0 +1,328 @@
+.header {
+  margin: 9px auto 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @include media-breakpoint-only(sm) {
+    left: 27px;
+    width: calc(100% - 54px);
+  }
+
+  &__container {
+    background-color: $white;
+  }
+
+  &__top {
+    width: 100%;
+    border-bottom: 1px solid $gray-1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-between(sm, md) {
+      border-bottom: none;
+      justify-content: flex-end;
+    }
+
+
+
+    &-left, &-right {
+      display: flex;
+      position: relative;
+      z-index: 1;
+    }
+
+    &-right {
+      @include media-breakpoint-between(sm, md) {
+        display: none;
+      }
+    }
+
+  }
+
+
+  &__cart {
+    text-decoration: none;
+    padding: 13px 13px 9px 33px;
+    position: relative;
+    @include links-hover-to-icon ($gold);
+
+    @include media-breakpoint-between(sm, md) {
+      order: 3;
+      padding: 10px 12px 4px 9px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 10px 7px 4px 9px;
+    }
+
+    @include xs {
+      padding: 10px 0 4px 4px;
+    }
+
+    &-counter {
+      position: absolute;
+      bottom: 12px;
+      right: 7px;
+      line-height: 1;
+      width: 19px;
+      height: 19px;
+      background-color: $gray-2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      color: $white;
+      border-radius: 50%;
+    }
+
+    &-icon {
+      width: 28px;
+      height: 28px;
+      @include media-breakpoint-between(sm, md) {
+        width: 27px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__favorite {
+    text-decoration: none;
+    padding: 13px 12px 9px 14px;
+    @include links-hover-to-icon ($gold);
+
+    @include media-breakpoint-between(sm, md) {
+      order: 2;
+      padding: 10px 8px 6px 9px;
+    }
+
+    @include xs {
+      padding: 10px 0 6px 4px;
+    }
+
+    &-icon {
+      width: 28px;
+      height: 28px;
+      @include media-breakpoint-between(sm, md) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__search {
+    text-decoration: none;
+    padding: 13px 15px 9px;
+    @include links-hover-to-icon ($gold);
+
+    @include media-breakpoint-between(sm, md) {
+      padding: 10px 8px 6px 9px;
+    }
+
+    @include xs {
+      padding: 10px 0 6px 4px;
+    }
+
+
+    &-icon {
+      width: 28px;
+      height: 28px;
+      @include media-breakpoint-between(sm, md) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    order: 4;
+    padding: 15px 16px 1px 13px;
+    @include links-hover-to-icon ($gold);
+
+    & > svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      display: block;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 15px 8px 1px 8px;
+    }
+    @include xs {
+      padding: 15px 8px 1px 4px;
+    }
+
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+
+    & > svg {
+      @include media-breakpoint-between(sm, md) {
+        width: 115px;
+        height: 27px;
+      }
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      width: auto;
+      margin-left: 18px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-left: 9px;
+    }
+
+
+  }
+
+  &__phone {
+    font-weight: $semi-bold;
+    font-family: $rft-font;
+    letter-spacing: 1px;
+    color: $black;
+    text-decoration: none;
+    padding: 17px 32px 9px 15px;
+    @include links-hover ($black, $gold, $gold, $gold, none);
+
+    @include media-breakpoint-only(lg) {
+      padding: 17px 24px 9px 15px;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    @include media-breakpoint-between(sm, md) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    padding: 0 32px 0 36px;
+
+    @include media-breakpoint-only(lg) {
+      padding: 0 50px 0 36px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  &__item {
+    list-style-type: none;
+    position: relative;
+
+
+    &-block {
+      margin-top: 0;
+      margin-bottom: 0;
+      background-color: $white;
+      position: absolute;
+      display: none;
+      top: calc(100% + 24px);
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+      right: 0;
+      padding: 10px 20px;
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 27.5px 28px 27.5px;
+        border-color: transparent transparent $white transparent;
+        position: absolute;
+        top: -13px;
+        right: 0;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -24px;
+        left: 0;
+        width: 100%;
+        height: 24px;
+      }
+      &__item {
+        list-style-type: none;
+      }
+      &__link {
+        font-family: $rft-font;
+        font-size: 13px;
+        font-weight: $bold;
+        display: flex;
+        padding: 14px 20px;
+        @include upperlink;
+        @include links-hover ($black, $black, $gold, $gold, none);
+
+      }
+    }
+
+    &--hidden {
+      @include media-breakpoint-only(lg) {
+        display: none;
+      }
+    }
+
+    &-dropdown {
+      display: none;
+      position: relative;
+
+      &:hover .header__item-block {
+        display: block;
+      }
+
+      @include media-breakpoint-only(lg) {
+        display: flex;
+        align-items: center;
+      }
+
+    }
+  }
+
+  &__link {
+    font-family: $rft-font;
+    font-size: 13px;
+    font-weight: $bold;
+    display: flex;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    @include upperlink;
+    @include links-hover ($black, $black, $gold, $gold, none);
+    &:hover + svg path {
+      fill: $gold;
+    }
+
+    &-percent {
+      position: absolute;
+      top: 5px;
+      right: -10px;
+      width: 13px;
+      height: 18px;
+      @include icon-hover($red, $red);
+    }
+    &-arrow {
+      width: 5px;
+      height: 2.5px;
+      display: inline-flex;
+    }
+  }
+
+}

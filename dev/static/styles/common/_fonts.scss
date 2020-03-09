@@ -1,0 +1,46 @@
+
+@font-face {
+  font-family: 'RFTone';
+  font-style: normal;
+  font-weight: $semi-bold;
+  src: url('./../fonts/RF-Tone-Semibold.eot') format("eot"),
+  url('./../fonts/RF-Tone-Semibold.woff2') format('woff2'),
+  url('./../fonts/RF-Tone-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RFTone';
+  font-style: normal;
+  font-weight: $bold;
+  src: url('./../fonts/RF-Tone-Bold.eot') format("eot"),
+  url('./../fonts/RF-Tone-Bold.woff2') format('woff2'),
+  url('./../fonts/RF-Tone-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MinionPro';
+  font-style: italic;
+  font-weight: $regular;
+  src: url("./../fonts/MinionProIt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'MinionPro';
+  font-style: normal;
+  font-weight: $regular;
+  src: url("./../fonts/MinionPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'MinionProDisplay';
+  font-style: normal;
+  font-weight: $regular;
+  src: url("./../fonts/MinionPro-Disp.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'MinionPro';
+  font-style: normal;
+  font-weight: $bold;
+  src: url("./../fonts/MinionPro-Bold.otf") format("opentype");
+}
