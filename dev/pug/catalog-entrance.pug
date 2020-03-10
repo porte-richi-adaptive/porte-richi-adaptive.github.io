@@ -5,6 +5,17 @@ block variables
 
 block content
     section.filter
+        .breadcrumbs.breadcrumbs--catalog
+            .container
+                include modules/breadcrumbs
+        .container
+            h1.filter__title Входные двери
+        .material-nav__wrap
+            .container
+                .material-nav
+                    a(href="#").material-nav__link все модели
+                    a(href="#").material-nav__link.material-nav__link--active для квартиры
+                    a(href="#").material-nav__link для дома
     section.catalog-entrance
         .container
             .row.catalog-entrance__row
@@ -127,7 +138,7 @@ block content
                                     .entrance-item__color.btn-color
 
                                 .entrance-item__price-mobile
-                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-old 887 руб.
                                     .entrance-item__price-actual 885 руб.
 
                 .col-xl-7.col-lg-7.col-md-7.col-.factoid
@@ -167,8 +178,60 @@ block content
 
                 include modules/action
 
-                .entrance-full
+                .entrance-full.section-margin
+                    a(href="#").entrance-full__link
+                        .row
+                            .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.col-md-6.entrance-full__descr
+                                h2.entrance-full__title.h2 Горизонт Модерн G01
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                    .entrance-item__info-item Хит
+                                .entrance-item__price
+                                    .entrance-item__price-actual 1 606 руб.
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
+
+                            .col-xl-9.col-lg-9.col-md-10.entrance-full__gallery
+                                .entrance-item__favorite.btn-favorite.entrance-item__favorite--right
+                                img(src='static/images/entrance-full-1.jpg', alt='pic').entrance-full__img
+                                img(src='static/images/entrance-full-2.jpg', alt='pic').entrance-full__img
 
 
 
+                .entrance-full.section-margin
+                    a(href="#").entrance-full__link
+                        .row
+                            .col-xl-9.col-lg-9.col-md-10.entrance-full__gallery
+                                .entrance-item__favorite.btn-favorite
+                                img(src='static/images/entrance-full-1.jpg', alt='pic').entrance-full__img
+                                img(src='static/images/entrance-full-2.jpg', alt='pic').entrance-full__img
+                            .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.offset-md-1.col-md-5.entrance-full__descr
+                                h2.entrance-full__title.h2 Горизонт Модерн G01
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                    .entrance-item__info-item Хит
+                                .entrance-item__price
+                                    .entrance-item__price-actual 1 606 руб.
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
+
+                include modules/pagination
 

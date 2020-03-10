@@ -1,0 +1,107 @@
+.pagination {
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__link {
+    @include upperlink;
+    font-size: 13px;
+    height: 81px;
+    border: 1px solid $gray;
+    display: inline-flex;
+    align-items: center;
+    min-width: 81px;
+    justify-content: center;
+    &:hover {
+      svg path {
+        stroke: $gold;
+      }
+    }
+
+    &--download.pagination__link {
+      @include media-breakpoint-down(lg) {
+        width: 301px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @include media-breakpoint-down(md) {
+        width: 289px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      & + .pagination__link--big {
+        margin-left: 9px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      & + .pagination__link--big {
+        margin-left: 0;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 46px;
+      min-width: 46px;
+    }
+
+
+    &--active {
+      background: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+    }
+    &:not(:last-child) {
+      margin-right: 18px;
+      order: 1;
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+      }
+    }
+    &--big {
+      padding-left: 60px;
+      padding-right: 57px;
+      & svg {
+        display: none;
+        transition: $animation-default-time;
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+      }
+      @include media-breakpoint-down(lg) {
+        padding-left: 45px;
+        padding-right: 42px;
+
+        & + .pagination__link {
+          margin-left: 9px;
+          @include media-breakpoint-down(md) {
+            margin-left: 0;
+          }
+        }
+      }
+      @include media-breakpoint-down(md) {
+        padding-left: 0;
+        padding-right: 0;
+        & span {
+          display: none;
+        }
+      }
+
+    }
+    &:last-child {
+      position: absolute;
+      right: 0;
+      @include media-breakpoint-down(sm) {
+        position: static;
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+}

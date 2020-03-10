@@ -1,0 +1,37 @@
+.material-nav {
+  display: flex;
+  margin-top: 19px;
+
+  &__link {
+    @include upperlink;
+    font-size: 13px;
+    &--active {
+      color: $gray-2;
+      pointer-events: none;
+      &:before {
+        background-color: $gray-2;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 49px;
+    }
+    &:not(.material-nav__link--active):hover {
+      &:before {
+        background-color: $gold;
+      }
+    }
+    &:before {
+      content: '';
+      position: relative;
+      width: 19px;
+      height: 1px;
+      display: inline-flex;
+      margin-right: 9px;
+      top: -5px;
+      transition: $animation-default-time;
+    }
+    &:not(.material-nav__link--active):before  {
+      background-color: $black;
+    }
+  }
+}
