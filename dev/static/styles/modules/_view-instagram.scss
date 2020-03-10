@@ -22,7 +22,9 @@
     &-link {
       width: 236px;
       height: 236px;
-      margin-left: 2px;
+      &:not(:first-child) {
+        margin-left: 2px;
+      }
       @include media-breakpoint-down(md) {
         width: 145px;
         height: 145px;

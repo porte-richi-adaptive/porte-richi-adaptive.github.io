@@ -1,0 +1,163 @@
+.factoid {
+  background-image: linear-gradient(106.94deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+  padding-top: 55px;
+  padding-left: 51px;
+  padding-bottom: 62px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 34px;
+    padding-top: 36px;
+    padding-bottom: 42px;
+    margin-bottom: 200px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 18px;
+    padding-top:25px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin: 0 auto 45px;
+  }
+  @include mobile {
+    width: 306px;
+  }
+
+
+  &:hover .factoid__link {
+    color: $gold;
+    &:before {
+      background-color: $gold;
+    }
+  }
+
+  &__title {
+    max-width: 456px;
+    color: $black;
+    margin-bottom: 22px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 19px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 27px;
+      line-height: 36px;
+    }
+
+    &--salon {
+
+      @include media-breakpoint-down(md) {
+        max-width: 287px;
+      }
+    }
+
+  }
+
+  &__text {
+    color: $black;
+    max-width: 289px;
+    margin-bottom: 249px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 223px;
+      margin-bottom: 92px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 22px;
+      max-width: 226px;
+      margin-bottom: 154px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 173px;
+    }
+
+    &--salon {
+      max-width: 239px;
+      margin-bottom: 166px;
+      @include media-breakpoint-down(lg) {
+        max-width: 280px;
+        margin-bottom: 64px;
+      }
+
+      @include media-breakpoint-down(md) {
+        max-width: 200px;
+        margin-bottom: 96px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-width: 200px;
+        margin-bottom: 70px;
+      }
+    }
+
+  }
+
+  &__link {
+    @include upperlink-underline;
+    transition: $animation-default-time;
+    font-size: 13px;
+    @include media-breakpoint-down(md) {
+      font-size: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+
+    &--classic {
+      bottom: 38px;
+      right: 0;
+      @include media-breakpoint-down(lg) {
+        width: 382px;
+        height: 344px;
+        display: block;
+        right: -119px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 351px;
+        height: 316px;
+        right: -151px;
+        bottom: 29px;
+      }
+      @include media-breakpoint-down(sm) {
+        right: -185px;
+        bottom: 39px;
+      }
+    }
+
+    &--salon {
+      right: 10px;
+      bottom: 36px;
+      @include media-breakpoint-down(lg) {
+        width: 304px;
+        height: 264px;
+        right: -44px;
+        bottom: 78px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 218px;
+        height: 189px;
+        right: -42px;
+        bottom: 164px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 218px;
+        height: 189px;
+        right: -68px;
+        bottom: 132px;
+      }
+
+    }
+
+  }
+
+
+}

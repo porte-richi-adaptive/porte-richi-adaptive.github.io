@@ -42,6 +42,34 @@
     color: $gold;
   }
 }
+
+@mixin upperlink-underline($color: black, $underline-color: $black) {
+  font-family: $rft-font;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $color;
+  transition: $animation-default-time;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    color: $gold;
+    &:before {
+      background-color: $gold;
+    }
+  }
+  &:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $underline-color;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: $animation-default-time;
+  }
+}
+
 @mixin upperlink-title {
   font-family: $rft-font;
   font-weight: 700;

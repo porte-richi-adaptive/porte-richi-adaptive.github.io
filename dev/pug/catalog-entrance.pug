@@ -1,144 +1,173 @@
 extends template/main
 
 block variables
-	- var title = 'Главная страница'
+    - var title = 'Главная страница'
 
 block content
-	section.filter
-	section.catalog-entrance
-		.container
-			.row.catalog-entrance__row
+    section.filter
+    section.catalog-entrance
+        .container
+            .row.catalog-entrance__row
 
-				.entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
-					a(href='#').entrance-item__link
-						.entrance-item__mask
-						.entrance-item__favorite.btn-favorite
-						.entrance-item__new
-						.entrance-item__view
-							img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
-							img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
-							.entrance-item__discount
-						.entrance-item__descr
-							.entrance-item__descr-top
-								.entrance-item__name Горизонт Модерн K05
-								.entrance-item__price
-									.entrance-item__price-actual 883 руб.
-							.entrance-item__descr-bottom
-								.entrance-item__info
-									.entrance-item__info-item Для квартиры
-									.entrance-item__info-item Под заказ
-								.entrance-item__colors
-									.entrance-item__color.btn-color.active
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
+                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                    a(href='#').entrance-item__link
+                        .entrance-item__favorite.btn-favorite
+                        .entrance-item__new
+                        .entrance-item__view
+                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                            .entrance-item__discount
+                        .entrance-item__descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Горизонт Модерн K05
+                                .entrance-item__price
+                                    .entrance-item__price-actual 883 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                        .entrance-item__color-tip Ещё 25 цветов в карточке
 
-								.entrance-item__price-mobile
-									.entrance-item__price-old 887 руб
-									.entrance-item__price-actual 885 руб.
-
-
-				.entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
-					a(href='#').entrance-item__link
-						.entrance-item__favorite.btn-favorite
-						.entrance-item__view
-							img(src='static/images/entr-3.jpg', alt='pic').entrance-item__img
-							img(src='static/images/entr-4.jpg', alt='pic').entrance-item__img
-						.entrance-item__descr
-							.entrance-item__descr-top
-								.entrance-item__name Квадро Классик K42
-								.entrance-item__price
-									.entrance-item__price-old 887 руб
-									.entrance-item__price-actual 885 руб.
-							.entrance-item__descr-bottom
-								.entrance-item__info
-									.entrance-item__info-item Для квартиры
-									.entrance-item__info-item Под заказ
-									.entrance-item__info-item Хит
-								.entrance-item__colors
-									.entrance-item__color.btn-color.active
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-
-								.entrance-item__price-mobile
-									.entrance-item__price-actual 885 руб.
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
 
 
-				.col-xl-7.col-lg-7.col-md-7.col-16.entrance-item
-					a(href='#').entrance-item__link
-						.entrance-item__favorite.btn-favorite
-						.entrance-item__new
-						.entrance-item__view
-							img(src='static/images/entr-5.jpg', alt='pic').entrance-item__img
-							img(src='static/images/entr-6.jpg', alt='pic').entrance-item__img
-							.entrance-item__discount
-						.entrance-item__descr
-							.entrance-item__descr-top
-								.entrance-item__name Геометрия Модерн K28
-								.entrance-item__price
-									.entrance-item__price-actual от 1 606 руб.
-							.entrance-item__descr-bottom
-								.entrance-item__info
-									.entrance-item__info-item Для квартиры
-									.entrance-item__info-item Под заказ
-								.entrance-item__colors
-									.entrance-item__color.btn-color.active
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
+                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                    a(href='#').entrance-item__link
+                        .entrance-item__favorite.btn-favorite
+                        .entrance-item__view
+                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                        .entrance-item__descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Горизонт Модерн K05
+                                .entrance-item__price
+                                    .entrance-item__price-actual 883 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                        .entrance-item__color-tip Ещё 25 цветов в карточке
 
-				.col-xl-7.col-lg-7.col-md-7.col-16.entrance-item
-					a(href='#').entrance-item__link
-						.entrance-item__favorite.btn-favorite
-						.entrance-item__view
-							img(src='static/images/entr-5.jpg', alt='pic').entrance-item__img
-							img(src='static/images/entr-6.jpg', alt='pic').entrance-item__img
-						.entrance-item__descr
-							.entrance-item__descr-top
-								.entrance-item__name Геометрия Модерн K28
-								.entrance-item__price
-									.entrance-item__price-actual от 1 606 руб.
-							.entrance-item__descr-bottom
-								.entrance-item__info
-									.entrance-item__info-item Для квартиры
-									.entrance-item__info-item Под заказ
-								.entrance-item__colors
-									.entrance-item__color.btn-color.active
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-
-				.col-xl-7.col-lg-7.col-md-7.col-sm-16.entrance-item
-					a(href='#').entrance-item__link
-						.entrance-item__mask
-						.entrance-item__favorite.btn-favorite
-						.entrance-item__view
-							img(src='static/images/entr-5.jpg', alt='pic').entrance-item__img
-							img(src='static/images/entr-6.jpg', alt='pic').entrance-item__img
-						.entrance-item__descr
-							.entrance-item__descr-top
-								.entrance-item__name Геометрия Модерн K28
-								.entrance-item__price
-									.entrance-item__price-actual от 1 606 руб.
-							.entrance-item__descr-bottom
-								.entrance-item__info
-									.entrance-item__info-item Для квартиры
-									.entrance-item__info-item Под заказ
-								.entrance-item__colors
-									.entrance-item__color.btn-color.active
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
-									.entrance-item__color.btn-color
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
 
 
 
+                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                    a(href='#').entrance-item__link
+                        .entrance-item__favorite.btn-favorite
+                        .entrance-item__view
+                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                        .entrance-item__descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Горизонт Модерн K05
+                                .entrance-item__price
+                                    .entrance-item__price-actual 883 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
 
 
+                .col-xl-7.col-lg-7.col-md-7.col-.factoid
+                    a(href="#", target="_blank").factoid__overflow
+                        h2.factoid__title Двери в&nbsp;классическом стиле&nbsp;&mdash; благородное дополнение интерьера
+                        p.factoid__text Модели с&nbsp;отделками в&nbsp;древесных цветах с&nbsp;фурнитурой в&nbsp;традиционных оттенках будут органично смотреться в&nbsp;интерьере викторианского стиля, стиля барокко и&nbsp;ампир.
+                        span.factoid__link перейти в каталог
+                        img(src="static/images/icons/factoid-classic.svg", alt='pic').factoid__img.factoid__img--classic
+
+
+                .col-xl-7.col-lg-7.col-md-7.col-.entrance-item
+                    a(href='#').entrance-item__link
+                        .entrance-item__favorite.btn-favorite
+                        .entrance-item__view
+                            img(src='static/images/entr-5.jpg', alt='pic').entrance-item__img
+                            img(src='static/images/entr-6.jpg', alt='pic').entrance-item__img
+                        .entrance-item__descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Геометрия Модерн K28
+                                .entrance-item__price
+                                    .entrance-item__price-actual от 1 606 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
+
+                .col-xl-7.col-lg-7.col-md-7.col-.factoid
+                    a(href="#", target="_blank").factoid__overflow
+                        h2.factoid__title.factoid__title--salon  Входные двери &laquo;Порте Ричи&raquo; представлены в&nbsp;двух фирменных салонах
+                        p.factoid__text.factoid__text--salon  Вживую удобнее рассматривать фрезеровки и&nbsp;цвет отделок, проверять плавность хода двери, работу замков и&nbsp;удобство дверных ручек. И&nbsp;всегда можно обратиться за&nbsp;консультацией к&nbsp;менеджеру.
+                        span.factoid__link посмотреть на карте
+                        img(src="static/images/icons/factoid-salon.svg", alt='pic').factoid__img.factoid__img--salon
+
+
+                .col-xl-7.col-lg-7.col-md-7.col-.entrance-item
+                    a(href='#').entrance-item__link
+                        .entrance-item__mask
+                        .entrance-item__favorite.btn-favorite
+                        .entrance-item__view
+                            img(src='static/images/entr-5.jpg', alt='pic').entrance-item__img
+                            img(src='static/images/entr-6.jpg', alt='pic').entrance-item__img
+                        .entrance-item__descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Геометрия Модерн K28
+                                .entrance-item__price
+                                    .entrance-item__price-actual от 1 606 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                .entrance-item__price-mobile
+                                    .entrance-item__price-old 887 руб
+                                    .entrance-item__price-actual 885 руб.
+
+
+                include modules/action
+
+                .entrance-full
 
 
 

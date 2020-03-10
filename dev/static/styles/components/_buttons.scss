@@ -68,4 +68,11 @@
     opacity: 1;
     visibility: visible;
   }
+
+  &--multicolor {
+    background-image: url('../../static/images/icons/multicolor.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+  }
 }

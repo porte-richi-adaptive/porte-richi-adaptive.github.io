@@ -1,8 +1,22 @@
 $xs-width: 320px;
 $sm-width: 360px;
+$sm: 856px;
 
 @mixin xs {
   @media (min-width: #{$xs-width}) and (max-width: #{$sm-width - 1px}) {
     @content;
   }
 }
+
+@mixin mobile {
+  @media (max-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin mobile-between {
+  @media (min-width: #{$sm-width}) and (max-width: #{$sm - 1px}) {
+    @content;
+  }
+}
+

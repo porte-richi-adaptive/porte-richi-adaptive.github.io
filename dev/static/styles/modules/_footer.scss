@@ -38,16 +38,27 @@
     width: 100%;
     padding-top: 16px;
     border-top: 1px solid $gray;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+      margin-bottom: 23px;
+
+    }
 
     &-copyright {
       font-size: 16px;
       color: $gray;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 13px;
+      }
     }
     &-company {
       font-size: 16px;
       @include links-hover($gray, $gray, $gold);
       letter-spacing: -0.2px;
-
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
     }
   }
 

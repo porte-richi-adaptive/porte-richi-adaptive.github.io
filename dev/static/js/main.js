@@ -1,5 +1,22 @@
 $(document).ready(function () {
     svg4everybody({});
+
+    // --- Multicolor tip block hover
+    $(".js-multicolor-tip").on({
+
+        mouseenter: function() {
+            $(this).find('.ui-tip').css("display", "flex").fadeIn();
+        },
+        mouseleave: function () {
+            $(this).find('.ui-tip').fadeOut(0);
+        }
+    });
+
+
+
+
+
+
 });
 
 
