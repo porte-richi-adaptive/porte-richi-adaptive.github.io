@@ -1,0 +1,215 @@
+.recently-view {
+  overflow: hidden;
+  &__title {
+    margin-bottom: 45px;
+  }
+  &__wrap {
+    display: flex;
+  }
+  &__collection {
+    position: absolute;
+    right: 0;
+    background-color: $gray-2;
+    width: 177px;
+    top: -21px;
+    height: calc(100% + 21px);
+    z-index: -1;
+    @include media-breakpoint-down(md) {
+      width: 104px;
+      top: -14px;
+      height: calc(100% + 14px);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 21px;
+    border-bottom: 1px solid $gray-1;
+    margin-right: 106px;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      margin-right: 54px;
+    }
+    &:hover {
+      .entrance-item__name {
+        color: $gold;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding-bottom: 17px;
+    }
+
+    &--invisible {
+      width: 437px;
+      background-image: url('../../static/images/invisible-item.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--mask {
+      border-bottom: none;
+    }
+
+    &--invisible {
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: none;
+      &:hover {
+        h2 {
+          color: $gold;
+        }
+      }
+
+      h2 {
+        width: 437px;
+        text-align: center;
+        color: $white;
+        transition: $animation-default-time;
+        @include media-breakpoint-down(md) {
+          width: 290px;
+          font-size: 20px;
+          line-height: 27px;
+        }
+      }
+      span {
+        font-size: 27px;
+        line-height: 36px;
+        color: $white-2;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 30px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &--single {
+      position: relative;
+      & .recently-view__item-img {
+        width: 242px;
+        @include media-breakpoint-down(md) {
+          width: 144px;
+        }
+      }
+      & .recently-view__img {
+        @include media-breakpoint-down(md) {
+          width: 107.93px;
+          height: 256.18px;
+        }
+      }
+    }
+
+    &-mask {
+      position: absolute;
+      bottom: 0;
+      left: -27px;
+      height: 405px;
+      background-color: $green;
+      z-index: -1;
+      width: calc(100% + 52px);
+      @include media-breakpoint-down(md) {
+        height: 264px;
+      }
+    }
+
+    &-mask ~ &-descr {
+      .entrance-item__name {
+        color: $white;
+      }
+      .entrance-item__price-actual {
+        color: $white;
+      }
+      .entrance-item__price-old {
+        color: $white;
+        &::before {
+          background-color: $white;
+        }
+        & + .entrance-item__price-actual {
+          color: $red;
+        }
+
+      }
+      .entrance-item__info-item {
+        color: $white;
+      }
+      .btn-color.active:after {
+        border-color: $white;
+      }
+    }
+
+    & .entrance-item__colors {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
+    }
+
+    & .entrance-item__descr-top {
+      margin-bottom: 3px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 8px;
+      }
+    }
+
+    & .entrance-item__name {
+      font-size: 24px;
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+      }
+    }
+
+    &-img {
+      margin-bottom: 14px;
+      display: flex;
+      position: relative;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &--big {
+      position: relative;
+      @include media-breakpoint-down(md) {
+        max-width: 329px;
+      }
+      & .recently-view__img {
+        @include media-breakpoint-down(md) {
+          width: 160px;
+          height: 256px;
+        }
+      }
+
+    }
+
+    &--between {
+      & .recently-view__img {
+        &:first-child {
+          margin-right: 26px;
+          @include media-breakpoint-down(md) {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+
+    &--entrance {
+      justify-content: space-between;
+      & .recently-view__img {
+        @include media-breakpoint-down(md) {
+          width: 116px;
+          height: 256px;
+        }
+      }
+    }
+  }
+  &__img {
+    height: auto;
+    display: block;
+    @include media-breakpoint-down(md) {
+      max-width: inherit;
+    }
+  }
+
+}
