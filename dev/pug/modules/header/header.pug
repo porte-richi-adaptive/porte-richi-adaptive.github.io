@@ -13,13 +13,35 @@ header.header
                             +icon('search', 'header__search-icon')
                     a(href="#").header__menu
                         include ../../../static/images/svg/burger.svg
+                        .header__menu-close
+                            include ../../../static/images/icons/menu-close.svg
                 a(href="#").header__logo
                     include ../../../static/images/svg/logo.svg
 
                 .header__top-right
                     a(href='tel:+375291384963').header__phone +375 29 138-49-63
 
-
+            .header__mobile
+                ul.header__mobile-list
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Входные двери
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Межкомнатные
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Комплексные решения
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link замер
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Акции
+                        +icon('percent', 'header__link-percent')
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Оплата
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Доставка и установка
+                    li.header__mobile-item
+                        a(href="#").header__mobile-link Контакты
+                a(href="tel:+375296180826").header__mobile-phone +375 29 618-08-26
+                a(href="tel:+375295831713").header__mobile-phone +375 29 583-17-13
             .header__bottom
                 nav.header__nav
                     ul.header__list

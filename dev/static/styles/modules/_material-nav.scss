@@ -1,6 +1,9 @@
 .material-nav {
   display: flex;
   margin-top: 19px;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 
   &__link {
     @include upperlink;

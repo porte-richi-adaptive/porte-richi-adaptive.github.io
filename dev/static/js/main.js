@@ -12,6 +12,20 @@ $(document).ready(function () {
         }
     });
 
+    // --- Mobile Menu close
+    $('.header__menu > svg').on('click', function(){
+        $(this).hide(0);
+        $('.header__menu-close').show();
+        $('.header__mobile').slideDown(300);
+    });
+
+    // --- Mobile Menu open
+    $('.header__menu-close').on('click', function(){
+        $('.header__menu > svg').show(0);
+        $('.header__menu-close').hide();
+        $('.header__mobile').slideUp(300);
+    });
+
 
 
 
