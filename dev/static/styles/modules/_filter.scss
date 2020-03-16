@@ -1,7 +1,11 @@
 .filter {
   padding-top: 108px;
   position: relative;
-  z-index: 1;
+  z-index: 1002;
+  @include media-breakpoint-down(md) {
+    padding-top: 33px;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -10,10 +14,90 @@
     width: 100%;
     height: 278px;
     background: linear-gradient(180deg, #DEE2E3 0%, rgba(222, 226, 227, 0) 100%);
+    @include media-breakpoint-down(md) {
+      z-index: -1;
+    }
   }
+  &-sort {
+    position: relative;
+    transition: $animation-default-time;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    svg {
+      transition: $animation-default-time;
+    }
+    &:hover {
+      .filter-sort__active {
+        color: $gold;
+      }
+      svg path {
+        stroke: $gold;
+      }
+      svg {
+        transform: rotate(180deg);
+      }
+      .filter-sort__dropown {
+        display: block;
+      }
 
-  &__title {
+    }
+    &__active {
+      @include upperlink;
+      font-size: 13px;
+      margin-right: 9px;
 
+      & + svg path {
+        transition: $animation-default-time;
+      }
+
+      &:hover {
+        & + svg path {
+          stroke: $gold;
+        }
+      }
+    }
+    &__wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &__dropown {
+      position: absolute;
+      top: calc(100% + 38px);
+      left: 0;
+      background-color: $white;
+      padding: 17px 0 17px;
+      z-index: 100;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+      display: none;
+      &:after {
+        content: '';
+        position: absolute;
+        top: -17px;
+        right: 29px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 27.5px 28px 27.5px;
+        border-color: transparent transparent $white transparent;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 38px;
+        top: -38px;
+        left: 0;
+      }
+
+      &-link {
+        @include upperlink;
+        font-size: 13px;
+        display: block;
+        padding: 10px 20px;
+      }
+    }
   }
 
 }

@@ -9,6 +9,9 @@
 @import "common/fonts";
 @import "common/base";
 
+// --- Vendor ---
+@import "vendor/slick";
+
 // --- Modules ---
 @import "modules/header";
 @import "modules/footer";
@@ -23,6 +26,8 @@
 @import "modules/breadcrumbs";
 @import "modules/material-nav";
 @import "modules/recently-view";
+@import "modules/main-filter";
+@import "modules/filter-mobile";
 
 // --- Components ---
 @import "components/buttons";

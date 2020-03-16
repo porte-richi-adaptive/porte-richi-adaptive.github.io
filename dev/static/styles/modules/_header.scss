@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1003;
   @include media-breakpoint-only(sm) {
     left: 27px;
     width: calc(100% - 54px);
@@ -15,6 +15,7 @@
     width: 100%;
     padding-bottom: 33px;
     display: none;
+    z-index: 100;
     &-list {
       padding-top: 7px;
       margin-left: 20px;

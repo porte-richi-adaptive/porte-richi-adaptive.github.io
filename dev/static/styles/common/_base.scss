@@ -3,6 +3,9 @@ body {
   font-size: $fz-base;
   font-family: $minion-font;
   font-weight: $regular;
+  &.fixed {
+    overflow: hidden;
+  }
 }
 
 h1 {

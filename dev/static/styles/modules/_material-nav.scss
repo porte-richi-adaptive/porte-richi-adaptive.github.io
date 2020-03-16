@@ -5,6 +5,14 @@
     display: none;
   }
 
+  &__wrap {
+    & > .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
   &__link {
     @include upperlink;
     font-size: 13px;
@@ -16,7 +24,7 @@
       }
     }
     &:not(:last-child) {
-      margin-right: 49px;
+      margin-right: 37px;
     }
     &:not(.material-nav__link--active):hover {
       &:before {

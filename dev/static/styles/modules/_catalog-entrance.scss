@@ -1,6 +1,9 @@
 .catalog-entrance {
-  margin-top: 150px;
-
+  padding-top: 64px;
+  overflow: hidden;
+  @include media-breakpoint-down(md) {
+    padding-top: 36px;
+  }
   &__row {
     justify-content: space-between;
   }
