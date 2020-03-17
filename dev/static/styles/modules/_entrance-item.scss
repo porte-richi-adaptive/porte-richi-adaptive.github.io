@@ -138,9 +138,10 @@
     background-position: center;
     z-index: 1;
     @include media-breakpoint-down(md) {
-      width: 75px;
-      height: 75px;
+      width: 82px;
+      height: 82px;
       background-size: cover;
+      background-image: url('../../static/images/icons/new-label-mobile.svg');
     }
     @include media-breakpoint-down(sm) {
       top: -23px;

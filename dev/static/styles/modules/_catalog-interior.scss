@@ -2,5 +2,11 @@
   &__row {
     padding-top: 72px;
     justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      padding-top: 49px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 29px;
+    }
   }
 }

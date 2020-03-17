@@ -15,7 +15,7 @@ $sm: 856px;
 }
 
 @mixin mobile-between {
-  @media (min-width: #{$sm-width}) and (max-width: #{$sm - 1px}) {
+  @media (min-width: #{$sm-width + 1}) and (max-width: #{$sm - 1px}) {
     @content;
   }
 }

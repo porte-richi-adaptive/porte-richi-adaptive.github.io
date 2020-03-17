@@ -3,7 +3,7 @@
   padding-right: 9px;
   padding-left: 9px;
   width: 390px;
-  margin-bottom: 190px;
+  margin-bottom: 200px;
   @include media-breakpoint-down(lg) {
     width: 312px;
     margin-bottom: 178px;
@@ -14,34 +14,66 @@
     margin-bottom: 115px;
   }
   @include media-breakpoint-down(sm) {
+    width: 45.029vw;
+    height: auto;
+  }
+  @include mobile-between {
+    margin-right: 10vw;
+    margin-bottom: 13.450vw;
+  }
+  @include mobile {
     width: 100%;
     height: auto;
   }
 
+  .entrance-item__discount {
+    @include mobile-between {
+      height: 45vw;
+    }
+  }
+
   .entrance-item__favorite {
-    left: 1px;
-    top: 62px;
+    left: -8px;
+    top: 69px;
+    @include media-breakpoint-down(lg) {
+      left: -8px;
+      top: 33px;
+    }
     @include media-breakpoint-down(sm) {
       left: -1px;
-      top: -13px;
+      bottom: 0;
+    }
+    @include mobile-between {
+      top: 3.860vw;
+    }
+    @include mobile {
+      left: -1px;
+      bottom: 0;
+      top: 33px;
     }
   }
 
   .entrance-item__new {
-    top: -41px;
-    right: -30px;
+    top: -36px;
+    right: -36px;
     @include media-breakpoint-down(lg) {
-      top: -85px;
+      top: -36px;
+      right: -36px;
     }
     @include media-breakpoint-down(md) {
-      top: -77px;
+      top: -18px;
       right: -18px;
     }
     @include media-breakpoint-down(sm) {
-      width: 20.833vw;
-      height: 20.833vw;
-      top: -24.722vw;
-      right: -5vw;
+      width: 9.591vw;
+      height: 9.591vw;
+      top: -2.105vw;
+      right: -18px;
+    }
+    @include mobile {
+      width: 82px;
+      height: 82px;
+      top: -26px;
     }
   }
 
@@ -55,8 +87,14 @@
     margin-bottom: 14px;
     position: relative;
     padding-top: 85px;
+    @include media-breakpoint-down(lg) {
+      padding-top: 51px;
+    }
     @include media-breakpoint-down(md) {
       margin-bottom: 10px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 6.550vw;
     }
   }
 
@@ -76,9 +114,12 @@
       height: 385.31px;
     }
     @include media-breakpoint-down(sm) {
+      width: 33vw;
+      height: 80vw;
+    }
+    @include mobile {
       width: 58.611vw;
       height: 138.889vw;
-
     }
   }
 
@@ -93,20 +134,26 @@
     @include media-breakpoint-down(lg) {
       width: 207.42px;
       height: 518px;
-      top: -51px;
+      bottom: 5px;
       right: 4px;
     }
     @include media-breakpoint-down(md) {
       width: 175.39px;
       height: 430px;
-      top: -45px;
+      bottom: 5px;
       right: -1px;
     }
     @include media-breakpoint-down(sm) {
+      width: 35.222vw;
+      height: 86.556vw;
+      bottom: 5px;
+      left: 7.602vw;
+    }
+    @include mobile {
       width: 72.222vw;
       height: 155.556vw;
-      top: -16.7vw;
-      right: -1px;
+      bottom: 5px;
+      top: auto;
     }
   }
 }
