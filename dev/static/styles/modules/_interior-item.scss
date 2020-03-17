@@ -3,7 +3,7 @@
   padding-right: 9px;
   padding-left: 9px;
   width: 390px;
-  margin-bottom: 274px;
+  margin-bottom: 190px;
   @include media-breakpoint-down(lg) {
     width: 312px;
     margin-bottom: 178px;
@@ -19,6 +19,8 @@
   }
 
   .entrance-item__favorite {
+    left: 1px;
+    top: 62px;
     @include media-breakpoint-down(sm) {
       left: -1px;
       top: -13px;
@@ -26,7 +28,7 @@
   }
 
   .entrance-item__new {
-    top: -125px;
+    top: -41px;
     right: -30px;
     @include media-breakpoint-down(lg) {
       top: -85px;
@@ -52,6 +54,7 @@
   &__view {
     margin-bottom: 14px;
     position: relative;
+    padding-top: 85px;
     @include media-breakpoint-down(md) {
       margin-bottom: 10px;
     }
