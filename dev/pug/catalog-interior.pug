@@ -1,0 +1,340 @@
+extends template/main
+
+block variables
+    - var title = 'Главная страница'
+
+block content
+    .filter-mobile__popup
+        form
+            .filter-mobile__popup-all
+                header.filter-mobile__popup-header
+                    .filter-mobile__popup-title фильтры
+                    .filter-mobile__popup-close
+                        include ../static/images/icons/close.svg
+                .filter-mobile__popup-list
+                    .filter-mobile__popup-item.js-filter-inner
+                        span Сортировать
+                    .filter-mobile__popup-item.js-filter-inner
+                        span Стиль
+                    .filter-mobile__popup-item.js-filter-inner
+                        span Фрезеровка
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Двупольные
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Акции и скидки
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Интересные решения
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Образцы в салоне
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Со стеклом
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Новинки
+
+
+
+                footer.filter-mobile__popup-footer
+                    button.filter-mobile__popup-view показать 10 дверей
+                    button.filter-mobile__popup-clear Сбросить фильтры
+            .filter-mobile__popup-sort
+                header.filter-mobile__popup-header
+                    .filter-mobile__popup-title сортировать
+                    .filter-mobile__popup-close
+                        include ../static/images/icons/close.svg
+                    .filter-mobile__popup-back
+                        include ../static/images/icons/arrow-left-mobile.svg
+                .filter-mobile__popup-list
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='radio' name="1").filter-mobile__popup-radio
+                            span.filter-mobile__popup-text по возрастанию цены
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='radio' name="1").filter-mobile__popup-radio
+                            span.filter-mobile__popup-text по убыванию цены
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='radio' name="1").filter-mobile__popup-radio
+                            span.filter-mobile__popup-text по популярности
+                footer.filter-mobile__popup-footer
+                    button.filter-mobile__popup-view сортировать
+                    button.filter-mobile__popup-clear по умолчанию
+
+
+
+
+
+
+
+
+
+
+    section.filter
+        .breadcrumbs.breadcrumbs--catalog
+            .container
+                include modules/breadcrumbs
+        .container
+            h1.filter__title Межкомнатные двери
+        .material-nav__wrap
+            .container
+                .material-nav
+                    a(href="#").material-nav__link все модели
+                    a(href="#").material-nav__link.material-nav__link--active для квартиры
+                    a(href="#").material-nav__link для дома
+                .filter-sort
+                    .filter-sort__wrap
+                        a(href="#").filter-sort__active по возрастанию цены
+                        include ../static/images/svg/arrow-dropdown.svg
+                        .filter-sort__dropown
+                            form.filter-sort__dropown-form
+                                a(href="#").filter-sort__dropown-link по убыванию цены
+                                a(href="#").filter-sort__dropown-link по популярности
+        .filter-mobile
+            .container.filter-mobile__container
+                .filter-mobile__material
+                    a(href="#").filter-mobile__material-text все модели
+                    include ../static/images/svg/arrow-dropdown.svg
+                    .filter-mobile__material-dropdown
+                        .filter-mobile__material-wrap
+                            a(href="#").filter-mobile__material-text.filter-mobile__material-link.container для квартиры
+                        .filter-mobile__material-wrap
+                            a(href="#").filter-mobile__material-text.filter-mobile__material-link.container для дома
+                .filter-mobile__options
+                    span.filter-mobile__options-text.js-mobile-filter Фильтры
+                    include ../static/images/icons/arrow-right-mobile.svg
+
+
+
+
+
+
+    .container.main-filter__container
+            .main-filter
+                .main-filter__list-wrap
+                    .main-filter__list
+                        .main-filter__item.main-filter__tab
+                            span.main-filter__counter 2
+                            span Фрезеровка
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown.main-filter__dropdown--long
+                                form
+                                   .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                   .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                   .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                   .main-filter__dropdown-img
+                                        img(src='static/images/door3.png', alt='pic').entrance-item__img
+
+                        a(href="#").main-filter__link.main-filter__tab Стиль
+                        .main-filter__item.main-filter__tab
+                            span Стиль
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown
+                                form
+                                    label.main-filter__dropdown-label
+                                        input(type='checkbox').main-filter__dropdown-checkbox
+                                        span.main-filter__dropdown-text современный
+                                    label.main-filter__dropdown-label
+                                        input(type='checkbox').main-filter__dropdown-checkbox
+                                        span.main-filter__dropdown-text классический
+                                    label.main-filter__dropdown-label
+                                        input(type='checkbox').main-filter__dropdown-checkbox
+                                        span.main-filter__dropdown-text с дизайнерский
+
+                        .main-filter__item.main-filter__tab
+                            span Система
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown
+                                form
+                                    label.main-filter__dropdown-label
+                                        input(type='radio', name="drop", value="1").main-filter__dropdown-radio
+                                        span.main-filter__dropdown-text двери-купе
+                                    label.main-filter__dropdown-label
+                                        input(type='radio', name="drop", value="2").main-filter__dropdown-radio
+                                        span.main-filter__dropdown-text внутрипроёмные
+                                    label.main-filter__dropdown-label
+                                        input(type='radio', name="drop", value="3").main-filter__dropdown-radio
+                                        span.main-filter__dropdown-text с двери-пеналы
+
+
+                        a(href="#").main-filter__link.main-filter__tab.main-filter__tab--active Образцы в салоне
+                        a(href="#").main-filter__link.main-filter__tab Акции и скидки
+                        a(href="#").main-filter__link.main-filter__tab Акции и скидки
+                .main-filter__clear
+                    include ../static/images/icons/trash.svg
+
+
+    section.catalog-interior
+        .container
+            .row.catalog-interior__row
+                .interior-item
+                    .entrance-item__favorite.btn-favorite
+                    .entrance-item__new
+                    .interior-item__view
+                        .interior-item__img-wrap
+                            img(src='static/images/int-1.jpg', alt='pic').interior-item__img
+                            .entrance-item__discount
+                        .interior-item__mask
+                    .entrance-item__descr
+                        .entrance-item__descr-top
+                            .entrance-item__name НК256В2
+                            .entrance-item__price
+                                .entrance-item__price-actual 4 323 руб.
+                        .entrance-item__descr-bottom
+                            .entrance-item__info
+                                .entrance-item__info-item Для квартиры
+                            .entrance-item__colors
+                                .entrance-item__color.btn-color.active
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                    .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+                .interior-item
+                    .entrance-item__favorite.btn-favorite
+                    .entrance-item__new
+                    .interior-item__view
+                        .interior-item__img-wrap
+                            img(src='static/images/int-2.jpg', alt='pic').interior-item__img
+                            .entrance-item__discount
+                        .interior-item__mask
+                    .entrance-item__descr
+                        .entrance-item__descr-top
+                            .entrance-item__name НК256В2
+                            .entrance-item__price
+                                .entrance-item__price-actual 4 323 руб.
+                        .entrance-item__descr-bottom
+                            .entrance-item__info
+                                .entrance-item__info-item Для квартиры
+                            .entrance-item__colors
+                                .entrance-item__color.btn-color.active
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                    .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+                .interior-item
+                    .entrance-item__favorite.btn-favorite
+                    .entrance-item__new
+                    .interior-item__view
+                        .interior-item__img-wrap
+                            img(src='static/images/int-3.jpg', alt='pic').interior-item__img
+                            .entrance-item__discount
+                        .interior-item__mask
+                    .entrance-item__descr
+                        .entrance-item__descr-top
+                            .entrance-item__name НК256В2
+                            .entrance-item__price
+                                .entrance-item__price-actual 4 323 руб.
+                        .entrance-item__descr-bottom
+                            .entrance-item__info
+                                .entrance-item__info-item Для квартиры
+                            .entrance-item__colors
+                                .entrance-item__color.btn-color.active
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                    .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+
+                .interior-item
+                    .entrance-item__favorite.btn-favorite
+                    .entrance-item__new
+                    .interior-item__view
+                        .interior-item__img-wrap
+                            img(src='static/images/int-4.jpg', alt='pic').interior-item__img
+                            .entrance-item__discount
+                        .interior-item__mask
+                    .entrance-item__descr
+                        .entrance-item__descr-top
+                            .entrance-item__name НК256В2
+                            .entrance-item__price
+                                .entrance-item__price-actual 4 323 руб.
+                        .entrance-item__descr-bottom
+                            .entrance-item__info
+                                .entrance-item__info-item Для квартиры
+                            .entrance-item__colors
+                                .entrance-item__color.btn-color.active
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.btn-color
+                                .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                    .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+
+
+
+
+
+

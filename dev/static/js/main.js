@@ -74,7 +74,6 @@ $(document).ready(function () {
     $('.filter-mobile__popup-back').on('click', function() {
         $('.filter-mobile__popup-sort').fadeOut(250);
         $('.filter-mobile__popup-all').fadeIn(250);
-
     });
 
 

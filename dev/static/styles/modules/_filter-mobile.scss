@@ -201,7 +201,7 @@
   }
 
   &__container {
-    position: relative;
+
   }
 
   &__options {
@@ -214,6 +214,9 @@
     right: 0;
     top: 0;
     z-index: 10;
+    @include media-breakpoint-down(sm) {
+      right: 27px;
+    }
     &:hover {
       .filter-mobile__options-text {
         color: $gold;
@@ -237,7 +240,6 @@
   &__material {
     display: flex;
     align-items: center;
-    position: relative;
 
     &.opened {
       & > .filter-mobile__material-text {
