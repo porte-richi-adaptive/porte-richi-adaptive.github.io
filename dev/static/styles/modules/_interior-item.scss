@@ -18,6 +18,13 @@
     height: auto;
   }
 
+  .entrance-item__favorite {
+    @include media-breakpoint-down(sm) {
+      left: -1px;
+      top: -13px;
+    }
+  }
+
   .entrance-item__new {
     top: -125px;
     right: -30px;
@@ -27,6 +34,12 @@
     @include media-breakpoint-down(md) {
       top: -77px;
       right: -18px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 20.833vw;
+      height: 20.833vw;
+      top: -24.722vw;
+      right: -5vw;
     }
   }
 
