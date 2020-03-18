@@ -1,0 +1,20 @@
+<svg width="405" height="489" viewBox="0 0 405 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="111.867" y="0.366211" width="181.266" height="28.1668" fill="#AFAFAF"/>
+<path d="M77.6836 0.366211H111.865V469.337L96.5546 487.869H77.6836V0.366211Z" fill="#AFAFAF"/>
+<path d="M327.316 0.366211H293.135L294.203 469.715L309.157 487.869H327.316V0.366211Z" fill="#AFAFAF"/>
+<rect x="96.8906" y="19.8447" width="212.31" height="467.481" stroke="black" stroke-width="0.5"/>
+<path d="M96.6402 487.575L111.615 469.149C111.615 304.02 112.328 193.285 112.328 28.1553" stroke="black" stroke-width="0.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M294.035 469.073C294.035 386.542 293.849 317.597 293.663 248.652C293.477 179.686 293.291 110.72 293.291 28.1553H292.871C292.871 110.72 293.057 179.687 293.243 248.653C293.429 317.619 293.615 386.585 293.615 469.149V469.226L309.29 487.71L309.611 487.441L294.035 469.073Z" fill="black"/>
+<path d="M292.907 28.298L309.168 19.9834" stroke="black" stroke-width="0.5"/>
+<path d="M293.99 468.973H111.508" stroke="black" stroke-width="0.5"/>
+<rect x="77.793" y="0.583008" width="249.824" height="486.742" stroke="black" stroke-width="0.5"/>
+<path d="M97.3242 20.3076L112.595 28.3C256.846 28.3 293.15 28.3 292.909 28.3" stroke="black" stroke-width="0.5"/>
+<path d="M0.001358 464.438L77.543 464.438L77.543 487.869L0.00135219 487.869" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10"/>
+<path d="M0.00135768 472.363L77.543 472.363" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10"/>
+<path d="M0.00135768 467.041L77.543 467.041" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10"/>
+<path d="M327.598 464.438L405 464.438M405 487.869L327.598 487.869" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10"/>
+<path d="M327.598 472.363L405 472.363" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10"/>
+<path d="M327.598 467.041L405 467.041" stroke="#231F20" stroke-width="0.5" stroke-miterlimit="10"/>
+<rect x="128.691" y="229.202" width="14.0012" height="14.6667" stroke="black" stroke-width="0.5"/>
+<rect x="133.867" y="234.618" width="22.2877" height="3.83337" fill="#F7F7F7" stroke="black" stroke-width="0.5"/>
+</svg>
