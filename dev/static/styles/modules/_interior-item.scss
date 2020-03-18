@@ -3,15 +3,12 @@
   padding-right: 9px;
   padding-left: 9px;
   width: 390px;
-  margin-bottom: 200px;
   @include media-breakpoint-down(lg) {
     width: 312px;
-    margin-bottom: 178px;
   }
 
   @include media-breakpoint-down(md) {
     width: 228px;
-    margin-bottom: 115px;
   }
   @include media-breakpoint-down(sm) {
     width: 45.029vw;
@@ -48,8 +45,8 @@
     }
     @include mobile {
       left: -1px;
-      bottom: 0;
-      top: 33px;
+      bottom: auto;
+      top: 41px;
     }
   }
 
@@ -73,7 +70,8 @@
     @include mobile {
       width: 82px;
       height: 82px;
-      top: -26px;
+      top: -17px;
+      right: -8px;
     }
   }
 
@@ -95,6 +93,9 @@
     }
     @include media-breakpoint-down(sm) {
       padding-top: 6.550vw;
+    }
+    @include mobile {
+      padding-top: 60px;
     }
   }
 
@@ -154,6 +155,7 @@
       height: 155.556vw;
       bottom: 5px;
       top: auto;
+      left: 11.602vw;
     }
   }
 }
