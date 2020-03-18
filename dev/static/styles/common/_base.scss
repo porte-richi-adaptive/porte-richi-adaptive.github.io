@@ -36,6 +36,18 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 300;
+  @include media-breakpoint-down(lg) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 27px;
+    line-height: 36px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 h5 {
@@ -70,6 +82,7 @@ p {
     font-size: 27px;
     line-height: 27px;
   }
+
 
 }
 

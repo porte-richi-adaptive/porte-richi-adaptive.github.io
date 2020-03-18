@@ -160,6 +160,77 @@
   }
 
   &-get {
+    width: 405px;
+    height: 865px;
+    background: linear-gradient(99.86deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+    padding-left: 28px;
+    padding-top: 46px;
+    position: relative;
+    @include media-breakpoint-down(lg) {
+      width: 325.04px;
+      height: 624px;
+      padding-top: 22px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 211px;
+      height: 593px;
+      padding-top: 32px;
+      padding-left: 19px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      height: 505px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 487.54px;
+      background-image: url('../../static/images/factiod-get-door.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      @include media-breakpoint-down(lg) {
+        height: 435px;
+        background-image: url('../../static/images/factiod-get-door-note.svg');
+        background-position: bottom;
+      }
+      @include media-breakpoint-down(md) {
+        height: 211px;
+        background-size: contain;
+      }
+    }
 
+    &__title {
+      color: $black;
+      max-width: 330.65px;
+      margin-bottom: 14px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 21px;
+      }
+      @include media-breakpoint-down(md) {
+        max-width: 164px;
+      }
+    }
+    &__text {
+      max-width: 309.48px;
+      color: $black;
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 248.65px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 181px;
+      }
+    }
+    &__link {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
   }
 }

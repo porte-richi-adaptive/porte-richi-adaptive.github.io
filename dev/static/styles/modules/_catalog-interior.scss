@@ -8,5 +8,8 @@
     @include media-breakpoint-down(md) {
       padding-top: 29px;
     }
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
   }
 }
