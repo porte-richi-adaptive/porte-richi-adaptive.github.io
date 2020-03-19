@@ -1,16 +1,41 @@
 .interior-bivalve {
   position: relative;
+  @include media-breakpoint-down(lg) {
+    margin-right: 22px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-right: 0;
+  }
+
+  & .entrance-item__discount {
+    @include media-breakpoint-down(md) {
+      height: 300px;
+    }
+    @include mobile-between {
+      height: 95vw;
+    }
+  }
+
 
   & .entrance-item__favorite {
     position: absolute;
     top: -18px;
     left: -9px;
+    @include media-breakpoint-down(md) {
+      top: -13px;
+      left: -6px;
+    }
   }
 
   & .entrance-item__new {
     position: absolute;
     right: -36px;
     top: -36px;
+    @include media-breakpoint-down(md) {
+      right: -15px;
+      top: -12px;
+    }
+
   }
 
   &__container {
