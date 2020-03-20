@@ -10,6 +10,18 @@
   align-items: center;
   padding-bottom: 56px;
   position: relative;
+  @include media-breakpoint-down(lg) {
+    height: 612px;
+    padding-bottom: 46px;
+  }
+  @include media-breakpoint-down(md) {
+    height: 498px;
+    padding-bottom: 37px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 113.889vw;
+    padding-bottom: 31px;
+  }
   &:hover {
     .invisible-item__name {
       color: $gold;
@@ -23,11 +35,30 @@
   & .entrance-item__discount {
     bottom: 101px;
     background-image: url(../../static/images/discount-invisible.svg);
+    @include media-breakpoint-down(lg) {
+      bottom: 120px;
+    }
+    @include media-breakpoint-down(md) {
+      bottom: 71px;
+    }
+    @include media-breakpoint-down(sm) {
+      background-image: url(../../static/images/discount-invisible-mobile.svg);
+      height: 220px;
+      bottom: 75px;
+    }
   }
 
   & .entrance-item__new {
     top: -36px;
     right: -36px;
+    @include media-breakpoint-down(md) {
+      top: -27px;
+      right: -27px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: -18px;
+      right: -18px;
+    }
   }
 
   &__container {
@@ -42,6 +73,18 @@
     font-family: $minion-display;
     margin-bottom: 9px;
     transition: $animation-default-time;
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 27px;
+      line-height: 27px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
 
   &__price {
@@ -53,6 +96,14 @@
       line-height: 36px;
       color: $white;
       font-family: $minion-display;
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        line-height: 18px;
+      }
     }
 
     &-old {
@@ -61,6 +112,13 @@
       color: $white;
       position: relative;
       margin-right: 12px;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        line-height: 27px;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -73,6 +131,10 @@
       & + .invisible-item__price-actual {
         color: $red;
         font-size: 27px;
+        @include media-breakpoint-down(md) {
+          font-size: 18px;
+          line-height: 18px;
+        }
       }
     }
   }
