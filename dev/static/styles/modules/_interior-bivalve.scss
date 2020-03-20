@@ -6,6 +6,13 @@
   @include media-breakpoint-down(md) {
     margin-right: 0;
   }
+  @include mobile-between {
+    margin-bottom: 13.450vw;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 45px;
+  }
+
 
   & .entrance-item__discount {
     @include media-breakpoint-down(md) {
