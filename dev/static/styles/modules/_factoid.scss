@@ -365,6 +365,24 @@
     background: linear-gradient(99.86deg, #F8F8F8 13.54%, #EDEDED 86.46%);
     padding-top: 45px;
     padding-left: 29px;
+    @include media-breakpoint-down(lg) {
+      width: 325px;
+      height: 614px;
+      padding-top: 23px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 211px;
+      height: 586px;
+      padding-top: 26px;
+      padding-left: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+    @include mobile {
+      width: 306px;
+      height: 507px;
+    }
 
     &__link {
       display: block;
@@ -376,17 +394,43 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      @include media-breakpoint-down(lg) {
+        width: 249px;
+        height: 354px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 188px;
+        height: 269px;
+      }
+      @include mobile-between {
+        width: 300px;
+        height: 366px;
+        object-fit: contain;
+      }
+      @include mobile {
+        width: 198px;
+        height: 283px;
+      }
     }
 
     &__title {
       max-width: 331px;
       color: $black;
       margin-bottom: 15px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 21px;
+      }
+      @include mobile {
+        margin-bottom: 12px;
+      }
     }
 
     &__text {
       max-width: 310px;
       color: $black;
+      @include media-breakpoint-down(lg) {
+        max-width: 250px;
+      }
     }
 
     &__caption {
@@ -396,6 +440,15 @@
       font-style: italic;
       width: 110px;
       color: $black;
+      @include media-breakpoint-down(md) {
+        position: static;
+        margin-top: 11px;
+      }
+      @include mobile {
+        position: absolute;
+        bottom: 36px;
+        left: 20px;
+      }
     }
 
     &__name {
@@ -403,11 +456,18 @@
       line-height: 27px;
       display: block;
       margin-bottom: 6px;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
     }
 
     &__manager {
       font-size: 18px;
       line-height: 18px;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
   }
