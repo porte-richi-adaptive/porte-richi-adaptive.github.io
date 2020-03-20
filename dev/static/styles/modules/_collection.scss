@@ -1,0 +1,117 @@
+.collection {
+  display: flex;
+  align-items: center;
+  margin-right: -9px;
+  margin-left: -9px;
+  margin-top: 36px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 31px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: 21px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 21px;
+  }
+
+  &__wrap {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -37px;
+      width: 737px;
+      z-index: -1;
+      height: 536px;
+      border: 1px solid $gold;
+      @include media-breakpoint-down(lg) {
+        width: 630px;
+        height: 458px;
+        top: -31px;
+        left: -31px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 449px;
+        height: 326px;
+        top: -21px;
+        left: -22px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: calc(100% - 14px);
+        height: calc(100% - 24px);
+        top: -12px;
+        left: 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    @include media-breakpoint-down(sm) {
+      width: calc(100% - 14px);
+      margin-left: 14px;
+    }
+  }
+
+  &__descr {
+    &:hover {
+      .collection__link {
+        color: $gold;
+        &:before {
+          background-color: $gold;
+        }
+      }
+    }
+  }
+
+  &__descr {
+    @include media-breakpoint-down(sm) {
+      margin-top: 26px;
+    }
+  }
+
+  &__sup {
+    @include upperlink;
+    display: inline-flex;
+    margin-bottom: 11px;
+    color: $gray-2;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+      font-size: 10px;
+    }
+  }
+
+  &__title {
+    color: $gold;
+    margin-bottom: 18px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 9px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 1px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 38px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__link {
+    @include upperlink-underline;
+
+  }
+
+
+}

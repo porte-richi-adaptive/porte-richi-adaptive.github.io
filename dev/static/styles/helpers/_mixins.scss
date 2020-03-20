@@ -36,6 +36,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: $black;
+  font-size: 13px;
   transition: $animation-default-time;
   cursor: pointer;
   &:hover {
@@ -47,6 +48,7 @@
   font-family: $rft-font;
   font-weight: 700;
   letter-spacing: 3px;
+  font-size: 13px;
   text-transform: uppercase;
   color: $color;
   transition: $animation-default-time;
@@ -67,6 +69,14 @@
     bottom: -8px;
     left: 0;
     transition: $animation-default-time;
+  }
+  @include media-breakpoint-down(lg) {
+    &:before {
+      bottom: -4px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 10px;
   }
 }
 
