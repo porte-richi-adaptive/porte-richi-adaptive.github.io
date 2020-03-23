@@ -469,6 +469,76 @@
         line-height: 18px;
       }
     }
+  }
+  &-invisible {
+    width: 598px;
+    height: 729px;
+    background-image: url('../../static/images/factoid-invisible-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 41px;
+    padding-top: 55px;
+
+    @include media-breakpoint-down(lg) {
+      width: 458px;
+      height: 612px;
+      padding-left: 35px;
+      padding-top: 41px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 330px;
+      height: 497px;
+      padding-left: 19px;
+      padding-top: 27px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      background-size: cover;
+    }
+
+    &:hover {
+      .factoid-invisible__link {
+        color: $gold;
+        &:before {
+          background-color: $gold;
+        }
+      }
+    }
+
+    &__title {
+      max-width: 503px;
+      margin-bottom: 22px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 19px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 11px;
+        max-width: 273px;
+      }
+    }
+
+    &__text {
+      max-width: 229px;
+      margin-bottom: 86px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 143px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 113px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 129px;
+      }
+    }
+
+    &__link {
+      @include upperlink-underline;
+      @include media-breakpoint-down(sm) {
+
+      }
+    }
 
   }
 }

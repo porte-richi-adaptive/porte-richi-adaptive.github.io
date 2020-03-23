@@ -10,6 +10,7 @@
   align-items: center;
   padding-bottom: 56px;
   position: relative;
+
   @include media-breakpoint-down(lg) {
     height: 612px;
     padding-bottom: 46px;
@@ -21,6 +22,7 @@
   @include media-breakpoint-down(sm) {
     height: 113.889vw;
     padding-bottom: 31px;
+    margin-bottom: 45px;
   }
   &:hover {
     .invisible-item__name {
@@ -63,7 +65,12 @@
 
   &__container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
   }
 
   &__name {
