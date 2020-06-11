@@ -13,6 +13,14 @@
     }
 }
 
+@mixin title-size ($size) {
+  @if $size == 'h3' {
+    font-size: 27px;
+    line-height: 36px;
+    font-family: $minion-display;
+  }
+}
+
 @mixin icon-hover ($color, $hover) {
   fill: $color;
   transition: $animation-default-time;

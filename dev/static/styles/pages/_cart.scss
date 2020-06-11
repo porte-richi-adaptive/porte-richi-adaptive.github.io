@@ -168,6 +168,10 @@
         position: relative;
         display: inline-flex;
 
+        &:empty {
+          display: none;
+        }
+
         &:empty + #{$cost}-actual {
           color: $black;
         }
@@ -182,7 +186,82 @@
           background-color: $gray;
         }
       }
+    }
 
+    // Quantity
+    .cart-table__quantity {
+      display: flex;
+      padding-left: 21px;
+      width: 197px;
+
+      &-number {
+        @include upperlink;
+        font-size: $fz-base;
+        line-height: 29px;
+        min-width: 48px;
+        text-align: center;
+        user-select: none;
+        &:hover {
+          color: $black;
+          cursor: default;
+        }
+      }
+
+      &-minus {
+        transition: $transition-base;
+
+        &.disabled {
+          opacity: .5;
+          cursor: default;
+          pointer-events: none;
+        }
+      }
+
+      &-plus {
+        &:after {
+          content: '';
+          width: 1px;
+          height: 15px;
+          background-color: $gray;
+          position: absolute;
+          left: 50%;
+          top: calc( 50% - 7.5px );
+          transition: $transition-base;
+        }
+      }
+
+      &-plus, &-minus {
+        position: relative;
+        width: 33px;
+        height: 33px;
+        border: 1px solid $gray;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: $transition-base;
+
+        &:before {
+          content: '';
+          width: 15px;
+          height: 1px;
+          background-color: $gray;
+          position: absolute;
+          left: calc( 50% - 7.5px );
+          top: calc( 50% - 1px );
+          transition: $transition-base;
+        }
+
+        &:hover {
+          border-color: $gold;
+          &:before, &:after {
+            background-color: $gold;
+          }
+        }
+      }
+    }
+
+    // Sum
+    &__sum {
+      @include title-size('h3');
 
     }
 

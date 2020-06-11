@@ -10,7 +10,7 @@ block content
             .breadcrumbs
                 include ./modules/breadcrumbs
             h1.cart__title Мой заказ
-            section.cart
+            section.cart#cart
                 .cart-table
                     .cart-table__header
                         .cart-table__header-product Товар
@@ -31,6 +31,11 @@ block content
                             .cart-table__cost.base-fz-20
                                 .cart-table__cost-old 722 руб.
                                 .cart-table__cost-actual 613 руб.
+                            .cart-table__quantity
+                                .cart-table__quantity-minus
+                                .cart-table__quantity-number 99
+                                .cart-table__quantity-plus
+                            .cart-table__sum 3 613 руб.
 
                         // item
                         .cart-table__row
@@ -44,11 +49,14 @@ block content
                             .cart-table__cost.base-fz-20
                                 .cart-table__cost-old
                                 .cart-table__cost-actual 613 руб.
+                            .cart-table__quantity
+                                .cart-table__quantity-minus
+                                .cart-table__quantity-number 2
+                                .cart-table__quantity-plus
+                            .cart-table__sum 613руб.
 
 
 
-
-
-
-
+block script
+    script(src="static/js/pages/cart/cart.js")
 

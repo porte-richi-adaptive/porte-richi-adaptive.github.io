@@ -106,7 +106,7 @@
             <div class="breadcrumbs__wrap"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link breadcrumbs__link--active" href="#">Входные двери</a></div>
           </div>
           <h1 class="cart__title">Мой заказ</h1>
-          <section class="cart">
+          <section class="cart" id="cart">
             <div class="cart-table">
               <div class="cart-table__header">
                 <div class="cart-table__header-product">Товар</div>
@@ -127,6 +127,12 @@
                     <div class="cart-table__cost-old">722 руб.</div>
                     <div class="cart-table__cost-actual">613 руб.</div>
                   </div>
+                  <div class="cart-table__quantity">
+                    <div class="cart-table__quantity-minus"></div>
+                    <div class="cart-table__quantity-number">99</div>
+                    <div class="cart-table__quantity-plus"></div>
+                  </div>
+                  <div class="cart-table__sum">3 613 руб.</div>
                 </div>
                 <!-- item-->
                 <div class="cart-table__row">
@@ -140,6 +146,12 @@
                     <div class="cart-table__cost-old"></div>
                     <div class="cart-table__cost-actual">613 руб.</div>
                   </div>
+                  <div class="cart-table__quantity">
+                    <div class="cart-table__quantity-minus"></div>
+                    <div class="cart-table__quantity-number">2</div>
+                    <div class="cart-table__quantity-plus"></div>
+                  </div>
+                  <div class="cart-table__sum">613руб.</div>
                 </div>
               </div>
             </div>
@@ -221,4 +233,5 @@
   <script src="static/js/slick.min.js"></script>
   <script src="static/js/libs.min.js"></script>
   <script src="static/js/main.js"></script>
+  <script src="static/js/pages/cart/cart.js"></script>
 </html>
