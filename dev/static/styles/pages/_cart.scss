@@ -140,8 +140,8 @@
         visibility: hidden;
 
         &:hover {
-          color: $black;
-          border-bottom-color: $black;
+          color: $gold;
+          border-bottom-color: $gold;
           opacity: 1;
           visibility: visible;
         }
@@ -154,8 +154,39 @@
 
     // Cost
     &__cost {
+      $cost: &;
+
       width: 176px;
+      padding-left: 19px;
+
+      &-actual {
+        color: $red;
+      }
+
+      &-old {
+        color: $gray;
+        position: relative;
+        display: inline-flex;
+
+        &:empty + #{$cost}-actual {
+          color: $black;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: calc( 50% - 1px );
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $gray;
+        }
+      }
+
+
     }
+
+
 
   }
 }
