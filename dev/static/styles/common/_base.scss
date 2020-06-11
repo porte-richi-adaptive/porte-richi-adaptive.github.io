@@ -8,6 +8,13 @@ body {
   }
 }
 
+main {
+  padding-top: 108px;
+  position: relative;
+  z-index: 1;
+}
+
+
 h1 {
   font-size: 61px;
   line-height: 63px;
@@ -113,8 +120,8 @@ p {
 }
 
 .container {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 9px;
+  padding-right: 9px;
   @include media-breakpoint-down(sm) {
     padding-left: 27px;
     padding-right: 27px;
@@ -132,4 +139,14 @@ p {
   @include media-breakpoint-down(sm ) {
     margin-bottom: 45px;
   }
+}
+
+.base-fz-18 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.base-fz-20 {
+  font-size: 20px;
+  line-height: 27px;
 }

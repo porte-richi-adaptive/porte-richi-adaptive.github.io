@@ -10,7 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <header class="header">
+    <!-- Mode condition-->
+    <header class="header  + header--gray">
       <div class="container header__container">
         <div class="row">
           <div class="header__top">
@@ -52,8 +53,8 @@
           </div>
           <div class="header__mobile">
             <ul class="header__mobile-list">
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Входные двери</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Межкомнатные</a></li>
+              <li class="header__mobile-item"><a class="header__mobile-link" href="/catalog-entrance.html">Входные двери</a></li>
+              <li class="header__mobile-item"><a class="header__mobile-link" href="/catalog-interior.html">Межкомнатные</a></li>
               <li class="header__mobile-item"><a class="header__mobile-link" href="#">Комплексные решения</a></li>
               <li class="header__mobile-item"><a class="header__mobile-link" href="#">замер</a></li>
               <li class="header__mobile-item"><a class="header__mobile-link" href="#">Акции</a>
@@ -69,8 +70,8 @@
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="#">входные двери</a></li>
-                <li class="header__item"><a class="header__link" href="#">межкомнатные</a></li>
+                <li class="header__item"><a class="header__link" href="/catalog-entrance.html">входные двери</a></li>
+                <li class="header__item"><a class="header__link" href="/catalog-interior.html">межкомнатные</a></li>
                 <li class="header__item"><a class="header__link" href="#">комплексные решения</a></li>
                 <li class="header__item header__item--hidden"><a class="header__link" href="#">замер</a></li>
                 <li class="header__item header__item--hidden"><a class="header__link" href="#">акции</a>
@@ -99,6 +100,52 @@
       </div>
     </header>
     <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__wrap"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link breadcrumbs__link--active" href="#">Входные двери</a></div>
+          </div>
+          <h1 class="cart__title">Мой заказ</h1>
+          <section class="cart">
+            <div class="cart-table">
+              <div class="cart-table__header">
+                <div class="cart-table__header-product">Товар</div>
+                <div class="cart-table__header-cost">Цена</div>
+                <div class="cart-table__header-quantity">Количество</div>
+                <div class="cart-table__header-sum">Сумма</div>
+              </div>
+              <div class="cart-table__body">
+                <!-- item-->
+                <div class="cart-table__row">
+                  <div class="cart-table__item">
+                    <div class="cart-table__item-img"><img src="static/images/content/cart/cart-item-1.jpg" alt=""></div><a class="cart-table__item-title base-fz-20" href="#">Межкомнатная дверь ЛН31</a>
+                    <div class="cart-table__item-descr base-fz-18">Строганный шпон, Американский орех, тонированный, матовый</div>
+                    <div class="cart-table__item-favorite">В избранное</div>
+                    <div class="cart-table__item-delete">Удалить</div>
+                  </div>
+                  <div class="cart-table__cost">
+                    <div class="cart-table__cost-old">722 руб.</div>
+                    <div class="cart-table__cost-actual">613 руб.</div>
+                  </div>
+                </div>
+                <!-- item-->
+                <div class="cart-table__row">
+                  <div class="cart-table__item active-field">
+                    <div class="cart-table__item-img"><img src="static/images/content/cart/cart-item-2.jpg" alt=""></div><a class="cart-table__item-title base-fz-20" href="#">Межкомнатная дверь АВ123-В2</a>
+                    <div class="cart-table__item-descr base-fz-18">Строганный шпон, Американский орех, тонированный, матовый</div>
+                    <div class="cart-table__item-favorite">В избранное</div>
+                    <div class="cart-table__item-delete">Удалить</div>
+                  </div>
+                  <div class="cart-table__cost">
+                    <div class="cart-table__cost-old"></div>
+                    <div class="cart-table__cost-actual">613 руб.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
     <div class="view-instagram">
       <div class="container">

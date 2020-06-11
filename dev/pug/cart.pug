@@ -1,6 +1,54 @@
 extends template/main
 
 block variables
-    - var title = 'Главная страница'
+    - var title = 'Главная страница';
+    - var headerGrayBackground = true;
 
 block content
+    .container
+        .row
+            .breadcrumbs
+                include ./modules/breadcrumbs
+            h1.cart__title Мой заказ
+            section.cart
+                .cart-table
+                    .cart-table__header
+                        .cart-table__header-product Товар
+                        .cart-table__header-cost Цена
+                        .cart-table__header-quantity Количество
+                        .cart-table__header-sum Сумма
+
+                    .cart-table__body
+                        // item
+                        .cart-table__row
+                            .cart-table__item
+                                .cart-table__item-img
+                                    img(src='static/images/content/cart/cart-item-1.jpg', alt='')
+                                a(href="#").cart-table__item-title.base-fz-20 Межкомнатная дверь ЛН31
+                                .cart-table__item-descr.base-fz-18 Строганный шпон, Американский орех, тонированный, матовый
+                                .cart-table__item-favorite В избранное
+                                .cart-table__item-delete Удалить
+                            .cart-table__cost
+                                .cart-table__cost-old 722 руб.
+                                .cart-table__cost-actual 613 руб.
+
+                        // item
+                        .cart-table__row
+                            .cart-table__item.active-field
+                                .cart-table__item-img
+                                    img(src='static/images/content/cart/cart-item-2.jpg', alt='')
+                                a(href="#").cart-table__item-title.base-fz-20 Межкомнатная дверь АВ123-В2
+                                .cart-table__item-descr.base-fz-18 Строганный шпон, Американский орех, тонированный, матовый
+                                .cart-table__item-favorite В избранное
+                                .cart-table__item-delete Удалить
+                            .cart-table__cost
+                                .cart-table__cost-old
+                                .cart-table__cost-actual 613 руб.
+
+
+
+
+
+
+
+

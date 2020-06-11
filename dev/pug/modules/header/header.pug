@@ -1,4 +1,10 @@
-header.header
+
+// Mode condition
+if headerGrayBackground
+    - var grayModifier = 'header--gray';
+
+
+header(class=`header  + ${grayModifier}`)
     .container.header__container
         .row
             .header__top
@@ -24,9 +30,9 @@ header.header
             .header__mobile
                 ul.header__mobile-list
                     li.header__mobile-item
-                        a(href="#").header__mobile-link Входные двери
+                        a(href="/catalog-entrance.html").header__mobile-link Входные двери
                     li.header__mobile-item
-                        a(href="#").header__mobile-link Межкомнатные
+                        a(href="/catalog-interior.html").header__mobile-link Межкомнатные
                     li.header__mobile-item
                         a(href="#").header__mobile-link Комплексные решения
                     li.header__mobile-item
@@ -46,9 +52,9 @@ header.header
                 nav.header__nav
                     ul.header__list
                         li.header__item
-                            a(href='#').header__link входные двери
+                            a(href='/catalog-entrance.html').header__link входные двери
                         li.header__item
-                            a(href='#').header__link межкомнатные
+                            a(href='/catalog-interior.html').header__link межкомнатные
                         li.header__item
                             a(href='#').header__link комплексные решения
                         li.header__item.header__item--hidden

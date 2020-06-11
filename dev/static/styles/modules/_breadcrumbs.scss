@@ -1,14 +1,14 @@
 .breadcrumbs {
-  &--catalog {
-    padding-top: 49px;
-    padding-bottom: 27px;
-    @include media-breakpoint-down(lg) {
-      padding-bottom: 17px;
-    }
-    @include media-breakpoint-down(md) {
-      padding-bottom: 6px;
-    }
+  width: 100%;
+  padding-top: 49px;
+  padding-bottom: 27px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 17px;
   }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 6px;
+  }
+
   &__link {
     font-size: 18px;
     font-style: italic;
