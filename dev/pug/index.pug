@@ -1,0 +1,32 @@
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title Навигация по сайту | Порте-Ричи
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="keywords" content="Порте-ричи")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        link( rel='shortcut icon' type="image/x-icon" href="static/images/icons/favicon.png")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
+
+        <!--[if lt IE 9]>
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+        <![endif]-->
+    body
+        section.index-navigation
+            a(href="#").index-navigation__logo
+                include ../static/images/svg/logo.svg
+            .container
+                .row
+                    ul.index-navigation__list
+                        li.index-navigation__item
+                            .index-navigation__img
+
+                            a(href="/cart.html").index-navigation__link Корзина
+                        li.index-navigation__item
+                            .index-navigation__img
+                                img(src='static/images/content/our-saloon.jpg', alt='pic')
+                            a(href="").index-navigation__link Наши салоны
