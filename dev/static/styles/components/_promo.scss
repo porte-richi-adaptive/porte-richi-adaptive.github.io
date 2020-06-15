@@ -1,0 +1,55 @@
+.promo {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      margin-right: 27px;
+    }
+
+    &__field {
+      width: 247px;
+      height: 50px;
+      display: inline-flex;
+      border: 1px solid $gray-1;
+      background-color: $white;
+      padding-left: 18px;
+      padding-right: 18px;
+      &:focus {
+        border: 1px solid $gray-1;
+        outline: none;
+      }
+    }
+
+    &__submit {
+      width: 182px;
+      height: 50px;
+      background-color: $gray-1;
+      @include upperlink;
+      color: $gray;
+      font-size: $fz-base;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 18px;
+      margin-left: 18px;
+      cursor: default;
+      transition: $transition-base;
+      pointer-events: none;
+      user-select: none;
+      &:hover {
+        color: $gray;
+      }
+      &--active {
+        background-color: $black;
+        cursor: pointer;
+        color: $white;
+        pointer-events: auto;
+        user-select: auto;
+        &:hover {
+          background-color: $gold;
+          color: $white;
+        }
+      }
+    }
+
+}

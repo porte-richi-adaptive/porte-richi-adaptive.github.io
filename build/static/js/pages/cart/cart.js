@@ -52,7 +52,6 @@ function () {
             if (countFieldNumber > 1) {
               countField.innerText = --countFieldNumber;
             } else {
-              парр;
               counterMinusBtn.classList.add('disabled');
             }
           });
@@ -129,5 +128,16 @@ function () {
 // Set name of cart by Id
 
 
-var cart = new Cart('cart');
-console.dir(cart);
+var cart = new Cart('cart'); // --- Promo code ---
+
+var promoField = document.querySelector('.promo__field');
+var promoSubmit = document.querySelector('.promo__submit');
+promoField.addEventListener('keyup', function (e) {
+  e.preventDefault();
+
+  if (this.value.length <= 1) {
+    promoSubmit.classList.remove('promo__submit--active');
+  } else {
+    promoSubmit.classList.add('promo__submit--active');
+  }
+});

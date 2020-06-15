@@ -40,7 +40,7 @@ class Cart {
 
                     countField.innerText = --countFieldNumber;
 
-                } else {парр
+                } else {
                     counterMinusBtn.classList.add('disabled');
                 }
 
@@ -76,4 +76,18 @@ class Cart {
 // Init
 // Set name of cart by Id
 const cart = new Cart('cart');
-console.dir(cart);
+
+
+// --- Promo code ---
+const promoField = document.querySelector('.promo__field');
+const promoSubmit = document.querySelector('.promo__submit');
+
+promoField.addEventListener('keyup', function(e) {
+    e.preventDefault();
+    if( this.value.length <= 1 ) {
+        promoSubmit.classList.remove('promo__submit--active');
+    } else {
+        promoSubmit.classList.add('promo__submit--active');
+    }
+});
+
