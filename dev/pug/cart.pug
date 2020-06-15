@@ -73,7 +73,10 @@ block content
                     a(href="#").cart-checkout__submit оформить
                     include ./modules/terms
             // Promo
-            include ./modules/promo
+            .cart__promo
+                include ./modules/promo
+            .cart__form
+                include ./modules/form-data
 
 
 
@@ -89,5 +92,6 @@ block content
 
 
 block script
-    script(src="static/js/pages/cart/cart.js")
+    script(src="static/js/pages/cart/cart.js", defer)
+    script(src="static/js/components/form-data.js", defer)
 

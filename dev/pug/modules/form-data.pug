@@ -1,0 +1,25 @@
+form.form-data#formData
+    h2.form-data__title Мои данные
+    label.form-data__label
+        span.form-data__name Имя
+        .form-data__field
+            input(type='text', data-form-valid='name').form-data__input.js-form-validation
+            span.form-data__tip Дмитрий
+            .form-data__error.form-data__error--name
+    label.form-data__label
+        span.form-data__name Телефон
+        .form-data__field
+            input(type='text', data-form-valid='phone').form-data__input.js-form-validation
+            span.form-data__tip + 375 44 546 36 09
+            .form-data__error.form-data__error--phone
+    label.form-data__label
+        span.form-data__name Почта
+        .form-data__field
+            input(type='text', data-form-valid='mail').form-data__input.js-form-validation
+            span.form-data__tip example@gmail.com
+            .form-data__error.form-data__error--post Мы пришлём письмо с подтверждением заказа
+
+    label.form-data__label
+        span.form-data__name Комментарий
+        .form-data__field
+            textarea.form-data__textarea

@@ -177,8 +177,38 @@
             </div>
           </section>
           <!-- Promo-->
-          <div class="promo"><span class="promo__text base-fz-20"> Промокод</span>
-            <input class="base-fz-20 promo__field" type="text"><a class="promo__submit" href="#">применить</a>
+          <div class="cart__promo">
+            <div class="promo"><span class="promo__text base-fz-20"> Промокод</span>
+              <input class="base-fz-20 promo__field" type="text"><a class="promo__submit" href="#">применить</a>
+            </div>
+          </div>
+          <div class="cart__form">
+            <form class="form-data" id="formData">
+              <h2 class="form-data__title">Мои данные</h2>
+              <label class="form-data__label"><span class="form-data__name">Имя</span>
+                <div class="form-data__field">
+                  <input class="form-data__input js-form-validation" type="text" data-form-valid="name"><span class="form-data__tip">Дмитрий</span>
+                  <div class="form-data__error form-data__error--name"></div>
+                </div>
+              </label>
+              <label class="form-data__label"><span class="form-data__name">Телефон</span>
+                <div class="form-data__field">
+                  <input class="form-data__input js-form-validation" type="text" data-form-valid="phone"><span class="form-data__tip">+ 375 44 546 36 09</span>
+                  <div class="form-data__error form-data__error--phone"></div>
+                </div>
+              </label>
+              <label class="form-data__label"><span class="form-data__name">Почта</span>
+                <div class="form-data__field">
+                  <input class="form-data__input js-form-validation" type="text" data-form-valid="mail"><span class="form-data__tip">example@gmail.com</span>
+                  <div class="form-data__error form-data__error--post">Мы пришлём письмо с подтверждением заказа</div>
+                </div>
+              </label>
+              <label class="form-data__label"><span class="form-data__name">Комментарий</span>
+                <div class="form-data__field">
+                  <textarea class="form-data__textarea"></textarea>
+                </div>
+              </label>
+            </form>
           </div>
         </div>
       </div>
@@ -257,5 +287,6 @@
   <script src="static/js/slick.min.js"></script>
   <script src="static/js/libs.min.js"></script>
   <script src="static/js/main.js"></script>
-  <script src="static/js/pages/cart/cart.js"></script>
+  <script src="static/js/pages/cart/cart.js" defer></script>
+  <script src="static/js/components/form-data.js" defer></script>
 </html>

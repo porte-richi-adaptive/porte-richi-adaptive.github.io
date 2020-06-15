@@ -1,3 +1,19 @@
+@mixin font-size ($font-base) {
+
+  @if $font-base == '18' {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @else if $font-base == '20' {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+}
+
+
+
 @mixin links-hover ($link: $black, $visit: inherit, $hover:$gold, $active: $black, $line: none) {
     color: $link;
     text-decoration: $line;
