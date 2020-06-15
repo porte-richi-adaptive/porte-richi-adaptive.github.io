@@ -52,6 +52,7 @@ function () {
             if (countFieldNumber > 1) {
               countField.innerText = --countFieldNumber;
             } else {
+              парр;
               counterMinusBtn.classList.add('disabled');
             }
           });

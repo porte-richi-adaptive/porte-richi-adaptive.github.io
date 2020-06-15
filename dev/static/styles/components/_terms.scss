@@ -1,0 +1,27 @@
+.terms {
+  display: flex;
+
+  &__icon {
+    padding-right: 6px;
+  }
+
+  &__text {
+    font-size: $fz-base;
+    color: $gray-2;
+    line-height: 18px;
+    font-style: italic;
+  }
+  &__link {
+    font-size: $fz-base;
+    color: $gray-2;
+    line-height: 18px;
+    font-style: italic;
+    transition: $transition-base;
+    padding-left: 4px;
+    text-decoration: underline;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}

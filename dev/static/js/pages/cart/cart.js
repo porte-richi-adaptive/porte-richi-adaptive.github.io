@@ -40,7 +40,7 @@ class Cart {
 
                     countField.innerText = --countFieldNumber;
 
-                } else {
+                } else {парр
                     counterMinusBtn.classList.add('disabled');
                 }
 

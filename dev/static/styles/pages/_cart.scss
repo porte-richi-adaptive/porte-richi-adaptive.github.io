@@ -2,6 +2,7 @@
   $cart: &;
 
   width: 100%;
+  position: relative;
 
   &__title {
     width: 100%;
@@ -262,10 +263,70 @@
     // Sum
     &__sum {
       @include title-size('h3');
+    }
+  }
 
+  // Checkout
+  &-checkout {
+    position: absolute;
+    right: 0;
+    top: -9px;
+    max-width: 334px;
+
+    &__table {
+      padding: 27px 24px 27px 18px;
+      background: linear-gradient(114.12deg, #F8F8F8 13.54%, #EDEDED 86.46%);
     }
 
+    &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:first-child) {
+        margin-bottom: 9px;
+      }
+      &--red {
+        color: $red;
+      }
+    }
 
+    &__submit {
+      width: 100%;
+      height: 70px;
+      @include upperlink;
+      background-color: $gray-1;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: $transition-base;
+      margin-bottom: 18px;
+      &:hover {
+        color: $white;
+        background-color: $gray-2;
+      }
+    }
+
+    &__name {
+
+      &-counter {
+        display: flex;
+        align-items: center;
+      }
+
+      &--big {
+        margin-right: 29px;
+        margin-bottom: 18px;
+      }
+    }
+
+    &__number {
+      &--big {
+        margin-bottom: 18px;
+      }
+    }
 
   }
+
+
 }
