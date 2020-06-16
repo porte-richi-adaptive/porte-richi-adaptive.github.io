@@ -65,6 +65,7 @@
 
       &-sum {
         width: 156px;
+        text-align: right;
         @include media-breakpoint-down(lg) {
           width: auto;
         }
@@ -79,7 +80,7 @@
     &__row {
       position: relative;
       padding-left: 51px;
-      margin-bottom: 27px;
+      margin-bottom: 37px;
       display: flex;
       @include media-breakpoint-down(lg) {
         margin-bottom: 21px;
@@ -96,14 +97,6 @@
       cursor: pointer;
       @include media-breakpoint-down(lg) {
         width: 295px;
-      }
-
-      &:hover {
-
-        #{$cart-table__item}-delete, #{$cart-table__item}-favorite {
-          opacity: 1;
-          visibility: visible;
-        }
       }
 
       &.active-field {
@@ -188,9 +181,6 @@
         display: inline-flex;
         cursor: pointer;
         color: $gray-2;
-        transition: $transition-base;
-        opacity: 0;
-        visibility: hidden;
 
         &:hover {
           color: $gold;
@@ -342,6 +332,8 @@
 
     // Sum
     &__sum {
+      flex-grow: 1;
+      text-align: right;
       @include title-size('h3');
       @include media-breakpoint-down(lg) {
         width: auto;
@@ -362,7 +354,7 @@
     }
 
     &__table {
-      padding: 27px 24px 27px 18px;
+      padding: 36px 24px 27px 18px;
       background: linear-gradient(114.12deg, #F8F8F8 13.54%, #EDEDED 86.46%);
       @include media-breakpoint-down(lg) {
         padding-top: 16px;
@@ -396,7 +388,7 @@
       justify-content: center;
       align-items: center;
       transition: $transition-base;
-      margin-bottom: 18px;
+      margin-bottom: 21px;
       &:hover {
         color: $white;
         background-color: $gray-2;
