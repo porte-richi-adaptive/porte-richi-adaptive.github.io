@@ -10,6 +10,10 @@
     color: $gray-2;
     line-height: 18px;
     font-style: italic;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
   &__link {
     font-size: $fz-base;
@@ -19,6 +23,10 @@
     transition: $transition-base;
     padding-left: 4px;
     text-decoration: underline;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+      line-height: 18px;
+    }
 
     &:hover {
       color: $gold;

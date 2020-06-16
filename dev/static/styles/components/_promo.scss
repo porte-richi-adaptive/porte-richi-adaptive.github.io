@@ -4,6 +4,7 @@
 
     &__text {
       margin-right: 27px;
+      @include font-size("20");
     }
 
     &__field {
@@ -14,6 +15,7 @@
       background-color: $white;
       padding-left: 18px;
       padding-right: 18px;
+      @include font-size("20");
       &:focus {
         border: 1px solid $gray-1;
         outline: none;

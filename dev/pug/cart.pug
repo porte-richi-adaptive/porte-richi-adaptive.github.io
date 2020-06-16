@@ -24,11 +24,11 @@ block content
                             .cart-table__item
                                 .cart-table__item-img
                                     img(src='static/images/content/cart/cart-item-1.jpg', alt='')
-                                a(href="#").cart-table__item-title.base-fz-20 Межкомнатная дверь ЛН31
-                                .cart-table__item-descr.base-fz-18 Строганный шпон, Американский орех, тонированный, матовый
+                                a(href="#").cart-table__item-title Межкомнатная дверь ЛН31
+                                .cart-table__item-descr Строганный шпон, Американский орех, тонированный, матовый
                                 .cart-table__item-favorite В избранное
                                 .cart-table__item-delete Удалить
-                            .cart-table__cost.base-fz-20
+                            .cart-table__cost
                                 .cart-table__cost-old 722 руб.
                                 .cart-table__cost-actual 613 руб.
                             .cart-table__quantity
@@ -42,8 +42,8 @@ block content
                             .cart-table__item.active-field
                                 .cart-table__item-img
                                     img(src='static/images/content/cart/cart-item-2.jpg', alt='')
-                                a(href="#").cart-table__item-title.base-fz-20 Межкомнатная дверь АВ123-В2
-                                .cart-table__item-descr.base-fz-18 Строганный шпон, Американский орех, тонированный, матовый
+                                a(href="#").cart-table__item-title Межкомнатная дверь АВ123-В2
+                                .cart-table__item-descr Строганный шпон, Американский орех, тонированный, матовый, тонированный, матовый
                                 .cart-table__item-favorite В избранное
                                 .cart-table__item-delete Удалить
                             .cart-table__cost.base-fz-20
@@ -58,18 +58,18 @@ block content
                 .cart-checkout(data-margin-top='56')
                     .cart-checkout__table
                         .cart-checkout__row
-                            h2.cart-checkout__name.cart-checkout__name--big Итого
-                            h2.cart-checkout__number.cart-checkout__number--big 5 545 руб.
+                            .cart-checkout__name.cart-checkout__name--big Итого
+                            .cart-checkout__number.cart-checkout__number--big 5 545 руб.
                         .cart-checkout__row
-                            span.cart-checkout__name.cart-checkout__name-counter.base-fz-20  Товары,
-                                .cart-checkout__name-total.base-fz-20  7шт
-                            span.cart-checkout__number.base-fz-20  5 545 руб.
+                            span.cart-checkout__name.cart-checkout__name-counter Товары,
+                                .cart-checkout__name-total 7 шт
+                            span.cart-checkout__number  5 545 руб.
                         .cart-checkout__row.cart-checkout__row--red
-                            span.cart-checkout__name.base-fz-20  Скидка
-                            span.cart-checkout__number.base-fz-20 - 300 руб.
-                        .cart-checkout__row.cart-checkout__row--red
-                            span.cart-checkout__name.base-fz-20  Промокод
-                            span.cart-checkout__number.base-fz-20 - 23 руб.
+                            span.cart-checkout__name  Скидка
+                            span.cart-checkout__number - 300 руб.
+                        //.cart-checkout__row.cart-checkout__row--red
+                            span.cart-checkout__name  Промокод
+                            span.cart-checkout__number - 23 руб.
                     a(href="#").cart-checkout__submit оформить
                     include ./modules/terms
                 // Promo

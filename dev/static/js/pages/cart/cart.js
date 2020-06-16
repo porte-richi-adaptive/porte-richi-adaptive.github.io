@@ -92,8 +92,7 @@ promoField.addEventListener('keyup', function(e) {
 });
 
 // --- Sticky Offer Block ---
-var sticky = new Sticky('.cart-checkout')
-
+var sticky = new Sticky('.cart-checkout');
 
 
 
