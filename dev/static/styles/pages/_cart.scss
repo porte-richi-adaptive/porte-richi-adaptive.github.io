@@ -2,7 +2,7 @@
   $cart: &;
 
   position: relative;
-  margin-bottom: 9px;
+  margin-bottom: 180px;
 
   &__title {
     width: 100%;
@@ -341,9 +341,16 @@
     width: 950px;
   }
 
-  // Data-form
+  // Form Data
   &__form {
 
   }
+
+  // Steps
+  &__steps {
+    width: 100%;
+  }
+
+
 
 }
