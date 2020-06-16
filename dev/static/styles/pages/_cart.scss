@@ -1,7 +1,6 @@
 .cart {
   $cart: &;
 
-  width: 100%;
   position: relative;
   margin-bottom: 9px;
 
@@ -274,9 +273,9 @@
   // Checkout
   &-checkout {
     position: absolute;
-    right: 0;
     top: -9px;
-    max-width: 334px;
+    left: calc( 100% + 106px );
+    width: 334px;
 
     &__table {
       padding: 27px 24px 27px 18px;
@@ -339,7 +338,7 @@
   // Promo
   &__promo {
     margin-bottom: 99px;
-    width: 100%;
+    width: 950px;
   }
 
   // Data-form

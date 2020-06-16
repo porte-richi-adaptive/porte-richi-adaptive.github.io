@@ -140,4 +140,6 @@ promoField.addEventListener('keyup', function (e) {
   } else {
     promoSubmit.classList.add('promo__submit--active');
   }
-});
+}); // --- Sticky Offer Block ---
+
+var sticky = new Sticky('.cart-checkout');

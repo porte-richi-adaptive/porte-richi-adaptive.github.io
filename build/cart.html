@@ -106,7 +106,7 @@
             <div class="breadcrumbs__wrap"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link breadcrumbs__link--active" href="#">Входные двери</a></div>
           </div>
           <h1 class="cart__title">Мой заказ</h1>
-          <section class="cart" id="cart">
+          <section class="cart" id="cart" data-sticky-container>
             <div class="cart-table">
               <div class="cart-table__header">
                 <div class="cart-table__header-product">Товар</div>
@@ -155,7 +155,7 @@
                 </div>
               </div>
             </div>
-            <div class="cart-checkout">
+            <div class="cart-checkout" data-margin-top="56">
               <div class="cart-checkout__table">
                 <div class="cart-checkout__row">
                   <h2 class="cart-checkout__name cart-checkout__name--big">Итого</h2>
@@ -175,41 +175,41 @@
                 <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения</a></div>
               </div>
             </div>
-          </section>
-          <!-- Promo-->
-          <div class="cart__promo">
-            <div class="promo"><span class="promo__text base-fz-20"> Промокод</span>
-              <input class="base-fz-20 promo__field" type="text"><a class="promo__submit" href="#">применить</a>
+            <!-- Promo-->
+            <div class="cart__promo">
+              <div class="promo"><span class="promo__text base-fz-20"> Промокод</span>
+                <input class="base-fz-20 promo__field" type="text"><a class="promo__submit" href="#">применить</a>
+              </div>
             </div>
-          </div>
-          <div class="cart__form">
-            <form class="form-data" id="formData">
-              <h2 class="form-data__title">Мои данные</h2>
-              <label class="form-data__label"><span class="form-data__name">Имя</span>
-                <div class="form-data__field">
-                  <input class="form-data__input js-form-validation" type="text" data-form-valid="name"><span class="form-data__tip">Дмитрий</span>
-                  <div class="form-data__error form-data__error--name"></div>
-                </div>
-              </label>
-              <label class="form-data__label"><span class="form-data__name">Телефон</span>
-                <div class="form-data__field">
-                  <input class="form-data__input js-form-validation" type="text" data-form-valid="phone"><span class="form-data__tip">+ 375 44 546 36 09</span>
-                  <div class="form-data__error form-data__error--phone"></div>
-                </div>
-              </label>
-              <label class="form-data__label"><span class="form-data__name">Почта</span>
-                <div class="form-data__field">
-                  <input class="form-data__input js-form-validation" type="text" data-form-valid="mail"><span class="form-data__tip">example@gmail.com</span>
-                  <div class="form-data__error form-data__error--post">Мы пришлём письмо с подтверждением заказа</div>
-                </div>
-              </label>
-              <label class="form-data__label"><span class="form-data__name">Комментарий</span>
-                <div class="form-data__field">
-                  <textarea class="form-data__textarea"></textarea>
-                </div>
-              </label>
-            </form>
-          </div>
+            <div class="cart__form">
+              <form class="form-data" id="formData">
+                <h2 class="form-data__title">Мои данные</h2>
+                <label class="form-data__label"><span class="form-data__name">Имя</span>
+                  <div class="form-data__field">
+                    <input class="form-data__input js-form-validation" type="text" data-form-valid="name"><span class="form-data__tip">Дмитрий</span>
+                    <div class="form-data__error form-data__error--name"></div>
+                  </div>
+                </label>
+                <label class="form-data__label"><span class="form-data__name">Телефон</span>
+                  <div class="form-data__field">
+                    <input class="form-data__input js-form-validation" type="text" data-form-valid="phone"><span class="form-data__tip">+ 375 44 546 36 09</span>
+                    <div class="form-data__error form-data__error--phone"></div>
+                  </div>
+                </label>
+                <label class="form-data__label"><span class="form-data__name">Почта</span>
+                  <div class="form-data__field">
+                    <input class="form-data__input js-form-validation" type="text" data-form-valid="mail"><span class="form-data__tip">example@gmail.com</span>
+                    <div class="form-data__error form-data__error--post">Мы пришлём письмо с подтверждением заказа</div>
+                  </div>
+                </label>
+                <label class="form-data__label"><span class="form-data__name">Комментарий</span>
+                  <div class="form-data__field">
+                    <textarea class="form-data__textarea"></textarea>
+                  </div>
+                </label>
+              </form>
+            </div>
+          </section>
         </div>
       </div>
     </main>
@@ -287,6 +287,7 @@
   <script src="static/js/slick.min.js"></script>
   <script src="static/js/libs.min.js"></script>
   <script src="static/js/main.js"></script>
+  <script src="static/js/vendor/stickybits.js" defer></script>
   <script src="static/js/pages/cart/cart.js" defer></script>
   <script src="static/js/components/form-data.js" defer></script>
 </html>

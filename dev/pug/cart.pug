@@ -10,7 +10,7 @@ block content
             .breadcrumbs
                 include ./modules/breadcrumbs
             h1.cart__title Мой заказ
-            section.cart#cart
+            section.cart#cart(data-sticky-container)
                 .cart-table
                     .cart-table__header
                         .cart-table__header-product Товар
@@ -55,7 +55,7 @@ block content
                                 .cart-table__quantity-plus
                             .cart-table__sum 613руб.
 
-                .cart-checkout
+                .cart-checkout(data-margin-top='56')
                     .cart-checkout__table
                         .cart-checkout__row
                             h2.cart-checkout__name.cart-checkout__name--big Итого
@@ -72,11 +72,11 @@ block content
                             span.cart-checkout__number.base-fz-20 - 23 руб.
                     a(href="#").cart-checkout__submit оформить
                     include ./modules/terms
-            // Promo
-            .cart__promo
-                include ./modules/promo
-            .cart__form
-                include ./modules/form-data
+                // Promo
+                .cart__promo
+                    include ./modules/promo
+                .cart__form
+                    include ./modules/form-data
 
 
 
@@ -92,6 +92,7 @@ block content
 
 
 block script
+    script(src="static/js/vendor/stickybits.js", defer)
     script(src="static/js/pages/cart/cart.js", defer)
     script(src="static/js/components/form-data.js", defer)
 
