@@ -4,14 +4,21 @@
 
   $form-data: &;
 
+  @include media-breakpoint-down(lg) {
+    padding: 43px 0 32px 36px;
+  }
+
   &__title {
     margin-bottom: 27px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 36px;
+    }
   }
 
   &__label {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 18px;
+    margin-bottom: 27px;
     &:hover {
       cursor: pointer;
     }
@@ -21,6 +28,9 @@
     min-width: 158px;
     padding-top: 11px;
     @include font-size('20');
+    @include media-breakpoint-down(lg) {
+      min-width: 169px;
+    }
   }
 
   &__input {
@@ -80,6 +90,10 @@
       width: 309px;
       opacity: 1;
       visibility: visible;
+      @include media-breakpoint-down(lg) {
+        width: 190px;
+        margin-top: 4px;
+      }
     }
   }
 
@@ -107,6 +121,11 @@
       outline: none;
       border-color: $gray;
     }
+    @include media-breakpoint-down(lg) {
+      width: 482px;
+      height: 170px;
+    }
+
   }
 
 }

@@ -53,7 +53,7 @@ block content
                                 .cart-table__quantity-minus
                                 .cart-table__quantity-number 2
                                 .cart-table__quantity-plus
-                            .cart-table__sum 613руб.
+                            .cart-table__sum 613 руб.
 
                         // item
                         .cart-table__row
@@ -71,7 +71,7 @@ block content
                                 .cart-table__quantity-minus
                                 .cart-table__quantity-number 2
                                 .cart-table__quantity-plus
-                            .cart-table__sum 613руб.
+                            .cart-table__sum 613 руб.
 
 
                         // item
@@ -90,7 +90,7 @@ block content
                                 .cart-table__quantity-minus
                                 .cart-table__quantity-number 2
                                 .cart-table__quantity-plus
-                            .cart-table__sum 613руб.
+                            .cart-table__sum 613 руб.
 
                         // item
                         .cart-table__row
@@ -110,29 +110,30 @@ block content
                                 .cart-table__quantity-plus
                             .cart-table__sum 613руб.
 
-                .cart-checkout(data-margin-top='56')
-                    .cart-checkout__table
-                        .cart-checkout__row
-                            .cart-checkout__name.cart-checkout__name--big Итого
-                            .cart-checkout__number.cart-checkout__number--big 5 545 руб.
-                        .cart-checkout__row
-                            span.cart-checkout__name.cart-checkout__name-counter Товары,
-                                .cart-checkout__name-total 7 шт
-                            span.cart-checkout__number  5 545 руб.
-                        .cart-checkout__row.cart-checkout__row--red
-                            span.cart-checkout__name  Скидка
-                            span.cart-checkout__number - 300 руб.
-                        //.cart-checkout__row.cart-checkout__row--red
-                            span.cart-checkout__name  Промокод
-                            span.cart-checkout__number - 23 руб.
-                    a(href="#").cart-checkout__submit оформить
-                    include ./modules/terms
+                .cart-checkout(data-margin-top='56', data-sticky-for="1196")
+                    .cart-checkout__wrapper
+                        .cart-checkout__table
+                            .cart-checkout__row
+                                .cart-checkout__name.cart-checkout__name--big Итого
+                                .cart-checkout__number.cart-checkout__number--big 5 545 руб.
+                            .cart-checkout__row
+                                span.cart-checkout__name.cart-checkout__name-counter Товары,
+                                    .cart-checkout__name-total 7 шт
+                                span.cart-checkout__number  5 545 руб.
+                            .cart-checkout__row.cart-checkout__row--red
+                                span.cart-checkout__name  Скидка
+                                span.cart-checkout__number - 300 руб.
+                            //.cart-checkout__row.cart-checkout__row--red
+                                span.cart-checkout__name  Промокод
+                                span.cart-checkout__number - 23 руб.
+                        a(href="#").cart-checkout__submit оформить
+                        include ./modules/terms
                 // Promo
                 .cart__promo
                     include ./modules/promo
 
                 // Additional Discount
-                .cart__promo
+                .cart__additional-discount
                     include ./modules/additional-discount
 
                 // Form Data

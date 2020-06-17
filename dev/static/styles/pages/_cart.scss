@@ -4,6 +4,11 @@
   position: relative;
   margin-bottom: 180px;
 
+  @include media-breakpoint-down(lg) {
+    width: 728px;
+    margin-bottom: 135px;
+  }
+
   &__title {
     width: 100%;
     margin-bottom: 49px;
@@ -18,10 +23,11 @@
     $cart-table: &;
     width: 950px;
     margin-bottom: 27px;
-    @include media-breakpoint-down(lg) {
-      width: 728px;
 
+    @include media-breakpoint-down(lg) {
+      width: 100%;
     }
+
 
     &__header {
 
@@ -68,6 +74,7 @@
         text-align: right;
         @include media-breakpoint-down(lg) {
           width: auto;
+          flex-grow: 1;
         }
       }
     }
@@ -83,7 +90,7 @@
       margin-bottom: 37px;
       display: flex;
       @include media-breakpoint-down(lg) {
-        margin-bottom: 21px;
+        margin-bottom: 35px;
       }
       &:last-child {
 
@@ -170,7 +177,7 @@
         margin-bottom: 9px;
         @include font-size('18');
         @include media-breakpoint-down(lg) {
-          margin-bottom: 14px;
+          margin-bottom: 9px;
         }
       }
 
@@ -244,6 +251,7 @@
 
       @include media-breakpoint-down(lg) {
         width: 155px;
+        padding-left: 20px;
       }
 
       &-number {
@@ -256,7 +264,7 @@
         @include media-breakpoint-down(lg) {
           min-width: 38px;
           font-size: 13px;
-          line-height: 23px;
+          line-height: 27px;
         }
         &:hover {
           color: $black;
@@ -334,7 +342,7 @@
     &__sum {
       flex-grow: 1;
       text-align: right;
-      @include title-size('h3');
+      @include title('h3');
       @include media-breakpoint-down(lg) {
         width: auto;
       }
@@ -346,11 +354,20 @@
     position: absolute;
     top: -9px;
     left: calc( 100% + 106px );
-    width: 334px;
     @include media-breakpoint-down(lg) {
-      right: 0;
-      left: auto;
-      width: 254px;
+      right: -101px;
+    }
+
+    &__wrapper {
+      width: 334px;
+      &--desktop {
+        position: relative;
+        left: -18px;
+        top: 20px;
+      }
+      @include media-breakpoint-down(lg) {
+        width: 254px;
+      }
     }
 
     &__table {
@@ -360,6 +377,7 @@
         padding-top: 16px;
         padding-bottom: 18px;
         padding-right: 18px;
+        width: 254px;
       }
     }
 
@@ -435,6 +453,13 @@
   &__promo {
     margin-bottom: 54px;
     width: 950px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__promo + &__additional-discount:empty {
+    height: 45px;
   }
 
   // Form Data
@@ -445,8 +470,17 @@
   // Steps
   &__steps {
     width: 100%;
+    margin-bottom: 135px;
   }
 
+
+  // additional-discount
+  &__additional-discount {
+    margin-bottom: 99px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 63px;
+    }
+  }
 
 
 }

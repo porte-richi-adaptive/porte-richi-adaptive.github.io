@@ -3,6 +3,9 @@
 
   &__title {
     margin-bottom: 31px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 36px;
+    }
   }
 
   &__list {
@@ -12,6 +15,9 @@
   &__item {
     &:not(:last-child) {
       margin-right: 73px;
+      @include media-breakpoint-down(lg) {
+        margin-right: 61px;
+      }
     }
   }
 
@@ -27,6 +33,9 @@
       width: 100%;
       height: 1px;
       background-color: $black;
+      @include media-breakpoint-down(lg) {
+        bottom: 5px;
+      }
     }
 
   }
@@ -34,11 +43,19 @@
   &__img {
     margin-bottom: 18px;
     display: block;
+    @include media-breakpoint-down(lg) {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 15px;
+    }
   }
 
   &__descr {
     @include font-size('20');
     max-width: 280px;
+    @include media-breakpoint-down(lg) {
+      max-width: 212px;
+    }
   }
 
 }

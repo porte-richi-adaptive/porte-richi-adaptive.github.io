@@ -92,7 +92,22 @@ promoField.addEventListener('keyup', function(e) {
 });
 
 // --- Sticky Offer Block ---
-var sticky = new Sticky('.cart-checkout');
+const sticky = new Sticky('.cart-checkout');
+
+let isDesktop = false;
+let isNote = false;
+
+
+// Init
+const viewWidth = window.innerWidth;
+const checkoutWrapper = document.querySelector('.cart-checkout__wrapper');
+
+if( viewWidth > 1479.98 ) {
+    checkoutWrapper.classList.add('cart-checkout__wrapper--desktop');
+    console.log(checkoutWrapper);
+}
+
+
 
 
 

@@ -2,4 +2,41 @@
   background-image: linear-gradient(153.36deg, #F8F8F8 13.54%, #EDEDED 86.46%);
   width: 100%;
   height: 177px;
+  padding-left: 45px;
+  padding-top: 15px;
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    padding-left: 36px;
+  }
+
+  &:after {
+    content: '%';
+    font-size: 200px;
+    color: $gray;
+    position: absolute;
+    right: 45px;
+    top: calc(50% - 115px);
+    font-family: $minion-display;
+    @include media-breakpoint-down(lg) {
+      font-size: 180px;
+      line-height: 180px;
+      right: 27px;
+      top: calc(50% - 90px);
+    }
+  }
+
+  &__title {
+    max-width: 565px;
+    color: $black;
+    margin-bottom: 29px;
+    @include media-breakpoint-down(lg) {
+      max-width: 492px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__view {
+    @include upperlink-underline;
+  }
+
 }
