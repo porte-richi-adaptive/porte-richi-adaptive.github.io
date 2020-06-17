@@ -1,5 +1,4 @@
 .steps {
-  margin-bottom: 180px;
 
   &__title {
     margin-bottom: 31px;
@@ -33,9 +32,6 @@
       width: 100%;
       height: 1px;
       background-color: $black;
-      @include media-breakpoint-down(lg) {
-        bottom: 5px;
-      }
     }
 
   }

@@ -94,18 +94,23 @@ promoField.addEventListener('keyup', function(e) {
 // --- Sticky Offer Block ---
 const sticky = new Sticky('.cart-checkout');
 
-let isDesktop = false;
-let isNote = false;
-
-
-// Init
-const viewWidth = window.innerWidth;
+// Init Sticky Class
 const checkoutWrapper = document.querySelector('.cart-checkout__wrapper');
+const littleDesktopModeClass = 'cart-checkout__wrapper--little';
 
-if( viewWidth > 1479.98 ) {
-    checkoutWrapper.classList.add('cart-checkout__wrapper--desktop');
-    console.log(checkoutWrapper);
-}
+// Add Class on resize
+window.addEventListener('resize', function(event) {
+
+    let viewWidth = window.innerWidth;
+
+    if( viewWidth > 1196  && viewWidth < 1480) {
+        checkoutWrapper.classList.add(littleDesktopModeClass);
+    } else {
+        checkoutWrapper.classList.remove(littleDesktopModeClass);
+    }
+});
+
+
 
 
 

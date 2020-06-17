@@ -142,14 +142,17 @@ promoField.addEventListener('keyup', function (e) {
   }
 }); // --- Sticky Offer Block ---
 
-var sticky = new Sticky('.cart-checkout');
-var isDesktop = false;
-var isNote = false; // Init
+var sticky = new Sticky('.cart-checkout'); // Init Sticky Class
 
-var viewWidth = window.innerWidth;
 var checkoutWrapper = document.querySelector('.cart-checkout__wrapper');
+var littleDesktopModeClass = 'cart-checkout__wrapper--little'; // Add Class on resize
 
-if (viewWidth > 1479.98) {
-  checkoutWrapper.classList.add('cart-checkout__wrapper--desktop');
-  console.log(checkoutWrapper);
-}
+window.addEventListener('resize', function (event) {
+  var viewWidth = window.innerWidth;
+
+  if (viewWidth > 1196 && viewWidth < 1480) {
+    checkoutWrapper.classList.add(littleDesktopModeClass);
+  } else {
+    checkoutWrapper.classList.remove(littleDesktopModeClass);
+  }
+});
