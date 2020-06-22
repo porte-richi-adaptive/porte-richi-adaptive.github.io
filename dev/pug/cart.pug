@@ -25,8 +25,8 @@ block content
                                 .cart-table__item-img
                                     img(src='static/images/content/cart/cart-item-1.jpg', alt='')
                                 a(href="#").cart-table__item-title Межкомнатная дверь ЛН31
-                                .cart-table__item-descr Строганный шпон, Американский орех, тонированный, матовый
-                                .cart-table__item__controll
+                                .cart-table__item-descr Строганный шпон, Американский орех, тонированный
+                                .cart-table__item-controll
                                     .cart-table__item-favorite В избранное
                                     .cart-table__item-delete Удалить
                             .cart-table__cost
@@ -44,11 +44,11 @@ block content
                                 .cart-table__item-img
                                     img(src='static/images/content/cart/cart-item-2.jpg', alt='')
                                 a(href="#").cart-table__item-title Межкомнатная дверь АВ123-В2
-                                .cart-table__item-descr Строганный шпон, Американский орех, тонированный, матовый
-                                .cart-table__item__controll
+                                .cart-table__item-descr Строганный шпон, тонированный, матовый
+                                .cart-table__item-controll
                                     .cart-table__item-favorite В избранное
                                     .cart-table__item-delete Удалить
-                            .cart-table__cost.base-fz-20
+                            .cart-table__cost
                                 .cart-table__cost-old
                                 .cart-table__cost-actual 613 руб.
                             .cart-table__quantity
@@ -64,10 +64,10 @@ block content
                                     img(src='static/images/content/cart/cart-item-3.jpg', alt='')
                                 a(href="#").cart-table__item-title Входная дверь Старый Лондон
                                 .cart-table__item-descr Снаружи: SteelTex Protect, «Дуб золотистый» с серебрянной патиной. Внутри: SteelTex Protect, «Дуб золотистый» с серебрянной патиной.
-                                .cart-table__item__controll
+                                .cart-table__item-controll
                                     .cart-table__item-favorite В избранное
                                     .cart-table__item-delete Удалить
-                            .cart-table__cost.base-fz-20
+                            .cart-table__cost
                                 .cart-table__cost-old
                                 .cart-table__cost-actual 613 руб.
                             .cart-table__quantity
@@ -77,7 +77,7 @@ block content
                             .cart-table__sum 613 руб.
 
 
-                .cart-checkout(data-margin-top='56', data-sticky-for="1196")
+                .cart-checkout(data-margin-top='56', data-sticky-for="856")
                     .cart-checkout__wrapper
                         .cart-checkout__table
                             .cart-checkout__row
@@ -95,20 +95,42 @@ block content
                                 span.cart-checkout__number - 23 руб.
                         a(href="#").cart-checkout__submit оформить
                         include ./modules/terms
+                // Mobile Checkout
+    .cart__promo.cart__promo--mobile
+        .container
+            include ./modules/promo
+    .cart-checkout.cart-checkout--mobile(data-margin-top='56', data-sticky-for="856")
+        .cart-checkout__wrapper
+            .cart-checkout__table
+                .cart-checkout__row
+                    .cart-checkout__name.cart-checkout__name--big Итого
+                    .cart-checkout__number.cart-checkout__number--big 5 545 руб.
+                .cart-checkout__row
+                    span.cart-checkout__name.cart-checkout__name-counter Товары,
+                        .cart-checkout__name-total 7 шт
+                    span.cart-checkout__number  5 545 руб.
+                .cart-checkout__row.cart-checkout__row--red
+                    span.cart-checkout__name  Скидка
+                    span.cart-checkout__number - 300 руб.
+                //.cart-checkout__row.cart-checkout__row--red
+                    span.cart-checkout__name  Промокод
+                    span.cart-checkout__number - 23 руб.
+            a(href="#").cart-checkout__submit оформить
+            include ./modules/terms
                 // Promo
-                .cart__promo
+                //.cart__promo
                     include ./modules/promo
 
                 // Additional Discount
-                .cart__additional-discount
+                //.cart__additional-discount
                     include ./modules/additional-discount
 
                 // Form Data
-                .cart__form
+                //.cart__form
                     include ./modules/form-data
 
             // Steps
-            .cart__steps
+            //.cart__steps
                 include ./modules/steps
 
 

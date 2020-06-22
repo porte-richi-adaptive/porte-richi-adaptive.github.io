@@ -1,5 +1,11 @@
 .terms {
   display: flex;
+  @include media-breakpoint-down(sm) {
+    display: none;
+    &--mobile {
+      display: flex;
+    }
+  }
 
   &__icon {
     padding-right: 6px;
@@ -14,6 +20,12 @@
       font-size: 14px;
       line-height: 18px;
     }
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 18px;
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__link {
     font-size: $fz-base;
@@ -26,6 +38,11 @@
     @include media-breakpoint-down(lg) {
       font-size: 14px;
       line-height: 18px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 18px;
+      padding-left: 0;
     }
 
     &:hover {

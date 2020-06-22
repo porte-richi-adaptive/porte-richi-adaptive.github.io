@@ -1,10 +1,17 @@
 .promo {
     display: flex;
     align-items: center;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
 
     &__text {
       margin-right: 27px;
       @include font-size("20");
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 9px;
+      }
     }
 
     &__field {
@@ -19,6 +26,14 @@
       &:focus {
         border: 1px solid $gray-1;
         outline: none;
+      }
+      @include media-breakpoint-down(md) {
+        width: 275px;
+        height: 45px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin-bottom: 23px;
       }
     }
 
@@ -51,6 +66,14 @@
           background-color: $gold;
           color: $white;
         }
+      }
+      @include media-breakpoint-down(md) {
+        width: 178px;
+        height: 45px;
+        font-size: 13px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
       }
     }
 

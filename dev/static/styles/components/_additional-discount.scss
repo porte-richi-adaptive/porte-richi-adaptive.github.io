@@ -8,6 +8,11 @@
   @include media-breakpoint-down(lg) {
     padding-left: 36px;
   }
+  @include media-breakpoint-down(md) {
+    padding-left: 19px;
+    padding-top: 24px;
+    height: 186px;
+  }
 
   &:after {
     content: '%';
@@ -23,6 +28,12 @@
       right: 27px;
       top: calc(50% - 90px);
     }
+    @include media-breakpoint-down(md) {
+      font-size: 110px;
+      line-height: 110px;
+      right: 12px;
+      top: calc(50% - 25px);
+    }
   }
 
   &__title {
@@ -33,10 +44,19 @@
       max-width: 492px;
       margin-bottom: 42px;
     }
+    @include media-breakpoint-down(md) {
+      max-width: 343px;
+      margin-bottom: 31px;
+    }
   }
 
   &__view {
     @include upperlink-underline;
+    &:before {
+      @include media-breakpoint-down(md) {
+        bottom: -9px;
+      }
+    }
   }
 
 }

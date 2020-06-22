@@ -8,10 +8,17 @@
     padding: 43px 0 32px 36px;
   }
 
+  @include media-breakpoint-down(md) {
+    padding: 27px 0 32px 27px;
+  }
+
   &__title {
     margin-bottom: 27px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 36px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
     }
   }
 
@@ -22,6 +29,9 @@
     &:hover {
       cursor: pointer;
     }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 6px;
+    }
   }
 
   &__name {
@@ -30,6 +40,10 @@
     @include font-size('20');
     @include media-breakpoint-down(lg) {
       min-width: 169px;
+    }
+    @include media-breakpoint-down(md) {
+      min-width: 100%;
+      margin-bottom: 9px;
     }
   }
 
@@ -49,6 +63,10 @@
     &:hover {
       border-color: $gold;
       cursor: pointer;
+    }
+    @include media-breakpoint-down(md) {
+      width: 249px;
+      height: 45px;
     }
   }
 
@@ -94,6 +112,9 @@
         width: 190px;
         margin-top: 4px;
       }
+      @include media-breakpoint-down(md) {
+        width: 170px;
+      }
     }
   }
 
@@ -124,6 +145,10 @@
     @include media-breakpoint-down(lg) {
       width: 482px;
       height: 170px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 418px;
+      height: 156px;
     }
 
   }

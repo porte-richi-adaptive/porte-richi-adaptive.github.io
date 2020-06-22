@@ -150,9 +150,7 @@ var littleDesktopModeClass = 'cart-checkout__wrapper--little'; // Add Class on r
 window.addEventListener('resize', function (event) {
   var viewWidth = window.innerWidth;
 
-  if (viewWidth > 1196 && viewWidth < 1480) {
-    checkoutWrapper.classList.add(littleDesktopModeClass);
-  } else {
-    checkoutWrapper.classList.remove(littleDesktopModeClass);
+  if (viewWidth > 856 && viewWidth < 1480) {
+    sticky.update();
   }
 });
