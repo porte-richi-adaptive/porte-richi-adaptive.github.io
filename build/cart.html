@@ -216,6 +216,13 @@
           </div>
         </div>
       </div>
+      <div class="cart__additional-discount">
+        <div class="container">
+          <div class="additional-discount">
+            <h3 class="additional-discount__title">Вы&nbsp;можете получить дополнительную социальную или комплексную скидку от&nbsp;3&nbsp;до&nbsp;20%</h3><a class="additional-discount__view" href="#">Политика скидок</a>
+          </div>
+        </div>
+      </div>
       <div class="cart-checkout cart-checkout--mobile" data-margin-top="56" data-sticky-for="856">
         <div class="cart-checkout__wrapper">
           <div class="cart-checkout__table">
@@ -239,40 +246,71 @@
             </div>
             <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения
                 <!-- Promo-->
-                <!--.cart__promo
-                include ./modules/promo
-                
-                -->
+                <div class="cart__promo">
+                  <div class="promo"><span class="promo__text"> Промокод</span>
+                    <input class="promo__field" type="text"><a class="promo__submit" href="#">применить</a>
+                  </div>
+                </div>
                 <!-- Additional Discount-->
-                <!--.cart__additional-discount
-                include ./modules/additional-discount
-                
-                -->
+                <div class="cart__additional-discount">
+                  <div class="additional-discount">
+                    <h3 class="additional-discount__title">Вы&nbsp;можете получить дополнительную социальную или комплексную скидку от&nbsp;3&nbsp;до&nbsp;20%</h3><a class="additional-discount__view" href="#">Политика скидок</a>
+                  </div>
+                </div>
                 <!-- Form Data-->
-                <!--.cart__form
-                include ./modules/form-data
-                
-                --></a></div>
+                <div class="cart__form">
+                  <form class="form-data" id="formData">
+                    <h2 class="form-data__title">Мои данные</h2>
+                    <label class="form-data__label"><span class="form-data__name">Имя</span>
+                      <div class="form-data__field">
+                        <input class="form-data__input js-form-validation" type="text" data-form-valid="name"><span class="form-data__tip">Дмитрий</span>
+                        <div class="form-data__error form-data__error--name"></div>
+                      </div>
+                    </label>
+                    <label class="form-data__label"><span class="form-data__name">Телефон</span>
+                      <div class="form-data__field">
+                        <input class="form-data__input js-form-validation" type="text" data-form-valid="phone"><span class="form-data__tip">+ 375 44 546 36 09</span>
+                        <div class="form-data__error form-data__error--phone"></div>
+                      </div>
+                    </label>
+                    <label class="form-data__label"><span class="form-data__name">Почта</span>
+                      <div class="form-data__field">
+                        <input class="form-data__input js-form-validation" type="text" data-form-valid="mail"><span class="form-data__tip">example@gmail.com</span>
+                        <div class="form-data__error form-data__error--post">Мы&nbsp;пришлём письмо с&nbsp;подтверждением заказа</div>
+                      </div>
+                    </label>
+                    <label class="form-data__label"><span class="form-data__name">Комментарий</span>
+                      <div class="form-data__field">
+                        <textarea class="form-data__textarea"></textarea>
+                      </div>
+                    </label>
+                  </form>
+                </div></a></div>
           </div>
           <!-- Steps-->
-          <!--.cart__steps
-          include ./modules/steps
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          -->
+          <div class="cart__steps">
+            <div class="steps">
+              <h2 class="steps__title">4 шага после оформления заказа</h2>
+              <div class="steps__list">
+                <div class="steps__item"><img class="steps__img" src="static/images/icons/step-1.svg" alt="шаги">
+                  <h3 class="steps__subtitle">Бесплатный замер</h3>
+                  <p class="steps__descr">Специалист измерит высоту и&nbsp;ширину проёма, определит его особенности и&nbsp;поможет выбрать правильную сторону открывания двери.</p>
+                </div>
+                <div class="steps__item"><img class="steps__img" src="static/images/icons/step-2.svg" alt="шаги">
+                  <h3 class="steps__subtitle">Оплата</h3>
+                  <p class="steps__descr">При заключении договора понадобится предоплата&nbsp;&mdash; от&nbsp;30% от&nbsp;стоимости двери. Остаток вносится до&nbsp;доставки и&nbsp;установки.</p>
+                </div>
+                <div class="steps__item"><img class="steps__img" src="static/images/icons/step-3.svg" alt="шаги">
+                  <h3 class="steps__subtitle">Доставка и установка</h3>
+                  <p class="steps__descr">Когда двери будут готовы, доставим их&nbsp;в&nbsp;Минск или за&nbsp;МКАД и&nbsp;установим. Правильный монтаж продлит срок службы двери.</p>
+                </div>
+                <div class="steps__item"><img class="steps__img" src="static/images/icons/step-4.svg" alt="шаги">
+                  <h3 class="steps__subtitle">Гарантия</h3>
+                  <p class="steps__descr">Действует 2&nbsp;года на&nbsp;дверь с&nbsp;повреждениями из-за процесса производства, фурнитуру и&nbsp;монтаж наших мастеров.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

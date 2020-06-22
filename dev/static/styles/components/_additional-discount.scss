@@ -13,6 +13,11 @@
     padding-top: 24px;
     height: 186px;
   }
+  @include media-breakpoint-down(sm) {
+    padding-top: 27px;
+    height: auto;
+    padding-bottom: 47px;
+  }
 
   &:after {
     content: '%';
@@ -34,6 +39,9 @@
       right: 12px;
       top: calc(50% - 25px);
     }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__title {
@@ -52,6 +60,9 @@
 
   &__view {
     @include upperlink-underline;
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+    }
     &:before {
       @include media-breakpoint-down(md) {
         bottom: -9px;

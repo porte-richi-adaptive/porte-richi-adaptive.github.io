@@ -99,6 +99,9 @@ block content
     .cart__promo.cart__promo--mobile
         .container
             include ./modules/promo
+    .cart__additional-discount
+        .container
+            include ./modules/additional-discount
     .cart-checkout.cart-checkout--mobile(data-margin-top='56', data-sticky-for="856")
         .cart-checkout__wrapper
             .cart-checkout__table
@@ -118,19 +121,19 @@ block content
             a(href="#").cart-checkout__submit оформить
             include ./modules/terms
                 // Promo
-                //.cart__promo
+                .cart__promo
                     include ./modules/promo
 
                 // Additional Discount
-                //.cart__additional-discount
+                .cart__additional-discount
                     include ./modules/additional-discount
 
                 // Form Data
-                //.cart__form
+                .cart__form
                     include ./modules/form-data
 
             // Steps
-            //.cart__steps
+            .cart__steps
                 include ./modules/steps
 
 
