@@ -6,9 +6,21 @@
       display: flex;
     }
   }
+  @include xs {
+    &--mobile {
+      .terms__text {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+  }
+
 
   &__icon {
     padding-right: 6px;
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
+    }
   }
 
   &__text {
@@ -25,6 +37,15 @@
       line-height: 18px;
       display: flex;
       flex-direction: column;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      flex-direction: row;
+    }
+    span {
+      @include media-breakpoint-down(sm) {
+        width: 115px;
+      }
     }
   }
   &__link {
@@ -43,6 +64,10 @@
       font-size: 16px;
       line-height: 18px;
       padding-left: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      width: 189px;
     }
 
     &:hover {

@@ -1,8 +1,32 @@
 .form-data {
   background-image: linear-gradient(116.01deg, #F8F8F8 13.54%, #EDEDED 86.46%);
   padding: 45px 176px 54px 45px;
+  @include media-breakpoint-down(sm) {
+    position: relative;
+  }
 
+  // Main context
   $form-data: &;
+
+
+  .terms {
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    @include xs {
+      bottom: -119px;
+    }
+  }
+  .cart-checkout__submit {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      position: absolute;
+      bottom: -70px;
+      left: 0;
+      margin-bottom: 0;
+    }
+  }
 
   @include media-breakpoint-down(lg) {
     padding: 43px 0 32px 36px;
@@ -10,6 +34,10 @@
 
   @include media-breakpoint-down(md) {
     padding: 27px 0 32px 27px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 27px 18px 32px;
   }
 
   &__title {
@@ -68,10 +96,16 @@
       width: 249px;
       height: 45px;
     }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
   }
 
   &__field {
     position: relative;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
     
     &--error {
 
@@ -115,6 +149,14 @@
       @include media-breakpoint-down(md) {
         width: 170px;
       }
+      @include media-breakpoint-down(sm) {
+        bottom: 0;
+        left: 0;
+        margin-top: 11px;
+        position: static;
+        margin-left: 0;
+        width: 200px;
+      }
     }
   }
 
@@ -148,6 +190,10 @@
     }
     @include media-breakpoint-down(md) {
       width: 418px;
+      height: 156px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
       height: 156px;
     }
 

@@ -465,6 +465,10 @@
       display: none;
       &--mobile {
         display: block;
+        margin-bottom: 54px;
+      }
+      .terms {
+        display: none;
       }
     }
 
@@ -539,6 +543,9 @@
       }
       @include media-breakpoint-down(sm) {
         display: none;
+        &--mobile {
+          display: flex;
+        }
       }
     }
 
@@ -617,18 +624,32 @@
 
   // Form Data
   &__form {
-
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 161px;
+    }
   }
 
   // Steps
   &__steps {
     width: 100%;
     margin-bottom: 180px;
+    &--mobile {
+      display: none;
+    }
     @include media-breakpoint-down(lg) {
       margin-bottom: 135px;
     }
     @include media-breakpoint-down(md) {
       margin-bottom: 75px;
+    }
+    @include media-breakpoint-down(sm) {
+      &--mobile-none {
+        display: none;
+      }
+      &--mobile {
+        display: block;
+        margin-bottom: 64px;
+      }
     }
   }
 
@@ -638,6 +659,19 @@
     margin-bottom: 99px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 63px;
+    }
+  }
+
+  // Empty Cart
+  &-cart {
+    padding-top: 51px;
+    padding-bottom: 200px;
+    &__text {
+      @include title('h2');
+    }
+
+    &__link {
+      @include upperlink-underline();
     }
   }
 

@@ -1,0 +1,28 @@
+extends template/main
+
+block variables
+    - var title = 'Главная страница';
+    - var headerGrayBackground = true;
+
+block content
+    .container
+        .row
+            .breadcrumbs
+                include ./modules/breadcrumbs
+            h1.cart__title Мой заказ
+            .cart-empty
+                p.cart-empty__text Вы ничего не выбрали.
+                p.cart-empty__text
+                    | Посмотрите каталог
+                    a(href="#").cart-empty__link входных
+                    | или
+                    a(href="#").cart-empty__link межкомнатных
+                    | дверей и добавьте товары к заказу.
+
+
+
+
+block script
+    script(src="static/js/vendor/stickybits.js", defer)
+    script(src="static/js/pages/cart/cart.js", defer)
+    script(src="static/js/components/form-data.js", defer)

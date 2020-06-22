@@ -26,17 +26,27 @@
       @include media-breakpoint-down(md) {
         margin-right: 0;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
     }
     @include media-breakpoint-down(md) {
       width: 50%;
 
       &:first-child, &:nth-child(2) {
         margin-bottom: 27px;
+
       }
 
       &:nth-child(2n) {
         padding-left: 9px;
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
+        }
       }
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
     }
   }
 
@@ -81,6 +91,9 @@
     @include media-breakpoint-down(md) {
       max-width: 100%;
       padding-right: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
     }
   }
 

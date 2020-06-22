@@ -9,9 +9,9 @@ body {
 }
 
 main {
-  padding-top: 108px;
+  margin-top: 108px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   @include media-breakpoint-down(md) {
     padding-top: 32px;
   }
