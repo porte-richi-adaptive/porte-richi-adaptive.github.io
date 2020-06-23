@@ -181,6 +181,28 @@
               </div>
             </div>
             <div class="cart__sections">
+              <div class="cart-checkout" data-margin-top="56" data-sticky-for="856">
+                <div class="cart-checkout__wrapper">
+                  <div class="cart-checkout__table">
+                    <div class="cart-checkout__row">
+                      <div class="cart-checkout__name cart-checkout__name--big">Итого</div>
+                      <div class="cart-checkout__number cart-checkout__number--big">5 545 руб.</div>
+                    </div>
+                    <div class="cart-checkout__row"><span class="cart-checkout__name cart-checkout__name-counter">Товары,
+                        <div class="cart-checkout__name-total">7 шт</div></span><span class="cart-checkout__number"> 5 545 руб.</span></div>
+                    <div class="cart-checkout__row cart-checkout__row--red"><span class="cart-checkout__name"> Скидка</span><span class="cart-checkout__number">- 300 руб.</span></div>
+                    <div class="cart-checkout__row cart-checkout__row--red"><span class="cart-checkout__name"> Промокод</span><span class="cart-checkout__number">- 23 руб.</span></div>
+                  </div><a class="cart-checkout__submit cart-checkout__submit--disabled" href="#">оформить</a>
+                  <div class="terms terms--mobile">
+                    <div class="terms__icon"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 14L4.83564 14.7474L5.56914 15.3994L6.2348 14.6783L5.5 14ZM0.335636 10.7474L4.83564 14.7474L6.16436 13.2526L1.66436 9.25259L0.335636 10.7474ZM6.2348 14.6783L18.2348 1.67828L16.7652 0.32172L4.7652 13.3217L6.2348 14.6783Z" fill="#CBA576"/>
+</svg>
+
+                    </div>
+                    <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения</a></div>
+                  </div>
+                </div>
+              </div>
               <div class="cart__promo">
                 <div class="promo"><span class="promo__text"> Промокод</span>
                   <input class="promo__field" type="text"><a class="promo__submit" href="#">применить</a>
@@ -196,13 +218,13 @@
                   <h2 class="form-data__title">Мои данные</h2>
                   <label class="form-data__label"><span class="form-data__name">Имя</span>
                     <div class="form-data__field">
-                      <input class="form-data__input js-form-validation" type="text" data-form-valid="name"><span class="form-data__tip">Дмитрий</span>
+                      <input class="form-data__input js-form-validation" type="text" data-form-valid="name" data-require-field="false"><span class="form-data__tip">Дмитрий</span>
                       <div class="form-data__error form-data__error--name"></div>
                     </div>
                   </label>
                   <label class="form-data__label"><span class="form-data__name">Телефон</span>
                     <div class="form-data__field">
-                      <input class="form-data__input js-form-validation" type="text" data-form-valid="phone"><span class="form-data__tip">+ 375 44 546 36 09</span>
+                      <input class="form-data__input js-form-validation" type="text" data-form-valid="phone" data-require-field="false"><span class="form-data__tip">+ 375 44 546 36 09</span>
                       <div class="form-data__error form-data__error--phone"></div>
                     </div>
                   </label>
@@ -216,7 +238,7 @@
                     <div class="form-data__field">
                       <textarea class="form-data__textarea"></textarea>
                     </div>
-                  </label><a class="cart-checkout__submit cart-checkout__submit--mobile" href="#">оформить</a>
+                  </label><a class="cart-checkout__submit cart-checkout__submit--disabled cart-checkout__submit--mobile" href="#">оформить</a>
                   <div class="terms terms--mobile">
                     <div class="terms__icon"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.5 14L4.83564 14.7474L5.56914 15.3994L6.2348 14.6783L5.5 14ZM0.335636 10.7474L4.83564 14.7474L6.16436 13.2526L1.66436 9.25259L0.335636 10.7474ZM6.2348 14.6783L18.2348 1.67828L16.7652 0.32172L4.7652 13.3217L6.2348 14.6783Z" fill="#CBA576"/>
@@ -226,31 +248,6 @@
                     <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения</a></div>
                   </div>
                 </form>
-              </div>
-            </div>
-            <div class="cart-checkout" data-margin-top="56" data-sticky-for="856">
-              <div class="cart-checkout__wrapper">
-                <div class="cart-checkout__table">
-                  <div class="cart-checkout__row">
-                    <div class="cart-checkout__name cart-checkout__name--big">Итого</div>
-                    <div class="cart-checkout__number cart-checkout__number--big">5 545 руб.</div>
-                  </div>
-                  <div class="cart-checkout__row"><span class="cart-checkout__name cart-checkout__name-counter">Товары,
-                      <div class="cart-checkout__name-total">7 шт</div></span><span class="cart-checkout__number"> 5 545 руб.</span></div>
-                  <div class="cart-checkout__row cart-checkout__row--red"><span class="cart-checkout__name"> Скидка</span><span class="cart-checkout__number">- 300 руб.</span></div>
-                  <!--.cart-checkout__row.cart-checkout__row--red
-                  span.cart-checkout__name  Промокод
-                  span.cart-checkout__number - 23 руб.
-                  -->
-                </div><a class="cart-checkout__submit" href="#">оформить</a>
-                <div class="terms terms--mobile">
-                  <div class="terms__icon"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.5 14L4.83564 14.7474L5.56914 15.3994L6.2348 14.6783L5.5 14ZM0.335636 10.7474L4.83564 14.7474L6.16436 13.2526L1.66436 9.25259L0.335636 10.7474ZM6.2348 14.6783L18.2348 1.67828L16.7652 0.32172L4.7652 13.3217L6.2348 14.6783Z" fill="#CBA576"/>
-</svg>
-
-                  </div>
-                  <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения</a></div>
-                </div>
               </div>
             </div>
           </section>
@@ -355,6 +352,7 @@
   <script src="static/js/libs.min.js"></script>
   <script src="static/js/main.js"></script>
   <script src="static/js/vendor/stickybits.js" defer></script>
+  <script src="static/js/vendor/inputmask.js" defer></script>
   <script src="static/js/pages/cart/cart.js" defer></script>
   <script src="static/js/components/form-data.js" defer></script>
 </html>

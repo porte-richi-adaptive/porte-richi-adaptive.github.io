@@ -77,6 +77,26 @@ block content
                             .cart-table__sum 613 руб.
 
                 .cart__sections
+
+                    .cart-checkout(data-margin-top='56', data-sticky-for="856")
+                        .cart-checkout__wrapper
+                            .cart-checkout__table
+                                .cart-checkout__row
+                                    .cart-checkout__name.cart-checkout__name--big Итого
+                                    .cart-checkout__number.cart-checkout__number--big 5 545 руб.
+                                .cart-checkout__row
+                                    span.cart-checkout__name.cart-checkout__name-counter Товары,
+                                        .cart-checkout__name-total 7 шт
+                                    span.cart-checkout__number  5 545 руб.
+                                .cart-checkout__row.cart-checkout__row--red
+                                    span.cart-checkout__name  Скидка
+                                    span.cart-checkout__number - 300 руб.
+                                .cart-checkout__row.cart-checkout__row--red
+                                    span.cart-checkout__name  Промокод
+                                    span.cart-checkout__number - 23 руб.
+                            a(href="#").cart-checkout__submit.cart-checkout__submit--disabled оформить
+                            include ./modules/terms
+
                     .cart__promo
                         include ./modules/promo
 
@@ -87,34 +107,13 @@ block content
                         include ./modules/form-data
 
 
-
-                .cart-checkout(data-margin-top='56', data-sticky-for="856")
-                    .cart-checkout__wrapper
-                        .cart-checkout__table
-                            .cart-checkout__row
-                                .cart-checkout__name.cart-checkout__name--big Итого
-                                .cart-checkout__number.cart-checkout__number--big 5 545 руб.
-                            .cart-checkout__row
-                                span.cart-checkout__name.cart-checkout__name-counter Товары,
-                                    .cart-checkout__name-total 7 шт
-                                span.cart-checkout__number  5 545 руб.
-                            .cart-checkout__row.cart-checkout__row--red
-                                span.cart-checkout__name  Скидка
-                                span.cart-checkout__number - 300 руб.
-                            //.cart-checkout__row.cart-checkout__row--red
-                                span.cart-checkout__name  Промокод
-                                span.cart-checkout__number - 23 руб.
-                        a(href="#").cart-checkout__submit оформить
-                        include ./modules/terms
-
             .cart__steps
                 include ./modules/steps
 
 
 
-
-
 block script
     script(src="static/js/vendor/stickybits.js", defer)
+    script(src="static/js/vendor/inputmask.js", defer)
     script(src="static/js/pages/cart/cart.js", defer)
     script(src="static/js/components/form-data.js", defer)

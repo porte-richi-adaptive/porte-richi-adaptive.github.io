@@ -3,13 +3,13 @@ form.form-data#formData
     label.form-data__label
         span.form-data__name Имя
         .form-data__field
-            input(type='text', data-form-valid='name').form-data__input.js-form-validation
+            input(type='text', data-form-valid='name', data-require-field='false').form-data__input.js-form-validation
             span.form-data__tip Дмитрий
             .form-data__error.form-data__error--name
     label.form-data__label
         span.form-data__name Телефон
         .form-data__field
-            input(type='text', data-form-valid='phone').form-data__input.js-form-validation
+            input(type='text', data-form-valid='phone', data-require-field='false').form-data__input.js-form-validation
             span.form-data__tip + 375 44 546 36 09
             .form-data__error.form-data__error--phone
     label.form-data__label
@@ -23,5 +23,5 @@ form.form-data#formData
         span.form-data__name Комментарий
         .form-data__field
             textarea.form-data__textarea
-    a(href="#").cart-checkout__submit.cart-checkout__submit--mobile оформить
+    a(href="#").cart-checkout__submit.cart-checkout__submit--disabled.cart-checkout__submit--mobile оформить
     include ../modules/terms

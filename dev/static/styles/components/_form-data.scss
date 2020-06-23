@@ -13,8 +13,10 @@
     position: absolute;
     bottom: -110px;
     left: 0;
+    display: none;
     @include xs {
       bottom: -119px;
+      display: flex;
     }
   }
   .cart-checkout__submit {
@@ -118,6 +120,13 @@
       #{$form-data}__error {
         opacity: 1;
         visibility: visible;
+        @include media-breakpoint-down(sm) {
+          position: static;
+          width: 100%;
+          margin-left: 0;
+          margin-top: 9px;
+          margin-bottom: 9px;
+        }
       }
     }
   }
@@ -134,9 +143,18 @@
     cursor: default;
     &--name {
       width: 213px;
+      @include media-breakpoint-down(md) {
+        width: 160px;
+      }
     }
     &--phone {
       width: 291px;
+      @include media-breakpoint-down(lg) {
+        width: 190px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 160px;
+      }
     }
     &--post {
       width: 309px;

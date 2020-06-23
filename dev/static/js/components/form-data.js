@@ -1,7 +1,10 @@
 class FormData {
     constructor(formName) {
         this.form = document.querySelector(`#${formName}`);
+        this.phoneField = document.querySelector(`[data-form-valid='phone']`);
+        this.submitBtn = document.querySelector('.cart-checkout__submit');
         this.fields = document.querySelectorAll(`#${formName} .js-form-validation`);
+        this.requiredFields = document.querySelectorAll('[data-require-field]');
         this.errorText = {
             name: {
                 success: '',
@@ -17,13 +20,37 @@ class FormData {
             }
         };
         this.validateReg = {
-            phone: /^\+375 [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}$/,
+            phone: /^\+ 375 \([0-9]{2}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/,
             mail: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         };
     }
 
     init() {
+        this.checkRequiredFields(this.requiredFields);
+        this.initPhoneMask();
         this.addFieldEvents();
+    }
+
+    initPhoneMask() {
+        if(this.phoneField !== null) {
+            Inputmask({"mask": "+ 375 (99) 999-99-99"}).mask(this.phoneField);
+        }
+    }
+
+    checkRequiredFields(fields) {
+        let fieldsRequiredCounter =  0;
+
+
+        for(let field of fields) {
+            if( field.dataset.requireField === 'true' ) {
+                ++fieldsRequiredCounter;
+            }
+        }
+        if(fieldsRequiredCounter === fields.length) {
+            this.submitBtn.classList.remove('cart-checkout__submit--disabled');
+            return true;
+        }
+        this.submitBtn.classList.add('cart-checkout__submit--disabled');
     }
 
     nameValidation(value) {
@@ -36,6 +63,8 @@ class FormData {
         if( type === 'name') {
             return this.nameValidation(value);
         }
+        console.log(value);
+        console.log(type);
         return this.validateReg[type].test(value);
     }
 
@@ -53,24 +82,25 @@ class FormData {
 
             field.addEventListener('keyup', function() {
 
-
                 const validType = this.dataset.formValid;
                 const isValid = self.validate(this.value, validType);
                 const fieldErrorStr = 'form-data__field--error';
                 const field = this.closest('.form-data__field');
                 const errorField = field.querySelector('.form-data__error');
 
-
-
                 // If not validate
                 if(!isValid) {
                     field.classList.add(fieldErrorStr);
                     errorField.innerText = self.setErrorText(validType);
+                    this.dataset.requireField = false;
                 }
                 else {
                     field.classList.remove(fieldErrorStr);
                     errorField.innerText = self.setSuccessText(validType);
+                    this.dataset.requireField = true;
                 }
+
+                self.checkRequiredFields(self.requiredFields);
 
             });
 
@@ -78,6 +108,8 @@ class FormData {
     }
 
 }
+
+
 
 // Init
 new FormData('formData').init();
