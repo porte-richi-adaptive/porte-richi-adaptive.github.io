@@ -1,0 +1,14 @@
+extends template/main
+
+block variables
+    - var title = 'Главная страница';
+    - var headerGrayBackground = true;
+
+block content
+    section.cart-success
+        .container
+            .row
+                .offset-2
+                    .cart-success__wrap
+                        h1.cart-success__title Спасибо, что оформили заказ
+                        p.cart-success__text В&nbsp;ближайшее время с&nbsp;вами свяжется менеджер, чтобы уточнить детали заказа и&nbsp;согласовать дату замера.

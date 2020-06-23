@@ -725,9 +725,7 @@
         @include media-breakpoint-down(lg) {
           bottom: 3px;
         }
-        @include media-breakpoint-down(md) {
 
-        }
       }
       &:hover:after {
         background-color: $black;
@@ -735,6 +733,45 @@
       &:hover {
         color: $black;
       }
+    }
+  }
+
+  // Cart Success
+  &-success {
+    padding-top: 172px;
+    padding-bottom: 222px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrap {
+      position: relative;
+      &::before {
+        content: '';
+        background-image: url('../../static/images/icons/cart-success.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: calc( 100% - 11px );
+        bottom: calc(50% - 149px);
+        width: 334px;
+        height: 385px;
+        @include media-breakpoint-down(lg) {
+          width: 254px;
+          height: 293px;
+          background-size: contain;
+
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 18px;
+    }
+
+    &__text {
+      @include title('h2');
+      max-width: 653px;
     }
   }
 
