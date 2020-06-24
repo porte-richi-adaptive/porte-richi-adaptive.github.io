@@ -1,6 +1,7 @@
 // --- Helpers ---
 @import "helpers/variables";
 @import "helpers/mixins";
+@import "helpers/mixins/section-mixins";
 @import "helpers/media";
 
 // --- Common ---
@@ -43,6 +44,7 @@
 @import "components/form-data";
 @import "components/steps";
 @import "components/additional-discount";
+@import "components/company-salons";
 
 // --- Pages ---
 @import "pages/cart";
