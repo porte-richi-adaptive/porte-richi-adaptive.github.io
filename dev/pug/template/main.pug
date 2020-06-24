@@ -1,5 +1,11 @@
 include ../utils/mixins
+// Mode condition
+
+
 block variables
+
+if headerGrayBackground
+    - var grayModifier = 'main-container--gray';
 
 doctype html
 html(lang="ru-RU")
@@ -17,10 +23,11 @@ html(lang="ru-RU")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
         <![endif]-->
     body
-        include ../modules/header/header
-        main.main
-            block content
-        include ../modules/footer/footer
+        div(class=`main-container ${grayModifier}`)
+            include ../modules/header/header
+            main.main
+                block content
+            include ../modules/footer/footer
     script(src="static/js/jquery-3.3.1.min.js")
     script(src="static/js/sly.min.js")
     script(src="static/js/slick.min.js")

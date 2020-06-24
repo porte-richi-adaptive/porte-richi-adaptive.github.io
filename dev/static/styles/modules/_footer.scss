@@ -12,7 +12,7 @@
 
   &__title {
     @include upperlink-title;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
 
     @include media-breakpoint-down(md) {
       font-size: 13px;

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- Mode condition--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -10,33 +11,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <!-- Mode condition-->
-    <header class="header  + header--gray">
-      <div class="container header__container">
-        <div class="row">
-          <div class="header__top">
-            <div class="header__top-left"><a class="header__cart" href="#">
-                <svg class="svg-sprite-icon icon-cart header__cart-icon">
-                  <use xlink:href="static/images/svg/symbol/sprite.svg#cart"></use>
-                </svg>
-                <div class="header__cart-counter">2</div></a><a class="header__favorite" href="#">
-                <svg class="svg-sprite-icon icon-favorite header__favorite-icon">
-                  <use xlink:href="static/images/svg/symbol/sprite.svg#favorite"></use>
-                </svg>
-                <div class="header__cart-counter">2</div></a><a class="header__search" href="#">
-                <svg class="svg-sprite-icon icon-search header__search-icon">
-                  <use xlink:href="static/images/svg/symbol/sprite.svg#search"></use>
-                </svg></a><a class="header__menu" href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div class="main-container main-container--gray">
+      <header class="header">
+        <div class="container header__container">
+          <div class="row">
+            <div class="header__top">
+              <div class="header__top-left"><a class="header__cart" href="#">
+                  <svg class="svg-sprite-icon icon-cart header__cart-icon">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#cart"></use>
+                  </svg>
+                  <div class="header__cart-counter">2</div></a><a class="header__favorite" href="#">
+                  <svg class="svg-sprite-icon icon-favorite header__favorite-icon">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#favorite"></use>
+                  </svg>
+                  <div class="header__cart-counter">2</div></a><a class="header__search" href="#">
+                  <svg class="svg-sprite-icon icon-search header__search-icon">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#search"></use>
+                  </svg></a><a class="header__menu" href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <line x1="1" y1="-1" x2="21" y2="-1" transform="matrix(-1 0 0 1 22 2)" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="1" y1="-1" x2="21" y2="-1" transform="matrix(-1 0 0 1 22 8)" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="1" y1="-1" x2="14" y2="-1" transform="matrix(-1 0 0 1 22 14)" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-                <div class="header__menu-close"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div class="header__menu-close"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16 1L8.5 8.5M1 16L8.5 8.5M8.5 8.5L16 16L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-                </div></a></div><a class="header__logo" href="#"><svg width="151" height="36" viewBox="0 0 151 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  </div></a></div><a class="header__logo" href="#"><svg width="151" height="36" viewBox="0 0 151 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M46.7112 18.1496C48.7174 18.1496 49.5908 17.0081 49.5908 15.2759C49.5908 13.8973 48.6976 12.8738 46.87 12.8738H45.7187V18.1496H46.7112ZM42.9787 13.0707C42.9787 12.067 42.8589 11.0625 42.8589 11.0625H47.1479C50.5833 11.0625 52.3705 13.051 52.3705 15.1778C52.3705 17.7959 50.3451 19.9806 47.0295 19.9806H45.718V23.0124C45.718 23.918 45.8172 24.8434 45.8172 24.8434H42.9787V13.0707ZM62.6768 19.4689C62.6768 16.6143 61.8424 14.6265 59.3207 14.6265C57.4541 14.6265 56.5205 16.2994 56.5205 18.4849C56.5205 21.3387 57.4137 23.2489 59.8567 23.2489C61.6644 23.2489 62.6768 21.6536 62.6768 19.4689ZM53.8202 19.0361C53.8202 16.0044 55.4486 12.8343 59.7971 12.8343C63.3715 12.8343 65.3969 15.374 65.3969 18.9176C65.3969 21.9493 63.7685 25.0404 59.3994 25.0404C55.8456 25.0404 53.8202 22.5797 53.8202 19.0361ZM71.6318 18.8978C73.2404 18.8978 74.0741 18.1693 74.0741 16.7914C74.0741 15.7284 73.5778 14.882 71.7509 14.882H70.5989V18.8985H71.6318V18.8978ZM72.2869 20.7098C72.2869 20.7098 72.0288 20.7684 71.4532 20.7684H70.5989V23.0131C70.5989 23.918 70.6982 24.8434 70.6982 24.8434H67.9582V15.0387C67.9582 14.0357 67.8391 13.0114 67.8391 13.0114H72.0288C75.0077 13.0114 76.7552 14.4684 76.7552 16.7914C76.7552 18.3077 75.9803 19.4293 74.6107 19.9806L76.7552 23.3477C77.0725 23.8641 77.417 24.3634 77.7874 24.8434L74.7695 24.9423L72.2869 20.7098ZM81.7191 14.8425L79.6143 14.882C78.9592 14.9018 78.0858 15.0006 78.0858 15.0006L78.1851 13.0121H88.1525L88.0533 15.0006C88.0533 15.0006 87.1203 14.9018 86.6638 14.882L84.3598 14.8425V23.0124C84.3598 23.918 84.459 24.8434 84.459 24.8434H81.7191V14.8425ZM90.0191 15.0394C90.0191 14.0357 89.9 13.0121 89.9 13.0121H98.2L98.1008 14.9018C98.1008 14.9018 97.4656 14.803 96.2746 14.7832L92.6605 14.7444V18.0712L96.9098 18.0119L96.8105 19.8825L92.6605 19.8034V23.1303L96.215 23.0914C96.9892 23.0717 98.2993 22.9531 98.2993 22.9531L98.2 24.8434H90.0191V15.0394ZM108.526 18.1898C110.849 18.1898 111.842 17.0081 111.842 15.3345C111.842 13.819 110.829 12.8738 108.922 12.8738H107.771V18.1891H108.526V18.1898ZM109.419 19.9806H107.771V23.0124C107.771 23.918 107.87 24.8434 107.87 24.8434H105.03V13.0707C105.03 12.067 104.912 11.0625 104.912 11.0625H109.201C112.636 11.0625 114.621 12.7361 114.621 15.4333C114.621 17.1853 113.331 18.5039 111.762 19.0361L114.344 23.347C114.661 23.8635 115.006 24.363 115.376 24.8434L112.318 24.9423L109.419 19.9806H109.419ZM117.402 15.0394C117.402 14.0357 117.282 12.8738 117.282 12.8738L120.043 12.9133V23.0124C120.043 23.918 120.142 24.8434 120.142 24.8434H117.402V15.0394ZM122.604 19.1152C122.604 15.9458 124.371 12.835 128.223 12.835C130.01 12.835 131.024 13.406 132.016 13.6813L131.44 15.6105C130.408 15.3352 129.673 14.7839 128.124 14.7839C126.297 14.7839 125.384 16.2204 125.384 18.878C125.384 21.7129 126.456 23.0914 128.72 23.0914C130.407 23.0914 131.658 22.5204 131.658 22.5204L131.917 24.2329C131.917 24.2329 130.666 25.0404 128.482 25.0404C125.126 25.0404 122.605 23.0717 122.605 19.1145L122.604 19.1152ZM134.26 15.0394C134.26 14.0357 134.141 13.0121 134.141 13.0121L136.901 12.9133V18.0119H142.342V15.0394C142.342 14.0357 142.223 13.0121 142.223 13.0121L144.982 12.9133V23.0124C144.982 23.918 145.082 24.8434 145.082 24.8434H142.342V19.8627H136.901V23.0117C136.901 23.9173 137 24.8427 137 24.8427H134.26V15.0394ZM148.24 15.0394C148.24 14.0357 148.12 12.8343 148.12 12.8343L150.881 12.9133V23.0124C150.881 23.918 150.98 24.8434 150.98 24.8434H148.24V15.0394Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9578 35.8337L8.97852 28.9139L17.7783 20.1885L27.7812 30.1061L26.021 31.8511L17.7783 23.6791L12.499 28.9132L15.9585 32.3431L19.7711 28.5631L21.5314 30.3087L15.9578 35.8337Z" fill="#F5A83A"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M29.9648 27.942L19.9619 18.0243L28.761 9.30176L35.7404 16.2215L30.1682 21.7465L28.408 20.0015L32.2199 16.2215L28.7603 12.7916L23.4817 18.0258L31.7243 26.197L29.9648 27.942Z" fill="#527EBF"/>
@@ -49,138 +50,139 @@
 </g>
 </svg>
 </a>
-            <div class="header__top-right"><a class="header__phone" href="tel:+375291384963">+375 29 138-49-63</a></div>
-          </div>
-          <div class="header__mobile">
-            <ul class="header__mobile-list">
-              <li class="header__mobile-item"><a class="header__mobile-link" href="/catalog-entrance.html">Входные двери</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="/catalog-interior.html">Межкомнатные</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Комплексные решения</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">замер</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Акции</a>
-                <svg class="svg-sprite-icon icon-percent header__link-percent">
-                  <use xlink:href="static/images/svg/symbol/sprite.svg#percent"></use>
-                </svg>
-              </li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Оплата</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Доставка и установка</a></li>
-              <li class="header__mobile-item"><a class="header__mobile-link" href="#">Контакты</a></li>
-            </ul><a class="header__mobile-phone" href="tel:+375296180826">+375 29 618-08-26</a><a class="header__mobile-phone" href="tel:+375295831713">+375 29 583-17-13</a>
-          </div>
-          <div class="header__bottom">
-            <nav class="header__nav">
-              <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="/catalog-entrance.html">входные двери</a></li>
-                <li class="header__item"><a class="header__link" href="/catalog-interior.html">межкомнатные</a></li>
-                <li class="header__item"><a class="header__link" href="#">комплексные решения</a></li>
-                <li class="header__item header__item--hidden"><a class="header__link" href="#">замер</a></li>
-                <li class="header__item header__item--hidden"><a class="header__link" href="#">акции</a>
+              <div class="header__top-right"><a class="header__phone" href="tel:+375291384963">+375 29 138-49-63</a></div>
+            </div>
+            <div class="header__mobile">
+              <ul class="header__mobile-list">
+                <li class="header__mobile-item"><a class="header__mobile-link" href="/catalog-entrance.html">Входные двери</a></li>
+                <li class="header__mobile-item"><a class="header__mobile-link" href="/catalog-interior.html">Межкомнатные</a></li>
+                <li class="header__mobile-item"><a class="header__mobile-link" href="#">Комплексные решения</a></li>
+                <li class="header__mobile-item"><a class="header__mobile-link" href="#">замер</a></li>
+                <li class="header__mobile-item"><a class="header__mobile-link" href="#">Акции</a>
                   <svg class="svg-sprite-icon icon-percent header__link-percent">
                     <use xlink:href="static/images/svg/symbol/sprite.svg#percent"></use>
                   </svg>
                 </li>
-                <li class="header__item header__item--hidden"><a class="header__link" href="#">оплата</a></li>
-                <li class="header__item"><a class="header__link" href="#">доставка и установка</a></li>
-                <li class="header__item header__item--hidden"><a class="header__link" href="#"> контакты</a></li>
-                <li class="header__item header__item-dropdown"><a class="header__link" href="#">ещё</a><svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <li class="header__mobile-item"><a class="header__mobile-link" href="#">Оплата</a></li>
+                <li class="header__mobile-item"><a class="header__mobile-link" href="#">Доставка и установка</a></li>
+                <li class="header__mobile-item"><a class="header__mobile-link" href="#">Контакты</a></li>
+              </ul><a class="header__mobile-phone" href="tel:+375296180826">+375 29 618-08-26</a><a class="header__mobile-phone" href="tel:+375295831713">+375 29 583-17-13</a>
+            </div>
+            <div class="header__bottom">
+              <nav class="header__nav">
+                <ul class="header__list">
+                  <li class="header__item"><a class="header__link" href="/catalog-entrance.html">входные двери</a></li>
+                  <li class="header__item"><a class="header__link" href="/catalog-interior.html">межкомнатные</a></li>
+                  <li class="header__item"><a class="header__link" href="#">комплексные решения</a></li>
+                  <li class="header__item header__item--hidden"><a class="header__link" href="#">замер</a></li>
+                  <li class="header__item header__item--hidden"><a class="header__link" href="#">акции</a>
+                    <svg class="svg-sprite-icon icon-percent header__link-percent">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#percent"></use>
+                    </svg>
+                  </li>
+                  <li class="header__item header__item--hidden"><a class="header__link" href="#">оплата</a></li>
+                  <li class="header__item"><a class="header__link" href="#">доставка и установка</a></li>
+                  <li class="header__item header__item--hidden"><a class="header__link" href="#"> контакты</a></li>
+                  <li class="header__item header__item-dropdown"><a class="header__link" href="#">ещё</a><svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L3.5 3.5L6 1" stroke="black"/>
 </svg>
 
-                  <ul class="header__item-block">
-                    <li class="header__item-block__item"><a class="header__item-block__link" href="#">замер</a></li>
-                    <li class="header__item-block__item"><a class="header__item-block__link" href="#">акции</a></li>
-                    <li class="header__item-block__item"><a class="header__item-block__link" href="#">оплата</a></li>
-                    <li class="header__item-block__item"><a class="header__item-block__link" href="#">контакты</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="container">
-        <div class="row">
-          <div class="breadcrumbs">
-            <div class="breadcrumbs__wrap"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link breadcrumbs__link--active" href="#">Входные двери</a></div>
-          </div>
-          <h1 class="cart__title">Мой заказ</h1>
-          <div class="cart-empty">
-            <p class="cart-empty__text">Вы ничего не выбрали.</p>
-            <p class="cart-empty__text">Посмотрите каталог<a class="cart-empty__link" href="#">входных</a>или<a class="cart-empty__link" href="#">межкомнатных</a><br> дверей и добавьте товары к заказу.</p>
-          </div>
-        </div>
-      </div>
-    </main>
-    <div class="view-instagram">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 col-md-6 col-sm-16">
-            <div class="view-instagram__left">
-              <h2 class="view-instagram__title">Следите за&nbsp;нами в&nbsp;Инстаграме</h2><a class="view-instagram__link" href="#"><span>посмотреть профиль</span>
-                <svg class="svg-sprite-icon icon-long-arrow view-instagram__long-arrow">
-                  <use xlink:href="static/images/svg/symbol/sprite.svg#long-arrow"></use>
-                </svg></a>
+                    <ul class="header__item-block">
+                      <li class="header__item-block__item"><a class="header__item-block__link" href="#">замер</a></li>
+                      <li class="header__item-block__item"><a class="header__item-block__link" href="#">акции</a></li>
+                      <li class="header__item-block__item"><a class="header__item-block__link" href="#">оплата</a></li>
+                      <li class="header__item-block__item"><a class="header__item-block__link" href="#">контакты</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
-          <div class="view-instagram__right"><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-1.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-2.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-3.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-4.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-5.jpg" alt=""></a></div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="row">
+            <div class="breadcrumbs">
+              <div class="breadcrumbs__wrap"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link breadcrumbs__link--active" href="#">Входные двери</a></div>
+            </div>
+            <h1 class="cart__title">Мой заказ</h1>
+            <div class="cart-empty">
+              <p class="cart-empty__text">Вы ничего не выбрали.</p>
+              <p class="cart-empty__text">Посмотрите каталог<a class="cart-empty__link" href="#">входных</a>или<a class="cart-empty__link" href="#">межкомнатных</a><br> дверей и добавьте товары к заказу.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="view-instagram">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-16">
+              <div class="view-instagram__left">
+                <h2 class="view-instagram__title">Следите за&nbsp;нами в&nbsp;Инстаграме</h2><a class="view-instagram__link" href="#"><span>посмотреть профиль</span>
+                  <svg class="svg-sprite-icon icon-long-arrow view-instagram__long-arrow">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#long-arrow"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="view-instagram__right"><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-1.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-2.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-3.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-4.jpg" alt=""></a><a class="view-instagram__img-link" href="#"><img class="view-instagram__img" src="static/images/insta-5.jpg" alt=""></a></div>
+          </div>
         </div>
       </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-5 col- footer__block">
+              <h5 class="footer__title">Каталог</h5>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#"> Входные двери</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Межкомнатные</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Комплексные решения</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col- footer__block">
+              <h5 class="footer__title">Покупателю</h5>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#"> Бесплатный замер</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Оплата</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Доставка и установка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Виды межкомнатных дверей</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-5 col-8 footer__block">
+              <h5 class="footer__title">о компании</h5>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#"> О нас</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Контакты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Реквизиты</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-5 col-8 footer__block">
+              <h5 class="footer__title">следите</h5>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#"> Инстаграм</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Фейсбук</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> Пинтерест</a></li>
+              </ul>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-5 col- footer__block">
+              <h5 class="footer__title">Фирменные салоны</h5>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#"> пр-т Дзержинского, 122</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> ул. Кальварийская, 7б, ТЦ «Трюм»</a></li>
+                <li class="footer__item"><a class="footer__link" href="#"> ул. Олешева, 1</a></li>
+                <li class="footer__item footer__item-phone"><a class="footer__link" href="tel:+ 375291384963"> + 375 29 138-49-63</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="footer__bottom">
+              <div class="footer__bottom-copyright">© Порте-Ричи 2019</div><a class="footer__bottom-company" href="#">Сайт разработал «Чеширский Кот» на 1С-Битрикс</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-5 col- footer__block">
-            <h5 class="footer__title">Каталог</h5>
-            <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="#"> Входные двери</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Межкомнатные</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Комплексные решения</a></li>
-            </ul>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 col- footer__block">
-            <h5 class="footer__title">Покупателю</h5>
-            <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="#"> Бесплатный замер</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Оплата</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Доставка и установка</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Виды межкомнатных дверей</a></li>
-            </ul>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-md-5 col-8 footer__block">
-            <h5 class="footer__title">о компании</h5>
-            <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="#"> О нас</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Контакты</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Реквизиты</a></li>
-            </ul>
-          </div>
-          <div class="col-xl-3 col-lg-2 col-md-5 col-8 footer__block">
-            <h5 class="footer__title">следите</h5>
-            <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="#"> Инстаграм</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Фейсбук</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> Пинтерест</a></li>
-            </ul>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-5 col- footer__block">
-            <h5 class="footer__title">Фирменные салоны</h5>
-            <ul class="footer__list">
-              <li class="footer__item"><a class="footer__link" href="#"> пр-т Дзержинского, 122</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> ул. Кальварийская, 7б, ТЦ «Трюм»</a></li>
-              <li class="footer__item"><a class="footer__link" href="#"> ул. Олешева, 1</a></li>
-              <li class="footer__item footer__item-phone"><a class="footer__link" href="tel:+ 375291384963"> + 375 29 138-49-63</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="footer__bottom">
-            <div class="footer__bottom-copyright">© Порте-Ричи 2019</div><a class="footer__bottom-company" href="#">Сайт разработал «Чеширский Кот» на 1С-Битрикс</a>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
   <script src="static/js/jquery-3.3.1.min.js"></script>
   <script src="static/js/sly.min.js"></script>

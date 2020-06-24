@@ -20,7 +20,7 @@
     height: 100%;
     &-link {
       width: 236px;
-      height: 236px;
+      height: 232px;
       &:not(:first-child) {
         margin-left: 2px;
       }
@@ -40,7 +40,7 @@
     width: 107px;
     height: 16px;
     fill: $white;
-    margin-left: 129px;
+    margin-left: 116px;
     @include media-breakpoint-down(lg) {
       width: 70px;
       margin-left: 59px;
@@ -60,7 +60,7 @@
     color: $white;
     letter-spacing: 3px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     display: flex;
     align-items: center;
     @include media-breakpoint-down(md) {
@@ -72,7 +72,7 @@
     padding-top: 26px;
     background-color: $black-1;
     color: $white;
-    padding-bottom: 40px;
+    padding-bottom: 36px;
     @include media-breakpoint-down(md) {
       padding-top: 16px;
       padding-bottom: 26px;
@@ -87,7 +87,7 @@
 
   &__title {
     width: 271px;
-    padding-bottom: 42px;
+    padding-bottom: 45px;
     @include media-breakpoint-down(md) {
       font-size: 27px;
       line-height: 36px;
