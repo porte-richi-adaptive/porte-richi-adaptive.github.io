@@ -110,6 +110,14 @@
 
       @include media-breakpoint-down(md) {
 
+        #{$company-salons}__link {
+          &:hover {
+            #{$company-salons}__address span::before {
+              background-color: $gold;
+            }
+          }
+        }
+
         #{$company-salons}__descr {
           margin-top: 79px;
           @include media-breakpoint-down(sm) {
@@ -120,20 +128,17 @@
         #{$company-salons}__address {
           display: flex;
           flex-direction: column;
+          transition: none;
 
           @include media-breakpoint-down(sm) {
             flex-direction: row;
           }
 
-          &:hover {
-            span:before {
-              background-color: $gold;
-            }
-          }
 
           span {
             position: relative;
             display: inline-flex;
+            transition: $transition-base;
             &:last-child {
               width: 100px;
             }
@@ -148,6 +153,7 @@
               position: absolute;
               left: 0;
               bottom: 0;
+              transition: $transition-base;
             }
           }
           &::before {
@@ -210,6 +216,10 @@
       top: auto;
       left: 0;
       right: 0;
+    }
+
+    @include xs {
+      font-size: 19px;
     }
 
     &::before {
