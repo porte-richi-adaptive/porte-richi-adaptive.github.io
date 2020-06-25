@@ -1,9 +1,13 @@
-# Стартовый шаблон автора канала FrontCoder
-Используется связка `Gulp` + `Pug` + `SCSS` + `BrowserSync`
 
-## Установка
-Склонировать репозиторий и выполнить либо npm install
+![Альтернативный текст](./build/static/images/icons/logo.svg)
+-
+### Ссылки на страницы
 
-## Каналы связи
-- [youtube канал](https://www.youtube.com/c/frontcoder)
-- [чат в телеграм](https://t.me/frontcoder)
+
+#### Корзина
+Страницы  | Ссылки
+----------------|----------------------
+Корзина заказ      | [перейти](https://porte-richi-adaptive.github.io/build/cart-checkout.html)
+ Корзина спасибо             | [перейти](https://porte-richi-adaptive.github.io/build/cart-success.html)
+ Корзина пустая | [перейти](https://porte-richi-adaptive.github.io/build/cart-empty.html)
+
