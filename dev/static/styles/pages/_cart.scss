@@ -756,6 +756,7 @@
 
     @include media-breakpoint-down(sm) {
       padding-top: 240px;
+      padding-bottom: 45px;
     }
 
     &__link {
