@@ -1,5 +1,5 @@
 
-![Альтернативный текст](./build/static/images/icons/logo.svg)
+![Лого](./build/static/images/icons/logo.svg)
 -
 ### Ссылки на страницы
 
