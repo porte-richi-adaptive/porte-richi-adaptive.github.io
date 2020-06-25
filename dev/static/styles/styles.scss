@@ -2,6 +2,7 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/mixins/section-mixins";
+@import "helpers/mixins/typography-mixins";
 @import "helpers/media";
 
 // --- Common ---
@@ -48,3 +49,4 @@
 
 // --- Pages ---
 @import "pages/cart";
+@import "pages/sample";

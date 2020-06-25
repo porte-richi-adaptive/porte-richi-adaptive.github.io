@@ -25,6 +25,9 @@ function () {
       this.setFavoriteEvent();
     }
   }, {
+    key: "setSubmitEvent",
+    value: function setSubmitEvent() {}
+  }, {
     key: "setCounterEvents",
     value: function setCounterEvents() {
       var _iteratorNormalCompletion = true;
@@ -142,10 +145,7 @@ promoField.addEventListener('keyup', function (e) {
   }
 }); // --- Sticky Offer Block ---
 
-var sticky = new Sticky('.cart-checkout'); // Init Sticky Class
-
-var checkoutWrapper = document.querySelector('.cart-checkout__wrapper');
-var littleDesktopModeClass = 'cart-checkout__wrapper--little'; // Add Class on resize
+var sticky = new Sticky('.cart-checkout'); // Add Class on resize
 
 window.addEventListener('resize', function (event) {
   var viewWidth = window.innerWidth;

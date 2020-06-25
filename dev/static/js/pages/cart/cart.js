@@ -15,6 +15,10 @@ class Cart {
         this.setFavoriteEvent();
     }
 
+    setSubmitEvent() {
+        
+    }
+
     setCounterEvents() {
 
         for(let counter of this.items) {
@@ -93,10 +97,6 @@ promoField.addEventListener('keyup', function(e) {
 
 // --- Sticky Offer Block ---
 let sticky = new Sticky('.cart-checkout');
-
-// Init Sticky Class
-const checkoutWrapper = document.querySelector('.cart-checkout__wrapper');
-const littleDesktopModeClass = 'cart-checkout__wrapper--little';
 
 // Add Class on resize
 window.addEventListener('resize', function(event) {

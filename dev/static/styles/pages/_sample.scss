@@ -1,0 +1,27 @@
+.sample {
+  @include section-indent;
+
+  &__title {
+    margin-top: 63px;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    @include typography('p1');
+    margin-bottom: 90px;
+  }
+
+  &__subtitle {
+    margin-bottom: 9px;
+    @include title('h3');
+  }
+
+  &__descr {
+    @include font-size('20');
+  }
+
+  &__block {
+    margin-bottom: 45px;
+  }
+
+}

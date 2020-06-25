@@ -530,7 +530,6 @@
       margin-bottom: 21px;
       &--disabled {
         cursor: default;
-        pointer-events: none;
         &:hover {
           background-color: $gray-1;
         }

@@ -2,7 +2,7 @@ class FormData {
     constructor(formName) {
         this.form = document.querySelector(`#${formName}`);
         this.phoneField = document.querySelector(`[data-form-valid='phone']`);
-        this.submitBtn = document.querySelector('.cart-checkout__submit');
+        this.submitBtn = document.querySelectorAll('.cart-checkout__submit');
         this.fields = document.querySelectorAll(`#${formName} .js-form-validation`);
         this.requiredFields = document.querySelectorAll('[data-require-field]');
         this.errorText = {
@@ -29,6 +29,7 @@ class FormData {
         this.checkRequiredFields(this.requiredFields);
         this.initPhoneMask();
         this.addFieldEvents();
+        this.setSmoothScrolling();
     }
 
     initPhoneMask() {
@@ -47,10 +48,32 @@ class FormData {
             }
         }
         if(fieldsRequiredCounter === fields.length) {
-            this.submitBtn.classList.remove('cart-checkout__submit--disabled');
+            for(let btn of this.submitBtn) {
+                btn.classList.remove('cart-checkout__submit--disabled');
+            }
+
             return true;
         }
-        this.submitBtn.classList.add('cart-checkout__submit--disabled');
+        for(let btn of this.submitBtn) {
+            btn.classList.add('cart-checkout__submit--disabled');
+        }
+
+    }
+
+    setSmoothScrolling() {
+        const submitBtns = document.querySelectorAll('.js-form-submit');
+        for(let btn of submitBtns) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                if(btn.classList.contains('cart-checkout__submit--disabled')) {
+                    this.form.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+            });
+        }
     }
 
     nameValidation(value) {
@@ -63,8 +86,6 @@ class FormData {
         if( type === 'name') {
             return this.nameValidation(value);
         }
-        console.log(value);
-        console.log(type);
         return this.validateReg[type].test(value);
     }
 
