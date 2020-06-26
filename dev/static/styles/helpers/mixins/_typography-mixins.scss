@@ -15,5 +15,53 @@
     }
   }
 
+  @if $size == 'p2' {
+    font-size: 20px;
+    line-height: 27px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+
+  @if $size == 'link' {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: $rft-font;
+    letter-spacing: 3px;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+
+  @if $size == 'descr' {
+    font-size: 18px;
+    line-height: 18px;
+    font-style: italic;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+
+  @if $size == 'descr-multi' {
+
+    font-size: 18px;
+    line-height: 27px;
+    font-style: italic;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
 
 }

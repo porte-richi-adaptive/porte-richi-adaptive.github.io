@@ -1,0 +1,35 @@
+
+- var placeholderText =  'В какое время вам удобно разговаривать? Вас интересует замер проёма для межкомнатной или входной двери?';
+
+form(class="application-form", id='application-form')
+    h2.application-form__title Заявка на замер
+    p.application-form__descr Заполните форму, чтобы менеджер согласовал дату и время замера.
+    .application-form__field
+        label.application-form__label
+            span.application-form__name Имя
+            input( type='text', required ).application-form__input
+        .application-form__message
+
+    .application-form__field
+        label.application-form__label
+            span.application-form__name Телефон
+            input( type='tel', required ).application-form__input
+        .application-form__message
+
+    .application-form__field.application-form__field--top
+        label.application-form__label
+            span.application-form__name Комментарий
+            textarea(placeholder=`${placeholderText}`).application-form__textarea
+        .application-form__message
+
+    .application-form__field
+        .application-form__terms
+            include ../modules/terms
+
+    .application-form__block
+        a(href="#").application-form__submit.application-form__submit--disabled Отправить
+        span.application-form__required Имя и&nbsp;телефон&nbsp;&mdash; обязательные поля
+
+
+
+

@@ -1,0 +1,131 @@
+.application-form {
+  background-image: linear-gradient(113.57deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+  padding-top: 36px;
+  padding-left: 36px;
+  padding-bottom: 63px;
+
+  $application-form: &;
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__required {
+    max-width: 135px;
+    font-size: 16px;
+    line-height: 18px;
+    font-style: italic;
+    color: $gray-2;
+    margin-left: 27px;
+  }
+
+  &__descr {
+    @include typography('p2');
+    margin-bottom: 27px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__field {
+    margin-bottom: 18px;
+    &--top {
+      margin-top: 36px;
+
+      #{$application-form}__label {
+        align-items: flex-start;
+      }
+      #{$application-form}__name {
+        margin-top: 9px;
+      }
+    }
+  }
+
+  &__terms {
+    margin-left: 163px;
+    margin-bottom: 36px;
+  }
+
+  &__name {
+    @include typography('p2');
+    min-width: 165px;
+  }
+
+  &__submit {
+    @include typography('link');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $black;
+    width: 246px;
+    height: 73px;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: $gold;
+      color: $white;
+    }
+
+    &--disabled {
+      background-color: $gray-1;
+      cursor: default;
+      color: $gray;
+      &:hover {
+        background-color: $gray-1;
+        color: $gray;
+      }
+    }
+  }
+
+  &__input {
+    border: 1px solid $gray-1;
+    background-color: $white;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 246px;
+    height: 50px;
+    transition: $transition-base;
+    @include typography('p2');
+
+    &:focus, &:active {
+      border-color: $gray;
+      outline: none;
+    }
+
+    &--error {
+      border-color: $red;
+    }
+  }
+
+
+  &__textarea {
+    padding: 15px 18px;
+    width: 432px;
+    height: 143px;
+    border: 1px solid $gray-1;
+    resize: none;
+    transition: $transition-base;
+    @include typography('p2');
+
+    &:focus, &:active {
+      border-color: $gray;
+      outline: none;
+    }
+
+    &::placeholder {
+      @include typography('descr-multi');
+      color: $gray-2;
+    }
+  }
+
+}

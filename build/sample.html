@@ -109,40 +109,43 @@
                 <p class="sample__text">Профессиональный замер гарантирует правильный монтаж, надёжность и практичность эксплуатации входных и межкомнатных дверей. Специалист с точностью определит параметры дверных проёмов, необходимую комплектацию погонажа и рассчитает стоимость установки.</p>
               </div>
               <div class="col-xl-9 col-lg-11">
-                <form class="form-data" id="formData">
-                  <h2 class="form-data__title">Мои данные</h2>
-                  <label class="form-data__label"><span class="form-data__name">Имя</span>
-                    <div class="form-data__field">
-                      <input class="form-data__input js-form-validation" type="text" data-form-valid="name" data-require-field="false"><span class="form-data__tip">Дмитрий</span>
-                      <div class="form-data__error form-data__error--name"></div>
+                <div class="sample__form">
+                  <form class="application-form" id="application-form">
+                    <h2 class="application-form__title">Заявка на замер</h2>
+                    <p class="application-form__descr">Заполните форму, чтобы менеджер согласовал дату и время замера.</p>
+                    <div class="application-form__field">
+                      <label class="application-form__label"><span class="application-form__name">Имя</span>
+                        <input class="application-form__input" type="text" required>
+                      </label>
+                      <div class="application-form__message"></div>
                     </div>
-                  </label>
-                  <label class="form-data__label"><span class="form-data__name">Телефон</span>
-                    <div class="form-data__field">
-                      <input class="form-data__input js-form-validation" type="text" data-form-valid="phone" data-require-field="false"><span class="form-data__tip">+ 375 44 546 36 09</span>
-                      <div class="form-data__error form-data__error--phone"></div>
+                    <div class="application-form__field">
+                      <label class="application-form__label"><span class="application-form__name">Телефон</span>
+                        <input class="application-form__input" type="tel" required>
+                      </label>
+                      <div class="application-form__message"></div>
                     </div>
-                  </label>
-                  <label class="form-data__label"><span class="form-data__name">Почта</span>
-                    <div class="form-data__field">
-                      <input class="form-data__input js-form-validation" type="text" data-form-valid="mail"><span class="form-data__tip">example@gmail.com</span>
-                      <div class="form-data__error form-data__error--post">Мы&nbsp;пришлём письмо с&nbsp;подтверждением заказа</div>
+                    <div class="application-form__field application-form__field--top">
+                      <label class="application-form__label"><span class="application-form__name">Комментарий</span>
+                        <textarea class="application-form__textarea" placeholder="В какое время вам удобно разговаривать? Вас интересует замер проёма для межкомнатной или входной двери?"></textarea>
+                      </label>
+                      <div class="application-form__message"></div>
                     </div>
-                  </label>
-                  <label class="form-data__label"><span class="form-data__name">Комментарий</span>
-                    <div class="form-data__field">
-                      <textarea class="form-data__textarea"></textarea>
-                    </div>
-                  </label><a class="js-form-submit cart-checkout__submit cart-checkout__submit--disabled cart-checkout__submit--mobile" href="#">оформить</a>
-                  <div class="terms terms--mobile">
-                    <div class="terms__icon"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="application-form__field">
+                      <div class="application-form__terms">
+                        <div class="terms terms--mobile">
+                          <div class="terms__icon"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.5 14L4.83564 14.7474L5.56914 15.3994L6.2348 14.6783L5.5 14ZM0.335636 10.7474L4.83564 14.7474L6.16436 13.2526L1.66436 9.25259L0.335636 10.7474ZM6.2348 14.6783L18.2348 1.67828L16.7652 0.32172L4.7652 13.3217L6.2348 14.6783Z" fill="#CBA576"/>
 </svg>
 
+                          </div>
+                          <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения</a></div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="terms__text"><span>Принимаю условия</span><a class="terms__link" href="#">пользовательского соглашения</a></div>
-                  </div>
-                </form>
+                    <div class="application-form__block"><a class="application-form__submit application-form__submit--disabled" href="#">Отправить</a><span class="application-form__required">Имя и&nbsp;телефон&nbsp;&mdash; обязательные поля</span></div>
+                  </form>
+                </div>
               </div>
               <div class="offset-xl-1 offset-lg-1 col-xl-6 col-lg-4">
                 <div class="sample__block"><img class="sample__img" src="static/images/icons/step-1.svg" alt="">
@@ -156,6 +159,7 @@
             </div>
           </div>
         </section>
+        <script src="static/js/components/application-form.js"></script>
       </main>
       <div class="view-instagram">
         <div class="container">
