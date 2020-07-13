@@ -70,6 +70,8 @@
     width: 246px;
     height: 73px;
     transition: $transition-base;
+    outline: none;
+    border:none;
 
     &:hover {
       background-color: $gold;
