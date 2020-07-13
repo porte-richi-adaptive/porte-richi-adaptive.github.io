@@ -104,24 +104,24 @@
         <section class="sample">
           <div class="container">
             <div class="row">
-              <div class="col-xl-16">
+              <div class="col-xl-12 col-lg-13 col-md-15">
                 <h1 class="sample__title">Замер дверного проёма</h1>
                 <p class="sample__text">Профессиональный замер гарантирует правильный монтаж, надёжность и практичность эксплуатации входных и межкомнатных дверей. Специалист с точностью определит параметры дверных проёмов, необходимую комплектацию погонажа и рассчитает стоимость установки.</p>
               </div>
-              <div class="col-xl-9 col-lg-11">
+              <div class="col-xl-9 col-lg-11 col-md-10">
                 <div class="sample__form">
-                  <form class="application-form" id="application-form">
+                  <form class="application-form" id="application-form" novalidate>
                     <h2 class="application-form__title">Заявка на замер</h2>
                     <p class="application-form__descr">Заполните форму, чтобы менеджер согласовал дату и время замера.</p>
                     <div class="application-form__field">
                       <label class="application-form__label"><span class="application-form__name">Имя</span>
-                        <input class="application-form__input" type="text" required>
+                        <input class="application-form__input" type="text" data-valid-state="" required>
                       </label>
                       <div class="application-form__message"></div>
                     </div>
                     <div class="application-form__field">
                       <label class="application-form__label"><span class="application-form__name">Телефон</span>
-                        <input class="application-form__input" type="tel" required>
+                        <input class="application-form__input" type="tel" data-valid-state="" required>
                       </label>
                       <div class="application-form__message"></div>
                     </div>
@@ -144,12 +144,12 @@
                       </div>
                     </div>
                     <div class="application-form__block">
-                      <button class="application-form__submit application-form__submit--disabled">Отправить</button><span class="application-form__required">Имя и&nbsp;телефон&nbsp;&mdash; обязательные поля</span>
+                      <button class="application-form__submit disabled">Отправить</button><span class="application-form__required">Имя и&nbsp;телефон&nbsp;&mdash; обязательные поля</span>
                     </div>
                   </form>
                 </div>
               </div>
-              <div class="offset-xl-1 offset-lg-1 col-xl-6 col-lg-4">
+              <div class="offset-xl-1 offset-lg-1 col-xl-6 col-lg-4 col-md-6">
                 <div class="sample__block"><img class="sample__img" src="static/images/icons/step-1.svg" alt="">
                   <p class="sample__descr">При самостоятельном замере даже маленькая ошибка может обойтись в два раза дороже. Замер специалиста компании позволит избежать ненужных затрат на расширение или сужение проёмов дверей.</p>
                 </div>
@@ -161,8 +161,8 @@
             </div>
           </div>
         </section>
-        <script src="static/js/vendor/inputmask.js"></script>
-        <script src="static/js/components/application-form.js"></script>
+        <script src="static/js/vendor/inputmask.js" defer></script>
+        <script src="static/js/components/application-form.js" defer></script>
       </main>
       <div class="view-instagram">
         <div class="container">

@@ -1,19 +1,19 @@
 
 - var placeholderText =  'В какое время вам удобно разговаривать? Вас интересует замер проёма для межкомнатной или входной двери?';
 
-form(class="application-form", id='application-form')
+form(class="application-form", id='application-form', novalidate)
     h2.application-form__title Заявка на замер
     p.application-form__descr Заполните форму, чтобы менеджер согласовал дату и время замера.
     .application-form__field
         label.application-form__label
             span.application-form__name Имя
-            input( type='text', required ).application-form__input
+            input( type='text', data-valid-state='',  required ).application-form__input
         .application-form__message
 
     .application-form__field
         label.application-form__label
             span.application-form__name Телефон
-            input( type='tel', required ).application-form__input
+            input( type='tel', data-valid-state='', required ).application-form__input
         .application-form__message
 
     .application-form__field.application-form__field--top
@@ -27,7 +27,7 @@ form(class="application-form", id='application-form')
             include ../modules/terms
 
     .application-form__block
-        button.application-form__submit.application-form__submit--disabled Отправить
+        button.application-form__submit.disabled Отправить
         span.application-form__required Имя и&nbsp;телефон&nbsp;&mdash; обязательные поля
 
 

@@ -1,5 +1,15 @@
 @mixin typography ($size) {
 
+  @if $size == 'h2-new' {
+    font-size: 42px;
+    line-height: 54px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
   @if $size == 'p1' {
 
     font-size: 25px;

@@ -4,11 +4,27 @@
   &__title {
     margin-top: 63px;
     margin-bottom: 18px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 44px;
+    }
+  }
+
+  &__img {
+    @include media-breakpoint-down(lg) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__text {
     @include typography('p1');
     margin-bottom: 90px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 75px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 54px;
+    }
   }
 
   &__subtitle {
@@ -22,6 +38,12 @@
 
   &__block {
     margin-bottom: 45px;
+  }
+
+  &__form {
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 41px);
+    }
   }
 
 }
