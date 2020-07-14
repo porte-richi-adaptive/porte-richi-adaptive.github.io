@@ -9,8 +9,7 @@
   }
 
   @include media-breakpoint-down(md) {
-    padding-left: 27px;
-    padding-top: 27px;
+    padding: 27px 27px 36px;
   }
 
   $application-form: &;
@@ -34,6 +33,12 @@
     color: $gray-2;
     margin-left: 27px;
     transition: $transition-base;
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      margin-left: 0;
+    }
+
     &.active {
       color: $red;
     }
@@ -48,6 +53,7 @@
     }
     @include media-breakpoint-down(md) {
       max-width: 305px;
+      margin-bottom: 27px;
     }
   }
 
@@ -64,6 +70,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   &__field {
@@ -72,6 +82,10 @@
       margin-top: 36px;
       @include media-breakpoint-down(lg) {
         margin-top: 27px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: 18px;
       }
 
       #{$application-form}__label {
@@ -89,6 +103,9 @@
     @include media-breakpoint-down(lg) {
       margin-bottom: 27px;
     }
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+    }
   }
 
   &__name {
@@ -96,6 +113,7 @@
     min-width: 165px;
     @include media-breakpoint-down(md) {
       width: 100%;
+      margin-bottom: 9px;
     }
   }
 
@@ -117,6 +135,12 @@
       width: 254px;
       height: 63px;
       margin-left: 54px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 13px;
     }
 
     &:hover {
@@ -148,6 +172,10 @@
     @include media-breakpoint-down(lg) {
       width: 189px;
     }
+    @include media-breakpoint-down(md) {
+      width: 183px;
+      height: 45px;
+    }
 
 
     &[data-valid-state='error'] {
@@ -172,6 +200,11 @@
 
     @include media-breakpoint-down(lg) {
       width: 391px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 376px;
+      height: 117px;
     }
 
     &:focus, &:active {
