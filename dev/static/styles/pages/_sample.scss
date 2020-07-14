@@ -7,12 +7,25 @@
     @include media-breakpoint-down(lg) {
       margin-top: 44px;
     }
+    @include media-breakpoint-down(sm) {
+      line-height: 45px;
+      margin-top: 24px;
+    }
   }
 
   &__img {
     @include media-breakpoint-down(lg) {
       width: 50px;
       height: 50px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 6px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 90px;
+      height: 90px;
     }
   }
 
@@ -24,6 +37,9 @@
     }
     @include media-breakpoint-down(md) {
       margin-bottom: 54px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 41px;
     }
   }
 
@@ -38,12 +54,23 @@
 
   &__block {
     margin-bottom: 45px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 77px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 45px;
+    }
   }
 
   &__form {
     @include media-breakpoint-down(md) {
       width: calc(100% - 41px);
     }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-bottom: 18px;
+    }
+
   }
 
 }

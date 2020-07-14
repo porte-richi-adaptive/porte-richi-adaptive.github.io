@@ -177,6 +177,9 @@
         #{$company-salons}__address {
           left: auto;
           right: calc(100% - -70px);
+          @include media-breakpoint-down(md) {
+            right: calc(100% - -89px);
+          }
           @include media-breakpoint-down(sm) {
             left: 0;
             right: 0;
