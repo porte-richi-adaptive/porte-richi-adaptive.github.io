@@ -50,6 +50,7 @@
       &-number {
         @include typography('h1');
         letter-spacing: -2px;
+        font-family: $minion-display;
       }
       &-text {
         @include typography('p2');
