@@ -1,0 +1,79 @@
+.stocks {
+  margin-bottom: 110px;
+
+    &__item {
+      &:not(:last-child) {
+        padding-bottom: 38px;
+        margin-bottom: 27px;
+        border-bottom: 1px solid $gray-1;
+      }
+    }
+
+    &__block {
+      max-width: 317px;
+    }
+
+    .breadcrumbs__wrap {
+      margin-top: 48px;
+      margin-bottom: 27px;
+    }
+
+    &__link {
+      color: $black;
+    }
+
+    &__title {
+      margin-bottom: 31px;
+    }
+
+    &__tip {
+      @include typography('descr-multi');
+      display: inline-block;
+      margin-bottom: 18px;
+    }
+
+    &__img {
+      margin-bottom: 3px;
+    }
+
+    &__name {
+      margin-bottom: 8px;
+    }
+
+    &__condition {
+      margin-bottom: 45px;
+
+      &-wrap {
+        margin-top: -84px;
+      }
+
+      &-number {
+        @include typography('h1');
+        letter-spacing: -2px;
+      }
+      &-text {
+        @include typography('p2');
+      }
+    }
+  &__tabs {
+
+    position: relative;
+    &-title {
+      margin-bottom: 27px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

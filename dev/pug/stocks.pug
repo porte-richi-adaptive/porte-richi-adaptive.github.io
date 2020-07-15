@@ -1,23 +1,55 @@
 extends template/main
 
 block variables
-    - var title = 'Главная страница';
+    - var title = 'Акции и скидки';
     - var headerGrayBackground = true;
 
 block content
-    section.sctoks
+    section.stocks
         .container
             .row
-                include modules/breadcrumbs
-                h1.sctoks__title Акции и скидки
+                .col-16
+                    include modules/breadcrumbs
+                    h1.stocks__title Акции и скидки
                 .col-xl-11
-                    img(src='static/images/content/cart/cart-item-1.jpg', alt='').sctoks__item
-
-
+                    .stocks__item
+                        a(href="#").stocks__link
+                            img(src='static/images/discount.jpg', alt='').stocks__img
+                            span.stocks__tip Акция действует до 28 февраля 2018 года
+                            h2.stocks__name Складские двери Мёрс и Кёльн со скидкой
+                            p.stocks__text Специальная цена на&nbsp;входные двери &laquo;Мёрс&raquo; и&nbsp;&laquo;Кёльн&raquo; с&nbsp;итальянскими замками&nbsp;&mdash; 990&nbsp;рублей. В&nbsp;наличии на&nbsp;складе, готовы к&nbsp;установке в&nbsp;течение 7&nbsp;рабочих дней.
+                    .stocks__item
+                        a(href="#").stocks__link
+                            img(src='static/images/discount.jpg', alt='').stocks__img
+                            span.stocks__tip Акция действует до 28 февраля 2018 года
+                            h2.stocks__name Входные двери «Хаски» со скидкой
+                            p.stocks__text Подготовьте свой дом к&nbsp;зимним холодам вместе со&nbsp;&laquo;Стальной линией&raquo;&nbsp;&mdash; у&nbsp;нас скидка&nbsp;15% на&nbsp;восемь непромерзающих входных дверей.
                 .offset-lg-1.col-lg-4
+                    .stocks__condition-wrap
+                        .stocks__condition
+                            .stocks__condition-number до 8%
+                            .stocks__condition-text скидка пенсионерам, многодетным семьям и&nbsp;людям с&nbsp;ограниченными возможностями
 
+                        .stocks__condition
+                            .stocks__condition-number до 20%
+                            .stocks__condition-text скидка при покупке двух и&nbsp;более дверей
 
+                        .stocks__condition
+                            .stocks__condition-number 5%
+                            .stocks__condition-text скидка для держателей карточки «Моцная картка»
 
+                        .stocks__condition
+                            .stocks__condition-number 2%
+                            .stocks__condition-text кешбэка по карте Cashalot
+
+                        p.stocks__block Скидки не&nbsp;суммируются, не&nbsp;действует на&nbsp;образцы, модели на&nbsp;акции и&nbsp;при покупке дверей в&nbsp;рассрочку.
+
+    section.stocks__tabs
+        .container
+            .row
+                .col-16
+                    h2.stocks__tabs-title Двери на акции
+        include modules/result-tabs
 
 
 
