@@ -6,7 +6,7 @@ var state = {
 var container = document.querySelector('.result-tabs');
 var tabs = container.querySelectorAll('.result-tabs__tab');
 var pages = container.querySelectorAll('.result-tabs__page');
-tabs.forEach(function (tab, i, arr) {
+tabs.forEach(function (tab) {
   tab.addEventListener('click', function (e) {
     e.preventDefault();
     var name = tab.dataset.tab || '';

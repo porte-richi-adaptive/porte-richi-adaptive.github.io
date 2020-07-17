@@ -1,0 +1,44 @@
+extends template/main
+
+block variables
+    - var title = 'Акции и скидки';
+    - var headerGrayBackground = true;
+
+block content
+    section.stocks.stocks__buy
+        .container
+            .row
+                .col-16
+                    include modules/breadcrumbs
+                    h1.stocks__title Акции и скидки
+                .col-xl-11.col-lg-11.col-md-12
+                    h2.stocks__empty Акций сейчас нет. Воспользуйтесь системой постоянных скидок, чтобы купить дверь дешевле.
+                .offset-xl-1.col-xl-4.offset-lg-1.col-lg-4.col-md-4
+                    .stocks__condition-wrap
+                        .stocks__condition
+                            .stocks__condition-number до 8%
+                            .stocks__condition-text скидка пенсионерам, многодетным семьям и&nbsp;людям с&nbsp;ограниченными возможностями
+
+                        .stocks__condition
+                            .stocks__condition-number до 20%
+                            .stocks__condition-text скидка при покупке двух и&nbsp;более дверей
+
+                        .stocks__condition
+                            .stocks__condition-number 5%
+                            .stocks__condition-text скидка для держателей карточки «Моцная картка»
+
+                        .stocks__condition
+                            .stocks__condition-number 2%
+                            .stocks__condition-text кешбэка по карте Cashalot
+
+                        p.stocks__block Скидки не&nbsp;суммируются, не&nbsp;действует на&nbsp;образцы, модели на&nbsp;акции и&nbsp;при покупке дверей в&nbsp;рассрочку.
+
+    section.stocks__tabs
+        .container
+            .row
+                .col-16
+                    h2.stocks__tabs-title Двери на акции
+        include modules/result-tabs
+
+
+    script(src="static/js/components/result-tabs.js", defer)

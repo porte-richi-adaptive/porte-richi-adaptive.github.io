@@ -1,21 +1,123 @@
 .stocks {
+  $stocks: &;
   margin-bottom: 110px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 80px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 42px;
+  }
+    &__descr {
+      margin-top: 27px;
+      margin-bottom: 27px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 36px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 27px;
+      }
+      p {
+        margin-bottom: 27px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include media-breakpoint-down(lg) {
+          line-height: 27px;
+          font-size: 20px;
+        }
+        @include media-breakpoint-down(md) {
+          line-height: 22px;
+          font-size: 16px;
+        }
+      }
+      ul {
+        margin-bottom: 27px;
+      }
+      li {
+        @include media-breakpoint-down(md) {
+          line-height: 22px;
+          font-size: 16px;
+        }
+      }
+    }
+    &__empty {
+
+    }
+
+    &.stocks__buy {
+      #{$stocks}__item {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    &__btn {
+      @include upperlink;
+      width: 334px;
+      height: 81px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $gray;
+      &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $black;
+      }
+      @include media-breakpoint-down(md) {
+        width: 306px;
+        height: 72px;
+      }
+      @include mobile {
+        width: 100%;
+        height: 72px;
+      }
+    }
 
     &__item {
+      @include media-breakpoint-down(md) {
+        width: calc(100% - 66px);
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+
       &:not(:last-child) {
         padding-bottom: 38px;
         margin-bottom: 27px;
         border-bottom: 1px solid $gray-1;
+        @include media-breakpoint-down(lg) {
+          border-bottom-color: transparent;
+        }
+        @include media-breakpoint-down(md) {
+          border-bottom-color: $gray-1;
+        }
       }
     }
 
     &__block {
       max-width: 317px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 54px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: 27px;
+      }
     }
 
     .breadcrumbs__wrap {
       margin-top: 48px;
       margin-bottom: 27px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 18px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: 29px;
+        margin-bottom: 5px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
     }
 
     &__link {
@@ -24,33 +126,80 @@
 
     &__title {
       margin-bottom: 31px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 22px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 12px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 9px;
+      }
     }
 
     &__tip {
       @include typography('descr-multi');
       display: inline-block;
       margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 27px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 16px;
+      }
     }
 
     &__img {
       margin-bottom: 3px;
+      width: 100%;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 8px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 5px;
+      }
     }
 
     &__name {
       margin-bottom: 8px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 11px;
+      }
     }
 
     &__condition {
       margin-bottom: 45px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 36px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 27px;
+      }
 
       &-wrap {
         margin-top: -84px;
+        @include media-breakpoint-down(lg) {
+          margin-top: -74px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-top: -61px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-top: 33px;
+        }
       }
 
       &-number {
         @include typography('h1');
         letter-spacing: -2px;
         font-family: $minion-display;
+        @include media-breakpoint-down(lg) {
+          letter-spacing: 0;
+          margin-bottom: 9px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-bottom: 0;
+        }
       }
       &-text {
         @include typography('p2');
@@ -61,6 +210,13 @@
     position: relative;
     &-title {
       margin-bottom: 27px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        position: relative;
+        z-index: 3;
+      }
     }
   }
 

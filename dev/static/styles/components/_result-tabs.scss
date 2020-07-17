@@ -12,9 +12,16 @@
     z-index: -1;
     transform: rotate(180deg);
     background-image: linear-gradient(180deg, #DEE2E3 0%, rgba(222, 226, 227, 0) 100%);
+    @include media-breakpoint-down(sm) {
+      height: 184px;
+      top: -77px;
+      z-index: 0;
+    }
   }
 
   &__page {
+    background-color: $white;
+
     &:not(:first-child) {
       display: none;
     }
@@ -22,6 +29,13 @@
 
   &__header {
     display: flex;
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      overflow: hidden;
+    }
+    &-container {
+      padding-right: 0;
+    }
   }
 
   &__body {
@@ -30,6 +44,12 @@
     width: 100%;
     padding-top: 64px;
     justify-content: space-between;
+    @include media-breakpoint-down(md) {
+      padding-top: 47px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 89px;
+    }
   }
 
   &__tab {
@@ -41,10 +61,20 @@
     background-color: $white;
     cursor: default;
     pointer-events: none;
+    white-space: nowrap;
     &:hover {
       #{$result-tabs}__name {
         color: $black;
       }
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 231px;
+      height: 52px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 53px;
+      padding: 18px;
     }
 
     &--disabled {
@@ -85,5 +115,7 @@
     background-color: $gray-2;
     color: $white;
     border-radius: 50%;
+    font-size: 18px;
+    font-family: $minion-display;
   }
 }

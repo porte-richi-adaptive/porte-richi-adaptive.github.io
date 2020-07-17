@@ -1,0 +1,61 @@
+extends template/main
+
+block variables
+    - var title = 'Акции и скидки';
+    - var headerGrayBackground = true;
+
+block content
+    section.stocks.stocks__buy
+        .container
+            .row
+                .col-16
+                    include modules/breadcrumbs
+                    h1.stocks__title Акции и скидки
+                .col-xl-11.col-lg-11.col-md-12
+                    .stocks__item
+                        a(href="#").stocks__link
+                            picture.stocks__picture
+                                source(srcset='static/images/stocks-mob.jpg', media="(max-width: 856px)")
+                                source(srcset='static/images/discount.jpg')
+                                img(srcset='static/images/discount.jpg', alt='').stocks__img
+                            span.stocks__tip Акция действует до 28 февраля 2018 года
+
+                    .stocks__descr
+                        p Подготовьте свой дом к зимним холодам вместе со «Стальной линией» — у нас скидка 15% на восемь непромерзающих входных дверей.
+                        p Двери «Хаски» сочетают повышенную защиту от холода и взлома. Устойчивы к заморозкам и перепадам температур, сохраняют тепло в доме. Подходят для установки с улицы в тамбур или в жилое помещение.
+                        ul
+                            li • Терморазрыв защищает дверь от промерзания, образования конденсата и наледи. Подпороговый профиль утепляет пространство у основания двери.
+                            li • Полотно из оцинкованной стали устойчиво к коррозии, атмосферостойкое покрытие не портится под воздействием солнца и перепадов температур.
+                            li • 2 или 3 контура уплотнения задерживают шум с улицы и сохраняют тишину в доме.
+                            li • Замок Maco или Siegenia плотно прижимает дверное полотно к коробке по всей высоте.
+                        p В акции участвуют восемь моделей «Хаски» — они представлены ниже со скидкой. Скидка действует, если вы заказываете дверь в указанной на сайте комплектации. Покупку можно оплатить в рассрочку от 3 до 8 месяцев. Приходите в наши салоны за новой дверью!
+                    .stocks__btn где купить
+                .offset-xl-1.col-xl-4.offset-lg-1.col-lg-4.col-md-4
+                    .stocks__condition-wrap
+                        .stocks__condition
+                            .stocks__condition-number до 8%
+                            .stocks__condition-text скидка пенсионерам, многодетным семьям и&nbsp;людям с&nbsp;ограниченными возможностями
+
+                        .stocks__condition
+                            .stocks__condition-number до 20%
+                            .stocks__condition-text скидка при покупке двух и&nbsp;более дверей
+
+                        .stocks__condition
+                            .stocks__condition-number 5%
+                            .stocks__condition-text скидка для держателей карточки «Моцная картка»
+
+                        .stocks__condition
+                            .stocks__condition-number 2%
+                            .stocks__condition-text кешбэка по карте Cashalot
+
+                        p.stocks__block Скидки не&nbsp;суммируются, не&nbsp;действует на&nbsp;образцы, модели на&nbsp;акции и&nbsp;при покупке дверей в&nbsp;рассрочку.
+
+    section.stocks__tabs
+        .container
+            .row
+                .col-16
+                    h2.stocks__tabs-title Двери на акции
+        include modules/result-tabs
+
+
+    script(src="static/js/components/result-tabs.js", defer)

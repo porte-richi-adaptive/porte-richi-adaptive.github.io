@@ -6,7 +6,7 @@ const tabs = container.querySelectorAll('.result-tabs__tab');
 const pages = container.querySelectorAll('.result-tabs__page');
 
 
-tabs.forEach((tab, i, arr) => {
+tabs.forEach((tab) => {
 
     tab.addEventListener('click', function(e) {
         e.preventDefault();
