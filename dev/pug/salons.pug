@@ -15,15 +15,17 @@ block content
         .salons__item
             .container
                 .row
-                    .col-xl-10
+                    .col-xl-10.col-lg-9
                         img(srcset='static/images/content/salons/olysheva.jpg', alt='').salons__img
-                    .offset-xl-1.col-xl-4
-                        a(href='#').salons__address ул. Олешева, 1
-                        p.salons__time с 10 до 20, в вс до 18
-                        a(href='tel:+375291384931').salons__link +375 29 138-49-31
-                        a(href='tel:+375291384963').salons__link +375 29 138-49-63
+                    .offset-xl-1.col-xl-4.offset-lg-1.col-lg-6
+                        a(href='#').salons__address.salons__address--top ул. Олешева, 1
+                        .salons__block
+                            p.salons__time с 10 до 20, в вс до 18
+                            .salons__links
+                                a(href='tel:+375291384931').salons__link +375 29 138-49-31
+                                a(href='tel:+375291384963').salons__link +375 29 138-49-63
                         .salons__parking схема проезда и парковок
-                        .salons__mini-wrap
+                        .salons__mini-wrap.salons__mini-wrap--top
                             .salons__mini
                                 span.salons__mini-number 22
                                 span.salons__mini-text образца межкомнатных
@@ -32,49 +34,53 @@ block content
                                 span.salons__mini-number 32
                                 span.salons__mini-text образца входных дверей в салоне
 
+        .salons__items
+            .salons__item
+                .container
+                    .row
+                        .col-xl-5.col-lg-7.salons__wrap
+                            .salons__metro малиновка
+                            a(href='#').salons__address пр-т Дзержинского, 122
+                            .salons__block.salons__block--middle
+                                p.salons__time с 10 до 20, в вс до 18
+                                .salons__links
+                                    a(href='tel:+375445990268').salons__link +375 44 599-02-68
+                                    a(href='tel:+375298478782').salons__link +375 29 847-87-82
+                            .salons__parking схема проезда и парковок
+                            .salons__mini-wrap
+                                .salons__mini
+                                    span.salons__mini-number 73
+                                    span.salons__mini-text.salons__mini-text--single образца межкомнатных<br/> дверей в салоне
 
-        .salons__item
-            .container
-                .row
-                    .col-xl-5
-                        .salons__metro малиновка
-                        a(href='#').salons__address пр-т Дзержинского, 122
-                        p.salons__time с 10 до 20, в вс до 18
-                        a(href='tel:+375445990268').salons__link +375 44 599-02-68
-                        a(href='tel:+375298478782').salons__link +375 29 847-87-82
-                        .salons__parking схема проезда и парковок
-                        .salons__mini-wrap
-                            .salons__mini
-                                span.salons__mini-number 73
-                                span.salons__mini-text образца межкомнатных<br/> дверей в салоне
-
-                    .offset-xl-1.col-xl-10
-                        img(srcset='static/images/content/salons/dzer.jpg', alt='').salons__img
+                        .offset-xl-1.col-xl-10.col-lg-9.salons__img-wrap
+                            img(srcset='static/images/content/salons/dzer.jpg', alt='').salons__img
 
 
 
-        .salons__item
-            .container
-                .row
-                    .col-xl-10
-                        img(srcset='static/images/content/salons/trum.jpg', alt='').salons__img
-                    .offset-xl-1.col-xl-4
-                        .salons__metro фрунзенская
-                        a(href='#').salons__address.salons__address--multi
-                            span ул. Кальварийская, 7б,
-                            span ТЦ «Трюм»
-                        p.salons__time с 10 до 20, в вс до 18
-                        a(href='tel:+375445463609 ').salons__link +375 44 546-36-09
-                        a(href='tel:+375295879209').salons__link +375 29 587-92-09
-                        .salons__parking схема проезда и парковок
-                        .salons__mini-wrap
-                            .salons__mini
-                                span.salons__mini-number 60
-                                span.salons__mini-text образцов межкомнатных
+            .salons__item
+                .container
+                    .row
+                        .col-xl-10.col-lg-9
+                            img(srcset='static/images/content/salons/trum.jpg', alt='').salons__img
+                        .offset-xl-1.col-xl-4.offset-lg-1.col-lg-6
+                            .salons__metro фрунзенская
+                            a(href='#').salons__address.salons__address--multi
+                                span ул. Кальварийская, 7б,
+                                span ТЦ «Трюм»
+                            .salons__block.salons__block--change
+                                p.salons__time с 10 до 20, в вс до 18
+                                .salons__links
+                                    a(href='tel:+375445463609 ').salons__link +375 44 546-36-09
+                                    a(href='tel:+375295879209').salons__link +375 29 587-92-09
+                            .salons__parking схема проезда и парковок
+                            .salons__mini-wrap
+                                .salons__mini
+                                    span.salons__mini-number 60
+                                    span.salons__mini-text образцов межкомнатных
 
-                            .salons__mini
-                                span.salons__mini-number 42
-                                span.salons__mini-text образца входных дверей в салоне
+                                .salons__mini
+                                    span.salons__mini-number 42
+                                    span.salons__mini-text образца входных дверей в салоне
 
 
 
