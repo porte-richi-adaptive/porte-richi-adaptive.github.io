@@ -20,3 +20,8 @@ $sm: 856px;
   }
 }
 
+@mixin mob-land {
+  @media (orientation:landscape ) and (max-width: #{$sm - 1px}) {
+    @content;
+  }
+}

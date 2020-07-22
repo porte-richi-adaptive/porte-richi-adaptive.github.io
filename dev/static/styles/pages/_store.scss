@@ -1,0 +1,99 @@
+.store {
+  &__title {
+    margin-bottom: 27px;
+    span {
+      display: inline-block;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    &--underline {
+      position: relative;
+      border-bottom: 2px solid $black;
+
+    }
+  }
+
+  &-main {
+    @include section-indent;
+
+    .breadcrumbs__wrap {
+      margin: 0 0 9px;
+      padding: 0;
+
+    }
+
+    &__bg {
+      position: absolute;
+      background-image: url('../../static/images/content/salons/salon-main-1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      min-height: 1107px;
+      top: 0;
+      z-index: -1;
+    }
+
+    &__container {
+      background-color: $white;
+      padding: 57px 27px 45px 36px;
+      width: 532px;
+      margin-top: 90px;
+      margin-bottom: 152px;
+      margin-left: 70px;
+    }
+
+    &__text {
+      @include typography('p2');
+      margin-bottom: 71px;
+    }
+
+    &__table {
+      border-top: 1px solid $gray-1;
+      border-bottom: 1px solid $gray-1;
+      margin-bottom: 27px;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-1;
+      }
+    }
+
+    &__name {
+      @include typography('tech');
+      color: $gray-6;
+    }
+
+    &__tel, &__info {
+      @include typography('tech');
+    }
+
+    &__info {
+      display: inline-block;
+    }
+
+    &__tel {
+      display: flex;
+      color: $black;
+    }
+
+    &__scheme {
+      display: flex;
+      justify-content: center;
+      &-link {
+        display: inline-block;
+        color: $black;
+        @include upperlink-underline;
+      }
+    }
+
+
+
+
+  }
+}

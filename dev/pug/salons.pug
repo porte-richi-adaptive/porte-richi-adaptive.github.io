@@ -5,6 +5,95 @@ block variables
     - var headerGrayBackground = true;
 
 block content
+    .salons__modal.js-map-modal
+        .salons__modal-close.js-modal-close
+            include ../static/images/icons/modal-close.svg
+        .salons__modal-wrap(data-modal-map='trum')
+            .container
+                .row
+                    .col-16
+                        .salons__modal-map.js-modal-wrap
+                            img(srcset='static/images/salon-map-trum.svg', alt='').salons__modal-img
+                            label.salons__modal-point(data-map-point='1').js-modal-point
+                                input(type='checkbox', name="point").salons__modal-radio
+                                .salons__modal-plus
+                                    include ../static/images/icons/modal-plus.svg
+                                .salons__modal-tip
+                                    .salons__modal-title Кальварийская
+                                    .salons__modal-transport
+                                        .salons__modal-block
+                                            .salons__modal-type автобусы
+                                            .salons__modal-number
+                                                span 40
+                                                span 46
+                                                span 78
+                                        .salons__modal-block
+                                            .salons__modal-type троллейбусы
+                                            .salons__modal-number
+                                                span 4
+                                                span 7
+                                                span 9
+                                                span 13
+                                                span 44
+                                                span 57
+                            label.salons__modal-point(data-map-point='2').js-modal-point
+                                input(type='checkbox', name="point").salons__modal-radio
+                                .salons__modal-plus
+                                    include ../static/images/icons/modal-plus.svg
+                                .salons__modal-tip
+                                    .salons__modal-title Салон «Порте Ричи»
+                                    .salons__modal-address ул. Кальварийская, 7Б
+                                    .salons__modal-time с 10 до 20, в вс до 18
+                            label.salons__modal-point(data-map-point='3').js-modal-point
+                                input(type='checkbox', name="point").salons__modal-radio
+                                .salons__modal-plus
+                                    include ../static/images/icons/modal-plus.svg
+                                .salons__modal-tip
+                                    .salons__modal-tip
+                                        .salons__modal-title ст. м. Фрунзенская
+                                        .salons__modal-transport
+                                            .salons__modal-block
+                                                .salons__modal-type автобусы
+                                                .salons__modal-number
+                                                    span 40
+                                                    span 46
+                                                    span 78
+                                            .salons__modal-block
+                                                .salons__modal-type троллейбусы
+                                                .salons__modal-number
+                                                    span 4
+                                                    span 7
+                                                    span 9
+                                                    span 13
+                                                    span 44
+                                                    span 57
+                            label.salons__modal-point(data-map-point='4').js-modal-point
+                                input(type='checkbox', name="point").salons__modal-radio
+                                .salons__modal-plus
+                                    include ../static/images/icons/modal-plus.svg
+                                .salons__modal-tip.salons__modal-tip--left
+                                    .salons__modal-title Максима Танка
+                                    .salons__modal-transport
+                                        .salons__modal-block
+                                            .salons__modal-type автобусы
+                                            .salons__modal-number
+                                                span 40
+                                                span 46
+                                                span 78
+                                        .salons__modal-block
+                                            .salons__modal-type троллейбусы
+                                            .salons__modal-number
+                                                span 4
+                                                span 7
+                                                span 9
+                                                span 13
+                                                span 44
+                                                span 57
+
+
+
+
+
     section.salons
         .container
             .row
@@ -24,7 +113,7 @@ block content
                             .salons__links
                                 a(href='tel:+375291384931').salons__link +375 29 138-49-31
                                 a(href='tel:+375291384963').salons__link +375 29 138-49-63
-                        .salons__parking схема проезда и парковок
+                        .salons__parking.js-modal-open схема проезда и парковок
                         .salons__mini-wrap.salons__mini-wrap--top
                             .salons__mini
                                 span.salons__mini-number 22
@@ -46,7 +135,7 @@ block content
                                 .salons__links
                                     a(href='tel:+375445990268').salons__link +375 44 599-02-68
                                     a(href='tel:+375298478782').salons__link +375 29 847-87-82
-                            .salons__parking схема проезда и парковок
+                            .salons__parking.js-modal-open схема проезда и парковок
                             .salons__mini-wrap
                                 .salons__mini
                                     span.salons__mini-number 73
@@ -72,7 +161,7 @@ block content
                                 .salons__links
                                     a(href='tel:+375445463609 ').salons__link +375 44 546-36-09
                                     a(href='tel:+375295879209').salons__link +375 29 587-92-09
-                            .salons__parking схема проезда и парковок
+                            .salons__parking.js-modal-open схема проезда и парковок
                             .salons__mini-wrap
                                 .salons__mini
                                     span.salons__mini-number 60
@@ -85,4 +174,4 @@ block content
 
 
 
-
+    script(src="static/js/components/salons-map-modal.js", defer)

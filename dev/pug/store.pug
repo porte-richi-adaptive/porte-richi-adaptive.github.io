@@ -1,0 +1,45 @@
+extends template/main
+
+block variables
+    - var title = 'Фирменный салон';
+    - var headerGrayBackground = true;
+
+block content
+    .store-main__bg
+    .store-main
+        .container
+            .row
+                .col-16
+                    .store-main__container
+                        include modules/breadcrumbs
+                        h1.store__title
+                            span Фирменный салон
+                            span на
+                            span.store__title--underline Кальварийской,
+                            span.store__title--underline 7б,
+                            span ТЦ «Трюм»
+                        .store-main__text  Выбирайте входные и&nbsp;межкомнатные двери для дома или квартиры в&nbsp;одном месте. Менеджеры покажут умные замки для входных дверей, расскажут об&nbsp;особенностях монтажа раздвижных систем.
+                        .store-main__table
+                            .store-main__row
+                                .store-main__name время работы
+                                .store-main__block
+                                    .store-main__info с 10 до 20,
+                                    .store-main__info в вс до 18
+
+                            .store-main__row
+                                .store-main__name контакты
+                                .store-main__block
+                                    a(href="tel:").store-main__tel +375 44 546-36-09
+                                    a(href="tel:").store-main__tel +375 29 587-92-09
+
+                            .store-main__row
+                                .store-main__name площадь салона
+                                .store-main__block
+                                    .store-main__info 230 м2
+
+                        .store-main__scheme
+                            a(href="").store-main__scheme-link схема проезда и парковок
+
+
+
+

@@ -1,5 +1,14 @@
 @mixin typography ($size) {
 
+  @if $size == 'tech' {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: $rft-font;
+    font-weight: 700;
+  }
+
   @if $size == 'h1' {
     font-size: 61px;
     line-height: 63px;

@@ -173,3 +173,11 @@ p {
   font-size: 20px;
   line-height: 27px;
 }
+
+// Script Classes
+body {
+  &.js-modal-open {
+    overflow: hidden;
+
+  }
+}
