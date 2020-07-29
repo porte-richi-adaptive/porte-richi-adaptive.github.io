@@ -1,0 +1,170 @@
+extends template/main
+
+block variables
+    - var title = 'Фирменный салон';
+    - var headerGrayBackground = true;
+
+block content
+    section.payment
+        .container
+            .row
+                .col-16
+                    include modules/breadcrumbs
+                    h1.payment__title Оплата
+
+        .payment__container
+            .container
+                .row
+                    .col-xl-3.col-lg-4.payment__first
+                        .payment__block
+                            .payment__name Наличными
+                            p.payment__text В фирменных салонах, при замере или доставке.
+                        .payment__block
+                            .payment__name Через безналичный расчёт
+                            p.payment__text По&nbsp;номеру счёта. Подходит для юридических лиц.
+                        .payment__block
+                            .payment__name Картой рассрочки
+                            p.payment__text Без процентов и переплат. Покупайте двери сейчас, платите потом.
+                    .offset-xl-1.col-xl-3.offset-lg-1.col-lg-4
+                        .payment__block
+                            .payment__name Банковской картой
+                            p.payment__text MasterCard, Visa, «БелКарт», «Моцная картка», Cashalot.
+                        .payment__block
+                            .payment__name Через систему «Расчёт»
+                            p.payment__text По номеру заказа через интернет или в банке.
+                    .offset-xl-2.col-xl-7.offset-lg-1.col-lg-6.payment__img-wrap
+                        img(src='static/images/content/salons/payment-1.svg', alt='').payment__img
+
+        .payment-table__container
+            .container
+                .row
+                    .col-xl-4.col-lg-4
+                        h2.payment__subtitle Двери в рассрочку
+                        p.payment__subtext Чтобы оформить покупку, необязательно оплачивать её&nbsp;стоимость сразу&nbsp;&mdash; можно воспользоваться беспроцентной рассрочкой. Устанавливайте дверь сегодня, а&nbsp;сумму покупки выплачивайте в&nbsp;течение нескольких месяцев, пополняя баланс карты удобным способом.
+                    .offset-xl-2.col-xl-10.offset-lg-1.col-lg-11
+                        .payment-table
+                            .payment-table__header
+                                .payment-table__header-item.payment-table__header-card Карта <br/> рассрочки
+                                .payment-table__header-item.payment-table__header-period Период, месяцев
+                                .payment-table__header-item.payment-table__header-time Срок оплаты, число месяца
+                                .payment-table__header-item.payment-table__header-range Мин...макс. сумма, руб.
+
+                            .payment-table__body
+                                .payment-table__item
+                                    .payment-table__item-block
+                                        img(src='static/images/icons/card-1.jpg', alt='').payment-table__item-img
+                                        .payment-table__item-card «Халва» МТБанка
+                                    .payment-table__item--grid.payment-table__item-period 2
+                                    .payment-table__item--grid.payment-table__item-time до 15
+                                    .payment-table__item--grid.payment-table__item-range 50...6000
+
+                                .payment-table__item
+                                    .payment-table__item-block
+                                        img(src='static/images/icons/card-2.jpg', alt='').payment-table__item-img
+                                        .payment-table__item-card «Смарт карта» банка «Дабрабыт»
+                                    .payment-table__item--grid.payment-table__item-period 5
+                                    .payment-table__item--grid.payment-table__item-time до 20
+                                    .payment-table__item--grid.payment-table__item-range 50...15 000
+
+                                .payment-table__item
+                                    .payment-table__item-block
+                                        img(src='static/images/icons/card-3.jpg', alt='').payment-table__item-img
+                                        .payment-table__item-card «КартаFun» БПС-Сбербанка
+                                    .payment-table__item--grid.payment-table__item-period 6
+                                    .payment-table__item--grid.payment-table__item-time до 30
+                                    .payment-table__item--grid.payment-table__item-range 200...10 000
+
+                                .payment-table__item
+                                    .payment-table__item-block
+                                        img(src='static/images/icons/card-4.jpg', alt='').payment-table__item-img
+                                        .payment-table__item-card «Карта покупок»   Белгазпромбанка
+                                    .payment-table__item--grid.payment-table__item-period 5
+                                    .payment-table__item--grid.payment-table__item-time до 20
+                                    .payment-table__item--grid.payment-table__item-range 200...5000
+
+                                .payment-table__item
+                                    .payment-table__item-block
+                                        img(src='static/images/icons/card-5.jpg', alt='').payment-table__item-img
+                                        .payment-table__item-card «Черепаха» банка ВТБ
+                                    .payment-table__item--grid.payment-table__item-period 10
+                                    .payment-table__item--grid.payment-table__item-time до 25
+                                    .payment-table__item--grid.payment-table__item-range 100...5000
+
+                        p.payment__tip Рассрочка действует на все двери, кроме акционных моделей и образцов.
+
+        .payment-steps
+            .container.payment-steps__container
+                h2.payment-steps__title
+                    | Если у вас нет карты рассрочки,<br/>
+                    span оформите её в банке
+                .row.payment-steps__row
+                    .offset-xl-1.col-xl-4.offset-lg-1.col-lg-4.payment-steps__over
+                        .payment-steps__block
+                            .payment-steps__step шаг 1
+                            h3.payment-steps__name Выберите вариант
+                            p.payment-steps__descr
+                                span Определите подходящий вариант рассрочки. Оставьте заявку на сайте:
+                                a(href="#").payment-steps__link «Халва»
+                                span ,
+                                a(href="#").payment-steps__link «Смарт карта»
+                                span ,
+                                a(href="#").payment-steps__link «КартаFun»
+                                span ,
+                                a(href="#").payment-steps__link «Карта покупок»
+                                span ,
+                                a(href="#").payment-steps__link «Черепаха»
+                                span .
+                    .offset-xl-1.col-xl-4.offset-lg-1.col-lg-4.payment-steps__over
+                        .payment-steps__block
+                            .payment-steps__step шаг 2
+                            h3.payment-steps__name Оформите карту
+                            p.payment-steps__descr Согласуйте с&nbsp;менеджером банка пакет документов и&nbsp;время визита. Посетите ближайший филиал выбранного банка для оформления карты.
+                    .offset-xl-1.col-xl-4.offset-lg-1.col-lg-4.payment-steps__over
+                        .payment-steps__block
+                            .payment-steps__step шаг 3
+                            h3.payment-steps__name Приходите за покупками
+                            p.payment-steps__descr С картой рассрочки приходите в фирменные салоны.
+
+        .payment__company
+            include modules/company-salons
+
+        .payment-system
+            .container
+                .row
+                    .col-16
+                        h2.payment-system__title О системе «Расчёт»
+                        p.payment-system__text Система &laquo;Расчёт&raquo; (ЕРИП) позволяет оплачивать покупку двери в&nbsp;15&nbsp;000 пунктах банковского обслуживания 23&nbsp;банков. Совершайте платежи без комиссии через мобильный и&nbsp;интернет-банкинг, кассы банка и&nbsp;инфокиоски.
+                    .col-xl-5.col-lg-5.col-md-8
+                        ul.payment-system__list
+                            h3.payment-system__subtitle Оплачивайте удобным способом:
+                            li.payment-system__item.payment-system__item--line наличными в кассе банка или через устройства приёма наличных денег;
+                            li.payment-system__item.payment-system__item--line электронными деньгами в Webmoney, EasyPay и других системах оплаты
+                            li.payment-system__item.payment-system__item--line банковской картой в&nbsp;мобильном и&nbsp;интернет-банке, банкоматах и&nbsp;кассах банка.
+                            .payment-system__tip При оплате в&nbsp;кассе банка скажите кассиру, что хотите сделать платёж через ЕРИП.
+
+
+                    .offset-xl-1.col-xl-5.offset-lg-1.col-lg-5.col-md-8.payment-system__center
+                        h3.payment-system__subtitle При самостоятельной оплате:
+                        ul.payment-system__list
+                            li.payment-system__item.payment-system__item--num Выберите пункт «Система “Расчёт” (ЕРИП)».
+                            li.payment-system__item.payment-system__item--num Следуйте по пути: «Интернет-магазины/ Сервисы/D/Ds-steelline.by».
+                            li.payment-system__item.payment-system__item--num Введите номер заказа, который менеджер скажет при оформлении договора.
+                            li.payment-system__item.payment-system__item--num Введите сумму платежа.
+                            li.payment-system__item.payment-system__item--num Убедитесь, что ФИО и сумма указаны верно.
+                            li.payment-system__item.payment-system__item--num Подтвердите оплату.
+
+
+                    .offset-xl-1.col-xl-4.offset-lg-1.col-lg-4
+                        .payment-system__aside
+                            h3.payment-system__subtitle
+                                | Подробнее о системе читайте на
+                                a(href="#").payment-system__link raschet.by
+                            p.payment-system__descr На&nbsp;сайте можно найти ближайший пункт обслуживания, узнать о&nbsp;правилах и&nbsp;скорости зачисления платежей.
+
+
+
+
+        .payment__company--mobile
+            include modules/company-salons
+
+

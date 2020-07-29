@@ -1,5 +1,7 @@
 @mixin typography ($size) {
 
+
+
   @if $size == 'tech' {
     font-size: 13px;
     line-height: 18px;
