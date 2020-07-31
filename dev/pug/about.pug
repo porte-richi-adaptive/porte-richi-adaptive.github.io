@@ -1,0 +1,98 @@
+extends template/main
+
+block variables
+    - var title = 'О компании «Порте Ричи»';
+    - var headerGrayBackground = true;
+
+block content
+    section.about
+        .about-description
+            .container
+                .row
+                    .col-xl-11.col-lg-14
+                        include modules/breadcrumbs
+                        h1.about__title О компании «Порте Ричи»
+                        p.about__text &laquo;Порте Ричи&raquo;&nbsp;&mdash; официальный дистрибьютор заводов входных и&nbsp;межкомнатных дверей. Компания сотрудничает с&nbsp;проверенными производителями, которые давно зарекомендовали себя среди покупателей и&nbsp;соблюдают сроки поставки. Вся продукция сертифицирована и&nbsp;соответствует стандарту СТБ 2433-2015.
+                        .about__block-container
+                            .about__block.about__block--first
+                                .about__block-number 450
+                                .about__block-text моделей межкомнатных и&nbsp;входных дверей
+                            .about__block.about__block--second
+                                .about__block-number 3
+                                .about__block-text фирменных салона в&nbsp;Минске
+
+
+
+        .about-set
+            .container
+                .row
+                    .col-xl-5.col-lg-5.col-md-16
+                        h2.about-set__title Комплекты из&nbsp;входной и&nbsp;межкомнатных дверей
+                        p.about-set__text Важное направление работы компании&nbsp;&mdash; комплексные решения. Это входные и&nbsp;межкомнатные двери с&nbsp;одинаковым или похожим дизайном. Такие решения помогают покупателю сделать быстрый выбор, сэкономить время, силы и&nbsp;деньги.
+                        .about-set__mini
+                            .about-set__mini-number 62
+                            .about-set__mini-text  варианта<br/> решений
+                            img(src='static/images/content/about-door.png', alt='').about-set__mini-img
+                    .offset-xl-2.col-xl-9.offset-lg-1.col-lg-10.col-md-16
+                        img(src='static/images/content/about-2.jpg', alt='').about-set__img
+                        .about-set__caption
+                            span Готовое решение для современного интерьера:
+                            a(href="#").about-set__link входная дверь «Монтана»
+                            span и
+                            a(href="#").about-set__link межкомнатная Ш161
+                        .about-set__mini.about-set__mini--mobile
+                            .about-set__mini-number 62
+                            .about-set__mini-text  варианта<br/> решений
+                            img(src='static/images/content/about-door.png', alt='').about-set__mini-img
+        .about-mission
+            .container
+                .row
+                    .col-16
+                        .about-mission__wrap
+                            .about-mission__title Наша миссия
+                            .about-mission__text Миссия &laquo;Порте Ричи&raquo;&nbsp;&mdash;
+                                span организовать гармоничное пространство
+                                | в&nbsp;доме или квартире покупателя,
+                                span где
+                                | он&nbsp;и&nbsp;его семья будут чувствовать себя
+                                span комфортно и&nbsp;безопасно.
+
+
+
+        .about-values
+            .container
+                .row
+                    .col-16
+                        h2.about-values__title 4 ценности компании
+
+                    .about-values__list
+                        .about-values__item
+                            img(src='static/images/content/about-i-1.svg', alt='').about-values__img
+                            h3.about-values__name Клиенты
+                            p.about-values__text Мы&nbsp;на&nbsp;100% заботимся о&nbsp;покупателе: помогаем в&nbsp;выборе, выезжаем на&nbsp;бесплатные замеры, доставляем и&nbsp;устанавливаем двери, осуществляем гарантийное и&nbsp;постгарантийное обслуживание.
+
+
+
+                        .about-values__item
+                            img(src='static/images/content/about-i-2.svg', alt='').about-values__img
+                            h3.about-values__name Партнёры
+                            p.about-values__text Наши партнёры&nbsp;&mdash; это люди, с&nbsp;которыми мы&nbsp;вместе добиваемся успеха. Двери под брендом &laquo;Порте Ричи&raquo; создают фабрики, которые имеют хорошую репутацию и&nbsp;отличаются высоким качеством производства.
+
+
+
+                        .about-values__item
+                            img(src='static/images/content/about-i-3.svg', alt='').about-values__img
+                            h3.about-values__name Продукт
+                            p.about-values__text В&nbsp;ассортименте межкомнатных и&nbsp;входных дверей нашего бренда представлены модели с&nbsp;отделками из&nbsp;массива дуба, в&nbsp;эмали, шпоне, экошпоне, с&nbsp;покрытием софт-тач или в&nbsp;глянце. Мы&nbsp;постоянно анализируем мировой рынок, чтобы найти лучшие товары и&nbsp;предложить их&nbsp;вам.
+
+
+
+                        .about-values__item
+                            img(src='static/images/content/about-i-4.svg', alt='').about-values__img
+                            h3.about-values__name Коллектив
+                            p.about-values__text Сотрудники&nbsp;&mdash; наш главный капитал. У&nbsp;нас работают продуктивные люди, которые стремятся к&nbsp;тому, чтобы покупатель остался доволен своим выбором. Стремление к&nbsp;этому мы&nbsp;ценим и&nbsp;поощряем. Сотрудники стажируются на&nbsp;заводах-производителях, участвуют в&nbsp;мировых выставках и&nbsp;постоянно ищут новые пути для развития.
+
+
+
+        include modules/company-salons
+
