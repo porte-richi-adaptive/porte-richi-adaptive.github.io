@@ -5,6 +5,15 @@
     @include media-breakpoint-down(lg) {
       margin-bottom: 18px;
     }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__row {
+    @include media-breakpoint-down(md) {
+      position: relative;
+    }
   }
 
   &__company {
@@ -22,6 +31,9 @@
   &__block {
     @include media-breakpoint-down(md) {
       max-width: 50%;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
     }
   }
 
@@ -48,6 +60,9 @@
       line-height: 22px;
       margin-left: 9px;
     }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__img {
@@ -60,6 +75,9 @@
         right: 141px;
         top: 0;
       }
+      @include media-breakpoint-down(sm) {
+        position: static;
+      }
     }
     @include media-breakpoint-down(lg) {
       width: 400px;
@@ -67,8 +85,13 @@
     }
     @include media-breakpoint-down(md) {
       position: absolute;
-      right: 0;
       top: 0;
+      left: calc(100% - 251px);
+    }
+    @include media-breakpoint-down(sm) {
+      position: static;
+      width: 100%;
+      margin-top: 27px;
     }
   }
 
@@ -139,9 +162,15 @@
       margin-top: 36px;
       margin-bottom: 18px;
     }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
 
     &__container {
       @include section-indent;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 54px;
+      }
     }
 
     &__item {
@@ -156,6 +185,9 @@
       @include media-breakpoint-down(md) {
         font-size: 16px;
         line-height: 22px;
+      }
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
       }
       &--grid {
         text-align: right;
@@ -183,6 +215,13 @@
           width: 313px;
           padding-right: 7px;
         }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          padding-right: 8px;
+          padding-left: 8px;
+          border-bottom: 1px solid $gray-1;
+          background-image: linear-gradient(158.4deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+        }
       }
       &-img {
         display: block;
@@ -193,11 +232,21 @@
         @include media-breakpoint-down(md) {
           width: 147px;
         }
+        @include media-breakpoint-down(sm) {
+          width: 22.5vw;
+          padding-left: 9px;
+          border-left: none;
+        }
       }
       &-time {
         width: 174px;
         @include media-breakpoint-down(md) {
           width: 169px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 34.17vw;
+          padding-left: 0;
+          text-align: center;
         }
       }
       &-range {
@@ -205,6 +254,14 @@
         @include media-breakpoint-down(md) {
           width: auto;
           flex-grow: 1;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 34.17vw;
+          flex: 0;
+          flex-grow: 1;
+          text-align: right;
+          padding-right: 9px;
+          padding-left: 0;
         }
       }
     }
@@ -232,6 +289,14 @@
           padding: 6px 18px 11px;
         }
 
+        @include media-breakpoint-down(sm) {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
         &:not(:last-child) {
           border-right: 1px solid $gray-1;
         }
@@ -247,11 +312,17 @@
           min-width: 314px;
           padding-left: 18px;
         }
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
       }
       &-period {
         width: 119px;
         @include media-breakpoint-down(md) {
           width: 147px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 22.5vw;
         }
       }
       &-time {
@@ -259,11 +330,17 @@
         @include media-breakpoint-down(md) {
           width: 168px;
         }
+        @include media-breakpoint-down(sm) {
+          width: 34.17vw;;
+        }
       }
       &-range {
         width: 148px;
         @include media-breakpoint-down(md) {
           width: 133px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 28.756vw;
         }
       }
     }
@@ -278,6 +355,9 @@
     &__over {
       @include media-breakpoint-down(md) {
         width: 220px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
       }
     }
 
@@ -297,6 +377,14 @@
       @include media-breakpoint-down(md) {
         margin-bottom: 18px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 9px;
+      }
+    }
+    &__block {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
     }
     &__name {
       margin-bottom: 9px;
@@ -306,12 +394,19 @@
       @include media-breakpoint-down(md) {
         margin-bottom: 9px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 18px;
+      }
     }
     &__title {
       text-align: center;
       margin-bottom: 36px;
       @include media-breakpoint-down(md) {
         margin-bottom: 39px;
+      }
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+        margin-bottom: 27px;
       }
       span {
         font-family: $minion-display;
@@ -328,6 +423,10 @@
       @include media-breakpoint-down(md) {
         padding-top: 40px;
         padding-bottom: 93px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 9px;
+        padding-top: 27px;
       }
     }
 
@@ -367,15 +466,28 @@
 
   &-system {
     @include section-indent;
-
+    @include media-breakpoint-down(md) {
+      margin-bottom: 158px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 54px;
+    }
     &__center {
       @include media-breakpoint-down(lg) {
         padding-right: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 18px;
       }
     }
 
     &__descr {
       max-width: 278px;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 312px;
+      }
     }
 
     &__aside {
@@ -385,6 +497,21 @@
       padding-left: 27px;
       position: relative;
       top: -15px;
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        right: 10px;
+        top: -42px;
+        width: 370px;
+        height: 133px;
+        padding-left: 18px;
+        padding-top: 15px;
+      }
+      @include media-breakpoint-down(sm) {
+        position: static;
+        width: 100%;
+        padding: 18px 33px 27px 18px;
+        height: auto;
+      }
       .payment-system__subtitle {
         margin-bottom: 0;
       }
@@ -404,6 +531,10 @@
         position: absolute;
         bottom: 4px;
         left: 0;
+        @include media-breakpoint-down(md) {
+          height: 1px;
+          bottom: 2px;
+        }
       }
     }
 
@@ -428,12 +559,28 @@
         max-width: 612px;
         margin-bottom: 45px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+        max-width: 100%;
+      }
     }
 
     &__subtitle {
       margin-bottom: 18px;
+      &--bottom {
+        @include media-breakpoint-down(md) {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
       @include media-breakpoint-down(md) {
         margin-bottom: 9px;
+        font-size: 22px;
+        line-height: 26px;
       }
     }
 
@@ -455,12 +602,21 @@
       @include media-breakpoint-down(md) {
         padding: 7px 48px 18px 19px;
       }
+      @include media-breakpoint-down(sm) {
+        padding: 9px 18px 18px 18px;
+        width: 100%;
+        margin-bottom: 36px;
+      }
     }
 
     &__list {
       counter-reset: step-counter;
       @include media-breakpoint-down(md) {
         padding-right: 49px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        margin-bottom: 18px;
       }
     }
 
@@ -480,6 +636,9 @@
       }
       &--num {
         margin-left: 27px;
+        @include media-breakpoint-down(md) {
+          margin-left: 21px;
+        }
       }
       &:not(:last-child) {
         margin-bottom: 9px;
@@ -491,6 +650,9 @@
         position: absolute;
         left: -27px;
         top: 0;
+        @include media-breakpoint-down(md) {
+          left: -22px;
+        }
       }
 
       &--line {
