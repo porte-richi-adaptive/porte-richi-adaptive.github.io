@@ -23,11 +23,15 @@
       height: 369px;
       background-color: $white-3;
       z-index: -2;
+      @include media-breakpoint-down(lg) {
+        height: 340px;
+      }
     }
   }
 
   &__tab {
-    width: 206px;
+    padding-left: 27px;
+    padding-right: 27px;
     height: 70px;
     align-items: center;
     justify-content: center;
@@ -38,6 +42,10 @@
     display: inline-flex;
     &:hover {
       color: $gold;
+    }
+    @include media-breakpoint-down(lg) {
+      padding-right: 18px;
+      padding-left: 18px;
     }
 
     &--active {
@@ -61,8 +69,15 @@
   &__text {
     margin-bottom: 63px;
     padding-right: 25px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 58px;
+      padding-right: 0;
+    }
     &--bottom {
       margin-bottom: 72px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 45px;
+      }
     }
   }
 
@@ -71,9 +86,18 @@
     border-bottom: 1px solid $gray-1;
     @include section-indent;
 
+    &-list {
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+      }
+    }
+
     &-row {
       display: flex;
       height: 46px;
+      @include media-breakpoint-down(lg) {
+        height: 42px;
+      }
       &:not(:last-child) {
         border-bottom: 1px solid $gray-1;
       }
@@ -81,6 +105,14 @@
         height: auto;
         .delivery__table-text.delivery__table--column {
           justify-content: flex-start;
+          @include media-breakpoint-down(lg) {
+            padding-top: 45px;
+          }
+        }
+        span {
+          @include media-breakpoint-down(lg) {
+            margin-bottom: 9px;
+          }
         }
       }
     }
@@ -91,6 +123,9 @@
 
     &-block {
       margin-left: 22px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 0;
+      }
 
       span {
         display: block;
@@ -98,6 +133,10 @@
         line-height: 27px;
         font-style: italic;
         margin-bottom: 9px;
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
     }
 
@@ -109,18 +148,34 @@
       padding-left: 18px;
       padding-top: 9px;
       width: 221px;
+      @include media-breakpoint-down(lg) {
+        width: 185px;
+        font-size: 18px;
+        line-height: 24px;
+      }
 
       span {
         display: block;
         margin-bottom: 9px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 12px;
+        }
       }
 
       &:first-child {
         width: 410px;
+        @include media-breakpoint-down(lg) {
+          width: 250px;
+
+        }
       }
 
       &:last-child {
         flex-grow: 1;
+        @include media-breakpoint-down(lg) {
+          flex-grow: 0;
+          width: 158px;
+        }
       }
 
       &:not(:first-child) {
@@ -139,6 +194,12 @@
       padding-left: 18px;
       background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
       border-bottom: 1px solid $gray-1;
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+        line-height: 24px;
+        height: 42px;
+        padding-top: 9px;
+      }
     }
 
     &-head {
@@ -146,6 +207,9 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 27px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 16px;
+      }
     }
 
     &-item {
@@ -161,23 +225,39 @@
       align-items: center;
       text-align: center;
       justify-content: center;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 21px;
+        width: 168px;
+        height: 60px;
+      }
       &:first-child {
         width: 410px;
         text-align: left;
         justify-content: flex-start;
         padding-left: 22px;
+        @include media-breakpoint-down(lg) {
+          width: 250px;
+        }
       }
       &:last-child {
         width: 213px;
         text-align: right;
         justify-content: flex-end;
         padding-right: 16px;
+        @include media-breakpoint-down(lg) {
+          width: 140px;
+        }
       }
     }
     &--column {
       flex-direction: column;
-      span {
+      span.delivery__table-number {
         text-align: right;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 9px;
+        }
       }
     }
   }
@@ -189,6 +269,9 @@
     background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
     margin-top: 50px;
     padding-left: 29px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 72px;
+    }
 
     &-number {
       font-size: 144px;
@@ -207,6 +290,11 @@
       position: absolute;
       right: -61px;
       bottom: 0;
+      @include media-breakpoint-down(lg) {
+        width: 121px;
+        height: 206px;
+        right: -50px;
+      }
     }
   }
 
@@ -215,12 +303,19 @@
     bottom: 180px;
     right: -11px;
     width: 100%;
+    @include media-breakpoint-down(lg) {
+      bottom: 141px;
+    }
 
     &-title {
       font-family: $minion-display;
       font-size: 27px;
       line-height: 36px;
       margin-bottom: 9px;
+      @include media-breakpoint-down(lg) {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
 
     &-text {
@@ -230,6 +325,9 @@
 
   &__step {
     margin-bottom: 63px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 54px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -245,6 +343,10 @@
       font-weight: $semi-bold;
       border-bottom: 1px solid $gray-1;
       background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 21px;
+      }
     }
 
     &-sub {
@@ -260,6 +362,9 @@
 
     &-title {
       margin-bottom: 29px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 18px;
+      }
     }
 
     &-row {
@@ -275,6 +380,9 @@
 
     &:first-child {
       margin-top: 170px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 136px;
+      }
     }
 
     &:last-child {
@@ -308,11 +416,20 @@
     align-items: center;
     padding-top: 36px;
     @include section-indent;
+    @include media-breakpoint-down(lg) {
+      height: 240px;
+      padding-top: 45px;
+    }
 
     &-title {
       width: 420px;
       text-align: center;
       margin-bottom: 27px;
+      @include typography('h2-new');
+      @include media-breakpoint-down(lg) {
+        width: 350px;
+        margin-bottom: 36px;
+      }
     }
 
     &-link {
