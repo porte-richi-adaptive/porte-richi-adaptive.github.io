@@ -1,0 +1,190 @@
+extends template/main
+
+block variables
+    - var title = 'Доставка и установка';
+    - var headerGrayBackground = true;
+
+block content
+    section.delivery
+        .delivery-description
+            .container
+                .row
+                    .col-xl-11.col-lg-14
+                        include modules/breadcrumbs
+                        h1.delivery__title Доставка и установка
+        .delivery__tabs
+            .container
+                .row
+                    .col-16
+                        .delivery__tab входные двери
+                        .delivery__tab.delivery__tab--active межкомнатные
+
+        .delivery__page(data-delivery-page='entrance')
+            .container
+                .row
+                    .col-xl-10
+                        h2.delivery__subtitle Доставка
+                        p.delivery__text Входную дверь сложно транспортировать, потому что она имеет большой вес и&nbsp;размер. Компания &laquo;Порте Ричи&raquo; понимает это и&nbsp;осуществляет быструю доставку входных дверей по&nbsp;Минску и&nbsp;за&nbsp;МКАД.
+                        .delivery__table
+                            .delivery__table-head
+                                .delivery__table-item Вид<br/> услуги
+                                .delivery__table-item Стоимость услуг<br/>  с монтажом, руб.
+                                .delivery__table-item Без монтажа,<br/>  руб.
+                            h3.delivery__table-line Доставка до подъезда
+                            .delivery__table-row
+                                .delivery__table-text В пределах Минска
+                                .delivery__table-text бесплатно
+                                .delivery__table-text 20
+                            .delivery__table-row
+                                .delivery__table-text Каждый километр за МКАД
+                                .delivery__table-text 1
+                                .delivery__table-text 1
+                            h3.delivery__table-line Подъём до квартиры
+                            .delivery__table-row
+                                .delivery__table-text На грузовом лифте
+                                .delivery__table-text бесплатно
+                                .delivery__table-text 15
+                            .delivery__table-row.delivery__table-row--column
+                                .delivery__table-text.delivery__table-list
+                                    span По лестнице за этаж:
+                                    .delivery__table-block
+                                        span серия «70»
+                                        span серия «80»
+                                        span серия «100»
+                                        span дверь выше 2,1 метра
+                                        span коробка двери
+
+                                .delivery__table-text.delivery__table--column
+                                    span 4
+                                    span 5
+                                    span 7
+                                    span 8,5
+                                    span 2
+                                .delivery__table-text.delivery__table--column
+                                    span 4
+                                    span 5
+                                    span 7
+                                    span 8,5
+                                    span 2
+
+                    .offset-xl-2.col-xl-4
+                        .delivery__mini
+                            .delivery__mini-number 2
+                            .delivery__mini-text года гарантийный<br/>срок эксплуатации
+                            img(src='static/images/delivery-door.jpg', alt='').delivery__mini-img
+
+                        .delivery__tip
+                            .delivery__tip-title Проверьте работу лифта<br/> перед доставкой
+                            .delivery__tip-text Грузовой лифт часто ломается. Если он&nbsp;сломан, входную дверь придётся поднимать вручную.
+
+                .row.delivery__row
+                    .col-xl-10
+                        h2.delivery__subtitle Установка
+                        p.delivery__text.delivery__text--bottom Правильный демонтаж старой входной двери и&nbsp;подготовка проёма к&nbsp;установке продлит срок эксплуатации новой двери. Профессиональный монтаж защитит изделие от&nbsp;перекоса дверного полотна и&nbsp;коробки, предотвратит заклинивание и&nbsp;поломку замков.
+                        .delivery__step
+                            .delivery__step-sub шаг 1
+                            h3.delivery__step-title Демонтируем старую дверь
+                            .delivery__step-head
+                                span Тип двери
+                                span Стоимость, руб.
+                            .delivery__step-row
+                                span Деревянная без сохранения коробки
+                                span бесплатно
+                            .delivery__step-row
+                                span Деревянная с сохранением коробки
+                                span 7,5
+                            .delivery__step-row
+                                span Металлическая
+                                span от 27
+
+                        .delivery__step
+                            .delivery__step-sub шаг 2
+                            h3.delivery__step-title Подготавливаем проём
+                            .delivery__step-head
+                                span Этап подготовки
+                                span Стоимость, руб.
+                            .delivery__step-row
+                                span Снимаем штукатурку и режем плитку
+                                span 7–10
+                            .delivery__step-row
+                                span Режем наличник с одной стороны
+                                span 18
+                            .delivery__step-row
+                                span Расширяем проём, если толщина стены <20 см
+                                span 50–70
+                            .delivery__step-row
+                                span Расширяем проём, если толщина стены >20 см
+                                span от 70
+                            .delivery__step-row
+                                span Расширяем проём, сбиваем четверть
+                                span 27
+
+                        .delivery__step
+                            .delivery__step-sub шаг 3
+                            h3.delivery__step-title Устанавливаем дверь
+                            .delivery__step-head
+                                span Тип двери
+                                span Стоимость, руб.
+                            .delivery__step-row
+                                span Серия «70»
+                                span 57
+                            .delivery__step-row
+                                span «80»
+                                span 75
+                            .delivery__step-row
+                                span «100»
+                                span 85
+                            .delivery__step-row
+                                span «100» с замком и девиатором
+                                span 90
+                            .delivery__step-row
+                                span Более 960 мм в ширину и 2200 мм в высоту
+                                span 90
+                            .delivery__step-row
+                                span «80» и «100» с двумя створками
+                                span 125
+                            .delivery__step-row
+                                span «Хаски» с двумя створками
+                                span 125
+
+                        .delivery__step
+                            h3.delivery__step-title Выполняем дополнительные монтажные работы
+                            .delivery__step-head
+                                span Вид услуги
+                                span Стоимость, руб.
+                            .delivery__step-row
+                                span Крепление на монтажные пластины
+                                span 15
+                            .delivery__step-row
+                                span «Тёплый монтаж» с лентами ПСУЛ и «Робибанд»,<br/> терморазрывом между полом и дверью
+                                span 30
+                            .delivery__step-row
+                                span Установка геркона
+                                span 41
+                            .delivery__step-row
+                                span Монтаж фрамуги
+                                span 50
+                            .delivery__step-row
+                                span Монтаж доборов
+                                span 15
+
+                    .offset-xl-2.col-xl-4
+                        .delivery__aside
+                            img(src='static/images/delivery-1.svg', alt='').delivery__aside-img
+                            h3.delivery__aside-title Демонтируем дверь осторожно
+                            p.delivery__aside-text Специалист по&nbsp;монтажу аккуратно снимает старую входную дверь. В&nbsp;процессе может отвалиться штукатурка не&nbsp;по&nbsp;вине мастера, а&nbsp;из-за долгой эксплуатации двери.
+
+                        .delivery__aside
+                            img(src='static/images/delivery-2.svg', alt='').delivery__aside-img
+                            h3.delivery__aside-title Помогаем собрать мусор
+                            p.delivery__aside-text После окончания монтажа соберём мусор. Стоимость&nbsp;&mdash; 20&nbsp;руб.
+
+                .row
+                    .col-16
+                        .delivery__choose
+                            h2.delivery__choose-title Выберите входные двери для своего интерьера
+                            a(href="#").delivery__choose-link перейти в каталог
+
+        .delivery__page(data-delivery-page='interior')
+
+    include modules/company-salons

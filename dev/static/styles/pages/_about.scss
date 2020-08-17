@@ -175,6 +175,16 @@
       height: 167px;
       background-image: linear-gradient(130.79deg, #F8F8F8 13.54%, #EDEDED 86.46%);
       padding-left: 27px;
+      &--mobile {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          display: block;
+          position: relative;
+          top: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
       @include media-breakpoint-down(lg) {
         background-image: linear-gradient(129.71deg, #F8F8F8 13.54%, #EDEDED 86.46%);
         height: 144px;
@@ -188,14 +198,9 @@
       }
       @include media-breakpoint-down(sm) {
         display: none;
-        &--mobile {
-          display: block;
-          position: relative;
-          top: 0;
-          right: 0;
-          width: 100%;
-        }
+
       }
+
 
       &-number {
         font-size: 144px;
