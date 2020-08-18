@@ -8,6 +8,10 @@
   font-weight: $bold;
   display: inline-flex;
   transition: $transition-base;
+  @include media-breakpoint-down(md) {
+    font-size: 13px;
+    line-height: 18px;
+  }
   &:hover {
     color: $gold;
   }
@@ -22,6 +26,10 @@
       height: $border-height;
       background-color: $border-color;
       transition: $transition-base;
+      @include media-breakpoint-down(md) {
+        height: 1px;
+        bottom: -2px;
+      }
     }
     &:hover:after {
       background-color: $gold;

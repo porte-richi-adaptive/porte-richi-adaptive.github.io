@@ -11,11 +11,11 @@ block content
                 .row
                     .col-xl-11.col-lg-14
                         include modules/breadcrumbs
-                        h1.delivery__title Доставка и установка
+                        h1.delivery__title Доставка и&nbsp;установка
         .delivery__tabs
             .container
                 .row
-                    .col-16
+                    .col-16.delivery__controll
                         .delivery__tab входные двери
                         .delivery__tab.delivery__tab--active межкомнатные
 
@@ -23,6 +23,10 @@ block content
             .container
                 .row
                     .col-xl-10.col-lg-9
+                        .delivery__mini.delivery__mini--mobile
+                            .delivery__mini-number 2
+                            .delivery__mini-text года гарантийный<br/>срок эксплуатации
+                            img(src='static/images/delivery-door.jpg', alt='').delivery__mini-img
                         h2.delivery__subtitle Доставка
                         p.delivery__text Входную дверь сложно транспортировать, потому что она имеет большой вес и&nbsp;размер. Компания &laquo;Порте Ричи&raquo; понимает это и&nbsp;осуществляет быструю доставку входных дверей по&nbsp;Минску и&nbsp;за&nbsp;МКАД.
                         .delivery__table
@@ -74,13 +78,18 @@ block content
                             img(src='static/images/delivery-door.jpg', alt='').delivery__mini-img
 
                         .delivery__tip
-                            .delivery__tip-title Проверьте работу лифта<br/> перед доставкой
+                            .delivery__tip-title Проверьте работу лифта перед доставкой
                             .delivery__tip-text Грузовой лифт часто ломается. Если он&nbsp;сломан, входную дверь придётся поднимать вручную.
 
                 .row.delivery__row
-                    .col-xl-10.col-lg-9
-                        h2.delivery__subtitle Установка
-                        p.delivery__text.delivery__text--bottom Правильный демонтаж старой входной двери и&nbsp;подготовка проёма к&nbsp;установке продлит срок эксплуатации новой двери. Профессиональный монтаж защитит изделие от&nbsp;перекоса дверного полотна и&nbsp;коробки, предотвратит заклинивание и&nbsp;поломку замков.
+                    .col-md-14
+                        .delivery__install--mobile
+                            h2.delivery__subtitle Установка
+                            p.delivery__text.delivery__text--bottom Правильный демонтаж старой входной двери и&nbsp;подготовка проёма к&nbsp;установке продлит срок эксплуатации новой двери. Профессиональный монтаж защитит изделие от&nbsp;перекоса дверного полотна и&nbsp;коробки, предотвратит заклинивание и&nbsp;поломку замков.
+                    .col-xl-10.col-lg-9.col-md-8
+                        .delivery__install
+                            h2.delivery__subtitle Установка
+                            p.delivery__text.delivery__text--bottom Правильный демонтаж старой входной двери и&nbsp;подготовка проёма к&nbsp;установке продлит срок эксплуатации новой двери. Профессиональный монтаж защитит изделие от&nbsp;перекоса дверного полотна и&nbsp;коробки, предотвратит заклинивание и&nbsp;поломку замков.
                         .delivery__step
                             .delivery__step-sub шаг 1
                             h3.delivery__step-title Демонтируем старую дверь
@@ -168,7 +177,7 @@ block content
                                 span Монтаж доборов
                                 span 15
 
-                    .offset-xl-2.col-xl-4.offset-lg-2.col-lg-5
+                    .offset-xl-2.col-xl-4.offset-lg-2.col-lg-5.offset-md-2.col-md-6
                         .delivery__aside
                             img(src='static/images/delivery-1.svg', alt='').delivery__aside-img
                             h3.delivery__aside-title Демонтируем дверь осторожно
