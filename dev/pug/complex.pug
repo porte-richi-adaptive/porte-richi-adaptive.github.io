@@ -59,11 +59,32 @@ block content
                         .complex__head
                            h2.complex__head-title Двери в квартиру
                            p.complex__head-text Внешний вид входной и&nbsp;межкомнатных дверей может изменить весь облик интерьера. Расскажите менеджеру о&nbsp;стиле своей квартиры, и&nbsp;он&nbsp;поможет выбрать подходящие фрезеровки и&nbsp;фурнитуру для всех дверей.
-                            .complex__tabs
-                                .complex__tabs-item современные
-                                .complex__tabs-item.active-tab  классические
+                            .complex__tabs.js-tab-wrap
+                                .complex__tabs-item.active-tab(data-tab='1', data-page-rel='0') современные
+                                .complex__tabs-item(data-tab='2', data-page-rel='0')  классические
 
-                .row
+                .row.active-page.tabs__page.js-tab-page(data-page='1', data-page-rel='0')
+                    .offset-xl-2.col-xl-12
+                        .complex__slider
+                            .complex__slider-figure
+                                img(src='static/images/content/complex/complex-min-i.png', alt='')
+                                .complex__slider-figure__text Решение в интерьере
+
+                            h3.complex__slider-title Ультра
+                            p.complex__slider-text Решение объединено прямыми линиями и&nbsp;лаконичностью. Вертикальные линии&nbsp;&mdash; символ устойчивости, простоты и&nbsp;прочности. Стеклянные вставки добавляют в&nbsp;интерьер свет и&nbsp;акцент на&nbsp;тёмной отделке.
+                            .complex__slider-container
+                                .complex__slider-item
+                                    .complex__slider-wrap
+                                        img(src='static/images/content/complex/slider-i-1.jpg', alt='').complex__slider-img.complex__slider-img--entrance
+                                    .complex__slider-name Входная дверь Ля Италия
+                                .complex__slider-item
+                                    .complex__slider-wrap
+                                        img(src='static/images/content/complex/slider-i-2.jpg', alt='').complex__slider-img.complex__slider-img--interior
+                                        img(src='static/images/content/complex/slider-i-2.jpg', alt='').complex__slider-img.complex__slider-img--interior
+                                        img(src='static/images/content/complex/slider-i-2.jpg', alt='').complex__slider-img.complex__slider-img--interior
+                                    .complex__slider-name Межкомнатные двери из коллекции ДН
+
+                .row.tabs__page.js-tab-page(data-page='2', data-page-rel='0')
                     .offset-xl-2.col-xl-12
                         .complex__slider
                             .complex__slider-figure
@@ -92,9 +113,9 @@ block content
                         .complex__head
                             h2.complex__head-title Двери в дом
                             p.complex__head-text Входная дверь защищает дом от&nbsp;взлома, холода и&nbsp;шума с&nbsp;улицы. Расскажите менеджеру о&nbsp;месте установки входной двери и&nbsp;желаемом стиле экстерьера и&nbsp;интерьера, чтобы он&nbsp;помог выбрать подходящее комплексное решение.
-                                .complex__tabs
-                                    .complex__tabs-item современные
-                                    .complex__tabs-item.active-tab  классические
+                                .complex__tabs.js-tab-wrap
+                                    .complex__tabs-item(data-tab='3') современные
+                                    .complex__tabs-item.active-tab(data-tab='4') классические
 
                 .row
                     .offset-xl-2.col-xl-12
@@ -203,6 +224,7 @@ block content
 
         script(src="static/js/jquery-3.3.1.min.js", defer)
         script(src="static/js/vendor/slick.min.js", defer)
+        script(src="static/js/components/tabs-builder.js", defer)
         script(src="static/js/pages/complex.js", defer)
 
 

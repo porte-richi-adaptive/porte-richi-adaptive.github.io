@@ -12,3 +12,5 @@ $('.complex__slider-container').slick({
   prevArrow: prevArrowIcon,
   nextArrow: nextArrowIcon
 });
+var tabs = new tabsBuilder();
+console.dir(tabs);
