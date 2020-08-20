@@ -26,13 +26,28 @@ function () {
       this.addTabs();
     }
   }, {
+    key: "removeActiveClass",
+    value: function removeActiveClass(list, activeClass) {
+      list.forEach(function (el) {
+        el.classList.remove(activeClass);
+      });
+    }
+  }, {
     key: "setTabEvent",
     value: function setTabEvent(tab) {
+      var self = this;
       tab.addEventListener('click', function () {
+        var tabActiveClass = 'active-tab';
+        var pageActiveClass = 'active-page';
         var pageNumber = this.dataset.pageRel;
         var tabNumber = this.dataset.tab;
         var innerTabs = this.closest('.js-tab-wrap').querySelectorAll('[data-tab]');
-        console.dir(innerTabs);
+        var pageList = document.querySelectorAll(".tabs__page[data-page-rel=\"".concat(pageNumber, "\"]"));
+        var currPage = document.querySelector(".tabs__page[data-page=\"".concat(tabNumber, "\"]"));
+        self.removeActiveClass(innerTabs, tabActiveClass);
+        this.classList.add(tabActiveClass);
+        self.removeActiveClass(pageList, pageActiveClass);
+        currPage.classList.add(pageActiveClass);
       });
     }
   }, {

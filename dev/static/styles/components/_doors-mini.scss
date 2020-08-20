@@ -3,6 +3,10 @@
   background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
   position: relative;
   padding-left: 27px;
+  @include media-breakpoint-down(lg) {
+    height: 144px;
+    padding-left: 14px;
+  }
 
   &__number {
     font-size: 144px;
@@ -10,18 +14,30 @@
     position: relative;
     top: -38px;
     font-family: $minion-display;
+    @include media-breakpoint-down(lg) {
+      font-size: 108px;
+      line-height: 90px;
+      top: -25px;
+    }
   }
 
   &__img {
     position: absolute;
     right: 0;
     bottom: 0;
+    @include media-breakpoint-down(lg) {
+      width: 186px;
+      height: 182px;
+    }
   }
 
   &__text {
     @include typography('p2');
     position: relative;
     top: -29px;
+    @include media-breakpoint-down(lg) {
+      top: -25px;
+    }
   }
 
 }
