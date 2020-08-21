@@ -72,13 +72,13 @@ block content
                 .row.active-page.tabs__page.js-tab-page(data-page='1', data-page-rel='0')
                     .offset-xl-2.col-xl-12.offset-lg-2.col-lg-12.offset-md-2.col-md-12
                         .complex__slider
-                            .complex__slider-figure
+                            .complex__slider-figure(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text Решение в интерьере
 
                             h3.complex__slider-title Ультра
                             p.complex__slider-text Решение объединено прямыми линиями и&nbsp;лаконичностью. Вертикальные линии&nbsp;&mdash; символ устойчивости, простоты и&nbsp;прочности. Стеклянные вставки добавляют в&nbsp;интерьер свет и&nbsp;акцент на&nbsp;тёмной отделке.
-                            .complex__slider-figure.complex__slider-figure--mobile
+                            .complex__slider-figure.complex__slider-figure--mobile(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text
                                     span Решение
@@ -98,13 +98,13 @@ block content
                 .row.tabs__page.js-tab-page(data-page='2', data-page-rel='0')
                     .offset-xl-2.col-xl-12.offset-lg-2.col-lg-12.offset-md-2.col-md-12
                         .complex__slider
-                            .complex__slider-figure
+                            .complex__slider-figure(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text Решение в интерьере
 
                             h3.complex__slider-title Ультра2
                             p.complex__slider-text Решение объединено прямыми линиями и&nbsp;лаконичностью. Вертикальные линии&nbsp;&mdash; символ устойчивости, простоты и&nbsp;прочности. Стеклянные вставки добавляют в&nbsp;интерьер свет и&nbsp;акцент на&nbsp;тёмной отделке.
-                            .complex__slider-figure.complex__slider-figure--mobile
+                            .complex__slider-figure.complex__slider-figure--mobile(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text
                                     span Решение
@@ -136,12 +136,12 @@ block content
                 .row.active-page.tabs__page.js-tab-page(data-page='3', data-page-rel='1')
                     .offset-xl-2.col-xl-12.offset-lg-2.col-lg-12.offset-md-2.col-md-12
                         .complex__slider
-                            .complex__slider-figure
+                            .complex__slider-figure(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text Решение в интерьере
                             h3.complex__slider-title Ультра
                             p.complex__slider-text Решение объединено прямыми линиями и&nbsp;лаконичностью. Вертикальные линии&nbsp;&mdash; символ устойчивости, простоты и&nbsp;прочности. Стеклянные вставки добавляют в&nbsp;интерьер свет и&nbsp;акцент на&nbsp;тёмной отделке.
-                            .complex__slider-figure.complex__slider-figure--mobile
+                            .complex__slider-figure.complex__slider-figure--mobile(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text
                                     span Решение
@@ -161,13 +161,13 @@ block content
                 .row.tabs__page.js-tab-page(data-page='4', data-page-rel='1')
                     .offset-xl-2.col-xl-12.offset-lg-2.col-lg-12.offset-md-2.col-md-12
                         .complex__slider
-                            .complex__slider-figure
+                            .complex__slider-figure(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text Решение в интерьере
 
                             h3.complex__slider-title Ультра2
                             p.complex__slider-text Решение объединено прямыми линиями и&nbsp;лаконичностью. Вертикальные линии&nbsp;&mdash; символ устойчивости, простоты и&nbsp;прочности. Стеклянные вставки добавляют в&nbsp;интерьер свет и&nbsp;акцент на&nbsp;тёмной отделке.
-                            .complex__slider-figure.complex__slider-figure--mobile
+                            .complex__slider-figure.complex__slider-figure--mobile(data-modal-trigger='1')
                                 img(src='static/images/content/complex/complex-min-i.png', alt='')
                                 .complex__slider-figure__text
                                     span Решение
@@ -271,10 +271,12 @@ block content
 
 
         include modules/company-salons
+        include components/modal
 
         script(src="static/js/jquery-3.3.1.min.js", defer)
         script(src="static/js/vendor/slick.min.js", defer)
         script(src="static/js/components/tabs-builder.js", defer)
+        script(src="static/js/components/modal-builder.js", defer)
         script(src="static/js/pages/complex.js", defer)
 
 

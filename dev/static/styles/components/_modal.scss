@@ -1,0 +1,92 @@
+body.js-modal-window-opened {
+  overflow-y: hidden;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: 30;
+  display: none;
+
+  &.opened {
+    display: block;
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 27px;
+    top: 36px;
+
+    @include media-breakpoint-down(sm) {
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+      top: 21px;
+      right: 27px;
+    }
+
+    &:hover {
+      svg path {
+        stroke: $gold;
+      }
+    }
+    svg path {
+      transition: $transition-base;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slick-arrow {
+    @include media-breakpoint-down(md) {
+      top: calc( 100% - 31px );
+    }
+  }
+
+  &__slider {
+    width: 1038px;
+    height: 720px;
+
+    @include media-breakpoint-down(lg) {
+      width: 798px;
+      height: 554px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 766px;
+      height: 532px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 306px;
+      height: 232px;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+  }
+
+
+}
