@@ -11,6 +11,16 @@
     height: 122px;
     padding-left: 18px;
   }
+  @include media-breakpoint-down(sm) {
+    padding-left: 27px;
+  }
+
+  &--mobile {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
 
   &__number {
     font-size: 144px;
@@ -27,6 +37,9 @@
       font-size: 90px;
       line-height: 100px;
       top: -38px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: -30px;
     }
   }
 
@@ -53,6 +66,9 @@
     }
     @include media-breakpoint-down(md) {
       top: -47px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: -40px;
     }
   }
 

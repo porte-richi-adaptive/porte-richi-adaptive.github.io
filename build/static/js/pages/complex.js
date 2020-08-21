@@ -10,7 +10,12 @@ $('.complex__slider-container').slick({
   variableWidth: true,
   slidesToShow: 1,
   prevArrow: prevArrowIcon,
-  nextArrow: nextArrowIcon
+  nextArrow: nextArrowIcon,
+  responsive: [{
+    breakpoint: 855.98,
+    settings: {
+      dots: true
+    }
+  }]
 });
 var tabs = new tabsBuilder();
-console.dir(tabs);
