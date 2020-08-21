@@ -25,6 +25,7 @@ class Modal {
                 const modalPage = document.querySelector(`[data-modal="${modalNum}"]`);
 
                 if(!self.isInit) {
+                    console.dir(1);
                     self.initCarousel();
                     self.isInit = true;
                 }
