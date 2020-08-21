@@ -162,6 +162,7 @@
     @include section-indent;
     @include media-breakpoint-down(sm) {
       margin-bottom: 54px;
+      overflow: hidden;
     }
 
     &--second {
@@ -397,6 +398,7 @@
       }
       @include media-breakpoint-down(sm) {
         margin-bottom: 32px;
+        width: 306px;
       }
     }
   }
@@ -593,6 +595,18 @@
 
       &:hover path {
         stroke: $gold;
+      }
+    }
+
+    .slick-list {
+
+      @include media-breakpoint-down(sm) {
+        width: 306px;
+      }
+
+      @include mobile-between {
+        width: 341px;
+        margin: 0 auto;
       }
     }
 
