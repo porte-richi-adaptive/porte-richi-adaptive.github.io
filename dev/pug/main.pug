@@ -1,0 +1,142 @@
+extends template/main
+
+block variables
+    - var title = 'Входная и межкомнатные двери в одном стиле';
+    - var headerGrayBackground = false;
+
+block content
+    section.main
+        .main__jumbo-wrap
+            .main__jumbo
+                .container
+                    .row
+                        .col-xl-6.col-lg-6.col-md-6
+                            .main__jumbo-container
+                                .main__jumbo-block
+                                    h1.main__jumbo-title Дверь-невидимка со&nbsp;скидкой&nbsp;20%
+                                    p.main__jumbo-text Покупайте межкомнатные двери под отделку дешевле до&nbsp;31&nbsp;июня. Скидка действует на&nbsp;модели с&nbsp;внутренним и&nbsp;внешним открыванием.
+                                    a(href="").main__jumbo-link Узнать больше
+                                .main__jumbo-block
+                                    h1.main__jumbo-title Дверь-невидимка2 со&nbsp;скидкой&nbsp;20%
+                                    p.main__jumbo-text Покупайте межкомнатные двери под отделку дешевле до&nbsp;31&nbsp;июня. Скидка действует на&nbsp;модели с&nbsp;внутренним и&nbsp;внешним открыванием.
+                                    a(href="").main__jumbo-link Узнать больше
+                                .main__jumbo-block
+                                    h1.main__jumbo-title Дверь-невидимка3 со&nbsp;скидкой&nbsp;20%
+                                    p.main__jumbo-text Покупайте межкомнатные двери под отделку дешевле до&nbsp;31&nbsp;июня. Скидка действует на&nbsp;модели с&nbsp;внутренним и&nbsp;внешним открыванием.
+                                    a(href="").main__jumbo-link Узнать больше
+                        .main__jumbo-slider(dir="rtl")
+                            .main__jumbo-item
+                                img(src='static/images/content/main-jumbo.jpg', alt='').main__jumbo-img
+                            .main__jumbo-item
+                                img(src='static/images/content/main-jumbo-2.jpg', alt='').main__jumbo-img
+                            .main__jumbo-item
+                                img(src='static/images/content/main-jumbo-3.jpg', alt='').main__jumbo-img
+
+            .main__jumbo-footer
+                .container
+                    .row
+                        .col-xl-6
+                            .main__jumbo-controll
+                                .main__jumbo-arrows
+                                    .main__jumbo-left
+                                        include ../static/images/icons/arrow-left-i.svg
+                                    .main__jumbo-right
+                                        include ../static/images/icons/arrow-right-i.svg
+                                .main__jumbo-numbers
+
+    section.main__style
+        .container
+            .row
+               .col-xl-5
+                   img(src='static/images/main-1.jpg', alt='').main__style-img--left
+                   .main__style-variant
+                       .doors-mini
+                           .doors-mini__number 62
+                           .doors-mini__text  варианта<br/>решений
+                           img(src='static/images/content/door-mini-img-1.jpg', alt='').doors-mini__img
+               .offset-xl-2.col-xl-9
+                   h2.main__style-title Входная и межкомнатные двери в одном стиле
+                   p.main__style-text Предлагаем комплекты входной и&nbsp;межкомнатных дверей с&nbsp;похожим дизайном&nbsp;&mdash; комплексные решения. Поможем за&nbsp;одно посещение салона подобрать все двери для интерьера дома или квартиры.
+                   img(src='static/images/main-2.jpg', alt='').main__style-img--right
+
+    section.main__comment
+        .container.main__comment-container
+            .row
+                .col-16
+                    .main__comment-left
+                        h2.main__comment-text
+                            | &laquo;Порте Ричи&raquo;&nbsp;&mdash; входные и&nbsp;межкомнатные
+                            span двери, которые помогут организовать гармоничное пространство
+                            | в&nbsp;доме или квартире.
+
+                        p.main__comment-about Мы&nbsp;не&nbsp;просто продаём двери, а&nbsp;помогаем сделать правильный выбор. Никогда не&nbsp;посоветуем установить дорогую дверь, если это нецелесообразно. Выслушаем покупателя, зададим вопросы и&nbsp;предложим лучшее решение.
+                        .main__comment-port
+                            span Команда
+                            | «Порте Ричи»
+                        .main__comment-name
+                            span Дмитрий,
+                            span директор компании
+                    .main__comment-right
+                        img(src='static/images/main-porte.png', alt='').main__comment-img
+
+
+    section.main__material
+        .container
+            .row
+                .col-xl-8.main__material-grid
+                    h2.main__material-title
+                        span Межкомнатные двери
+                        | в&nbsp;шпоне, экошпоне, эмали, глянце и&nbsp;покрытии под отделку станут украшением современных и&nbsp;классических интерьеров.
+
+                    img(src='static/images/main-3.jpg', alt='').main__material-img--left
+                .offset-xl-2.col-xl-6
+                    img(src='static/images/main-4.jpg', alt='').main__material-img--right
+                    .main__material-block
+                        .door-material
+                            .door-material__block
+                                .door-material__number 5
+                                .door-material__text материалов отделки
+                            a(href="").door-material__link узнать больше
+
+    section.main__choose
+        .container
+            .row
+                .col-xl-9
+                    h2.main__choose-title Выбирайте межкомнатные двери для любого интерьера
+                    img(src='static/images/main-5.jpg', alt='').main__choose-img.main__choose-img--left
+                .offset-xl-1.col-xl-6
+                    img(src='static/images/main-6.jpg', alt='').main__choose-img.main__choose-img--right
+
+            .row
+               .col-xl-4
+                   .main__choose-comment
+                       h3.main__choose-subtitle Современные
+                       p.main__choose-text Актуальный дизайн, декоративные вставки из&nbsp;стекла и&nbsp;металла, скрытые петли, ручки строгих форм и&nbsp;магнитные замки подчеркнут лаконичность обстановки.
+               .offset-xl-1.col-xl-4
+                   .main__choose-comment
+                       h3.main__choose-subtitle Классические двери
+                       p.main__choose-text Витиеватые узоры, витражи, декоративные элементы, капители и&nbsp;патинированные рисунки наполнят интерьер величественностью и&nbsp;элегантностью.
+               .offset-xl-1.col-xl-6
+                    .doors-interior
+                        .doors-interior__number 25
+                        p.doors-interior__text коллекций межкомнатных дверей, разбитых по&nbsp;стилям для вашего удобства
+                        .doors-interior__block
+                            img(src='static/images/3-doors-1.png', alt='').doors-interior__img.doors-interior__img--first
+                            img(src='static/images/3-doors-2.png', alt='').doors-interior__img.doors-interior__img--second
+                            img(src='static/images/3-doors-3.png', alt='').doors-interior__img.doors-interior__img--third
+
+    section.main__system
+        .container
+            .row
+
+
+
+
+
+
+
+
+
+    script(src="static/js/jquery-3.3.1.min.js", defer)
+    script(src="static/js/vendor/slick.min.js", defer)
+    script(src="static/js/pages/main.js", defer)

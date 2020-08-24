@@ -74,6 +74,94 @@
 
 }
 
+.door-material {
+  background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+  width: 388px;
+  padding-left: 24px;
+  padding-bottom: 21px;
+
+  &__block {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: -24px;
+  }
+
+  &__number {
+    font-size: 144px;
+    line-height: 100px;
+    font-family: $minion-display;
+    margin-right: 15px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 160px;
+  }
+
+  &__link {
+    @include link(true);
+    font-size: 13px;
+    line-height: 18px;
+    position: relative;
+    top: -7px;
+    left: 5px;
+    &:after {
+      height: 1px;
+      bottom: -2px;
+    }
+  }
+}
+
+.doors-interior {
+  background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+  height: 167px;
+  position: relative;
+  padding-left: 35px;
+
+  &__text {
+    position: relative;
+    top: -59px;
+    max-width: 264px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    &--first {
+      right: 91px;
+    }
+    &--second {
+      right: 49px;
+    }
+    &--third {
+      right: 0;
+    }
+  }
+
+  &__number {
+    font-size: 144px;
+    line-height: 100px;
+    font-family: $minion-display;
+    margin-bottom: 18px;
+    position: relative;
+    top: -51px;
+  }
+
+  &__text {
+
+  }
+
+  &__block {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
 
 
 
