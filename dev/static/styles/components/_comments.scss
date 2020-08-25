@@ -1,0 +1,66 @@
+.comments {
+  height: 400px;
+
+  &__header {
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include rft-txt;
+    margin-bottom: 21px;
+  }
+
+  &__left {
+    margin-right: 50px;
+    cursor: pointer;
+    transition: $transition-base;
+    &:hover {
+      path {
+        fill: $gold;
+      }
+    }
+  }
+
+  &__right {
+    cursor: pointer;
+    transition: $transition-base;
+    &:hover {
+      path {
+        fill: $gold;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    & .slick-disabled {
+      opacity: 0;
+      visibility: hidden;
+      cursor: default;
+    }
+  }
+
+  &__item {
+    border-left: 1px solid $gray-5;
+    padding-top: 8px;
+    padding-left: 21px;
+    width: 489px;
+    height: 261px;
+    flex-direction: column;
+    outline: none;
+    &:not(:last-child) {
+      margin-right: 106px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    left: 9px;
+    top: 80px;
+  }
+
+}

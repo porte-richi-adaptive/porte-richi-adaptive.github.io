@@ -468,7 +468,53 @@
         padding-right: 4px;
       }
     }
+  }
 
+  &__save {
+    position: relative;
+    @include section-indent;
+
+    &-title {
+      &--left {
+        margin-top: 34.6vw;;
+        margin-bottom: 9px;
+      }
+      &--right {
+        margin-bottom: 27px;
+      }
+    }
+
+    &-text {
+
+      &--left {
+        margin-bottom: 129px;
+      }
+
+      &--right {
+        margin-bottom: 129px;
+      }
+    }
+
+    &-door {
+      width: 513px;
+    }
+
+
+    &-img {
+
+      &--left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 49.2vw;
+        height: auto;
+      }
+    }
+  }
+
+  &__comments {
+    overflow: hidden;
+    @include section-indent;
   }
 
 
