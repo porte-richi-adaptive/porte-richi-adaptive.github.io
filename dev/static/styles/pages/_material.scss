@@ -1,0 +1,252 @@
+.material {
+
+  &__head {
+    @include section-indent;
+  }
+
+  &__col {
+    padding-right: 0;
+  }
+
+  .breadcrumbs__wrap {
+    margin-top: 41px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    margin-bottom: 36px;
+    @include typography('p1');
+  }
+
+  &__base {
+    @include section-indent;
+
+    &-title {
+      margin-bottom: 18px;
+    }
+
+    &-block {
+      background-image: linear-gradient(112.68deg, #EDEDED 13.1%, #FFFFFF 83.63%);
+      padding-top: 41px;
+      padding-bottom: 40px;
+      display: flex;
+      margin-top: 10px;
+      padding-left: 62px;
+    }
+
+    &-descr {
+      max-width: 334px;
+      margin-left: 27px;
+    }
+  }
+
+  &__eco {
+    background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+    padding-top: 79px;
+    padding-bottom: 81px;
+    @include section-indent;
+
+    &-head {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-head {
+      margin-bottom: 36px;
+    }
+
+    &-title {
+      display: inline-flex;
+      position: relative;
+      margin-bottom: 18px;
+      &:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+      }
+    }
+
+    &-name {
+      @include rft-txt;
+      color: $gray;
+      margin-bottom: 18px;
+    }
+
+    &-descr {
+
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__veneer {
+    @include section-indent;
+
+    &-block {
+      margin-bottom: 27px;
+      &--last {
+        margin-bottom: 45px;
+      }
+    }
+
+    &-info {
+      background-image: linear-gradient(112.68deg, #EDEDED 13.1%, #FFFFFF 83.63%);
+      padding: 68px 111px 58px 63px;
+      display: flex;
+    }
+
+    &-icon {
+      margin-right: 27px;
+    }
+
+    &-tabs {
+      margin-top: 74px;
+      border-left: 1px solid $gray-5;
+      padding-left: 40px;
+      padding-bottom: 21px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      padding-top: 36px;
+    }
+
+    &-item {
+      @include typography('h3');
+      cursor: pointer;
+      margin-bottom: 27px;
+      transition: $transition-base;
+      display: flex;
+      order: 0;
+
+      &:hover {
+        color: $gold;
+        &.active {
+          pointer-events: none;
+          color: $gray;
+        }
+      }
+
+      &.active {
+        color: $gray;
+        cursor: default;
+        order: 1;
+      }
+    }
+
+    &-content {
+      justify-content: space-between;
+      display: none;
+      &.active {
+        display: flex;
+      }
+
+    }
+
+    &-about {
+      max-width: 264px;
+    }
+  }
+
+  &__with {
+    background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+    padding-top: 81px;
+    padding-bottom: 81px;
+
+    &-block {
+      display: flex;
+      padding-left: 36px;
+    }
+
+    &-door {
+      display: flex;
+      position: relative;
+      &:last-child {
+        margin-left: 69px;
+      }
+    }
+
+    &-wrap {
+      margin-bottom: 27px;
+    }
+
+    &-text {
+      transform-origin: 0 0;
+      transform: rotate(-90deg);
+      position: absolute;
+      bottom: -24px;
+      left: -38px;
+      letter-spacing: .7px;
+      white-space: nowrap;
+      font-style: italic;
+      color: $gray;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__enamel {
+    height: 918px;
+    width: 100%;
+    background-image: url(#{$img-url}/content/material/enamel.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 81px;
+    @include section-indent;
+
+    .material__eco-title:after {
+      background-color: $white;
+    }
+
+    .material__eco-name {
+      color: $white;
+    }
+  }
+
+  &__gloss {
+    @include section-indent;
+  }
+
+  &__ground {
+    height: 918px;
+    width: 100%;
+    background-image: url(#{$img-url}/content/material/ground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 81px;
+    @include section-indent;
+
+    .material__eco-title:after {
+      background-color: $white;
+    }
+
+    .material__eco-name {
+      color: $white;
+    }
+  }
+
+  &__choose {
+
+    .delivery__choose-title {
+      width: 536px;
+    }
+  }
+
+}
