@@ -13,12 +13,19 @@
     @include media-breakpoint-down(lg) {
       margin-top: 49px;
     }
+    @include media-breakpoint-down(md) {
+      margin-top: 27px;
+      margin-bottom: 6px;
+    }
   }
 
   &__title {
     margin-bottom: 32px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 29px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 18px;
     }
   }
 
@@ -30,6 +37,9 @@
   &__text {
     margin-bottom: 36px;
     @include typography('p1');
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
   }
 
   &__base {
@@ -50,6 +60,12 @@
         padding-top: 50px;
         padding-left: 42px;
       }
+      @include media-breakpoint-down(md) {
+        padding-top: 48px;
+        padding-left: 49px;
+        padding-bottom: 45px;
+      }
+
     }
 
     &-icon {
@@ -68,6 +84,9 @@
         margin-left: 18px;
         max-width: 306px;
       }
+      @include media-breakpoint-down(md) {
+        max-width: 199px;
+      }
     }
   }
 
@@ -80,6 +99,32 @@
     @include media-breakpoint-down(lg) {
       padding-top: 63px;
       padding-bottom: 64px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    &-descr {
+      @include media-breakpoint-down(md) {
+        max-width: 345px;
+      }
+    }
+
+    &-img {
+      &--right {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      &--mob {
+        display: none;
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+      }
     }
 
     &-head {
@@ -97,6 +142,9 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 46px;
       }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 31px;
+      }
     }
 
     &-title {
@@ -105,6 +153,9 @@
       margin-bottom: 18px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 27px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
       }
       &:after {
         content: '';
@@ -150,12 +201,63 @@
       }
     }
 
+    &-dropdown {
+      height: 45px;
+      background-color: $gray-5;
+      margin-bottom: 18px;
+      position: relative;
+      padding-left: 18px;
+      display: none;
+      font-size: 20px;
+      line-height: 22px;
+      font-family: $minion-display;
+      padding-top: 12px;
+      cursor: pointer;
+      &.opened {
+        margin-bottom: 0;
+        &:after {
+          transform: rotate(90deg);
+        }
+        & + .material__veneer-list {
+          display: block;
+          margin-bottom: 18px;
+        }
+      }
+      &:after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 19px;
+        top: calc( 50% - 8px);
+        background-image: url(#{$img-url}/content/material/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: $transition-base;
+      }
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+
     &-info {
       background-image: linear-gradient(112.68deg, #EDEDED 13.1%, #FFFFFF 83.63%);
       padding: 68px 111px 58px 63px;
       display: flex;
+
       @include media-breakpoint-down(lg) {
         padding: 61px 111px 58px 38px;
+      }
+      @include media-breakpoint-down(md) {
+        display: none;
+        padding: 43px 31px 45px 38px;
+      }
+
+      &--mobile {
+        display: none;
+        @include media-breakpoint-down(md) {
+          display: flex;
+        }
       }
     }
 
@@ -179,6 +281,11 @@
         padding-left: 29px;
         padding-bottom: 44px;
       }
+      @include media-breakpoint-down(md) {
+        margin-top: 0;
+        padding-left: 0;
+        border-left: none;
+      }
     }
 
     &-list {
@@ -187,6 +294,12 @@
       padding-top: 36px;
       @include media-breakpoint-down(lg) {
         padding-top: 16px;
+      }
+      @include media-breakpoint-down(md) {
+        padding-top: 0;
+        border-left: 1px solid $gray-5;
+        border-right: 1px solid $gray-5;
+        display: none;
       }
     }
 
@@ -197,8 +310,19 @@
       transition: $transition-base;
       display: flex;
       order: 0;
+      font-family: $minion-display;
       @include media-breakpoint-down(lg) {
         margin-bottom: 20px;
+      }
+      @include media-breakpoint-down(md) {
+        height: 45px;
+        font-size: 20px;
+        line-height: 22px;
+        padding-left: 18px;
+        padding-top: 11px;
+        margin-bottom: 0;
+        border-bottom: 1px solid $gray-5;
+
       }
 
       &:hover {
@@ -219,6 +343,9 @@
     &-content {
       justify-content: space-between;
       display: none;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+      }
       &.active {
         display: flex;
       }
@@ -230,12 +357,19 @@
       @include media-breakpoint-down(lg) {
         max-width: 170px;
       }
+      @include media-breakpoint-down(md) {
+        max-width: 222px;
+      }
     }
 
     &-img {
       @include media-breakpoint-down(lg) {
         width: 213px;
         height: 213px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 126px;
+        height: 126px;
       }
     }
 
