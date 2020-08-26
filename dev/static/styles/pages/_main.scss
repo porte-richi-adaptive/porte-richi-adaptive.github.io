@@ -10,7 +10,7 @@
       height: 40.46vw;
     }
     @include media-breakpoint-down(md) {
-      height: 55.9vw;
+      height: 40.99vw;
     }
 
     .slick-slider {
@@ -27,6 +27,12 @@
       align-items: center;
       justify-content: space-between;
       padding-right: 81px;
+      @include media-breakpoint-down(lg) {
+        padding-right: 56px;
+      }
+      @include media-breakpoint-down(md) {
+        padding-right: 0;
+      }
     }
 
     &-numbers {
@@ -50,6 +56,9 @@
     &-left {
       margin-right: 54px;
       cursor: pointer;
+      @include media-breakpoint-down(md) {
+        margin-right: 36px;
+      }
     }
 
     &-right {
@@ -71,7 +80,7 @@
       @include media-breakpoint-down(md) {
         font-size: 42px;
         line-height: 45px;
-        padding-top: 45px;
+        padding-top: 27px;
         margin-bottom: 18px;
       }
     }
@@ -80,8 +89,11 @@
       color: $white;
       @include typography('p1');
       margin-bottom: 62px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         margin-bottom: 27px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
       }
     }
 
@@ -106,13 +118,20 @@
       right: 0;
       top: 0;
       width: 58.2vw;
+      @include media-breakpoint-down(md) {
+        width: 56.2vw;
+      }
     }
 
     &-wrap {
       height: 54.4vw;
       @include section-indent;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
       @include media-breakpoint-down(md) {
-        height: 65.4vw;
+        height: 47.99vw;
+        margin-bottom: 156px;
       }
     }
 
@@ -126,7 +145,7 @@
         height: 7.53vw;
       }
       @include media-breakpoint-down(md) {
-        height: 9.53vw;
+        height: 7vw;
       }
     }
 
@@ -138,8 +157,8 @@
       @include media-breakpoint-down(lg) {
         height: 47.97vw;
       }
-      @include media-breakpoint-down(lg) {
-        height: 65.4vw;
+      @include media-breakpoint-down(md) {
+        height: 47.99vw;
       }
     }
 
@@ -147,6 +166,7 @@
       position: relative;
       outline: none;
       flex-direction: column;
+      overflow: hidden;
     }
 
     &-controll {
@@ -160,17 +180,42 @@
     &-img {
       &--left {
         margin-bottom: 164px;
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+          margin-bottom: 124px;
+        }
+      }
+      &--right {
+        width: 100%;
+        @include media-breakpoint-down(lg) {
+          width: 526px;
+          height: auto;
+        }
+      }
+
+      &--wrap {
+        @include media-breakpoint-down(lg) {
+          display: flex;
+          justify-content: flex-end;
+        }
       }
     }
 
     &-title {
       max-width: 540px;
       margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        max-width: 413px;
+      }
     }
 
     &-text {
       max-width: 598px;
       margin-bottom: 125px;
+      @include media-breakpoint-down(lg) {
+        max-width: 459px;
+        margin-bottom: 165px;
+      }
     }
   }
 
@@ -185,20 +230,37 @@
       padding-top: 82px;
       padding-bottom: 150px;
       position: relative;
+      @include media-breakpoint-down(lg) {
+        padding-left: 70px;
+        padding-top: 70px;
+        padding-bottom: 138px;
+      }
     }
 
     &-left {
       max-width: 636px;
+      @include media-breakpoint-down(lg) {
+        max-width: 509px;
+      }
     }
     
     &-text {
       margin-bottom: 78px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 57px;
+      }
 
       span {
         font-style: italic;
         font-family: $minion-font;
         padding-left: 8px;
         padding-right: 8px;
+        @include media-breakpoint-down(lg) {
+          font-style: normal;
+          font-family: $minion-display;
+          padding-left: 6px;
+          padding-right: 6px;
+        }
       }
     }
 
@@ -206,6 +268,12 @@
       position: absolute;
       right: 145px;
       bottom: -150px;
+      @include media-breakpoint-down(lg) {
+        width: 335px;
+        height: 596px;
+        right: 150px;
+        bottom: -138px;
+      }
     }
 
     &-right {
@@ -224,6 +292,12 @@
       font-size: 22px;
       line-height: 27px;
       flex-direction: column;
+      @include media-breakpoint-down(lg) {
+        top: 27px;
+        right: 98px;
+        letter-spacing: .8px;
+      }
+
 
       span:last-child {
         font-size: 18px;
@@ -240,6 +314,12 @@
       margin-bottom: 18px;
       padding-left: 54px;
       z-index: 1;
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+        line-height: 24px;
+        padding-left: 29px;
+        max-width: 293px;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -252,6 +332,12 @@
         width: 78px;
         height: 78px;
         z-index: -1;
+        @include media-breakpoint-down(lg) {
+          width: 50px;
+          height: 50px;
+          left: -2px;
+          top: -9px;
+        }
       }
     }
 
@@ -260,6 +346,10 @@
       font-style: italic;
       font-size: 18px;
       line-height: 18px;
+      @include media-breakpoint-down(lg) {
+        padding-left: 30px;
+        letter-spacing: .7px;
+      }
       span {
         color: $gray-2;
         padding-right: 4px;
@@ -279,6 +369,11 @@
       left: 0;
       top: 0;
       background-color: $white-1;
+      @include media-breakpoint-down(lg) {
+        width: 44.2%;
+        height: 780px;
+        top: 108px;
+      }
     }
 
     &-grid {
@@ -287,18 +382,33 @@
 
     &-img {
 
+      &--left {
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+        }
+      }
+
       &--right {
         margin-bottom: 207px;
+        width: 100%;
+        margin-top: 51px;
       }
     }
 
     &-title {
       margin-bottom: 82px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 100px;
+        margin-bottom: 47px;
+      }
 
       span {
         font-family: $minion-font;
         font-style: italic;
         padding-right: 9px;
+        @include media-breakpoint-down(lg) {
+          padding-right: 7px;
+        }
       }
     }
   }
@@ -327,7 +437,7 @@
   }
 
   &__system {
-    background-image: url(#{$img-url}/system-line.svg);
+    background-image: url(#{$img-url}/system-bg.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -336,6 +446,11 @@
     padding-bottom: 159px;
     @include section-indent;
 
+    @include media-breakpoint-down(lg) {
+      padding-top: 70px;
+      padding-bottom: 82px;
+    }
+
     &-title {
       color: $white;
       margin-bottom: 20px;
@@ -343,12 +458,18 @@
         font-style: italic;
         font-family: $minion-font;
         padding-left: 4px;
+        @include media-breakpoint-down(lg) {
+          letter-spacing: 1.6px;
+        }
       }
     }
 
     &-text {
       color: $white;
       margin-bottom: 25px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 27px;
+      }
     }
 
     &-link {
@@ -358,6 +479,9 @@
       transition: $transition-base;
       display: inline-block;
       margin-bottom: 84px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 58px;
+      }
 
       &:before {
         content: '';
@@ -379,6 +503,9 @@
 
     &-img {
       position: relative;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
 
       &--top {
         margin-bottom: 113px;
@@ -387,6 +514,12 @@
       &--bottom {
         position: relative;
         left: -176px;
+        @include media-breakpoint-down(lg) {
+          width: 254px;
+          height: 330px;
+          left: -137px;
+          top: 10px;
+        }
       }
     }
   }
@@ -394,9 +527,18 @@
   &__create {
     @include section-indent;
 
+    &-img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+
     &-block {
       height: 100%;
       padding-top: 227px;
+      @include media-breakpoint-down(lg) {
+        padding-top: 157px;
+      }
     }
 
     &-link {
@@ -409,6 +551,9 @@
 
     &-text {
       margin-bottom: 34px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 46px;
+      }
     }
   }
 
@@ -419,6 +564,9 @@
     &-container {
       position: relative;
       padding-bottom: 53px;
+      @include media-breakpoint-down(lg) {
+        padding-bottom: 94px;
+      }
 
       &:after {
         content: '';
@@ -429,6 +577,12 @@
         left: 178px;
         top: -99px;
         z-index: -1;
+        @include media-breakpoint-down(lg) {
+          width: 526px;
+          height: 741px;
+          left: 204px;
+          top: -54px;
+        }
       }
     }
 
@@ -440,6 +594,9 @@
       align-items: center;
       margin-left: auto;
       margin-right: 145px;
+      @include media-breakpoint-down(lg) {
+        margin-right: 12px;
+      }
       &__img {
         margin-bottom: 18px;
         width: 158px;
@@ -449,11 +606,21 @@
 
     &-text {
       text-align: center;
+      @include media-breakpoint-down(lg) {
+        font-size: 20px;
+        line-height: 27px;
+      }
     }
 
     &-img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
       &--right {
         margin-bottom: 68px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 37px;
+        }
       }
     }
 
@@ -461,11 +628,17 @@
     &-title {
       padding-top: 9px;
       margin-bottom: 124px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 51px;
+      }
 
       span {
         font-style: italic;
         font-family: $minion-font;
         padding-right: 4px;
+        @include media-breakpoint-down(lg) {
+          padding-right: 6px;
+        }
       }
     }
   }
@@ -478,9 +651,16 @@
       &--left {
         margin-top: 34.6vw;;
         margin-bottom: 9px;
+        @include media-breakpoint-down(lg) {
+          margin-top: 38.1vw;
+          margin-bottom: 18px;
+        }
       }
       &--right {
         margin-bottom: 27px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 18px;
+        }
       }
     }
 
@@ -488,15 +668,25 @@
 
       &--left {
         margin-bottom: 129px;
+        @include media-breakpoint-down(lg) {
+          max-width: 492px;
+          margin-bottom: 89px;
+        }
       }
 
       &--right {
         margin-bottom: 129px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 58px;
+        }
       }
     }
 
     &-door {
       width: 513px;
+      @include media-breakpoint-down(lg) {
+        width: 447px;
+      }
     }
 
 
@@ -508,6 +698,9 @@
         top: 0;
         width: 49.2vw;
         height: auto;
+        @include media-breakpoint-down(lg) {
+          width: 53.5vw;
+        }
       }
     }
   }

@@ -166,11 +166,19 @@
   background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
   position: relative;
   padding-left: 30px;
+  @include media-breakpoint-down(lg) {
+    height: 173px;
+    padding-left: 26px;
+  }
 
   &__img {
     position: absolute;
     right: 0;
     bottom: 0;
+    @include media-breakpoint-down(lg) {
+      width: 129px;
+      height: 208px;
+    }
   }
 
   &__number {
@@ -179,12 +187,22 @@
     font-family: $minion-display;
     position: relative;
     top: -36px;
+    @include media-breakpoint-down(lg) {
+      font-size: 108px;
+      line-height: 100px;
+      top: -41px;
+    }
   }
 
   &__text {
     max-width: 300px;
     position: relative;
     top: -18px;
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+      line-height: 24px;
+      top: -36px;
+    }
   }
 }
 
