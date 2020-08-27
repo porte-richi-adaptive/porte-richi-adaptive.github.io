@@ -137,6 +137,21 @@
       padding-bottom: 16px;
     }
 
+    &--left {
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 68.75%;
+        max-width: 68.75%;
+      }
+    }
+
+    &--right {
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 25%;
+        max-width: 25%;
+        margin-left: 6.25%;
+      }
+    }
+
     &-descr {
       @include media-breakpoint-down(md) {
         max-width: 345px;
