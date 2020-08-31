@@ -12,4 +12,5 @@
 | Корзина пустая                          | [перейти](https://porte-richi-adaptive.github.io/build/cart-empty.html)    |
 | Доставка и установка                    | [перейти](https://porte-richi-adaptive.github.io/build/delivery.html)      |
 | Материалы отделки межкомнатных дверей   | [перейти](https://porte-richi-adaptive.github.io/build/material.html)      |
+| 404                                     | [перейти](https://porte-richi-adaptive.github.io/build/empty.html)         |
 
