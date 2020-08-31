@@ -1,0 +1,25 @@
+extends template/main
+
+block variables
+    - var title = 'Страница не найдена. Адрес набран неправильно или страницу перенесли.';
+    - var headerGrayBackground = true;
+
+block content
+    section.empty
+        .empty__block
+            .empty__title
+                img(srcset='static/images/empty.svg', alt='').empty__img
+
+            .empty__error ошибка
+            .empty__text Страница не&nbsp;найдена. Адрес набран неправильно или страницу перенесли.
+            a(href="#").empty__link перейти на главную
+
+
+    include modules/company-salons
+
+
+
+
+
+
+

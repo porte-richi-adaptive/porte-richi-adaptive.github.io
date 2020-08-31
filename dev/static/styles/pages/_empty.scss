@@ -1,0 +1,100 @@
+.empty {
+
+  padding-top: 122px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 63px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 72px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 46px;
+  }
+
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include section-indent;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__error {
+    color: $gray;
+    @include rft-txt;
+    margin-top: 66px;
+    margin-bottom: 18px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 43px;
+      margin-bottom: 9px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 59px;
+      margin-bottom: 18px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 40px;
+      margin-bottom: 9px;
+    }
+
+
+  }
+
+  &__img {
+    @include media-breakpoint-down(lg) {
+      width: 526px;
+      height: 318px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 374px;
+      height: 226.11px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 275px;
+      height: 166.25px;
+    }
+  }
+
+  &__text {
+    font-size: 27px;
+    line-height: 36px;
+    font-family: $minion-display;
+    max-width: 416px;
+    text-align: center;
+    margin-bottom: 54px;
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 45px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 36px;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 239px;
+      margin-bottom: 27px;
+    }
+
+  }
+
+  &__link {
+    @include link(true);
+    font-size: 16px;
+    line-height: 18px;
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+      line-height: 18px;
+      &:after {
+        height: 1px;
+        bottom: -2px;
+      }
+    }
+  }
+
+}
