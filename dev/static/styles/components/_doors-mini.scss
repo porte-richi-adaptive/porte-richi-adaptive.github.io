@@ -131,12 +131,38 @@
     bottom: 0;
     &--first {
       right: 91px;
+      @include media-breakpoint-down(lg) {
+        width: 96.18px;
+        height: 224.11px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 69.09px;
+        height: 161px;
+        right: 66px;
+      }
     }
     &--second {
       right: 49px;
+      @include media-breakpoint-down(lg) {
+        width: 95.27px;
+        height: 224.11px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 68.44px;
+        height: 161px;
+        right: 37px;
+      }
     }
     &--third {
       right: 0;
+      @include media-breakpoint-down(lg) {
+        width: 94.36px;
+        height: 224.11px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 67.79px;
+        height: 161px;
+      }
     }
   }
 

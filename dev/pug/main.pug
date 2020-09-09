@@ -13,15 +13,15 @@ block content
                         .col-xl-6.col-lg-6.col-md-6
                             .main__jumbo-container
                                 .main__jumbo-block
-                                    h1.main__jumbo-title Дверь-невидимка со&nbsp;скидкой&nbsp;20%
+                                    h1.main__jumbo-title Система Invisible
                                     p.main__jumbo-text Покупайте межкомнатные двери под отделку дешевле до&nbsp;31&nbsp;июня. Скидка действует на&nbsp;модели с&nbsp;внутренним и&nbsp;внешним открыванием.
                                     a(href="").main__jumbo-link Узнать больше
                                 .main__jumbo-block
-                                    h1.main__jumbo-title Дверь-невидимка2 со&nbsp;скидкой&nbsp;20%
+                                    h1.main__jumbo-title Система Invisible
                                     p.main__jumbo-text Покупайте межкомнатные двери под отделку дешевле до&nbsp;31&nbsp;июня. Скидка действует на&nbsp;модели с&nbsp;внутренним и&nbsp;внешним открыванием.
                                     a(href="").main__jumbo-link Узнать больше
                                 .main__jumbo-block
-                                    h1.main__jumbo-title Дверь-невидимка3 со&nbsp;скидкой&nbsp;20%
+                                    h1.main__jumbo-title Система Invisible
                                     p.main__jumbo-text Покупайте межкомнатные двери под отделку дешевле до&nbsp;31&nbsp;июня. Скидка действует на&nbsp;модели с&nbsp;внутренним и&nbsp;внешним открыванием.
                                     a(href="").main__jumbo-link Узнать больше
                         .main__jumbo-slider(dir="rtl")
@@ -43,6 +43,24 @@ block content
                                     .main__jumbo-right
                                         include ../static/images/icons/arrow-right-i.svg
                                 .main__jumbo-numbers
+
+    section.main__style.main__style--md
+        .container
+            .row
+                .col-md-16
+                    h2.main__style-title Входная и межкомнатные двери в одном стиле
+                    p.main__style-text Предлагаем комплекты входной и&nbsp;межкомнатных дверей с&nbsp;похожим дизайном&nbsp;&mdash; комплексные решения. Поможем за&nbsp;одно посещение салона подобрать все двери для интерьера дома или квартиры.
+                .col-md-8
+                    img(src='static/images/main-1.jpg', alt='').main__style-img--left
+                .col-md-8
+                    .main__style-block
+                        img(src='static/images/main-2.jpg', alt='').main__style-img--right
+                        .main__style-variant
+                            .doors-mini
+                                .doors-mini__number 62
+                                .doors-mini__text  варианта<br/>решений
+                                img(src='static/images/content/door-mini-img-1.jpg', alt='').doors-mini__img
+
 
     section.main__style
         .container
@@ -84,28 +102,52 @@ block content
     section.main__material
         .container
             .row
-                .col-xl-8.col-lg-9.main__material-grid
+                .col-xl-8.col-lg-9.col-md-10.main__material-grid
                     h2.main__material-title
                         span Межкомнатные двери
                         | в&nbsp;шпоне, экошпоне, эмали, глянце и&nbsp;покрытии под отделку станут украшением современных и&nbsp;классических интерьеров.
 
                     img(src='static/images/main-3.jpg', alt='').main__material-img--left
-                .offset-xl-2.col-xl-6.offset-lg-1.col-lg-6
+                .offset-xl-2.col-xl-6.offset-lg-1.col-lg-6.col-md-6
                     img(src='static/images/main-4.jpg', alt='').main__material-img--right
                     .main__material-block
                         .door-material
                             .door-material__block
                                 .door-material__number 5
                                 .door-material__text материалов отделки
+                                img(src='static/images/icons/eco.svg', alt='').door-material__img
                             a(href="").door-material__link узнать больше
+
+    section.main__choose.main__choose--mobile
+        .container
+            .row
+                .col-lg-7.col-md-8
+                    h2.main__choose-title Выбирайте межкомнатные двери для любого интерьера
+                    img(src='static/images/main-6-m.jpg', alt='').main__choose-img.main__choose-img--right
+                    .doors-interior
+                        .doors-interior__number 25
+                        p.doors-interior__text коллекций межкомнатных дверей, разбитых по&nbsp;стилям для вашего удобства
+                        .doors-interior__block
+                            img(src='static/images/3-doors-1.png', alt='').doors-interior__img.doors-interior__img--first
+                            img(src='static/images/3-doors-2.png', alt='').doors-interior__img.doors-interior__img--second
+                            img(src='static/images/3-doors-3.png', alt='').doors-interior__img.doors-interior__img--third
+                .offset-lg-1.col-lg-8.col-md-8
+                    .main__choose-comment
+                        h3.main__choose-subtitle Современные
+                        p.main__choose-text Актуальный дизайн, декоративные вставки из&nbsp;стекла и&nbsp;металла, скрытые петли, ручки строгих форм и&nbsp;магнитные замки подчеркнут лаконичность обстановки.
+                    .main__choose-comment
+                        h3.main__choose-subtitle Классические двери
+                        p.main__choose-text Витиеватые узоры, витражи, декоративные элементы, капители и&nbsp;патинированные рисунки наполнят интерьер величественностью и&nbsp;элегантностью.
+                        img(src='static/images/main-5.jpg', alt='').main__choose-img.main__choose-img--left
+
 
     section.main__choose
         .container
             .row
-                .col-xl-9
+                .col-xl-9.col-lg-7
                     h2.main__choose-title Выбирайте межкомнатные двери для любого интерьера
                     img(src='static/images/main-5.jpg', alt='').main__choose-img.main__choose-img--left
-                .offset-xl-1.col-xl-6
+                .offset-xl-1.col-xl-6.offset-lg-1.col-lg-8
                     img(src='static/images/main-6.jpg', alt='').main__choose-img.main__choose-img--right
 
             .row
@@ -126,10 +168,26 @@ block content
                             img(src='static/images/3-doors-2.png', alt='').doors-interior__img.doors-interior__img--second
                             img(src='static/images/3-doors-3.png', alt='').doors-interior__img.doors-interior__img--third
 
+    section.main__system.main__system--mobile
+        .container
+            .row
+                .col-md-8
+                    h2.main__system-title
+                        | Экономьте место с&nbsp;помощью
+                        span раздвижных систем
+
+                    p.main__system-text Любую модель из&nbsp;каталога можно заказать в&nbsp;виде внутрипроёмной, каскадной, двери-купе или пенал. Также предлагаем современную систему Magic с&nbsp;невидимой направляющей, складную TWIN и&nbsp;поворотную Rotor, которая открывается в&nbsp;обе стороны.
+                    a(href="").main__system-link узнать больше
+                    img(src='static/images/system-2.jpg', alt='').main__system-img.main__system-img--center
+                .offset-md-2.col-md-6
+                    .main__system-photo
+                    img(src='static/images/system-3.jpg', alt='').main__system-img.main__system-img--top
+                    img(src='static/images/system-1.jpg', alt='').main__system-img.main__system-img--left
+
     section.main__system
         .container
             .row
-                .col-xl-5.col-lg-5
+                .col-xl-5.col-lg-5.col-md-8.main__system--left
                     h2.main__system-title
                         | Экономьте место с&nbsp;помощью
                         span раздвижных систем
@@ -137,9 +195,10 @@ block content
                     p.main__system-text Любую модель из&nbsp;каталога можно заказать в&nbsp;виде внутрипроёмной, каскадной, двери-купе или пенал. Также предлагаем современную систему Magic с&nbsp;невидимой направляющей, складную TWIN и&nbsp;поворотную Rotor, которая открывается в&nbsp;обе стороны.
                     a(href="").main__system-link узнать больше
                     img(src='static/images/system-1.jpg', alt='').main__system-img.main__system-img--left
-                .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6
                     img(src='static/images/system-2.jpg', alt='').main__system-img.main__system-img--center
-                .offset-xl-1.col-xl-3.offset-lg-1.col-lg-3
+                .offset-xl-1.col-xl-6.offset-lg-1.main__system--center
+                    img(src='static/images/system-2.jpg', alt='').main__system-img.main__system-img--center
+                .offset-xl-1.col-xl-3.offset-lg-1.col-lg-3.offset-md-2.col-lg-6.main__system--right
                     img(src='static/images/system-3.jpg', alt='').main__system-img.main__system-img--top
                     img(src='static/images/system-4.jpg', alt='').main__system-img.main__system-img--bottom
 
@@ -147,9 +206,9 @@ block content
     section.main__create
         .container
             .row
-                .offset-xl-1.col-xl-8.offset-lg-1.col-lg-8
+                .offset-xl-1.col-xl-8.offset-lg-1.col-lg-8.col-md-8
                     img(src='static/images/create-1.jpg', alt='').main__create-img
-                .offset-xl-2.col-xl-4.offset-lg-1.col-lg-5
+                .offset-xl-2.col-xl-4.offset-lg-1.col-lg-5.offset-md-2.col-md-6
                     .main__create-block
                         h2.main__create-title Сделайте дверь продолжением интерьера
                         p.main__create-text Межкомнатные двери без наличников подчеркнут минималистичность обстановки. Выбирайте модели со&nbsp;скрытым алюминиевым коробом в&nbsp;заводских материалах и&nbsp;покрытии под самостоятельную отделку.
@@ -159,12 +218,12 @@ block content
     section.main__view
         .container.main__view-container
             .row
-                .col-xl-7.col-lg-8
+                .col-xl-7.col-lg-8.col-md-8
                     h2.main__view-title
                         span Входные двери
                         | для квартиры и&nbsp;дома сочетают максимальный уровень взломостойкости и&nbsp;неповторимый внешний вид.
                     img(src='static/images/view-1.jpg', alt='').main__view-img.main__view-img--left
-                .offset-xl-1.col-xl-8.offset-lg-1.col-lg-7
+                .offset-xl-1.col-xl-8.offset-lg-1.col-lg-7.col-md-8
                     img(src='static/images/view-2.jpg', alt='').main__view-img.main__view-img--right
                     .main__view-iso
                         img(src='static/images/view-iso.png', alt='').main__view-iso__img
@@ -177,7 +236,8 @@ block content
         img(src='static/images/save-1.jpg', alt='').main__save-img.main__save-img--left
         .container
             .row
-                .col-xl-8.col-lg-9
+                .col-xl-8.col-lg-9.col-md-8
+                    img(src='static/images/save-1.jpg', alt='').main__save-img.main__save-img--left.display-lg
                     h2.main__save-title.main__save-title--left Сохраните тепло в доме
                     p.main__save-text.main__save-text--left Уличные двери выдерживают перепады температур, не&nbsp;теряют вид под воздействием атмосферных явлений и&nbsp;защищают дом от&nbsp;потери тепла благодаря усиленному утеплению.
                     .main__save-door
@@ -186,7 +246,7 @@ block content
                             p.door-best__text раза двери &laquo;Стальная линия&raquo; становились лучшими в&nbsp;Беларуси на&nbsp;конкурсе &laquo;Выбор года&raquo;
                             img(src='static/images/door-best.jpg', alt='').door-best__img
 
-                .offset-xl-2.col-xl-6.offset-lg-1.col-lg-6
+                .offset-xl-2.col-xl-6.offset-lg-1.col-lg-6.offset-md-2.col-md-6
                     h2.main__save-title.main__save-title--right Сохраните тепло в доме
                     p.main__save-text.main__save-text--right Многоуровневая герметизация не&nbsp;пропускает в&nbsp;квартиру посторонние запахи и&nbsp;шум из&nbsp;подъезда. Это достигается за&nbsp;счёт конструкции двери, регулятора притвора и&nbsp;системы уплотнения.
                     img(src='static/images/save-2.jpg', alt='').main__save-img.main__save-img--right
