@@ -55,6 +55,9 @@
     &:not(:last-child) {
       margin-right: 106px;
     }
+    @include media-breakpoint-down(sm) {
+      padding-right: 199px;
+    }
   }
 
   &__list {
