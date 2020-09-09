@@ -810,6 +810,7 @@
     background-color: $green-1;
     padding-top: 143px;
     padding-bottom: 159px;
+    overflow: hidden;
     @include section-indent;
 
     @include media-breakpoint-down(lg) {
