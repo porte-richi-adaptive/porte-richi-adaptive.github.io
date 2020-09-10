@@ -24,6 +24,12 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+    .breadcrumbs__wrap {
+      @include media-breakpoint-down(sm) {
+        margin-top: 27px;
+        margin-bottom: 9px;
+      }
+    }
   }
 
   &__container {
@@ -209,7 +215,7 @@
         @include media-breakpoint-down(md) {
           right: 6px;
           bottom: 18px;
-          z-index: 1;
+          z-index: 0;
           position: absolute;
         }
         @include media-breakpoint-down(sm) {
@@ -264,6 +270,7 @@
         }
         @include media-breakpoint-down(md) {
           margin-bottom: 16px;
+          user-select: none;
         }
         @include media-breakpoint-down(sm) {
           margin-bottom: 12px;
@@ -277,6 +284,9 @@
         display: inline-flex;
         cursor: pointer;
         color: $gray-2;
+        @include media-breakpoint-down(md) {
+          user-select: none;
+        }
 
         &:hover {
           color: $gold;
@@ -397,7 +407,7 @@
           top: calc( 50% - 7.5px );
           transition: $transition-base;
           @include media-breakpoint-down(lg) {
-            left: calc( 50% - 1px );
+            left: 50%;
             top: calc( 50% - 5.5px );
             height: 11px;
           }
@@ -650,6 +660,22 @@
   &__form {
     @include media-breakpoint-down(sm) {
       margin-bottom: 161px;
+    }
+
+    .form-data .terms {
+      @include media-breakpoint-down(sm) {
+        display: flex;
+      }
+    }
+    .terms__link {
+      @include media-breakpoint-down(sm) {
+        margin-left: -9px;
+      }
+    }
+    .terms__icon {
+      @include media-breakpoint-down(sm) {
+        padding-right: 4px;
+      }
     }
   }
 

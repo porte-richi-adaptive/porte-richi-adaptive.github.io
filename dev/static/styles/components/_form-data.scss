@@ -187,6 +187,8 @@
     width: 100%;
     display: flex;
     @include font-size('18');
+    cursor: default;
+    pointer-events: none;
   }
 
   &__textarea {
