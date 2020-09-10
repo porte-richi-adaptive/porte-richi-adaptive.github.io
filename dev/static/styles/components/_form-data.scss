@@ -1,6 +1,6 @@
 .form-data {
   background-image: linear-gradient(116.01deg, #F8F8F8 13.54%, #EDEDED 86.46%);
-  padding: 45px 176px 54px 45px;
+  padding: 45px 176px 58px 45px;
   @include media-breakpoint-down(sm) {
     position: relative;
   }
@@ -55,7 +55,7 @@
   &__label {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 27px;
+    margin-bottom: 18px;
     &:hover {
       cursor: pointer;
     }
@@ -142,13 +142,16 @@
     visibility: hidden;
     cursor: default;
     &--name {
-      width: 213px;
+      width: 193px;
+      @include media-breakpoint-down(lg) {
+        width: 173px;
+      }
       @include media-breakpoint-down(md) {
-        width: 160px;
+        width: 129px;
       }
     }
     &--phone {
-      width: 291px;
+      width: 233px;
       @include media-breakpoint-down(lg) {
         width: 190px;
       }
@@ -157,7 +160,7 @@
       }
     }
     &--post {
-      width: 309px;
+      width: 195px;
       opacity: 1;
       visibility: visible;
       @include media-breakpoint-down(lg) {

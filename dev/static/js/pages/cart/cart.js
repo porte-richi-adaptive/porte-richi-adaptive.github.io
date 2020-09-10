@@ -30,7 +30,7 @@ class Cart {
 
             counterPlusBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                if(countFieldNumber >= 1) {
+                if(countFieldNumber >= 1 && countFieldNumber <= 98) {
 
                     counterMinusBtn.classList.remove('disabled');
                     countField.innerText = ++countFieldNumber;
