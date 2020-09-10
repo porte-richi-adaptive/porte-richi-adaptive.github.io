@@ -42,9 +42,13 @@
     width: 100%;
     color: $black;
     display: block;
-    cursor: default;
-    pointer-events: none;
+    transition: $transition-base;
+    cursor: pointer;
     @include font-size('20');
+
+    &:hover {
+      color: $gold;
+    }
     @include media-breakpoint-down(sm) {
       cursor: pointer;
       pointer-events: all;
@@ -52,7 +56,6 @@
   }
 
   &__descr {
-    margin-left: 9px;
     @include media-breakpoint-down(lg) {
       margin-left: 0;
     }

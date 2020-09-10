@@ -12,6 +12,9 @@
   &__right {
     display: flex;
     background-color: $white;
+    @include media-breakpoint-down(sm) {
+      margin-left: -27px;
+    }
   }
 
   &__img {
@@ -64,7 +67,7 @@
     display: flex;
     align-items: center;
     @include media-breakpoint-down(md) {
-      font-size: 10px;
+      font-size: 13px;
     }
   }
 

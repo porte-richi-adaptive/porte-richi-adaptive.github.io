@@ -599,6 +599,7 @@
     align-items: center;
     padding-top: 36px;
     @include section-indent;
+    margin-bottom: 126px;
     @include media-breakpoint-down(lg) {
       height: 240px;
       padding-top: 45px;

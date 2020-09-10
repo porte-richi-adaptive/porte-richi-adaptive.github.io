@@ -25,6 +25,12 @@
     padding-top: 6px;
     display: inline-flex;
     @include links-hover;
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
 
   }
   &__item {
@@ -38,7 +44,7 @@
     justify-content: space-between;
     width: 100%;
     padding-top: 16px;
-    border-top: 1px solid $gray;
+    border-top: 1px solid $gray-7;
     padding-bottom: 18px;
     @include media-breakpoint-down(md) {
       flex-wrap: wrap;
@@ -50,8 +56,12 @@
       font-size: 16px;
       color: $gray;
       @include media-breakpoint-down(md) {
+
+      }
+      @include media-breakpoint-down(sm) {
+        order: 2;
+        margin-bottom: 0;
         width: 100%;
-        margin-bottom: 13px;
       }
     }
     &-company {
@@ -59,6 +69,9 @@
       @include links-hover($gray, $gray, $gold);
       letter-spacing: -0.2px;
       @include media-breakpoint-down(md) {
+        margin-bottom: 13px;
+      }
+      @include media-breakpoint-down(sm) {
         width: 100%;
       }
     }

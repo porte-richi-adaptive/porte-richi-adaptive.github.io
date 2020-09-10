@@ -212,12 +212,14 @@
       display: inline-flex;
       position: relative;
       margin-bottom: 18px;
+      transition: $transition-base;
       @include media-breakpoint-down(lg) {
         margin-bottom: 27px;
       }
       @include media-breakpoint-down(md) {
         margin-bottom: 18px;
       }
+
       &:after {
         content: '';
         width: 100%;
@@ -226,8 +228,23 @@
         position: absolute;
         bottom: 10px;
         left: 0;
+        transition: $transition-base;
         @include media-breakpoint-down(lg) {
           bottom: 6px;
+        }
+      }
+
+      &:hover {
+        &:after {
+          background-color: $gold;
+        }
+      }
+
+      &__link {
+        color: inherit;
+        transition: $transition-base;
+        &:hover {
+          color: $gold;
         }
       }
     }
@@ -248,6 +265,10 @@
     }
 
     &-descr {
+      padding-right: 83px;
+      @include media-breakpoint-down(lg) {
+        padding-right: 0;
+      }
 
       &:not(:last-child) {
         margin-bottom: 18px;
@@ -278,7 +299,10 @@
     }
 
     .material__eco-title {
-      display: none;
+      display: inline-flex;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
       &--mobile {
         display: none;
         @include media-breakpoint-down(sm) {
@@ -668,10 +692,17 @@
       margin-bottom: 21px;
     }
 
+
     .material__eco-title:after {
       background-color: $white;
       @include media-breakpoint-down(sm) {
         background-color: $black;
+      }
+    }
+
+    .material__eco-title {
+      &:hover:after {
+        background-color: $gold;
       }
     }
 
@@ -854,6 +885,13 @@
       background-color: $white;
       @include media-breakpoint-down(sm) {
         background-color: $black;
+        transition: $transition-base;
+      }
+    }
+
+    .material__eco-title:hover {
+      &:after {
+        background-color: $gold;
       }
     }
 
