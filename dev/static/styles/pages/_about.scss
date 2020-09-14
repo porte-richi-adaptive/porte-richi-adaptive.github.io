@@ -1,4 +1,18 @@
 .about {
+
+  .company-salons {
+    margin-bottom: 81px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 63px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 72px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 44px;
+    }
+  }
+
   &-description {
     position: relative;
     margin-bottom: 261px;
@@ -375,6 +389,7 @@
 
   &-values {
     @include section-indent;
+    margin-bottom: 144px;
     @include media-breakpoint-down(md) {
       margin-bottom: 36px;
     }
@@ -458,7 +473,73 @@
         }
       }
     }
+  }
+
+  &-document {
+    @include section-indent;
+
+    &__item {
+      width: calc(25% - 18px);
+      @include media-breakpoint-down(sm) {
+        width: calc(50% - 18px);
+      }
+      &:nth-child(1), &:nth-child(2) {
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 36px;
+        }
+      }
+      &:last-child {
+        width: 25%;
+        @include media-breakpoint-down(sm) {
+         width: 50%;
+        }
+      }
+    }
+
+    &__img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        height: 347px;
+      }
+      @include media-breakpoint-down(md) {
+        height: 248px;
+      }
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+      &--m {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          height: 40vw;
+          display: block;
+        }
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__text {
+      padding-right: 14px;
+      margin-top: 18px;
+      @include typography('p2');
+      @include media-breakpoint-down(lg) {
+        margin-top: 9px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: 6px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+      }
+    }
 
   }
+
 
 }
