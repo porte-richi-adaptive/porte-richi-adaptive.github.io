@@ -1,7 +1,12 @@
 "use strict";
 
 $(document).ready(function () {
-  svg4everybody({}); // --- Multicolor tip block hover
+  svg4everybody({}); // Header More
+
+  $('.header__item-dropdown').on('click', function () {
+    $('.header__item-block').toggle();
+    $(this).toggleClass('active');
+  }); // --- Multicolor tip block hover
 
   $(".js-multicolor-tip").on({
     mouseenter: function mouseenter() {

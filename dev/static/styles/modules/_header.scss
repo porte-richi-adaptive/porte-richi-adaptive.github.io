@@ -308,7 +308,7 @@
     padding: 0 32px 0 36px;
 
     @include media-breakpoint-only(lg) {
-      padding: 0 50px 0 36px;
+      padding: 0;
     }
   }
 
@@ -318,11 +318,28 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    @include media-breakpoint-only(lg) {
+      justify-content: inherit;
+    }
   }
 
   &__item {
     list-style-type: none;
     position: relative;
+    cursor: pointer;
+    &:hover {
+      .header__link {
+        color: $gold;
+        & + svg path {
+          stroke: $gold;
+        }
+      }
+    }
+    @include media-breakpoint-only(lg) {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
 
 
     &-block {
@@ -333,7 +350,7 @@
       display: none;
       top: 100%;
       box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
-      left: -20px;
+      left: 0;
       border-top: 1px solid $gray-1;
       padding-top: 8px;
       padding-bottom: 28px;
@@ -356,6 +373,10 @@
         @include upperlink;
         @include links-hover ($black, $black, $gold, $gold, none);
 
+        @include media-breakpoint-only(lg) {
+          padding: 11px 21px 11px 30px;
+        }
+
       }
     }
 
@@ -370,47 +391,14 @@
       position: relative;
       transition: $transition-base;
 
-      &:after {
-        content: '';
-        width: 21px;
-        height: 100%;
-        position: absolute;
-        left: -21px;
-        top: 0;
-        background-color: $white-2;
-        transition: $transition-base;
-        opacity: 0;
-        visibility: hidden;
-      }
-      &:before {
-        content: '';
-        width: 51px;
-        height: 100%;
-        position: absolute;
-        right: -51px;
-        top: 0;
-        background-color: $white-2;
-        transition: $transition-base;
-        opacity: 0;
-        visibility: hidden;
-      }
-
       svg {
         transition: $transition-base;
         position: relative;
         left: 3px;
       }
 
-      &:hover {
+      &.active {
         background-color: $white-2;
-        &:after {
-          opacity: 1;
-          visibility: visible;
-        }
-        &:before {
-          opacity: 1;
-          visibility: visible;
-        }
 
         .header__link {
           color: $gold;
@@ -424,9 +412,7 @@
         }
       }
 
-      &:hover .header__item-block {
-        display: block;
-      }
+
 
       @include media-breakpoint-only(lg) {
         display: flex;

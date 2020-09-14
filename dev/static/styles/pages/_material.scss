@@ -342,7 +342,10 @@
         }
         & + .material__veneer-list {
           display: block;
-          margin-bottom: 18px;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          background-color: $white;
         }
       }
       &:after {
@@ -582,7 +585,7 @@
 
     .material__with-text {
       @include media-breakpoint-down(md) {
-        left: -37px;
+        left: -27px;
       }
     }
 
