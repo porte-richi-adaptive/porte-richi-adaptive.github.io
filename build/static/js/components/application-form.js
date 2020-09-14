@@ -16,7 +16,9 @@ function () {
     this.fields = this.form.querySelectorAll('input[required], textarea[required]');
     this.submitBtns = this.form.querySelector(".".concat(formId, "__submit"));
     this.validateRegExp = {
-      text: /[\wа-я]+/ig,
+      rus: /[а-яА-ЯЁё]/,
+      text: /^[a-zA-Z]*$/,
+      num: /[0-9]+/g,
       phone: /^\+ 375 \([0-9]{2}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/,
       mail: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     };
@@ -88,11 +90,13 @@ function () {
       field.addEventListener('keyup', function () {
         var isValid = _this2.validateRegExp['text'].test(field.value);
 
+        var isValidRus = _this2.validateRegExp['rus'].test(field.value);
+
         field.dataset.validState = '';
 
         _this2.disableRequiredTips();
 
-        if (isValid) {
+        if ((isValid || isValidRus) && field.value) {
           _this2.setSuccessState(field);
         } else {
           _this2.setErrorState(field);
@@ -153,6 +157,12 @@ function () {
       }
 
       field.addEventListener('keyup', function (e) {
+        var isNumber = _this4.validateRegExp['num'].test(field.value);
+
+        if (!isNumber) {
+          return false;
+        }
+
         var isValid = _this4.validateRegExp['phone'].test(field.value);
 
         field.dataset.validState = '';

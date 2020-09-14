@@ -4,7 +4,9 @@ class FormCreator {
         this.fields = this.form.querySelectorAll('input[required], textarea[required]');
         this.submitBtns = this.form.querySelector(`.${formId}__submit`);
         this.validateRegExp = {
-            text: /[\wа-я]+/ig,
+            rus: /[а-яА-ЯЁё]/,
+            text: /^[a-zA-Z]*$/,
+            num: /[0-9]+/g,
             phone: /^\+ 375 \([0-9]{2}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/,
             mail: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         };
@@ -47,6 +49,7 @@ class FormCreator {
 
     textFieldEvent(field) {
         let isValid = this.validateRegExp['text'].test(field.value);
+
         if(isValid) {
             this.setSuccessState(field);
         } else {
@@ -55,11 +58,13 @@ class FormCreator {
 
         field.addEventListener('keyup', () => {
             let isValid = this.validateRegExp['text'].test(field.value);
+            let isValidRus = this.validateRegExp['rus'].test(field.value);
+
             field.dataset.validState = '';
             this.disableRequiredTips();
 
 
-            if(isValid) {
+            if((isValid || isValidRus) && field.value) {
                 this.setSuccessState(field);
             } else {
                 this.setErrorState(field);
@@ -112,6 +117,10 @@ class FormCreator {
         }
 
         field.addEventListener('keyup', (e) => {
+            let isNumber = this.validateRegExp['num'].test(field.value);
+            if(!isNumber) {
+                return false;
+            }
             let isValid = this.validateRegExp['phone'].test(field.value);
 
             field.dataset.validState = '';

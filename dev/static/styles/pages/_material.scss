@@ -660,7 +660,7 @@
         font-size: 16px;
         line-height: 22px;
         bottom: -22px;
-        left: -31px;
+        left: -27px;
       }
     }
   }
@@ -746,7 +746,7 @@
   &__gloss {
     @include section-indent;
     @include media-breakpoint-down(sm) {
-      margin-bottom: 86px;
+      margin-bottom: 0;
       padding-top: 36px;
       padding-bottom: 36px;
       background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);

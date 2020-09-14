@@ -1,6 +1,14 @@
 $(document).ready(function () {
     svg4everybody({});
 
+    // Salons link hover
+    $('.salons__item-link').hover(function() {
+       $(this).closest('.salons__item').find('.salons__address').addClass('hover');
+
+    }, function() {
+        $(this).closest('.salons__item').find('.salons__address').removeClass('hover');
+    });
+
     // Header More
     $('.header__item-dropdown').on('click', function() {
         $('.header__item-block').toggle();

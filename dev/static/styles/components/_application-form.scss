@@ -43,6 +43,7 @@
       margin-left: 0;
     }
 
+
     &.active {
       color: $red;
     }
@@ -77,6 +78,9 @@
     @include media-breakpoint-down(md) {
       flex-wrap: wrap;
       justify-content: flex-start;
+    }
+    @include media-breakpoint-down(sm) {
+      position: relative;
     }
   }
 

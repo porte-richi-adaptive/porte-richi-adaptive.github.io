@@ -13,7 +13,7 @@ block content
                 .row
                     .col-16
                         .salons__modal-map.js-modal-wrap
-                            img(srcset='static/images/salon-map-trum.svg', alt='').salons__modal-img
+                            img(srcset='static/images/salon-map-t.png', alt='').salons__modal-img
                             label.salons__modal-point(data-map-point='1').js-modal-point
                                 input(type='checkbox', name="point").salons__modal-radio
                                 .salons__modal-plus
@@ -104,7 +104,7 @@ block content
         .salons__item
             .container
                 .row
-                    .col-xl-10.col-lg-9
+                    a(href="#").col-xl-10.col-lg-9.salons__item-link
                         img(srcset='static/images/content/salons/olysheva.jpg', alt='').salons__img
                     .offset-xl-1.col-xl-4.offset-lg-1.col-lg-6
                         a(href='#').salons__address.salons__address--top ул. Олешева, 1
@@ -135,13 +135,13 @@ block content
                                 .salons__links
                                     a(href='tel:+375445990268').salons__link +375 44 599-02-68
                                     a(href='tel:+375298478782').salons__link +375 29 847-87-82
-                            .salons__parking.js-modal-open схема проезда и парковок
+                            .salons__parking.salons__parking--middle.js-modal-open схема проезда и парковок
                             .salons__mini-wrap
                                 .salons__mini
                                     span.salons__mini-number 73
                                     span.salons__mini-text.salons__mini-text--single образца межкомнатных<br/> дверей в салоне
 
-                        .offset-xl-1.col-xl-10.col-lg-9.salons__img-wrap
+                        a(href="#").offset-xl-1.col-xl-10.col-lg-9.salons__img-wrap.salons__item-link
                             img(srcset='static/images/content/salons/dzer.jpg', alt='').salons__img
 
 
@@ -149,7 +149,7 @@ block content
             .salons__item
                 .container
                     .row
-                        .col-xl-10.col-lg-9
+                        a(href="#").col-xl-10.col-lg-9.salons__item-link
                             img(srcset='static/images/content/salons/trum.jpg', alt='').salons__img
                         .offset-xl-1.col-xl-4.offset-lg-1.col-lg-6
                             .salons__metro фрунзенская
@@ -161,7 +161,7 @@ block content
                                 .salons__links
                                     a(href='tel:+375445463609 ').salons__link +375 44 546-36-09
                                     a(href='tel:+375295879209').salons__link +375 29 587-92-09
-                            .salons__parking.js-modal-open схема проезда и парковок
+                            .salons__parking.salons__parking--bottom.js-modal-open схема проезда и парковок
                             .salons__mini-wrap
                                 .salons__mini
                                     span.salons__mini-number 60

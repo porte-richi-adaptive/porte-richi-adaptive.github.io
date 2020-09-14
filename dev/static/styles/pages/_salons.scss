@@ -108,6 +108,20 @@
       @include media-breakpoint-down(sm) {
         margin-bottom: 44px;
       }
+
+      &--middle {
+        margin-bottom: 157px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 72px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-bottom: 52px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 44px;
+        }
+      }
+
     }
 
     &:before {
@@ -191,11 +205,20 @@
         margin-top: 12px;
       }
     }
-    &:hover {
+    &.hover {
       color: $gold;
+      span {
+        color: $gold;
+        &:before {
+          background-color: $gold;
+        }
+      }
       &:before {
         background-color: $gold;
       }
+    }
+    &:hover {
+
     }
     &:before {
       content: '';
@@ -230,6 +253,18 @@
         }
         @include media-breakpoint-down(sm) {
           margin-bottom: 47px;
+        }
+        &--bottom {
+          margin-bottom: 105px;
+          @include media-breakpoint-down(lg) {
+            margin-bottom: 72px;
+          }
+          @include media-breakpoint-down(md) {
+            margin-bottom: 52px;
+          }
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 44px;
+          }
         }
       }
       &:before {
