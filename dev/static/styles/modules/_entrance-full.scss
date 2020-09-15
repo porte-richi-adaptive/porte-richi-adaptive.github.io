@@ -51,6 +51,10 @@
   }
 
   &__img {
+    object-fit: contain;
+    justify-self: flex-start;
+    align-self: flex-start;
+
     @include media-breakpoint-down(lg) {
       width: 288px;
       height: 461px;
