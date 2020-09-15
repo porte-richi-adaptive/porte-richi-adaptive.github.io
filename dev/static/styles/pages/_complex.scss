@@ -255,7 +255,7 @@
         margin-bottom: 36px;
       }
       @include media-breakpoint-down(sm) {
-        margin-bottom: 99px;
+        margin-bottom: 80px;
       }
     }
 
@@ -344,6 +344,9 @@
       }
 
       &:not(.active-tab) {
+        &:hover {
+          color: $gold;
+        }
         @include media-breakpoint-down(sm) {
           order: 2;
           padding-left: 18px;

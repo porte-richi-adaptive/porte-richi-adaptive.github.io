@@ -127,8 +127,8 @@ block content
                 .row
                     .col-xl-12.col-lg-10
                         .complex__head
-                            h2.complex__head-title Двери в квартиру
-                            p.complex__head-text Внешний вид входной и&nbsp;межкомнатных дверей может изменить весь облик интерьера. Расскажите менеджеру о&nbsp;стиле своей квартиры, и&nbsp;он&nbsp;поможет выбрать подходящие фрезеровки и&nbsp;фурнитуру для всех дверей.
+                            h2.complex__head-title Двери в дом
+                            p.complex__head-text Входная дверь защищает дом от&nbsp;взлома, холода и&nbsp;шума с&nbsp;улицы. Расскажите менеджеру о&nbsp;месте установки входной двери и&nbsp;желаемом стиле экстерьера и&nbsp;интерьера, чтобы он&nbsp;помог выбрать подходящее комплексное решение.
                             .complex__tabs.js-tab-wrap
                                 .complex__tabs-item.active-tab(data-tab='3', data-page-rel='1') современные
                                 .complex__tabs-item(data-tab='4', data-page-rel='1')  классические
@@ -235,7 +235,7 @@ block content
                     .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.col-md-8
                         .complex__shield-right
                             img(src='static/images/content/complex/shield-img.jpg', alt='').complex__shield-img
-                            img(src='static/images/content/complex/shield.svg', alt='').complex__shield-bg
+                            img(src='static/images/content/complex/shield.png', alt='').complex__shield-bg
                         .complex__shield-block.complex__shield-block--mob
                             img(src='static/images/content/complex/shield-i.svg', alt='').complex__shield-icon
                             p.complex__shield-descr Временный щит&nbsp;&mdash; полотно без дизайна для внутренней стороны входной двери на&nbsp;время ремонта.
@@ -274,9 +274,11 @@ block content
         include components/modal
 
         script(src="static/js/jquery-3.3.1.min.js", defer)
+        script(src="static/js/vendor/inputmask.js", defer)
         script(src="static/js/vendor/slick.min.js", defer)
         script(src="static/js/components/tabs-builder.js", defer)
         script(src="static/js/components/modal-builder.js", defer)
+        script(src="static/js/components/application-form.js", defer)
         script(src="static/js/pages/complex.js", defer)
 
 

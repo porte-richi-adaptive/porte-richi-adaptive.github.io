@@ -32,6 +32,7 @@ class Modal {
                 modalPage.classList.add('opened');
                 document.body.classList.add('js-modal-window-opened');
 
+
             });
         });
     }

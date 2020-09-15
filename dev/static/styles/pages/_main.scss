@@ -165,6 +165,7 @@
     &-wrap {
       height: 54.4vw;
       @include section-indent;
+      margin-bottom: 90px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 0;
       }
@@ -262,7 +263,7 @@
 
     &-img {
       &--left {
-        margin-bottom: 164px;
+        margin-bottom: 172px;
         @include media-breakpoint-down(lg) {
           width: 100%;
           margin-bottom: 124px;
@@ -271,7 +272,7 @@
           margin-bottom: 0;
         }
         @include media-breakpoint-down(sm) {
-          margin-bottom: 36px;
+          margin-bottom: 63px;
         }
       }
       &--right {
@@ -443,6 +444,11 @@
         right: 98px;
         letter-spacing: .8px;
       }
+      @include media-breakpoint-down(md) {
+        top: 9px;
+        right: 36px;
+        letter-spacing: .8px;
+      }
       @include media-breakpoint-down(sm) {
         top: auto;
         right: 3%;
@@ -572,8 +578,10 @@
 
     .door-material {
       width: 313px;
-      margin-left: auto;
       height: 141px;
+      @include media-breakpoint-down(lg) {
+        margin-left: auto;
+      }
     }
 
     .door-material__link {
@@ -613,7 +621,6 @@
       &--right {
         margin-bottom: 207px;
         width: 100%;
-        margin-top: 51px;
         @include media-breakpoint-down(lg) {
           margin-bottom: 179px;
         }
@@ -682,17 +689,28 @@
   }
 
   &__choose {
-    margin-bottom: 249px;
-
+    margin-bottom: 150px;
+    display: none;
     @include media-breakpoint-down(lg) {
       max-width: 100%;
       margin-bottom: 47px;
-      display: none;
+    }
+
+
+    &-text {
+      max-width: 92%;
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
+    }
+
+    &-comment {
+      margin-bottom: 40px;
     }
 
 
     &--mobile {
-      display: none;
+      display: block;
       .doors-interior--mobile {
         display: none;
       }
@@ -723,6 +741,7 @@
         line-height: 22px;
         top: -86px;
         left: -9px;
+        max-width: 200px;
       }
       @include media-breakpoint-down(sm) {
         max-width: 164px;
@@ -750,14 +769,32 @@
     }
 
     &-title {
-      margin-bottom: 63px;
-      max-width: 75%;
+      margin-bottom: 89px;
+      max-width: 94%;
       @include media-breakpoint-down(lg) {
-        max-width: 100%;
+        max-width: 90%;
         margin-bottom: 47px;
       }
       @include media-breakpoint-down(sm) {
         margin-bottom: 36px;
+        max-width: 100%;
+      }
+    }
+
+    &-img.main__choose-img--right {
+      width: 100%;
+      margin-bottom: 154px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 125px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 83px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 36px;
+      }
+      & + .doors-interior {
+
       }
     }
 
@@ -776,7 +813,7 @@
     }
 
     &-subtitle {
-      margin-bottom: 18px;
+      margin-bottom: 9px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 11px;
       }
@@ -784,7 +821,7 @@
 
     &-img {
       &--left {
-        margin-bottom: 141px;
+        margin-top: 105px;
         @include media-breakpoint-down(lg) {
           width: 100%;
           margin-top: 107px;
@@ -1296,6 +1333,9 @@
       }
       @include media-breakpoint-down(sm) {
         margin-bottom: 54px;
+        .door-best__img {
+          display: none;
+        }
       }
     }
 

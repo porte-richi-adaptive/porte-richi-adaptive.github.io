@@ -17,6 +17,9 @@
     margin-right: 50px;
     cursor: pointer;
     transition: $transition-base;
+    @include media-breakpoint-down(sm) {
+      margin-right: 27px;
+    }
     &:hover {
       path {
         fill: $gold;

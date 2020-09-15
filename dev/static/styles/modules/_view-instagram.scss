@@ -66,6 +66,7 @@
     font-size: 13px;
     display: flex;
     align-items: center;
+    user-select: none;
     @include media-breakpoint-down(md) {
       font-size: 13px;
     }
@@ -91,6 +92,7 @@
   &__title {
     width: 273px;
     padding-bottom: 45px;
+    user-select: none;
     @include media-breakpoint-down(md) {
       font-size: 27px;
       line-height: 36px;
