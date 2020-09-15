@@ -40,8 +40,15 @@
         }
       }
     }
-    &__empty {
-
+    &__buy {
+      .stocks__tip {
+        margin-bottom: 0;
+      }
+      .stocks__item:not(:last-child) {
+        @include media-breakpoint-down(md) {
+          margin-bottom: 18px;
+        }
+      }
     }
 
     &.stocks__buy {
