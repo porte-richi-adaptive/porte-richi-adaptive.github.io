@@ -19,6 +19,9 @@
     @include media-breakpoint-down(lg) {
       width: 220px;
       height: 479px;
+      object-fit: contain;
+      justify-self: flex-start;
+      align-self: flex-start;
     }
     @include media-breakpoint-down(md) {
       width: 156px;

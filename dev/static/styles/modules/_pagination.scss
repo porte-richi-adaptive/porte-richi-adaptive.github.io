@@ -2,10 +2,13 @@
   width: 100%;
   position: relative;
   display: flex;
-
+  padding-left: 9px;
+  padding-right: 9px;
   @include media-breakpoint-down(sm) {
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &__link {
@@ -95,11 +98,11 @@
 
     }
     &:last-child {
-      position: absolute;
-      right: 0;
+      margin-left: auto;
+      order: 2;
       @include media-breakpoint-down(sm) {
         position: static;
-        margin-bottom: 18px;
+        margin-top: 18px;
       }
     }
   }

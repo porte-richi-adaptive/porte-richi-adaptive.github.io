@@ -166,6 +166,20 @@
     }
 
     &--second {
+      @include media-breakpoint-down(md) {
+        .complex__choose-description {
+          display: none;
+          &--mob {
+            display: block;
+            max-width: 198px;
+            font-size: 18px;
+            line-height: 24px;
+            position: relative;
+            margin-top: 21px;
+            bottom: 0;
+          }
+        }
+      }
       @include media-breakpoint-down(sm) {
         .complex__choose-description {
           display: none;

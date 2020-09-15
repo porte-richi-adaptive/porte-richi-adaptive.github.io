@@ -1,5 +1,11 @@
 .entrance-full {
   width: 100%;
+  padding-left: 9px;
+  padding-right: 9px;
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   $entrance-item: '.entrance-item';
 
   &:hover {
