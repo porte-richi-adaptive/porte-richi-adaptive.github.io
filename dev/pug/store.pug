@@ -15,8 +15,9 @@ block content
                         h1.store__title
                             span Фирменный салон
                             span на
-                            span.store__title--underline Кальварийской,
-                            span.store__title--underline 7б,
+                            a(href="#").store__title-link
+                                span.store__title--underline Кальварийской,
+                                span.store__title--underline 7б,
                             span ТЦ «Трюм»
                         .store-main__text  Выбирайте входные и&nbsp;межкомнатные двери для дома или квартиры в&nbsp;одном месте. Менеджеры покажут умные замки для входных дверей, расскажут об&nbsp;особенностях монтажа раздвижных систем.
                         .store-main__table
@@ -119,7 +120,7 @@ block content
         .container
             .row
                 .offset-xl-1.col-xl-8
-                    img(src='static/images/content/salons/entrance-1.jpg', alt='').store-entrance__img
+                    img(src='static/images/content/salons/entrance-1-min.jpg', alt='').store-entrance__img
                 .offset-xl-1.col-xl-6
                     .store-entrance__right
                         h2.store-entrance__title Входные двери
@@ -136,37 +137,40 @@ block content
         h2.store-test__main Протестируйте умные замки, цилиндры ABUS и домофоны
         .container
             .row.store-test__row
-                .col-xl-8.store-test__column
-                    .store-test__block
-                        h3.store-test__title Умные замки
-                        p.store-test__text Посмотрите, как работают умные замки: Danalock открывается с&nbsp;помощью мобильного приложения, Samsumg SHS-P718&nbsp;&mdash; по&nbsp;коду или отпечатку пальца.
-                    .store-test__wrap
-                        img(srcset='static/images/content/salons/test-1.png', alt='').store-test__img
-                        p.store-test__name Samsung SHS-P718
-                        span.store-test__price от 1650 руб.
+                .col-xl-8
+                    .store-test__column
+                        .store-test__block
+                            h3.store-test__title Умные замки
+                            p.store-test__text Посмотрите, как работают умные замки: Danalock открывается с&nbsp;помощью мобильного приложения, Samsumg SHS-P718&nbsp;&mdash; по&nbsp;коду или отпечатку пальца.
+                        .store-test__wrap
+                            img(srcset='static/images/content/salons/test-1.png', alt='').store-test__img
+                            p.store-test__name Samsung SHS-P718
+                            span.store-test__price от 1650 руб.
                 .col-xl-8.store-test__margin
                     img(src='static/images/content/salons/test-2.jpg', alt='').store-test__picture
             .row.store-test__row
                 .col-xl-8.store-test__margin
                     img(src='static/images/content/salons/test-3.jpg', alt='').store-test__picture
 
-                .col-xl-8.store-test__column
-                    .store-test__block
-                        h3.store-test__title Цилиндры ABUS
-                        p.store-test__text Загляните в зону презентации цилиндров ABUS. Это немецкие механизмы с гарантией 50 лет. Их можно объединять в маcтер-системы, и тогда, чтобы открыть все замки в доме, понадобится всего один ключ.
-                    .store-test__wrap
-                        img(src='static/images/content/salons/test-4.png', alt='').store-test__img
-                        p.store-test__name Bravus 1000
-                        span.store-test__price 335 руб.
+                .col-xl-8
+                    .store-test__column
+                        .store-test__block
+                            h3.store-test__title Цилиндры ABUS
+                            p.store-test__text Загляните в зону презентации цилиндров ABUS. Это немецкие механизмы с гарантией 50 лет. Их можно объединять в маcтер-системы, и тогда, чтобы открыть все замки в доме, понадобится всего один ключ.
+                        .store-test__wrap
+                            img(src='static/images/content/salons/test-4.png', alt='').store-test__img
+                            p.store-test__name Bravus 1000
+                            span.store-test__price 335 руб.
             .row.store-test__row
-                .col-xl-8.store-test__column
-                    .store-test__block
-                        h3.store-test__title Домофоны Novicam
-                        p.store-test__text На стенде домофонии изучите современные системы контроля доступа: вызывные панели и видеодомофоны. Менеджеры расскажут про них больше и помогут подобрать оптимальный вариант для вашего дома или квартиры.
-                    .store-test__wrap
-                        img(src='static/images/content/salons/test-5.png', alt='').store-test__img
-                        p.store-test__name Smile 4 KIT
-                        span.store-test__price 126 руб.
+                .col-xl-8
+                    .store-test__column
+                        .store-test__block
+                            h3.store-test__title Домофоны Novicam
+                            p.store-test__text На стенде домофонии изучите современные системы контроля доступа: вызывные панели и видеодомофоны. Менеджеры расскажут про них больше и помогут подобрать оптимальный вариант для вашего дома или квартиры.
+                        .store-test__wrap
+                            img(src='static/images/content/salons/test-5.png', alt='').store-test__img
+                            p.store-test__name Smile 4 KIT
+                            span.store-test__price 126 руб.
 
                 .col-xl-8
                     img(src='static/images/content/salons/test-6.jpg', alt='').store-test__picture
@@ -175,10 +179,28 @@ block content
 
 
     .store-comfort
+        .container
+            .row
+                .col-xl-7.store-comfort__col
+                    .store-comfort__left
+                        h2.store-comfort__title Выбирайте двери с&nbsp;комфортом
+                        p.store-comfort__text Салон находится в&nbsp;мебельном торговом центре. Кроме дверей здесь можно купить аксессуары для дома, мягкую и&nbsp;корпусную мебель.
+                        .store-comfort__over
+                            img(src='static/images/content/salons/comfort-1.jpg', alt='').store-comfort__img
+
+                .offset-xl-2.col-xl-7
+                    .store-comfort__right
+                        .store-comfort__over
+                            img(src='static/images/content/salons/comfort-2.jpg', alt='').store-comfort__img
+                        h2.store-comfort__title Приходите в&nbsp;салон с&nbsp;ребёнком
+                        p.store-comfort__text В&nbsp;салоне предусмотрен детский уголок для рисования, чтобы ребёнок не&nbsp;заскучал, пока вы&nbsp;выбираете двери.
 
 
+    .store-form
+        include ./components/callback
 
-
+    .store-salons
+        include ./modules/other-salons
 
 
 

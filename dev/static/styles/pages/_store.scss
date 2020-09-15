@@ -1,10 +1,20 @@
 .store {
   &__title {
     margin-bottom: 27px;
+    &-link {
+      color: $black;
+      &:hover {
+        span {
+          color: $gold;
+          border-color: $gold;
+        }
+      }
+    }
     span {
       display: inline-block;
       padding-left: 4px;
       padding-right: 4px;
+      transition: $transition-base;
     }
     &--underline {
       position: relative;
@@ -24,7 +34,7 @@
 
     &__bg {
       position: absolute;
-      background-image: url('../../static/images/content/salons/salon-main-1.jpg');
+      background-image: url('../../static/images/content/salons/salon-main-1-min.jpg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -117,7 +127,7 @@
       display: flex;
       flex-wrap: wrap;
       position: absolute;
-      bottom: 0;
+      bottom: 5px;
       padding-left: 37px;
       &-number {
         font-size: 144px;
@@ -135,12 +145,15 @@
       }
       &-link {
         @include typography('tech');
-        width: 100%;
         color: $black;
+        height: fit-content;
+        display: inline-flex;
+        border-bottom: 1px solid $black;
         margin-top: -9px;
         transition: $transition-base;
         &:hover {
           color: $gold;
+          border-bottom-color: $gold;
         }
       }
 
@@ -314,6 +327,7 @@
 
   &-entrance {
     @include section-indent;
+    margin-bottom: 162px;
 
 
     &__title {
@@ -333,13 +347,15 @@
   }
 
   &-test {
+    margin-bottom: 205px;
+
+
     &__main {
       margin: 0 auto 45px;
       width: 600px;
     }
 
     &__block {
-      background-color: $white-1;
       padding-left: 90px;
       padding-top: 70px;
     }
@@ -354,11 +370,13 @@
     }
 
     &__column {
+      height: 100%;
       background-color: $white-1;
     }
 
+
+
     &__wrap {
-      background-color: $white-1;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -376,7 +394,7 @@
     }
 
     &__row {
-      margin-bottom: 14px;
+      margin-bottom: 18px;
     }
 
     &__picture {
@@ -393,8 +411,85 @@
     }
   }
 
-  &-comfort {
 
+
+  &-comfort {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 250px;
+
+    &__right {
+      position: relative;
+      top: -27px;
+
+      .store-comfort__over {
+        margin-top: 0;
+        margin-bottom: 126px;
+        position: relative;
+        top: -27px;
+      }
+      .store-comfort__title {
+        margin-bottom: 18px;
+      }
+    }
+
+    .store-comfort__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc( 44.157vw + 22px);
+      z-index: 1;
+      object-fit: cover;
+      height: 57.948vw;
+    }
+    .store-comfort__over {
+      height: 57.948vw;
+    }
+
+    &__left {
+
+      .store-comfort__img {
+        width: calc( 44.157vw + 22px);
+        right: -10px;
+        left: unset;
+
+      }
+
+      .store-comfort__title {
+        margin-bottom: 18px;
+      }
+
+      .store-comfort__over {
+        margin-top: 100px;
+      }
+
+    }
+
+    &__text {
+      max-width: 422px;
+    }
+
+    &__col {
+      position: static;
+    }
+
+    &__title {
+      max-width: 422px;
+    }
+
+    &__img {
+
+    }
+
+    &__over {
+      position: relative;
+      width: 100%;
+    }
+
+  }
+
+  &-form {
+    margin-bottom: 203px;
   }
 
 

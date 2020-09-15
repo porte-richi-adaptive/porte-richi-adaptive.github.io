@@ -1,0 +1,15 @@
+.other-salons {
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__link {
+    @include typography('h3');
+    text-decoration: none;
+    position: relative;
+    color: $black;
+    letter-spacing: -1px;
+  }
+
+}

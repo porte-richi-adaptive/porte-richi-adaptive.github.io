@@ -1,0 +1,96 @@
+.callback {
+  width: 100%;
+
+  &__container {
+    background-color: $white-1;
+    height: 260px;
+  }
+
+  &__row {
+    height: 100%;
+  }
+
+  &__title {
+    max-width: 284px;
+    padding-top: 41px;
+    padding-left: 50px;
+  }
+
+  &__img {
+    position: relative;
+    height: 100%;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 97px;
+    }
+  }
+
+  &__descr {
+    @include typography('p2');
+    padding-top: 56px;
+    margin-bottom: 18px;
+  }
+  
+  &__about {
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    width: 109px;
+    position: absolute;
+    bottom: 32px;
+    right: 60px;
+  }
+
+  &__name {
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 5px;
+  }
+
+  &__manager {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__input {
+    width: 249px;
+    height: 50px;
+    border: 1px solid $gray-1;
+    outline: none;
+    padding-right: 18px;
+    padding-left: 18px;
+    font-style: italic;
+    color: $gray;
+    font-size: 20px;
+    line-height: 27px;
+    &::placeholder {
+      color: $gray;
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    border: 1px solid $gray;
+    width: 146px;
+    height: 50px;
+    @include rft-txt;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: $transition-base;
+    &:hover {
+      background-color: $black;
+      border-color: $black;
+      color: $white;
+    }
+  }
+
+}
