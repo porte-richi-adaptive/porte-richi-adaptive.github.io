@@ -1,7 +1,38 @@
 .other-salons {
 
+
   &__title {
     margin-bottom: 36px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 651px;
+    @include media-breakpoint-down(lg) {
+      max-width: 499px;
+    }
+  }
+
+  &__img {
+    &:hover + .other-salons__block .other-salons__link {
+      color: $gold;
+      &:after {
+        background-color: $gold;
+      }
+    }
+
+    img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
   }
 
   &__link {
@@ -10,6 +41,103 @@
     position: relative;
     color: $black;
     letter-spacing: -1px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: $transition-base;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      background-color: $black;
+      transition: $transition-base;
+    }
+    &:hover {
+      color: $gold;
+      &:after {
+        background-color: $gold;
+      }
+    }
   }
+
+  &__bottom {
+    display: flex;
+    margin-top: 36px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 18px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    width: 100%;
+    @include typography('p2');
+    color: $black;
+    transition: $transition-base;
+    &:hover, &:focus {
+      color: $gold;
+    }
+  }
+
+  &__time {
+    @include typography('p2');
+    max-width: 100px;
+    margin-left: 27px;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-top: 3px;
+    @include media-breakpoint-down(lg) {
+      justify-content: flex-start;
+      margin-top: 18px;
+    }
+  }
+
+  &__fact {
+    text-align: right;
+    @include media-breakpoint-down(lg) {
+      text-align: left;
+    }
+    &:last-child {
+      margin-left: 55px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 0;
+      }
+    }
+    &:first-child {
+      @include media-breakpoint-down(lg) {
+        margin-right: 42px;
+      }
+    }
+  }
+
+  &__number {
+    font-size: 72px;
+    line-height: 83px;
+    font-family: $minion-display;
+    color: $black-3;
+    @include media-breakpoint-down(lg) {
+      line-height: 77px;
+    }
+  }
+
+  &__descr {
+    @include typography('p2');
+  }
+
+  &__block {
+    display: flex;
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+  }
+
+
 
 }

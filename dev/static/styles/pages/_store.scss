@@ -1,6 +1,9 @@
 .store {
   &__title {
     margin-bottom: 27px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 9px;
+    }
     &-link {
       color: $black;
       &:hover {
@@ -15,6 +18,11 @@
       padding-left: 4px;
       padding-right: 4px;
       transition: $transition-base;
+      &:first-of-type, &:last-child {
+        @include media-breakpoint-down(lg) {
+          padding-left: 0;
+        }
+      }
     }
     &--underline {
       position: relative;
@@ -42,6 +50,9 @@
       min-height: 1107px;
       top: 0;
       z-index: -1;
+      @include media-breakpoint-down(lg) {
+        min-height: 797px;
+      }
     }
 
     &__container {
@@ -50,12 +61,19 @@
       width: 532px;
       margin-top: 90px;
       margin-bottom: 152px;
-      margin-left: 70px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 27px;
+        padding: 39px 27px 42px 27px;
+        margin-bottom: 32px;
+      }
     }
 
     &__text {
       @include typography('p2');
       margin-bottom: 71px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 29px;
+      }
     }
 
     &__table {
@@ -112,12 +130,23 @@
       position: relative;
     }
 
+    &__img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+
     &__title {
       margin-bottom: 12px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 18px;
+      }
     }
 
     &__text {
-
+      @include media-breakpoint-down(lg) {
+        max-width: 332px;
+      }
     }
 
     &__mini {
@@ -129,12 +158,19 @@
       position: absolute;
       bottom: 5px;
       padding-left: 37px;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        padding-left: 27px;
+      }
       &-number {
         font-size: 144px;
         line-height: 100px;
         font-family: $minion-display;
         margin-right: 9px;
         margin-top: -24px;
+        @include media-breakpoint-down(lg) {
+          margin-top: -20px;
+        }
 
       }
       &-text {
@@ -142,6 +178,9 @@
         line-height: 25px;
         width: 93px;
         padding-top: 25px;
+        @include media-breakpoint-down(lg) {
+          padding-top: 30px;
+        }
       }
       &-link {
         @include typography('tech');
@@ -151,6 +190,9 @@
         border-bottom: 1px solid $black;
         margin-top: -9px;
         transition: $transition-base;
+        @include media-breakpoint-down(lg) {
+          margin-top: 1px;
+        }
         &:hover {
           color: $gold;
           border-bottom-color: $gold;
@@ -161,6 +203,9 @@
         position: absolute;
         right: -18px;
         bottom: 0;
+        @include media-breakpoint-down(lg) {
+          right: 0;
+        }
       }
     }
   }
@@ -170,23 +215,42 @@
 
     &__title {
       margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        max-width: 69%;
+      }
+    }
+
+    &__img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
     }
 
     &__text {
       margin-bottom: 177px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 100px;
+      }
     }
 
     &__mini {
 
       &-img {
         margin-bottom: 9px;
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+          margin-bottom: 11px;
+        }
       }
 
       &-text {
         font-size: 18px;
         line-height: 27px;
         font-style: italic;
-
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
     }
   }
@@ -199,10 +263,18 @@
       background-color: $white-1;
       padding-bottom: 219px;
       margin-bottom: 130px;
+      @include media-breakpoint-down(lg) {
+        padding-top: 61px;
+        padding-bottom: 140px;
+        margin-bottom: 135px;
+      }
     }
     &__title {
       max-width: 205px;
       margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        max-width: 95%;
+      }
     }
 
     &__text {
@@ -212,9 +284,15 @@
     &__mini {
       position: relative;
       margin-bottom: 135px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 99px;
+      }
 
       &-img {
         margin-bottom: 14px;
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+        }
       }
 
       &-text {
@@ -222,6 +300,11 @@
         line-height: 27px;
         font-style: italic;
         padding-left: 162px;
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+          padding-left: 175px;
+        }
       }
     }
     &__item {
@@ -236,12 +319,24 @@
       border-radius: 50%;
       flex-direction: column;
       padding-top: 99px;
+      @include media-breakpoint-down(lg) {
+        width: 220px;
+        height: 220px;
+        bottom: -17px;
+        left: -69px;
+        padding-top: 72px;
+      }
 
       &-name {
         font-size: 18px;
         line-height: 18px;
         font-style: italic;
         margin-bottom: 3px;
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 0;
+        }
       }
 
       &-price {
@@ -254,11 +349,20 @@
 
       &-img {
         margin-bottom: 42px;
+        @include media-breakpoint-down(lg) {
+          width: 132px;
+          height: 58px;
+          margin-bottom: 18px;
+        }
       }
     }
     
     &__figure {
       position: relative;
+
+      &-img {
+        width: 100%;
+      }
 
       &--first {
         .store-furniture__figure-text {
@@ -269,20 +373,50 @@
           bottom: -148px;
           right: -90px;
           padding-top: 47px;
+          @include media-breakpoint-down(lg) {
+            bottom: -77px;
+            right: -68px;
+            padding-top: 34px;
+          }
+        }
+        .store-furniture__product-text {
+          @include media-breakpoint-down(lg) {
+            margin-top: 15px;
+          }
+        }
+        .store-furniture__product-img {
+          @include media-breakpoint-down(lg) {
+            width: 56px;
+            height: 106px;
+          }
         }
       }
 
       &--second {
         .store-furniture__figure-text {
-          margin-top: 12px;
+          margin-top: 9px;
           display: block;
         }
         .store-furniture__product {
           top: -72px;
           right: -90px;
+          @include media-breakpoint-down(lg) {
+            top: -37px;
+            right: -68px;
+            padding-top: 6px;
+          }
         }
         .store-furniture__product-text {
           margin-top: 5px;
+          @include media-breakpoint-down(lg) {
+            margin-top: 0;
+          }
+        }
+        .store-furniture__product-img {
+          @include media-breakpoint-down(lg) {
+            width: 142px;
+            height: 142px;
+          }
         }
       }
 
@@ -290,6 +424,10 @@
         font-style: italic;
         font-size: 18px;
         line-height: 27px;
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
     }
 
@@ -300,6 +438,10 @@
       border-radius: 50%;
       position: absolute;
       z-index: 1;
+      @include media-breakpoint-down(lg) {
+        width: 220px;
+        height: 220px;
+      }
       &-text {
         font-size: 18px;
         line-height: 18px;
@@ -308,6 +450,10 @@
         text-align: center;
         margin-top: 27px;
         margin-bottom: 2px;
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
       &-img {
         display: block;
@@ -333,10 +479,16 @@
     &__title {
       line-height: 1;
       margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 22px;
+      }
     }
 
     &__text {
       margin-bottom: 64px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 78px;
+      }
     }
 
     &__block {
@@ -344,29 +496,66 @@
       justify-content: flex-end;
     }
 
+    &__img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+
+    &__right {
+      .store-interior__mini {
+        @include media-breakpoint-down(lg) {
+          width: 378px;
+          right: 0;
+        }
+      }
+      &-img {
+        width: 100%;
+      }
+    }
+
   }
 
   &-test {
     margin-bottom: 205px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 135px;
+    }
 
 
     &__main {
       margin: 0 auto 45px;
       width: 600px;
+      @include media-breakpoint-down(lg) {
+        width: 517px;
+        text-align: center;
+        margin-bottom: 36px;
+      }
     }
 
     &__block {
       padding-left: 90px;
       padding-top: 70px;
+      @include media-breakpoint-down(lg) {
+        padding-left: 36px;
+        padding-top: 46px;
+      }
     }
 
     &__title {
       margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 9px;
+      }
     }
 
     &__text {
       max-width: 510px;
       padding-bottom: 40px;
+      @include media-breakpoint-down(lg) {
+        max-width: 449px;
+        padding-bottom: 64px;
+      }
     }
 
     &__column {
@@ -384,6 +573,32 @@
 
     &__img {
       margin-bottom: 36px;
+      &--first {
+        @include media-breakpoint-down(lg) {
+          width: 43px;
+          height: 172px;
+          margin-bottom: 24px;
+        }
+      }
+      &--second {
+        @include media-breakpoint-down(lg) {
+          width: 359px;
+          height: 153px;
+          object-fit: contain;
+          position: relative;
+          left: -25px;
+          top: 28px;
+          margin-bottom: 20px;
+        }
+      }
+
+      &--third {
+        @include media-breakpoint-down(lg) {
+          width: 210px;
+          height: 136px;
+          margin-bottom: 13px;
+        }
+      }
     }
 
     &__name {
@@ -391,6 +606,11 @@
       font-size: 18px;
       line-height: 18px;
       font-style: italic;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 6px;
+      }
     }
 
     &__row {
@@ -400,6 +620,9 @@
     &__picture {
       display: block;
       height: 100%;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
     }
 
     &__price {
@@ -417,6 +640,9 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 250px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 161px;
+    }
 
     &__right {
       position: relative;
@@ -427,6 +653,10 @@
         margin-bottom: 126px;
         position: relative;
         top: -27px;
+        @include media-breakpoint-down(lg) {
+          margin-top: 54px;
+          margin-bottom: 52px;
+        }
       }
       .store-comfort__title {
         margin-bottom: 18px;
@@ -461,12 +691,18 @@
 
       .store-comfort__over {
         margin-top: 100px;
+        @include media-breakpoint-down(lg) {
+          margin-top: 81px;
+        }
       }
 
     }
 
     &__text {
       max-width: 422px;
+      @include media-breakpoint-down(lg) {
+        max-width: 370px;
+      }
     }
 
     &__col {
@@ -475,6 +711,9 @@
 
     &__title {
       max-width: 422px;
+      @include media-breakpoint-down(lg) {
+        max-width: 362px;
+      }
     }
 
     &__img {
@@ -490,6 +729,16 @@
 
   &-form {
     margin-bottom: 203px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 135px;
+    }
+  }
+
+  &-salons {
+    margin-bottom: 163px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 135px;
+    }
   }
 
 

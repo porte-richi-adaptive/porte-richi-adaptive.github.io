@@ -4,6 +4,9 @@
   &__container {
     background-color: $white-1;
     height: 260px;
+    @include media-breakpoint-down(lg) {
+      height: 230px;
+    }
   }
 
   &__row {
@@ -14,6 +17,10 @@
     max-width: 284px;
     padding-top: 41px;
     padding-left: 50px;
+    @include media-breakpoint-down(lg) {
+      padding-top: 44px;
+      padding-left: 54px;
+    }
   }
 
   &__img {
@@ -24,6 +31,11 @@
       position: absolute;
       bottom: 0;
       left: 97px;
+      @include media-breakpoint-down(lg) {
+        width: 204px;
+        height: 282px;
+        left: -39px;
+      }
     }
   }
 
@@ -31,6 +43,10 @@
     @include typography('p2');
     padding-top: 56px;
     margin-bottom: 18px;
+    @include media-breakpoint-down(lg) {
+      padding-left: 37px;
+      padding-top: 44px;
+    }
   }
   
   &__about {
@@ -41,17 +57,26 @@
     position: absolute;
     bottom: 32px;
     right: 60px;
+    @include media-breakpoint-down(lg) {
+      bottom: 29px;
+      right: 53px;
+    }
   }
 
   &__name {
     font-size: 22px;
     line-height: 27px;
     margin-bottom: 5px;
+
   }
 
   &__manager {
     font-size: 18px;
     line-height: 18px;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__input {
@@ -65,16 +90,31 @@
     color: $gray;
     font-size: 20px;
     line-height: 27px;
+    @include media-breakpoint-down(lg) {
+      width: 195px;
+      font-size: 16px;
+      line-height: 22px;
+      margin-right: 18px;
+    }
+
     &::placeholder {
       color: $gray;
       font-size: 20px;
       line-height: 27px;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
   }
 
   &__form {
     display: flex;
     justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      justify-content: flex-start;
+      margin-left: 36px;
+    }
   }
 
   &__btn {
