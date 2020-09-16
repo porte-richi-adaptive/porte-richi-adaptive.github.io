@@ -958,7 +958,7 @@
     @include media-breakpoint-down(lg) {
       margin-bottom: 161px;
     }
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       margin-bottom: 89px;
     }
 
@@ -1083,6 +1083,9 @@
     margin-bottom: 203px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 135px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 72px;
     }
   }
 

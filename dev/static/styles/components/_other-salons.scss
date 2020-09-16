@@ -18,6 +18,9 @@
     @include media-breakpoint-down(lg) {
       max-width: 499px;
     }
+    @include media-breakpoint-down(md) {
+      max-width: 360px;
+    }
   }
 
   &__img {
@@ -44,6 +47,9 @@
     display: inline-block;
     margin-top: 15px;
     transition: $transition-base;
+    @include media-breakpoint-down(md) {
+      margin-top: 5px;
+    }
     &:after {
       content: '';
       width: 100%;
