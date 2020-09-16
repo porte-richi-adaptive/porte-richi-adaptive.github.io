@@ -1,9 +1,19 @@
 .store {
+
+  &__mobile {
+    display: none;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+
+
   &__title {
     margin-bottom: 27px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 9px;
     }
+
     &-link {
       color: $black;
       &:hover {
@@ -34,10 +44,41 @@
   &-main {
     @include section-indent;
 
+
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      top: 0;
+      left: 9.3vw;
+    }
+
+    &__wrapper {
+      @include media-breakpoint-down(md) {
+        position: relative;
+        margin-top: 11px;
+        margin-bottom: 71px;
+      }
+    }
+
+    .store__title {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
     .breadcrumbs__wrap {
       margin: 0 0 9px;
       padding: 0;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
 
+    &__block {
+      @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
 
     &__bg {
@@ -53,6 +94,13 @@
       @include media-breakpoint-down(lg) {
         min-height: 797px;
       }
+      @include media-breakpoint-down(md) {
+        width: 766px;
+        margin: 0 auto;
+        position: relative;
+        min-height: 511px;
+
+      }
     }
 
     &__container {
@@ -66,6 +114,11 @@
         padding: 39px 27px 42px 27px;
         margin-bottom: 32px;
       }
+      @include media-breakpoint-down(md) {
+        width: 336px;
+        margin-top: 45px;
+        padding: 27px 27px 42px 27px;
+      }
     }
 
     &__text {
@@ -74,12 +127,18 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 29px;
       }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
     }
 
     &__table {
       border-top: 1px solid $gray-1;
       border-bottom: 1px solid $gray-1;
       margin-bottom: 27px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
     }
 
     &__row {
@@ -90,11 +149,19 @@
       &:not(:last-child) {
         border-bottom: 1px solid $gray-1;
       }
+      @include media-breakpoint-down(md) {
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
     }
 
     &__name {
       @include typography('tech');
       color: $gray-6;
+      @include media-breakpoint-down(md) {
+        font-size: 10px;
+        line-height: 18px;
+      }
     }
 
     &__tel, &__info {
@@ -103,11 +170,23 @@
 
     &__info {
       display: inline-block;
+      @include media-breakpoint-down(md) {
+        font-size: 10px;
+        line-height: 18px;
+      }
     }
 
     &__tel {
       display: flex;
       color: $black;
+      transition: $transition-base;
+      &:hover {
+        color: $gold;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 10px;
+        line-height: 18px;
+      }
     }
 
     &__scheme {
@@ -117,6 +196,10 @@
         display: inline-block;
         color: $black;
         @include upperlink-underline;
+        @include media-breakpoint-down(md) {
+          font-size: 10px;
+          line-height: 18px;
+        }
       }
     }
   }
@@ -134,12 +217,19 @@
       @include media-breakpoint-down(lg) {
         width: 100%;
       }
+      @include media-breakpoint-down(md) {
+        width: 88%;
+        margin-left: 56px;
+      }
     }
 
     &__title {
       margin-bottom: 12px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 18px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 9px;
       }
     }
 
@@ -162,6 +252,11 @@
         width: 100%;
         padding-left: 27px;
       }
+      @include media-breakpoint-down(md) {
+        height: 110px;
+        width: 291px;
+        padding-left: 14px;
+      }
       &-number {
         font-size: 144px;
         line-height: 100px;
@@ -170,6 +265,11 @@
         margin-top: -24px;
         @include media-breakpoint-down(lg) {
           margin-top: -20px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 108px;
+          line-height: 100px;
+          margin-top: -27px;
         }
 
       }
@@ -180,6 +280,12 @@
         padding-top: 25px;
         @include media-breakpoint-down(lg) {
           padding-top: 30px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+          line-height: 22px;
+          padding-top: 18px;
+          width: 73px;
         }
       }
       &-link {
@@ -192,6 +298,10 @@
         transition: $transition-base;
         @include media-breakpoint-down(lg) {
           margin-top: 1px;
+        }
+        @include media-breakpoint-down(md) {
+          position: absolute;
+          bottom: 22px;
         }
         &:hover {
           color: $gold;
@@ -206,6 +316,11 @@
         @include media-breakpoint-down(lg) {
           right: 0;
         }
+        @include media-breakpoint-down(md) {
+          width: 90px;
+          height: 149px;
+          right: -14px;
+        }
       }
     }
   }
@@ -213,10 +328,20 @@
   &-size {
     @include section-indent;
 
+    &__left {
+      @include media-breakpoint-down(md) {
+        width: 94%;
+      }
+    }
+
     &__title {
       margin-bottom: 18px;
       @include media-breakpoint-down(lg) {
         max-width: 69%;
+      }
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+        margin-bottom: 9px;
       }
     }
 
@@ -224,12 +349,16 @@
       @include media-breakpoint-down(lg) {
         width: 100%;
       }
+
     }
 
     &__text {
       margin-bottom: 177px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 100px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 42px;
       }
     }
 
@@ -251,11 +380,27 @@
           font-size: 16px;
           line-height: 22px;
         }
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+          line-height: 18px;
+        }
       }
     }
   }
 
   &-furniture {
+
+    &__left {
+      @include media-breakpoint-down(md) {
+        padding-left: 35px;
+      }
+    }
+
+    &__right {
+      @include media-breakpoint-down(md) {
+        padding-left: 24px;
+      }
+    }
 
 
     &__container {
@@ -268,6 +413,11 @@
         padding-bottom: 140px;
         margin-bottom: 135px;
       }
+      @include media-breakpoint-down(md) {
+        padding-top: 25px;
+        padding-bottom: 45px;
+        margin-bottom: 25px;
+      }
     }
     &__title {
       max-width: 205px;
@@ -275,10 +425,17 @@
       @include media-breakpoint-down(lg) {
         max-width: 95%;
       }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 12px;
+        max-width: 100%;
+      }
     }
 
     &__text {
       max-width: 265px;
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+      }
     }
 
     &__mini {
@@ -287,11 +444,20 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 99px;
       }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 87px;
+      }
 
       &-img {
         margin-bottom: 14px;
         @include media-breakpoint-down(lg) {
           width: 100%;
+        }
+        @include media-breakpoint-down(md) {
+          width: 647px;
+          margin-left: 35px;
+          margin-top: 36px;
+          margin-bottom: 12px;
         }
       }
 
@@ -304,6 +470,10 @@
           font-size: 16px;
           line-height: 22px;
           padding-left: 175px;
+        }
+        @include media-breakpoint-down(md) {
+          padding-left: 35px;
+          max-width: 85%;
         }
       }
     }
@@ -325,6 +495,15 @@
         bottom: -17px;
         left: -69px;
         padding-top: 72px;
+      }
+      @include media-breakpoint-down(md) {
+        left: unset;
+        bottom: unset;
+        right: 36px;
+        top: -67px;
+        width: 200px;
+        height: 200px;
+        padding-top: 66px;
       }
 
       &-name {
@@ -354,6 +533,11 @@
           height: 58px;
           margin-bottom: 18px;
         }
+        @include media-breakpoint-down(md) {
+          width: 125px;
+          height: 52px;
+          margin-bottom: 12px;
+        }
       }
     }
     
@@ -365,10 +549,30 @@
       }
 
       &--first {
+        @include media-breakpoint-down(md) {
+          padding-left: 35px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .store-furniture__figure-img {
+          @include media-breakpoint-down(md) {
+            width: 310.74px;
+            height: 354px;
+            margin-bottom: 18px;
+          }
+        }
+
         .store-furniture__figure-text {
           margin-bottom: 18px;
           display: block;
+          @include media-breakpoint-down(md) {
+            order: 2;
+            max-width: 95%;
+          }
         }
+
+
         .store-furniture__product {
           bottom: -148px;
           right: -90px;
@@ -378,10 +582,17 @@
             right: -68px;
             padding-top: 34px;
           }
+          @include media-breakpoint-down(md) {
+            bottom: unset;
+            top: -44px;
+            right: 1px;
+            padding-top: 28px;
+          }
         }
         .store-furniture__product-text {
           @include media-breakpoint-down(lg) {
-            margin-top: 15px;
+            margin-top: 13px;
+            margin-bottom: -1px;
           }
         }
         .store-furniture__product-img {
@@ -389,13 +600,32 @@
             width: 56px;
             height: 106px;
           }
+          @include media-breakpoint-down(md) {
+            width: 47px;
+            height: 88px;
+          }
         }
       }
 
       &--second {
+        @include media-breakpoint-down(md) {
+          padding-left: 27px;
+        }
+
+        .store-furniture__figure-img {
+          @include media-breakpoint-down(md) {
+            width: 265.34px;
+            height: 354px;
+          }
+        }
+
         .store-furniture__figure-text {
           margin-top: 9px;
           display: block;
+          @include media-breakpoint-down(md) {
+            margin-top: 13px;
+            max-width: 72%;
+          }
         }
         .store-furniture__product {
           top: -72px;
@@ -404,6 +634,11 @@
             top: -37px;
             right: -68px;
             padding-top: 6px;
+          }
+          @include media-breakpoint-down(md) {
+            top: -48px;
+            right: 52px;
+            padding-top: 15px;
           }
         }
         .store-furniture__product-text {
@@ -416,6 +651,10 @@
           @include media-breakpoint-down(lg) {
             width: 142px;
             height: 142px;
+          }
+          @include media-breakpoint-down(md) {
+            width: 111px;
+            height: 111px;
           }
         }
       }
@@ -441,6 +680,10 @@
       @include media-breakpoint-down(lg) {
         width: 220px;
         height: 220px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 200px;
+        height: 200px;
       }
       &-text {
         font-size: 18px;
@@ -471,9 +714,23 @@
     }
   }
 
+  &-inside {
+    display: none;
+    &__img {
+      width: 100%;
+    }
+    @include media-breakpoint-down(md) {
+      display: block;
+      margin-bottom: 63px;
+    }
+  }
+
   &-entrance {
     @include section-indent;
     margin-bottom: 162px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 93px;
+    }
 
 
     &__title {
@@ -482,6 +739,10 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 22px;
       }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
+
     }
 
     &__text {
@@ -503,11 +764,25 @@
     }
 
     &__right {
+      @include media-breakpoint-down(md) {
+        padding-left: 25px;
+      }
       .store-interior__mini {
         @include media-breakpoint-down(lg) {
           width: 378px;
           right: 0;
         }
+        @include media-breakpoint-down(md) {
+          width: 291px;
+          height: 111px;
+          right: 66px;
+        }
+      }
+      .store-entrance__right-img {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+
       }
       &-img {
         width: 100%;
@@ -521,6 +796,9 @@
     @include media-breakpoint-down(lg) {
       margin-bottom: 135px;
     }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 72px;
+    }
 
 
     &__main {
@@ -531,6 +809,10 @@
         text-align: center;
         margin-bottom: 36px;
       }
+      @include media-breakpoint-down(md) {
+        width: 441px;
+        margin-bottom: 18px;
+      }
     }
 
     &__block {
@@ -540,12 +822,19 @@
         padding-left: 36px;
         padding-top: 46px;
       }
+      @include media-breakpoint-down(md) {
+        padding-left: 25px;
+        padding-top: 28px;
+      }
     }
 
     &__title {
       margin-bottom: 18px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 9px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 11px;
       }
     }
 
@@ -555,6 +844,10 @@
       @include media-breakpoint-down(lg) {
         max-width: 449px;
         padding-bottom: 64px;
+      }
+      @include media-breakpoint-down(md) {
+        max-width: 327px;
+        padding-bottom: 22px;
       }
     }
 
@@ -579,6 +872,11 @@
           height: 172px;
           margin-bottom: 24px;
         }
+        @include media-breakpoint-down(md) {
+          width: 30px;
+          height: 121px;
+          margin-bottom: 15px;
+        }
       }
       &--second {
         @include media-breakpoint-down(lg) {
@@ -590,6 +888,16 @@
           top: 28px;
           margin-bottom: 20px;
         }
+        @include media-breakpoint-down(md) {
+          width: 213px;
+          left: 60px;
+          top: unset;
+          bottom: 34px;
+          position: absolute;
+          & + .store-test__name {
+            margin-top: 114px;
+          }
+        }
       }
 
       &--third {
@@ -597,6 +905,10 @@
           width: 210px;
           height: 136px;
           margin-bottom: 13px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 153px;
+          height: 99px;
         }
       }
     }
@@ -610,6 +922,9 @@
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 6px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
       }
     }
 
@@ -643,6 +958,9 @@
     @include media-breakpoint-down(lg) {
       margin-bottom: 161px;
     }
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 89px;
+    }
 
     &__right {
       position: relative;
@@ -657,9 +975,24 @@
           margin-top: 54px;
           margin-bottom: 52px;
         }
+        @include media-breakpoint-down(md) {
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 43px;
+        }
+
       }
       .store-comfort__title {
         margin-bottom: 18px;
+        @include media-breakpoint-down(md) {
+          padding-left: 12px;
+          margin-bottom: 11px;
+        }
+      }
+      .store-comfort__text {
+        @include media-breakpoint-down(md) {
+          padding-left: 12px;
+        }
       }
     }
 
@@ -671,9 +1004,17 @@
       z-index: 1;
       object-fit: cover;
       height: 57.948vw;
+      @include media-breakpoint-down(md) {
+        position: static;
+        width: 360px;
+        height: 100%;
+      }
     }
     .store-comfort__over {
       height: 57.948vw;
+      @include media-breakpoint-down(md) {
+        height: auto;
+      }
     }
 
     &__left {
@@ -682,11 +1023,16 @@
         width: calc( 44.157vw + 22px);
         right: -10px;
         left: unset;
-
+        @include media-breakpoint-down(md) {
+          width: 360px;
+        }
       }
 
       .store-comfort__title {
         margin-bottom: 18px;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 9px;
+        }
       }
 
       .store-comfort__over {
@@ -703,6 +1049,9 @@
       @include media-breakpoint-down(lg) {
         max-width: 370px;
       }
+      @include media-breakpoint-down(md) {
+        max-width: 340px;
+      }
     }
 
     &__col {
@@ -713,6 +1062,9 @@
       max-width: 422px;
       @include media-breakpoint-down(lg) {
         max-width: 362px;
+      }
+      @include media-breakpoint-down(md) {
+        max-width: 85%;
       }
     }
 
