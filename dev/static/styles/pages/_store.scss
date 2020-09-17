@@ -5,6 +5,7 @@
     @include media-breakpoint-down(md) {
       display: block;
     }
+
   }
 
 
@@ -12,6 +13,10 @@
     margin-bottom: 27px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 9px;
+    }
+    @include media-breakpoint-down(sm) {
+      line-height: 45px;
+      max-width: 100%;
     }
 
     &-link {
@@ -44,11 +49,23 @@
   &-main {
     @include section-indent;
 
+    &__mobile {
+      @include media-breakpoint-down(sm) {
+        .breadcrumbs__wrap {
+          margin-top: 20px;
+          margin-bottom: 6px;
+        }
+      }
+    }
 
     @include media-breakpoint-down(md) {
       position: absolute;
       top: 0;
       left: 9.3vw;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: static;
     }
 
     &__wrapper {
@@ -69,8 +86,8 @@
       margin: 0 0 9px;
       padding: 0;
       @include media-breakpoint-down(md) {
-        display: none;
-      }
+         display: none;
+       }
     }
 
     &__block {
@@ -99,7 +116,11 @@
         margin: 0 auto;
         position: relative;
         min-height: 511px;
-
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: 66.667vw;
+        min-height: auto;
       }
     }
 
@@ -118,6 +139,11 @@
         width: 336px;
         margin-top: 45px;
         padding: 27px 27px 42px 27px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin-top: 18px;
+        padding: 0;
       }
     }
 
@@ -200,6 +226,9 @@
           font-size: 10px;
           line-height: 18px;
         }
+        @include media-breakpoint-down(sm) {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -221,6 +250,11 @@
         width: 88%;
         margin-left: 56px;
       }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 54px;
+      }
     }
 
     &__title {
@@ -236,6 +270,10 @@
     &__text {
       @include media-breakpoint-down(lg) {
         max-width: 332px;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        margin-bottom: 18px;
       }
     }
 
@@ -256,6 +294,10 @@
         height: 110px;
         width: 291px;
         padding-left: 14px;
+      }
+      @include media-breakpoint-down(sm) {
+        position: static;
+        width: 100%;
       }
       &-number {
         font-size: 144px;
@@ -321,6 +363,9 @@
           height: 149px;
           right: -14px;
         }
+        @include media-breakpoint-down(sm) {
+          right: -2px;
+        }
       }
     }
   }
@@ -341,7 +386,7 @@
       }
       @include media-breakpoint-down(md) {
         max-width: 100%;
-        margin-bottom: 9px;
+        margin-bottom: 27px;
       }
     }
 
@@ -349,7 +394,9 @@
       @include media-breakpoint-down(lg) {
         width: 100%;
       }
-
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
     }
 
     &__text {
@@ -418,6 +465,10 @@
         padding-bottom: 45px;
         margin-bottom: 25px;
       }
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 18px;
+        margin-bottom: 45px;
+      }
     }
     &__title {
       max-width: 205px;
@@ -447,6 +498,9 @@
       @include media-breakpoint-down(md) {
         margin-bottom: 87px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 45px;
+      }
 
       &-img {
         margin-bottom: 14px;
@@ -458,6 +512,12 @@
           margin-left: 35px;
           margin-top: 36px;
           margin-bottom: 12px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-top: 27px;
+          margin-left: 0;
+          margin-bottom: 18px;
         }
       }
 
@@ -474,6 +534,10 @@
         @include media-breakpoint-down(md) {
           padding-left: 35px;
           max-width: 85%;
+        }
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+          padding-left: 0;
         }
       }
     }
@@ -504,6 +568,12 @@
         width: 200px;
         height: 200px;
         padding-top: 66px;
+      }
+      @include media-breakpoint-down(sm) {
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 36px;
       }
 
       &-name {
@@ -554,12 +624,21 @@
           display: flex;
           flex-direction: column;
         }
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
+          margin-bottom: 36px;
+        }
 
         .store-furniture__figure-img {
           @include media-breakpoint-down(md) {
             width: 310.74px;
             height: 354px;
             margin-bottom: 18px;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+            height: auto;
+            order: 1;
           }
         }
 
@@ -588,6 +667,12 @@
             right: 1px;
             padding-top: 28px;
           }
+          @include media-breakpoint-down(sm) {
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+            order: 3;
+          }
         }
         .store-furniture__product-text {
           @include media-breakpoint-down(lg) {
@@ -611,11 +696,19 @@
         @include media-breakpoint-down(md) {
           padding-left: 27px;
         }
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
+        }
 
         .store-furniture__figure-img {
           @include media-breakpoint-down(md) {
             width: 265.34px;
             height: 354px;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+            height: auto;
+            order: 1;
           }
         }
 
@@ -625,6 +718,9 @@
           @include media-breakpoint-down(md) {
             margin-top: 13px;
             max-width: 72%;
+          }
+          @include media-breakpoint-down(sm) {
+            max-width: 100%;
           }
         }
         .store-furniture__product {
@@ -639,6 +735,10 @@
             top: -48px;
             right: 52px;
             padding-top: 15px;
+          }
+          @include media-breakpoint-down(sm) {
+            position: static;
+            margin: 27px auto 0;
           }
         }
         .store-furniture__product-text {
@@ -718,6 +818,9 @@
     display: none;
     &__img {
       width: 100%;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 63px;
+      }
     }
     @include media-breakpoint-down(md) {
       display: block;
@@ -730,6 +833,9 @@
     margin-bottom: 162px;
     @include media-breakpoint-down(md) {
       margin-bottom: 93px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 18px;
     }
 
 
@@ -750,6 +856,9 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 78px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 18px;
+      }
     }
 
     &__block {
@@ -762,10 +871,18 @@
         width: 100%;
       }
     }
-
+    &__block {
+      @include media-breakpoint-down(sm) {
+        position: relative;
+        margin-bottom: 43px;
+      }
+    }
     &__right {
       @include media-breakpoint-down(md) {
         padding-left: 25px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
       }
       .store-interior__mini {
         @include media-breakpoint-down(lg) {
@@ -776,6 +893,10 @@
           width: 291px;
           height: 111px;
           right: 66px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          position: static;
         }
       }
       .store-entrance__right-img {
@@ -800,6 +921,12 @@
       margin-bottom: 72px;
     }
 
+    &__margin {
+      @include media-breakpoint-down(sm) {
+        order: 2;
+      }
+    }
+
 
     &__main {
       margin: 0 auto 45px;
@@ -810,8 +937,14 @@
         margin-bottom: 36px;
       }
       @include media-breakpoint-down(md) {
-        width: 441px;
+         width: 441px;
+         margin-bottom: 18px;
+       }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
         margin-bottom: 18px;
+        padding-left: 27px;
+        padding-right: 27px;
       }
     }
 
@@ -823,8 +956,12 @@
         padding-top: 46px;
       }
       @include media-breakpoint-down(md) {
-        padding-left: 25px;
-        padding-top: 28px;
+         padding-left: 25px;
+         padding-top: 28px;
+       }
+      @include media-breakpoint-down(sm) {
+        padding-left: 27px;
+        padding-right: 27px;
       }
     }
 
@@ -849,11 +986,20 @@
         max-width: 327px;
         padding-bottom: 22px;
       }
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        padding-bottom: 18px;
+      }
     }
 
     &__column {
       height: 100%;
       background-color: $white-1;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 18px;
+        height: auto;
+        padding-bottom: 36px;
+      }
     }
 
 
@@ -877,6 +1023,11 @@
           height: 121px;
           margin-bottom: 15px;
         }
+        @include media-breakpoint-down(sm) {
+          width: 56px;
+          height: 229px;
+          margin-bottom: 18px;
+        }
       }
       &--second {
         @include media-breakpoint-down(lg) {
@@ -898,6 +1049,17 @@
             margin-top: 114px;
           }
         }
+        @include media-breakpoint-down(sm) {
+          position: static;
+          padding-left: 27px;
+          padding-right: 27px;
+          width: 100%;
+          height: auto;
+          margin-top: 22px;
+          & + .store-test__name {
+            margin-top: 0;
+          }
+        }
       }
 
       &--third {
@@ -909,6 +1071,11 @@
         @include media-breakpoint-down(md) {
           width: 153px;
           height: 99px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 190px;
+          height: 123px;
+          margin-top: 62px;
         }
       }
     }
@@ -966,6 +1133,13 @@
       position: relative;
       top: -27px;
 
+      @include media-breakpoint-down(sm) {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+
       .store-comfort__over {
         margin-top: 0;
         margin-bottom: 126px;
@@ -980,6 +1154,12 @@
           justify-content: flex-end;
           margin-bottom: 43px;
         }
+        @include media-breakpoint-down(sm) {
+          margin-top: 27px;
+          order: 3;
+          position: static;
+          margin-bottom: 0;
+        }
 
       }
       .store-comfort__title {
@@ -988,10 +1168,17 @@
           padding-left: 12px;
           margin-bottom: 11px;
         }
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
+          margin-bottom: 9px;
+        }
       }
       .store-comfort__text {
         @include media-breakpoint-down(md) {
           padding-left: 12px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
         }
       }
     }
@@ -1008,6 +1195,9 @@
         position: static;
         width: 360px;
         height: 100%;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
       }
     }
     .store-comfort__over {
@@ -1026,6 +1216,10 @@
         @include media-breakpoint-down(md) {
           width: 360px;
         }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-bottom: 56px;
+        }
       }
 
       .store-comfort__title {
@@ -1040,6 +1234,9 @@
         @include media-breakpoint-down(lg) {
           margin-top: 81px;
         }
+        @include media-breakpoint-down(sm) {
+          margin-top: 27px;
+        }
       }
 
     }
@@ -1051,6 +1248,9 @@
       }
       @include media-breakpoint-down(md) {
         max-width: 340px;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
       }
     }
 

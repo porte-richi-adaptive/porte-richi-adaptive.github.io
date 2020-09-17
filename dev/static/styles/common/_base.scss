@@ -8,6 +8,19 @@ body {
   }
 }
 
+.mobile-only {
+  display: none!important;
+  @include media-breakpoint-down(sm) {
+    display: flex!important;
+  }
+}
+
+.mobile-hidden {
+  @include media-breakpoint-down(sm) {
+    display: none!important;
+  }
+}
+
 .main-container {
   padding-top: 9px;
   &--gray {

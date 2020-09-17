@@ -11,8 +11,7 @@ block content
                 .col-16
                     include modules/breadcrumbs
                     h1.store__title
-                        span Фирменный салон
-                        span на
+                        span Фирменный салон&nbsp;на
                         a(href="#").store__title-link
                             span.store__title--underline Кальварийской,
                             span.store__title--underline 7б,
@@ -62,7 +61,7 @@ block content
                     .store-interior__left
                         h2.store-interior__title Межкомнатные двери
                         p.store-interior__text В&nbsp;салоне представлены образцы дверей из&nbsp;шпона, экошпона и&nbsp;эмали. Рассмотрите детально каждую модель, проведите рукой по&nbsp;полотну, проверьте работу фурнитуры.
-                        .store-interior__mini
+                        .store-interior__mini.mobile-hidden
                             img(srcset='static/images/content/salons/tel_mini.png', alt='').store-interior__mini-img
                             span.store-interior__mini-number 60
                             span.store-interior__mini-text образцов в салоне
@@ -70,6 +69,11 @@ block content
 
                 .offset-xl-2.col-xl-9.offset-lg-1.col-lg-9.col-md-10
                     img(srcset='static/images/content/salons/interior.jpg', alt='').store-interior__img
+                    .store-interior__mini.mobile-only
+                        img(srcset='static/images/content/salons/tel_mini.png', alt='').store-interior__mini-img
+                        span.store-interior__mini-number 60
+                        span.store-interior__mini-text образцов в салоне
+                        a(href='#').store-interior__mini-link перейти в каталог
 
 
 
@@ -80,11 +84,12 @@ block content
             .row
                 .col-xl-8.col-lg-8.col-md-10
                     .store-size__left
-                        img(srcset='static/images/content/salons/size-1.jpg', alt='').store-size__img
+                        img(srcset='static/images/content/salons/size-1.jpg', alt='').store-size__img.mobile-hidden
                 .offset-xl-2.col-xl-6.offset-lg-1.col-lg-7.col-md-6
                     .store-size__right
                         h2.store-size__title Нестандартные размеры и конструкции
                         p.store-size__text Посмотрите в&nbsp;салоне, как работают раздвижные двери-купе, пеналы и&nbsp;система Magic, как выглядят двери скрытого монтажа со&nbsp;стандартным и&nbsp;обратным открыванием. Также здесь установлены образцы двустворчатых дверей, есть пример модели с&nbsp;доборами.
+                        img(srcset='static/images/content/salons/size-1.jpg', alt='').store-size__img.mobile-only
                         .store-size__mini
                             img(srcset='static/images/content/salons/size-2.jpg', alt='').store-size__mini-img
                             p.store-size__mini-text Двустворчатая дверь&nbsp;&mdash; оптимальное решение для проёмов шириной от&nbsp;1200&nbsp;мм.
@@ -133,18 +138,21 @@ block content
         .container
             .row
                 .offset-xl-1.col-xl-8.col-lg-9.col-md-8
-                    img(src='static/images/content/salons/entrance-1-min.jpg', alt='').store-entrance__img
+                    img(src='static/images/content/salons/entrance-1-min.jpg', alt='').store-entrance__img.mobile-hidden
                 .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.col-md-8
                     .store-entrance__right
                         h2.store-entrance__title Входные двери
                         p.store-entrance__text Двери &laquo;Стальная линия&raquo; не&nbsp;только защищают, но&nbsp;и&nbsp;преображают интерьер. В&nbsp;салоне установлены образцы моделей из&nbsp;современных и&nbsp;классических коллекций. Внимательно рассмотрите фрезеровки и&nbsp;цвет моделей в&nbsp;реальности, а&nbsp;не&nbsp;на&nbsp;мониторе, проверьте плавность хода двери и&nbsp;удобство ручек.
                         img(src='static/images/content/salons/entrance-2.jpg', alt='').store-entrance__right-img
-                        .store-entrance__block
+                        .store-entrance__block.mobile-hidden
                             .store-interior__mini
                                 img(srcset='static/images/content/salons/entrance-little.jpg', alt='').store-interior__mini-img
                                 span.store-interior__mini-number 42
                                 span.store-interior__mini-text образца в салоне
                                 a(href='#').store-interior__mini-link перейти в каталог
+
+                        img(src='static/images/content/salons/entrance-1-min.jpg', alt='').store-entrance__img.mobile-only
+
 
 
     .store-inside
@@ -152,6 +160,12 @@ block content
             .row
                 .col-16
                     img(src='static/images/content/salons/entrance-2.jpg', alt='').store-inside__img
+                    .store-entrance__block.mobile-only
+                        .store-interior__mini
+                            img(srcset='static/images/content/salons/entrance-little.jpg', alt='').store-interior__mini-img
+                            span.store-interior__mini-number 42
+                            span.store-interior__mini-text образца в салоне
+                            a(href='#').store-interior__mini-link перейти в каталог
 
     .store-test
         h2.store-test__main Протестируйте умные замки, цилиндры ABUS и домофоны

@@ -1,6 +1,7 @@
 .other-salons {
 
 
+
   &__title {
     margin-bottom: 36px;
     @include media-breakpoint-down(lg) {
@@ -11,6 +12,9 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -20,6 +24,12 @@
     }
     @include media-breakpoint-down(md) {
       max-width: 360px;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 31px;
+      }
     }
   }
 
@@ -102,6 +112,9 @@
       justify-content: flex-start;
       margin-top: 18px;
     }
+    @include media-breakpoint-down(sm) {
+      margin-top: 9px;
+    }
   }
 
   &__fact {
@@ -129,6 +142,9 @@
     color: $black-3;
     @include media-breakpoint-down(lg) {
       line-height: 77px;
+    }
+    @include media-breakpoint-down(md) {
+      line-height: 72px;
     }
   }
 
