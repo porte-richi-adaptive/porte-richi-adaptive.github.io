@@ -27,6 +27,7 @@
     }
     @include media-breakpoint-down(sm) {
       max-width: 100%;
+      width: 100%;
       &:not(:last-child) {
         margin-bottom: 31px;
       }
