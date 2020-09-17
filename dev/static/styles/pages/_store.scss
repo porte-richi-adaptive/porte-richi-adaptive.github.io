@@ -50,6 +50,10 @@
     @include section-indent;
 
     &__mobile {
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
       @include media-breakpoint-down(sm) {
         .breadcrumbs__wrap {
           margin-top: 20px;
