@@ -585,7 +585,7 @@
     }
 
     &-img {
-      width: 1217px;
+      width: 100%;
       height: auto;
       @include media-breakpoint-down(lg) {
         width: 1070px;
