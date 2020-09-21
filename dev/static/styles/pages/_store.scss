@@ -67,11 +67,13 @@
     @include media-breakpoint-down(md) {
       position: absolute;
       top: 0;
-      left: 9.3vw;
+      left: calc(50% - 347px);
+      width: 766px;
     }
 
     @include media-breakpoint-down(sm) {
       position: static;
+      width: 100%;
     }
 
     &__wrapper {
