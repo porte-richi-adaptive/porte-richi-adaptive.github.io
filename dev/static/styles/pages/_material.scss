@@ -336,7 +336,7 @@
       padding-top: 12px;
       cursor: pointer;
       &.opened {
-        margin-bottom: 0;
+        margin-bottom: 18px;
         &:after {
           transform: rotate(90deg);
         }
@@ -345,7 +345,16 @@
           position: absolute;
           left: 0;
           width: 100%;
+          margin-top: -18px;
           background-color: $white;
+          @include media-breakpoint-down(md) {
+            width: 374px;
+            left: 9px;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+            left: 0;
+          }
         }
       }
       &:after {
@@ -746,9 +755,9 @@
   &__gloss {
     @include section-indent;
     @include media-breakpoint-down(sm) {
-      margin-bottom: 0;
       padding-top: 36px;
       padding-bottom: 36px;
+      margin-bottom: 45px;
       background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
     }
 
@@ -776,6 +785,22 @@
         @include media-breakpoint-down(sm) {
           display: inline-block;
           margin-bottom: 20px;
+          position: relative;
+          &:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            background-color: $black;
+            transition: $transition-base;
+          }
+          &:hover {
+            &:after {
+              background-color: $gold;
+            }
+          }
         }
       }
     }

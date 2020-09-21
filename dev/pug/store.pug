@@ -94,8 +94,15 @@ block content
                             img(srcset='static/images/content/salons/size-2.jpg', alt='').store-size__mini-img
                             p.store-size__mini-text Двустворчатая дверь&nbsp;&mdash; оптимальное решение для проёмов шириной от&nbsp;1200&nbsp;мм.
 
+    .store-classic
+        .container
+            .row
+                .offset-xl-1.col-xl-4.col-lg-6.col-md-7.col-sm-16
+                    h2.store-classic__title Современность и&nbsp;классика
+                    p.store-classic__text Классические двери с&nbsp;витиеватыми узорами, витражами, золотой и&nbsp;серебряной патиной, элегантной фурнитурой. Модели с&nbsp;современным дизайном, декоративными вставками из&nbsp;стекла и&nbsp;металла, ручками строгих форм. В&nbsp;ассортименте салона есть двери для интерьеров в&nbsp;любом стиле.
 
-
+                .offset-xl-1.col-xl-9.offset-lg-1.col-lg-9.offset-md-1.col-md-8.col-sm-16
+                    img(src='static/images/content/salons/classic.jpg', alt='').store-classic__img
 
     .store-furniture
         .container.store-furniture__container
@@ -237,4 +244,5 @@ block content
         include ./modules/other-salons
 
 
-
+    script(src="static/js/vendor/inputmask.js", defer)
+    script(src="static/js/components/callback.js", defer)

@@ -184,6 +184,17 @@
             </div>
           </div>
         </div>
+        <div class="store-classic">
+          <div class="container">
+            <div class="row">
+              <div class="offset-xl-1 col-xl-4 col-lg-6 col-md-7 col-sm-16">
+                <h2 class="store-classic__title">Современность и&nbsp;классика</h2>
+                <p class="store-classic__text">Классические двери с&nbsp;витиеватыми узорами, витражами, золотой и&nbsp;серебряной патиной, элегантной фурнитурой. Модели с&nbsp;современным дизайном, декоративными вставками из&nbsp;стекла и&nbsp;металла, ручками строгих форм. В&nbsp;ассортименте салона есть двери для интерьеров в&nbsp;любом стиле.</p>
+              </div>
+              <div class="offset-xl-1 col-xl-9 offset-lg-1 col-lg-9 offset-md-1 col-md-8 col-sm-16"><img class="store-classic__img" src="static/images/content/salons/classic.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
         <div class="store-furniture">
           <div class="container store-furniture__container">
             <div class="row">
@@ -319,8 +330,8 @@
                 <div class="col-xl-5 col-lg-7">
                   <p class="callback__descr">Оставьте свой номер телефона, я&nbsp;перезвоню и&nbsp;проконсультирую вас по&nbsp;графику работы, местоположению и&nbsp;ассортименту салона.</p>
                   <form class="callback__form">
-                    <input class="callback__input" type="text" placeholder="Номер телефона">
-                    <button class="callback__btn">Отправить</button>
+                    <input class="callback__input js-phone-mask" type="text" placeholder="Номер телефона">
+                    <button class="callback__btn js-callback-submit disabled">Отправить</button>
                   </form>
                 </div>
                 <div class="col-xl-6 col-lg-5">
@@ -383,6 +394,8 @@
             </div>
           </div>
         </div>
+        <script src="static/js/vendor/inputmask.js" defer></script>
+        <script src="static/js/components/callback.js" defer></script>
       </main>
       <div class="view-instagram">
         <div class="container">

@@ -263,16 +263,18 @@
 
     &-img {
       &--left {
-        margin-bottom: 172px;
+        margin-bottom: 168px;
         @include media-breakpoint-down(lg) {
           width: 100%;
           margin-bottom: 124px;
         }
         @include media-breakpoint-down(md) {
           margin-bottom: 0;
+          height: 100%;
         }
         @include media-breakpoint-down(sm) {
           margin-bottom: 63px;
+          height: auto;
         }
       }
       &--right {

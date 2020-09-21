@@ -148,6 +148,10 @@
     color: $gray;
     font-size: 20px;
     line-height: 27px;
+    transition: $transition-base;
+    &.error {
+      border-color: $red;
+    }
     @include media-breakpoint-down(lg) {
       width: 195px;
       font-size: 16px;
@@ -206,7 +210,12 @@
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    pointer-events: all;
     transition: $transition-base;
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+    }
     @include media-breakpoint-down(sm) {
       width: 100%;
       margin-bottom: 27px;
