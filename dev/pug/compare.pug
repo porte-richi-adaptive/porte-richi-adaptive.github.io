@@ -1,0 +1,210 @@
+extends template/main
+
+block variables
+    - var title = 'Входная и межкомнатные двери в одном стиле';
+    - var headerGrayBackground = true;
+
+block content
+    .compare(data-compare-column='')
+        .container
+            .row
+                .col-16
+                    .compare__breadcrumbs
+                        include modules/breadcrumbs
+                    h1.compare__title Таблица комплектаций
+                    section.compare-head
+                        .compare-head__item.compare-head__tech
+                            span.compare-head__text Технические
+                            span.compare-head__text характеристики
+                        .compare-head__item
+                            span.compare-head__text Базовая,
+                            span.compare-head__text серия 70
+                        .compare-head__item
+                            span.compare-head__text Оптимальная,
+                            span.compare-head__text серия 80
+                        .compare-head__item
+                            span.compare-head__text Усиленная,
+                            span.compare-head__text серия 90
+                        .compare-head__item
+                            span.compare-head__text Непромерзающие,
+                            span.compare-head__text серия 100
+                        .compare-head__item
+                            span.compare-head__text Максимальная,
+                            span.compare-head__text серия 100
+
+                    section.compare-table
+                        .compare-table__block
+                            .compare-table__title Безопасность и надёжность
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина металла, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,5
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина полотна, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 89
+                                .compare-table__cell 90
+                                .compare-table__cell 98
+                                .compare-table__cell 90
+                                .compare-table__cell 90
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text  Толщина коробки, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,5
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text Петли, шт
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell 2 упорные само-центрирующиеся, диаметр 22 мм
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Класс прочности
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 4
+                                .compare-table__cell 5
+                                .compare-table__cell 6
+                                .compare-table__cell 4
+                                .compare-table__cell 4
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Класс прочности
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 4
+                                .compare-table__cell 5
+                                .compare-table__cell 6
+                                .compare-table__cell 4
+                                .compare-table__cell 4
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text Замки в комплекте
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+                                .compare-table__cell Apecs T-57 и T-52, сувальдный и цилиндровый
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+
+                        .compare-table__block
+                            .compare-table__title Защита от шума и посторонних запахов
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина металла, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,5
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина полотна, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 89
+                                .compare-table__cell 90
+                                .compare-table__cell 98
+                                .compare-table__cell 90
+                                .compare-table__cell 90
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text Толщина коробки, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,5
+                                .compare-table__cell 1,2
+                                .compare-table__cell 1,2
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Петли, шт
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell 2 упорные само-центрирующиеся, диаметр 22 мм
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell 2 на опорном подшипнике, диаметр 20 мм
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина металла, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 4
+                                .compare-table__cell 5
+                                .compare-table__cell 6
+                                .compare-table__cell 4
+                                .compare-table__cell 4
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text  Класс прочности
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell 4
+                                .compare-table__cell 5
+                                .compare-table__cell 6
+                                .compare-table__cell 4
+                                .compare-table__cell 4
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text  Замки в комплекте
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+                                .compare-table__cell Apecs T-57 и T-52, сувальдный и цилиндровый
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+                                .compare-table__cell Avers T47 и Т42, сувальдный и цилиндровый
+
+
+
+

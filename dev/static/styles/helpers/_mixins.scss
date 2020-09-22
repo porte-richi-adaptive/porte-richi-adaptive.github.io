@@ -1,4 +1,4 @@
-@mixin font-size ($font-base) {
+  @mixin font-size ($font-base) {
 
   @if $font-base == '18' {
     font-size: 18px;
