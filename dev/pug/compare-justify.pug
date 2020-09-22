@@ -1,0 +1,128 @@
+extends template/main
+
+block variables
+    - var title = 'Входная и межкомнатные двери в одном стиле';
+    - var headerGrayBackground = true;
+
+block content
+    .compare.compare--justify(data-compare-column='large')
+        .container.compare__container
+            .row
+                .col-16
+                    .compare__breadcrumbs
+                        include modules/breadcrumbs
+                    h1.compare__title Таблица комплектаций
+                    section.compare-head
+                        .compare-head__item
+                            span.compare-head__text Технические
+                            span.compare-head__text характеристики
+                        .compare-head__item
+                            span.compare-head__text Базовая,
+                            span.compare-head__text серия 70
+                        .compare-head__item
+                            span.compare-head__text Оптимальная,
+                            span.compare-head__text серия 80
+                        .compare-head__item
+                            span.compare-head__text Усиленная,
+                            span.compare-head__text серия 90
+
+                    section.compare-table
+                        .compare-table__block
+                            .compare-table__title Безопасность и надёжность
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина металла, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell.compare-table__cell--start
+                                    .compare-table__cell-name Базовая, серия 70
+                                    span 1,2
+                                .compare-table__cell
+                                    .compare-table__cell-name Оптимальная, серия 80
+                                    span 1,2
+                                .compare-table__cell
+                                    .compare-table__cell-name Усиленная, серия 90
+                                    span 1,5
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина металла, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell.compare-table__cell--start
+                                    .compare-table__cell-name Базовая, серия 70
+                                    span 1,2
+                                .compare-table__cell
+                                    .compare-table__cell-name Оптимальная, серия 80
+                                    span 1,2
+                                .compare-table__cell
+                                    .compare-table__cell-name Усиленная, серия 90
+                                    span 1,5
+
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text Петли, шт
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell.compare-table__cell--start
+                                    .compare-table__cell-name Базовая, серия 70
+                                    span PVC, Экошпон, Экошпон-Premium, SteelTex, SoftTouch, Камень, Шпон, SteelLak, OakPanel
+                                .compare-table__cell
+                                    .compare-table__cell-name Оптимальная, серия 80
+                                    span 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell
+                                    .compare-table__cell-name Усиленная, серия 90
+                                    span 2 упорные самоцентрирую- щиеся, диаметр 22 мм
+
+
+                        .compare-table__block
+                            .compare-table__title Защита от&nbsp;шума и&nbsp;посторонних запахов
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text   Толщина металла, мм
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell.compare-table__cell--start
+                                    .compare-table__cell-name Базовая, серия 70
+                                    span 1,2
+                                .compare-table__cell
+                                    .compare-table__cell-name Оптимальная, серия 80
+                                    span 1,2
+                                .compare-table__cell
+                                    .compare-table__cell-name Усиленная, серия 90
+                                    span 1,5
+
+                            .compare-table__row
+                                .compare-table__cell
+                                    .compare-table__text Петли, шт
+                                        .compare-table__help
+                                            include ../static/images/icons/what.svg
+                                            .compare-table__about Сталь усилена пластинами в&nbsp;зоне замков. Благодаря увеличению общей толщины полотна, дверь труднее разрезать ножницами по&nbsp;металлу, сложнее высверлить и&nbsp;выпилить замки.
+                                .compare-table__cell.compare-table__cell--start
+                                    .compare-table__cell-name Базовая, серия 70
+                                    span PVC, Экошпон, Экошпон-Premium, SteelTex, SoftTouch, Камень, Шпон, SteelLak, OakPanel
+                                .compare-table__cell
+                                    .compare-table__cell-name Оптимальная, серия 80
+                                    span 2 на опорном подшипнике, диаметр 20 мм
+                                .compare-table__cell
+                                    .compare-table__cell-name Усиленная, серия 90
+                                    span 2 упорные самоцентрирую- щиеся, диаметр 22 мм
+
+
+
+
+
+
+
+
+
+                    .compare-catalog
+                        h2.compare-catalog__title Производитель входных дверей&nbsp;&mdash; завод &laquo;Стальная линия&raquo;, Республика Беларусь
+                        a(href="#").compare-catalog__link перейти в каталог

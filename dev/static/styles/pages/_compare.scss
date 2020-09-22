@@ -466,4 +466,31 @@
     }
 
   }
+
+  // Mode Justify
+  &--justify {
+    .compare-head__item {
+      background: none;
+      position: relative;
+      &::after {
+        content: '';
+        width: calc(100% - 18px);
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+        @include media-breakpoint-down(md) {
+          width: calc(100% - 9px);
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+    .compare-table__cell {
+      width: 100%;
+    }
+  }
 }
