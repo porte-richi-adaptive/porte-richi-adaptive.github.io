@@ -75,6 +75,9 @@
       width: 100%;
       position: relative;
       background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
       @include media-breakpoint-down(lg) {
         font-size: 16px;
         line-height: 21px;
@@ -364,25 +367,67 @@
   // Mode Large
   &--large {
     .compare-head__item {
+      width: 200px;
+
+      @include media-breakpoint-down(lg) {
+        width: 148px;
+      }
 
       @include media-breakpoint-down(md) {
         width: 141px;
       }
+
       &:first-child {
+        width: 246px;
+        @include media-breakpoint-down(lg) {
+          width: 200px;
+        }
         @include media-breakpoint-down(md) {
           display: none;
         }
       }
       &--large {
-        width: 164px;
+        width: 254px;
+        @include media-breakpoint-down(lg) {
+          width: 188px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 164px;
+        }
       }
     }
     .compare-table__cell {
+      width: 218px;
+
+      @include media-breakpoint-down(lg) {
+        width: 166px;
+      }
+
+      &:first-child {
+        width: 263px;
+        @include media-breakpoint-down(lg) {
+          width: 218px;
+        }
+      }
+
+      &--large {
+        width: 271px;
+        @include media-breakpoint-down(lg) {
+          width: 206px;
+        }
+      }
+
+      &:last-child {
+        width: 181px;
+        @include media-breakpoint-down(lg) {
+          width: 148px;
+        }
+      }
+
+
       @include media-breakpoint-down(md) {
         width: 150px;
-        @include media-breakpoint-down(sm) {
-          width: 100%;
-        }
+
 
         &:first-child {
           width: 100%;
@@ -413,6 +458,9 @@
           }
         }
 
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
       }
     }
 
