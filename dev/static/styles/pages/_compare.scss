@@ -34,7 +34,7 @@
       padding-left: 27px;
       padding-right: 27px;
       margin-top: 18px;
-      margin-bottom: 18px;
+      margin-bottom: 7px;
     }
   }
 
@@ -112,6 +112,16 @@
     }
     @include media-breakpoint-down(md) {
       margin-bottom: 54px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 36px;
+      border-bottom: none;
+    }
+
+    &__block {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
     }
     &__title {
       width: 100%;
@@ -208,13 +218,6 @@
           border-bottom: 1px solid $gray-1;
           width: 144px;
         }
-        &:not(:first-child)::before {
-          content: attr(data-compare-rel);
-          font-size: 16px;
-          line-height: 22px;
-          position: static;
-
-        }
       }
 
       &:not(:first-child) {
@@ -223,6 +226,19 @@
           border-left: none;
           position: static;
 
+        }
+      }
+      &-name {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          display: block;
+          max-width: 137px;
+        }
+      }
+      & > span {
+        @include media-breakpoint-down(sm) {
+          max-width: 137px;
+          text-align: right;
         }
       }
     }
@@ -268,6 +284,12 @@
       opacity: 0;
       transition: $transition-base;
       z-index: 10;
+      @include media-breakpoint-down(md) {
+        padding: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        right: -116px;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -289,6 +311,9 @@
         top: -11px;
         right: 50px;
         transition: $transition-base;
+        @include media-breakpoint-down(sm) {
+          right: 105px;
+        }
       }
     }
   }
@@ -307,6 +332,13 @@
     @include media-breakpoint-down(md) {
       height: 190px;
     }
+    @include media-breakpoint-down(sm) {
+      margin-left: 27px;
+      margin-right: 27px;
+      padding-left: 14px;
+      padding-right: 14px;
+      height: 262px;
+    }
     &__title {
       margin-bottom: 27px;
       max-width: 842px;
@@ -318,6 +350,10 @@
       @include media-breakpoint-down(md) {
         margin-bottom: 18px;
         max-width: 523px;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        margin-bottom: 27px;
       }
     }
     &__link {
