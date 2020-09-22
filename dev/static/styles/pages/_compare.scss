@@ -33,6 +33,8 @@
     @include media-breakpoint-down(sm) {
       padding-left: 27px;
       padding-right: 27px;
+      margin-top: 18px;
+      margin-bottom: 18px;
     }
   }
 
@@ -136,6 +138,9 @@
         padding-right: 27px;
         height: 46px;
         border-bottom: 1px solid $gray-1;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
       }
     }
 
@@ -154,6 +159,7 @@
         padding-left: 27px;
         padding-right: 27px;
         border-top: none;
+        padding-bottom: 3px;
       }
       &:hover {
         background-color: $gray-8;
@@ -195,15 +201,19 @@
       @include media-breakpoint-down(sm) {
         width: 100%;
         padding: 9px 0;
+
         &:not(:first-child) {
           display: flex;
           justify-content: space-between;
+          border-bottom: 1px solid $gray-1;
+          width: 144px;
         }
         &:not(:first-child)::before {
-          content: '23';
+          content: attr(data-compare-rel);
           font-size: 16px;
           line-height: 22px;
           position: static;
+
         }
       }
 
@@ -363,6 +373,7 @@
           max-width: 145px;
           @include media-breakpoint-down(sm) {
             width: 100%;
+            max-width: 100%;
           }
         }
 
