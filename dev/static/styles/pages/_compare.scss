@@ -65,6 +65,7 @@
   &-table {
     width: 100%;
     border-bottom: 1px solid $gray-1;
+    margin-bottom: 63px;
 
     &__title {
       width: 100%;
@@ -163,7 +164,24 @@
         transition: $transition-base;
       }
     }
+  }
 
+  &-catalog {
+    height: 257px;
+    background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 36px;
+    @include section-indent;
+    &__title {
+      margin-bottom: 27px;
+      max-width: 842px;
+      text-align: center;
+    }
+    &__link {
+      @include link(true);
+    }
   }
 
 
