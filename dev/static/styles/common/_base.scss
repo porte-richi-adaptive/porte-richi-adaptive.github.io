@@ -42,6 +42,13 @@ body {
       }
     }
   }
+  &--big {
+
+    &:before {
+      height: 1213px;
+      background-image: linear-gradient(180deg, #DEE2E3 0%, rgba(222, 226, 227, 0) 100%);
+    }
+  }
 }
 
 

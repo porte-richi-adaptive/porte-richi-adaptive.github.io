@@ -1,0 +1,106 @@
+extends template/main
+
+block variables
+    - var title = 'Входная и межкомнатные двери в одном стиле';
+    - var headerGrayBackground = true;
+    - var headerGrayBackgroundBig = true;
+
+block content
+    section.entrance-item.entrance-item--first
+        .container
+            .row
+                .offset-xl-1.col-xl-6
+                    .entrance-item__wrap
+                        img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                        span.entrance-item__name Снаружи Муар, Серый графит
+                        span.entrance-item__refresh
+                            include ../static/images/content/entrance/refresh.svg
+                .offset-xl-1.col-xl-6
+                    .entrance-item__card
+                        .entrance-item__nav
+                            a(href="#").entrance-item__link Главная
+                            a(href="#").entrance-item__link Входные двери
+                            a(href="#").entrance-item__link Для дома
+                        h1.entrance-item__title Невада, Невада, Невада
+                        .entrance-item__info
+                            span.entrance-item__element Для дома
+                            span.entrance-item__element Под заказ до 45 рабочих  дней
+                            span.entrance-item__element Хит
+                        p.entrance-item__about Для двери с&nbsp;такой фрезеровкой можно выбрать комплектацию: базовую, оптимальную, усиленную или максимальную. Это влияет на&nbsp;уровень защиты двери, возможные материалы и&nbsp;цвет отделки.
+                        .entrance-item__variant
+                            .entrance-item__subtitle варианты исполнения
+                            .entrance-item__colors
+                                .entrance-item__color
+                                .entrance-item__color
+                                .entrance-item__color
+                                .entrance-item__color.entrance-item__color--active
+                                .entrance-item__color
+                                .entrance-item__color
+                                .entrance-item__color
+                                .entrance-item__color
+                                .entrance-item__color
+                                .entrance-item__color.entrance-item__color--multicolor
+
+                        .entrance-item__block комплектация максимальная
+                        .entrance-item__price
+                            .entrance-item__price-new от 1685 руб.
+                            .entrance-item__price-old 2456 руб.
+
+                        button.entrance-item__btn Добавить к заказу
+
+                        .entrance-item__new
+                            include ../static/images/content/entrance/new.svg
+
+    .entrance-view
+        .container
+            .row
+                .col-16
+                    .entrance-view__block
+                        h2.entrance-view__title Посмотрите образец по адресу
+                        .entrance-view__address пр-те Дзержинского, 125
+                        .entrance-view__address пр-те Олешева, 1
+                        .entrance-view__img
+
+    .entrance-example
+        .container
+            .row
+                .col-xl-9.entrance-example__column
+                    .entrance-example__left
+                        img(src='static/images/content/entrance/example.jpg', alt='').entrance-example__img
+                        p.entrance-example__text Антрацитовый оттенок отделки, современная вставка и&nbsp;фурнитура&nbsp;&mdash; сочетание последних трендов в&nbsp;дизайне
+
+                .offset-xl-1.col-xl-6
+                    .entrance-example__right
+                        img(src='static/images/content/entrance/example-2.jpg', alt='').entrance-example__img
+                        p.entrance-example__text Внешний вид двери определяет её&nbsp;установку в&nbsp;частный дом с&nbsp;современным фасадом
+
+    .entrance-complex
+        .container
+            .row
+                .col-xl-5
+                    .entrance-complex__left
+                        h2.entrance-complex__title Комплексная защита от&nbsp;промерзания
+                        p.entrance-complex__text Устойчивость входной двери к&nbsp;перепадам температур и&nbsp;влажности зависит от&nbsp;её&nbsp;конструкции и&nbsp;качества монтажа.
+                        p.entrance-complex__text Порошково-полимерное покрытие в&nbsp;7&nbsp;слоёв и&nbsp;3-х уровневая антикоррозийная обработка защищает от&nbsp;коррозии и&nbsp;отслаивания.
+                        p.entrance-complex__text Термовлагостойкий МДФ заламинирован со&nbsp;всех четырёх сторон. Так панель на&nbsp;100% защищена от&nbsp;попадания влаги внутрь двери.
+                        p.entrance-complex__text Полотно и&nbsp;коробка утеплены в&nbsp;несколько слоёв по&nbsp;контуру двери, поэтому попадание влаги внутрь исключено.
+                .col-xl-6
+                    .entrance-complex__center
+                        img(src='static/images/content/entrance/complex.svg', alt='').entrance-complex__img
+                .col-xl-5
+                    .entrance-complex__right
+                        h3.entrance-complex__subtitle Терморазрыв дверного полотна и&nbsp;коробки
+                        p.entrance-complex__text.entrance-complex__text--top Утеплители по&nbsp;рёбрам жёсткости и&nbsp;двум частям коробки отделяют металлические элементы двери&nbsp;&mdash; &laquo;мостики холода&raquo; от&nbsp;наружней стороны. Так, если место монтажа выбрано правильно, дверь не&nbsp;промёрзнет при температуре до &minus;30&nbsp;С.
+                        .entrance-complex__block
+                            .entrance-complex__descr Терморазрыв коробки не&nbsp;доступен для базовой и&nbsp;оптимальной комплектации
+                            .entrance-complex__descr + 119 рублей к усиленной
+                            .entrance-complex__descr + 173 рублей к максимальной
+                        h3.entrance-complex__subtitle «Тёплый монтаж»
+                        p.entrance-complex__text.entrance-complex__text--bottom  Утепления откосов, монтажных швов и&nbsp;разрыва стяжки на&nbsp;полу исключает продувание двери и&nbsp;возникновение конденсата из-за резкого охлаждения.
+                        .entrance-complex__block
+                            .entrance-complex__descr + 30 рублей к любой комплектации
+
+
+
+
+
