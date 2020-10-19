@@ -325,6 +325,7 @@
   &-complex {
     background-color: $white-2;
     padding-top: 52px;
+    margin-bottom: 180px;
 
     &__left {
       max-width: 359px;
@@ -376,7 +377,456 @@
     &__block {
       margin-bottom: 32px;
     }
+  }
+
+  &-vitrage {
+    margin-bottom: 180px;
+
+    &__container {
+      height: 941px;
+      background-image: url(#{$img-url}/content/entrance/entrance-vitrage.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &__block {
+      background-color: $white;
+      width: 100%;
+      height: 269px;
+      padding-top: 42px;
+      display: flex;
+    }
+
+    &__left {
+      width: 337px;
+      margin-left: 92px;
+    }
+
+    &__center {
+      width: 334px;
+      padding-top: 13px;
+      margin-left: 15px;
+    }
+
+    &__subtitle {
+      margin-bottom: 25px;
+    }
+
+    &__right {
+      width: 256px;
+      position: absolute;
+      right: -19px;
+      bottom: 11px;
+    }
+
+    &__row {
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 21px;
+    }
+  }
+
+  &-decore {
+    margin-bottom: 207px;
+
+    &__right {
+      margin-top: -21px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      max-width: 331px;
+      margin-bottom: 64px;
+    }
+    
+    &__caption {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 27px;
+      color: $black-1;
+      display: inline-block;
+      max-width: 336px;
+      margin-top: 12px;
+      letter-spacing: .97px;
+      font-weight: $regular;
+    }
+
+    &__strong {
+      font-weight: $bold;
+    }
+  }
+
+  &-poster {
+    display: flex;
+    height: 1017px;
+    background-color: $green;
+    position: relative;
+    @include section-indent;
+
+
+    &__tip {
+      position: absolute;
+      top: 209px;
+      left: 29.6%;
+      color: $white;
+    }
+
+    &__slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      padding-top: 394px;
+      padding-left: 10%;
+      cursor: pointer;
+    }
+
+    &__block {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .2);
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    &__number {
+      font-size: 22px;
+      line-height: 54px;
+      color: $white;
+      margin-bottom: 56px;
+    }
+
+    &__title {
+      color: $white;
+      max-width: 316px;
+    }
+  }
+
+  &-variant {
+    background-color: $white-1;
+    padding-top: 93px;
+    @include section-indent;
+
+    &__list {
+      @include typography('h3');
+      letter-spacing: -.9px;
+      margin-bottom: 27px;
+      transition: $transition-base;
+      cursor: pointer;
+      color: $gray;
+
+      &:hover:not( .entrance-variant__list--active ) {
+        color: $gold;
+      }
+      
+      &--active {
+        cursor: default;
+        color: $black;
+      }
+    }
+
+    &__link {
+      @include link(true);
+    }
+
+    &__tabs {
+      margin-bottom: 54px;
+    }
+
+    &__page {
+      display: none;
+      &--active {
+        display: block;
+      }
+    }
+
+    &__text {
+      margin-bottom: 139px;
+    }
+
+    &__center {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    &__title {
+      margin-bottom: 27px;
+      margin-top: 12px;
+    }
+
+    &__icon {
+      margin-bottom: 18px;
+    }
+
+    &__descr {
+      @include typography('base');
+    }
+
+    &__mini {
+      &:not(:last-child) {
+        margin-bottom: 108px;
+      }
+    }
+
+    &__block {
+      display: none;
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  &-size {
+    @include section-indent;
+
+    &__title {
+      margin-top: -12px;
+      padding-bottom: 31px;
+    }
+
+    &__text {
+      margin-bottom: 44px;
+    }
+
+    &__figcaption {
+      @include typography('descr-multi');
+      margin-top: 12px;
+    }
+  }
+
+  &-choose {
+    @include section-indent;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slick-dots {
+      display: none!important;
+    }
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__left {
+      width: 400px;
+    }
+
+    &__item {
+      padding-bottom: calc(27px / 2);
+      cursor: pointer;
+      transition: $transition-base;
+      order: 2;
+
+
+      &:not(:first-child) {
+        padding-top: calc(27px / 2);
+      }
+
+      &:hover {
+        color: $gold;
+      }
+
+      &--active {
+        order: 1;
+
+        .entrance-choose__name {
+          margin-bottom: 11px;
+          cursor: default;
+          color: $gray-2;
+        }
+
+        .entrance-choose__descr {
+          display: block;
+          cursor: default;
+        }
+
+        &:hover {
+          cursor: default;
+          pointer-events: none;
+          color: $black;
+        }
+        
+      }
+
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    &__name {
+      @include rft-txt;
+      display: block;
+    }
+
+    &__descr {
+      display: none;
+    }
+
+
+    &__right {
+      width: 862px;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+
+      &--active {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+      }
+
+
+
+      .slick-slide {
+        margin-left: 18px;
+      }
+
+      .slick-list {
+        margin-left: -18px;
+      }
+    }
+
+    &__slide {
+      position: relative;
+      width: 422px;
+      height: 535px;
+      background-color: $white-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+
+      &-name {
+        @include typography('descr-multi');
+        position: absolute;
+        top: 18px;
+        right: 18px;
+      }
+
+      &-color {
+        @include typography('descr-multi');
+        position: absolute;
+        bottom: 24px;
+        left: 18px;
+      }
+
+    }
+
+    &__controll {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 45px;
+    }
+
+    &__arrows {
+      display: flex;
+
+      &-right {
+        padding-left: 27px;
+        transition: $transition-base;
+
+        &.slick-disabled {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &-left {
+        padding-right: 27px;
+        transition: $transition-base;
+
+        &.slick-disabled {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &-left, &-right {
+        cursor: pointer;
+
+        path {
+          transition: $transition-base;
+        }
+
+        &:hover path {
+          fill: $gold;
+        }
+      }
+    }
+
+    &__numbers {
+      @include rft-txt;
+      color: $gray;
+      font-size: 16px;
+      letter-spacing: 9px;
+    }
+  }
+
+  &-furniture {
+
+    &__title {
+      text-align: center;
+      margin-bottom: 102px;
+    }
+
+    &__subtitle {
+      margin-bottom: 11px;
+    }
+
+    &__tip {
+      margin-bottom: 27px;
+      color: $gray;
+      font-size: 16px;
+      line-height: 22px;
+      font-family: $rft-font;
+      font-weight: $semi-bold;
+    }
+
+    &__block {
+      margin-bottom: 47px;
+      &:first-child {
+        margin-top: -9px;
+      }
+    }
+
+    &__text {
+      &--last {
+        margin-top: 27px;
+      }
+    }
 
   }
+
 
 }
