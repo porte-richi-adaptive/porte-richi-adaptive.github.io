@@ -62,4 +62,21 @@ $('.entrance-choose__item').on('click', function () {
   $(this).addClass(activeItemClass);
   $('[data-choose-carousel]').removeClass('entrance-choose__right--active');
   $("[data-choose-carousel=".concat(chooseNum, "]")).addClass('entrance-choose__right--active');
+}); // -- Entrance Level Carousel -- //
+
+var entranceOptions = {
+  infinite: false,
+  slidesToShow: 3,
+  nextArrow: $('.entrance-level__arrows-right'),
+  prevArrow: $('.entrance-level__arrows-left'),
+  dots: false
+};
+$('.entrance-level__slider').slick(entranceOptions); // -- Comments Carousel -- //
+
+$('.comments__list').slick({
+  slidesToShow: 1,
+  infinite: false,
+  nextArrow: $('.comments__right'),
+  prevArrow: $('.comments__left'),
+  variableWidth: true
 });
