@@ -124,7 +124,7 @@ img {
 .blog__img {
   width: 461px;
   height: 100%;
-  background-image: url('./../images/blog-big.jpg');
+  background-image: url("./../images/svg/little-1070px.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1336,20 +1336,80 @@ ul.article-step__list li:before {
   margin-bottom: 15px;
 }
 
-@include mQ(1070px) {
+@include mQ(1071px) {
   .container {
     max-width: 942px;
     overflow: hidden;
+    padding-left: 7px;
   }
   .h1 {
     font-size: 45px;
   }
 
-  .blog{
+  .blog {
     width: auto;
   }
 
-  .blog__item--big{
-    background-image: url("static/images/provance1070.png")!important;
+  .blog__left {
+    width: auto;
   }
+
+  .blog__link {
+    height: 93%;
+  }
+
+  .blog__item--big {
+    background-image: url("../images/provance1070.png");
+    width: 740px;
+    height: 423px;
+    padding-bottom: 15px;
+  }
+
+  .blog__item--big .blog__subtitle {
+    font-size: 32px;
+    font-family: $minion-font;
+    line-height: 40px;
+    letter-spacing: -1.3px;
+    padding-left: 36px;
+    margin-bottom: 10px;
+  }
+
+  .blog__item--big .blog__text {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $minion-font;
+    max-width: 645px;
+    padding-left: 36px;
+    margin-bottom: 5px;
+  }
+  .blog__item {
+    margin-bottom: 24px;
+  }
+  .blog__item--small {
+    height: 249px;
+  }
+
+  .blog__img{
+    width: 362px;
+    background: url("../images/1070small.png");
+  }
+
+  .blog__img:before{
+    height: 251px;
+  }
+
+  .blog__info{
+    padding-left: 25px;
+    margin-left: 18px;
+  }
+
+  .blog__min{
+    margin-top: -8px;
+  }
+  .blog__subtext{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+  }
+
 }
