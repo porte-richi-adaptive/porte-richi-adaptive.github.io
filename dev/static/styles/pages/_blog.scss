@@ -1337,6 +1337,10 @@ ul.article-step__list li:before {
   margin-bottom: 15px;
 }
 
+.blog__tags__open-menu{
+  display: none;
+}
+
 @include mQ(1196px) {
   .container {
     max-width: 1070px;
