@@ -82,7 +82,7 @@ img {
 .blog__item--big {
   width: 100%;
   height: 594px;
-  background-image: url('../static/images/blog_main_picture.png');
+  background-image: url('../images/blog_main_picture.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -124,7 +124,7 @@ img {
 .blog__img {
   width: 461px;
   height: 100%;
-  background-image: url("./../images/svg/little-1070px.svg");
+  background-image: url("../images/big-desktop-provance.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -195,7 +195,7 @@ img {
 .blog__title {
   width: 1390px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 26px;
 }
 
 .blog__link {
@@ -409,6 +409,7 @@ img {
 .blog__plugin .rangeslider__fill {
   background: #CBA576;
   box-shadow: none;
+  width: auto;
 }
 
 .blog__plugin .rangeslider--horizontal .rangeslider__handle {
@@ -1336,14 +1337,17 @@ ul.article-step__list li:before {
   margin-bottom: 15px;
 }
 
-@include mQ(1071px) {
+@include mQ(1196px) {
   .container {
-    max-width: 942px;
+    max-width: 1070px;
     overflow: hidden;
-    padding-left: 7px;
   }
   .h1 {
     font-size: 45px;
+  }
+
+  .blog__title {
+    width: auto;
   }
 
   .blog {
@@ -1352,15 +1356,19 @@ ul.article-step__list li:before {
 
   .blog__left {
     width: auto;
+    margin-bottom: 100px;
   }
 
   .blog__link {
     height: 93%;
   }
 
+  .blog__item {
+  }
+
   .blog__item--big {
     background-image: url("../images/provance1070.png");
-    width: 740px;
+    width: auto;
     height: 423px;
     padding-bottom: 15px;
   }
@@ -1389,27 +1397,54 @@ ul.article-step__list li:before {
     height: 249px;
   }
 
-  .blog__img{
+  .blog__img {
     width: 362px;
     background: url("../images/1070small.png");
   }
 
-  .blog__img:before{
+  .blog__img:before {
     height: 251px;
   }
 
-  .blog__info{
+  .blog__info {
     padding-left: 25px;
     margin-left: 18px;
   }
 
-  .blog__min{
-    margin-top: -8px;
-  }
-  .blog__subtext{
+
+  .blog__subtext {
     font-size: 18px;
     line-height: 24px;
     color: #000000;
   }
 
+  .blog__name {
+    display: none;
+  }
+
+  .blog__scroll {
+    width: 280px;
+    margin-right: 0px;
+  }
+
+  .blog__scroll-block {
+    padding: 0 17px 7px 17px;
+  }
+
+  .blog__scroll-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .blog__right {
+    margin-left: 52px;
+  }
+
+  .blog__cloud {
+    padding-top: 37px;
+  }
+
+  .blog__hash {
+    margin-bottom: 6px;
+  }
 }
