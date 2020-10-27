@@ -7,10 +7,40 @@ html(lang='en')
         link( rel='shortcut icon' type="image/x-icon" href="static/images/icons/favicon.png")
         link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
     body
-      .container
-        .blog__title
-            h1.h1 Блог
-
+        .container
+            .blog__title
+                h1.h1 Блог
+    .blog__tags
+        .container
+            .blog__tags__menu
+                p.blog__tags__menu-text Теги
+                .blog__tags__menu-arrow
+            .blog__tags__open-menu
+                .blog__tags__open-menu-top
+                    p.blog__name ТЕГИ
+                    img(src="static/images/cross.svg")
+                .blog__tags__open-menu__main
+                    .blog__tags__left-side
+                        .blog__scroll(data-groups-count='4')
+                            .blog__scroll-block
+                                .blog__scroll-main.blog__scroll-text Важные
+                                .blog__scroll-all.blog__scroll-text Все
+                            .blog__plugin
+                                input.blog__range(type='range' min='1' max='5' value='5' style='position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;')
+                                #js-rangeslider-0.rangeslider.rangeslider--horizontal
+                                    .rangeslider__fill
+                                    .rangeslider__handle(style='left: 271px;')
+                                .range-output 5
+                            .blog__cloud
+                                a.blog__hash(href='?tag=дизайн' data-group='1' data-code='дизайн' data-weight='0') #дизайн
+                                a.blog__hash(href='?tag=межкомнатные двери' data-group='2' data-code='межкомнатные двери' data-weight='1') #межкомнатные двери
+                                a.blog__hash(href='?tag=монтаж' data-group='3' data-code='монтаж' data-weight='2') #монтаж
+                                a.blog__hash(href='?tag=входные двери' data-group='3' data-code='входные двери' data-weight='3') #входные двери
+                                a.blog__hash(href='?tag=стили интерьера' data-group='4' data-code='стили интерьера' data-weight='4') #стили интерьера
+                                a.blog__hash(href='?tag=услуги' data-group='4' data-code='услуги' data-weight='5') #услуги
+                    .blog__tags__right-side
+                        p.blog__tags__right-side-show Показать все статьи
+    .container
         section.blog
             .blog__left
                 .blog__item.blog__item--big
@@ -123,7 +153,8 @@ html(lang='en')
             .pagination
                 a.pagination__number.pagination__number--active(href='javascript:void(0);') 1
                 a.pagination__number(href='/blog/?PAGEN_1=2') 2
-                a.pagination__next(href='/blog/?PAGEN_1=2') далее
+                a.pagination__next(href='/blog/?PAGEN_1=2')
+                 img(src='static/images/arrow.svg')
 
 block script
 script(src="static/js/jquery-3.3.1.min.js")
