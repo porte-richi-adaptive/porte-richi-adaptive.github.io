@@ -82,4 +82,18 @@ $('.comments__list').slick({
 }); // -- Defence tabs -- //
 
 var defenceTabs = $('[data-tab-item]');
-var defenceTabsPages = $('[data-tab-item]');
+var defenceTabsPages = $('[data-defence-page]');
+var defenceActiveTabClass = 'entrance-defence__item--active';
+var defenceTabsPicture = $('[data-defence-img]');
+defenceTabs.on('click', function () {
+  var tabNumber = $(this).data('tab-item');
+  var page = $("[data-defence-page=".concat(tabNumber, "]"));
+  var img = $("[data-defence-img=".concat(tabNumber, "]"));
+  defenceTabsPages.fadeOut(0);
+  page.fadeIn();
+  defenceTabsPicture.fadeOut(0);
+  img.fadeIn();
+  defenceTabs.removeClass(defenceActiveTabClass);
+  $(this).addClass(defenceActiveTabClass);
+  console.dir(img);
+});

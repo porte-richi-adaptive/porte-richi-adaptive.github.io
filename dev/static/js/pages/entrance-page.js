@@ -107,4 +107,24 @@ $('.comments__list').slick({
 // -- Defence tabs -- //
 
 const defenceTabs = $('[data-tab-item]');
-const defenceTabsPages = $('[data-tab-item]');
+const defenceTabsPages = $('[data-defence-page]');
+const defenceActiveTabClass = 'entrance-defence__item--active';
+const defenceTabsPicture = $('[data-defence-img]');
+
+defenceTabs.on('click', function() {
+    const tabNumber = $(this).data('tab-item');
+    const page = $(`[data-defence-page=${tabNumber}]`);
+    const img = $(`[data-defence-img=${tabNumber}]`);
+
+    defenceTabsPages.fadeOut(0);
+    page.fadeIn();
+
+    defenceTabsPicture.fadeOut(0);
+    img.fadeIn();
+
+    defenceTabs.removeClass(defenceActiveTabClass);
+    $(this).addClass(defenceActiveTabClass);
+
+    console.dir(img);
+
+});

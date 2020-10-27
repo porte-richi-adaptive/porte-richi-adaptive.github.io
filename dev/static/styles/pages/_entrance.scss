@@ -1153,6 +1153,20 @@
     background-color: $white-1;
     padding-top: 71px;
     margin-bottom: 90px;
+
+    &__img {
+      display: none;
+    }
+
+    [data-defence-img='1'] {
+      display: block;
+    }
+
+    [data-defence-page='1'] {
+      display: block;
+    }
+
+
     @include media-breakpoint-down(lg) {
       padding-top: 52px;
     }
@@ -1240,6 +1254,7 @@
       padding-left: 84px;
       padding-top: 51px;
       padding-right: 92px;
+      display: none;
       @include media-breakpoint-down(lg) {
         padding-left: 28px;
       }
