@@ -79,4 +79,7 @@ $('.comments__list').slick({
   nextArrow: $('.comments__right'),
   prevArrow: $('.comments__left'),
   variableWidth: true
-});
+}); // -- Defence tabs -- //
+
+var defenceTabs = $('[data-tab-item]');
+var defenceTabsPages = $('[data-tab-item]');

@@ -103,3 +103,8 @@ $('.comments__list').slick({
     prevArrow: $('.comments__left'),
     variableWidth: true
 });
+
+// -- Defence tabs -- //
+
+const defenceTabs = $('[data-tab-item]');
+const defenceTabsPages = $('[data-tab-item]');
