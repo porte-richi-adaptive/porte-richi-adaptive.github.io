@@ -4,6 +4,12 @@
   }
 }
 
+@mixin betweenQuery{
+  @media screen and  (max-width: 600px){
+    @content;
+  }
+}
+
 .container {
   max-width: 1390px;
   margin: 0 auto;
@@ -85,6 +91,7 @@ img {
   background-image: url('../images/blog_main_picture.png');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .blog__item--small {
@@ -182,15 +189,6 @@ img {
   cursor: pointer;
 }
 
-.blog__breadcrumbs {
-  width: 1390px;
-  margin: 0 auto;
-}
-
-.blog__breadcrumbs .breadcrumbs {
-  margin-top: 42px;
-  margin-bottom: 15px;
-}
 
 .blog__title {
   width: 1390px;
@@ -1487,6 +1485,7 @@ ul.article-step__list li:before {
 }
 
 @include mQ(856px) {
+
   .container {
     max-width: 766px;
     padding: 0;
@@ -1501,7 +1500,7 @@ ul.article-step__list li:before {
 
   .blog__item--big {
     background-image: url("../images/provance1070.png");
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 442px;
     padding-bottom: 15px;
@@ -1522,10 +1521,6 @@ ul.article-step__list li:before {
     max-width: 569px;
     padding-left: 27px;
     margin-bottom: 5px;
-  }
-
-  .blog__link {
-    height: 407px;
   }
 
   .blog__item {
@@ -1657,4 +1652,44 @@ ul.article-step__list li:before {
     margin-right: 92px;
     padding-bottom: 8px;
   }
+}
+
+@include betweenQuery{
+
+  .blog__title, .blog__tags, .blog__item--small{
+    padding-left: 10px;
+  }
+
+  .blog__left{
+    width: 100%;
+  }
+
+  .container{
+    max-width: 100%;
+  }
+  .pagination{
+    justify-content: center;
+  }
+
+  .blog__item--small {
+    height: auto;
+  }
+
+  .blog__controll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__row{
+    flex-wrap: wrap;
+  }
+
+  .blog__item--big{
+    background-image: url("../images/360px_provance.png");
+  }
+}
+
+@include mQ(360px){
+
 }
