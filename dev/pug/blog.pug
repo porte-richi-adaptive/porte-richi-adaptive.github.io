@@ -15,10 +15,11 @@ html(lang='en')
             .blog__tags__menu
                 p.blog__tags__menu-text Теги
                 .blog__tags__menu-arrow
-            .blog__tags__open-menu
-                .blog__tags__open-menu-top
-                    p.blog__name ТЕГИ
-                    img(src="static/images/cross.svg")
+        .blog__tags__open-menu
+            .blog__tags__open-menu-top
+                p.blog__name ТЕГИ
+                img(src="static/images/cross.svg")
+            .container.new_size
                 .blog__tags__open-menu__main
                     .blog__tags__left-side
                         .blog__scroll(data-groups-count='4')
@@ -154,7 +155,7 @@ html(lang='en')
                 a.pagination__number.pagination__number--active(href='javascript:void(0);') 1
                 a.pagination__number(href='/blog/?PAGEN_1=2') 2
                 a.pagination__next(href='/blog/?PAGEN_1=2')
-                 img(src='static/images/arrow.svg')
+                    img(src='static/images/arrow.svg')
 
 block script
 script(src="static/js/jquery-3.3.1.min.js")

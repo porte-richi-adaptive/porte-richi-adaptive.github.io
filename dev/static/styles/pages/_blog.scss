@@ -1594,6 +1594,8 @@ ul.article-step__list li:before {
   .blog__name {
     display: block;
     margin: 0 auto;
+    position: relative;
+    left: 21px;
   }
 
   .blog__tags__open-menu__main {
@@ -1618,5 +1620,41 @@ ul.article-step__list li:before {
     height: 1px;
     background: #000000;
     position: absolute;
+    left: 0;
+    bottom: 4px;
+  }
+  .new_size{
+    max-width: 806px!important;
+  }
+  .blog__scroll{
+    width: 393px;
+  }
+
+  .blog__scroll-block{
+    padding: 7px 25px 7px 27px;
+  }
+
+  .blog__scroll-text{
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .rangeslider__fill{
+    width: 383px;
+  }
+
+  .blog__cloud{
+    display: flex;
+    flex-direction: column;
+    padding-top: 49px;
+  }
+
+  .blog__hash{
+    margin-bottom: 39px;
+  }
+
+  .blog__tags__right-side-show{
+    margin-right: 92px;
+    padding-bottom: 8px;
   }
 }
