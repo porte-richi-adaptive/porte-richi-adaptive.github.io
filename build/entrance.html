@@ -350,23 +350,26 @@
         <div class="entrance-variant">
           <div class="container">
             <div class="row">
-              <div class="col-xl-4 col-lg-5">
+              <div class="col-xl-4 col-lg-5 col-md-9 entrance-variant__first">
                 <h2 class="entrance-variant__title">Варианты комплектации выбранной двери</h2>
                 <p class="entrance-variant__text">Комплектация двери влияет на&nbsp;технические характеристики: толщину металла, утепление полотна, уровень защиты от&nbsp;шума, холодного воздуха и&nbsp;посторонних запахов.</p>
-                <ul class="entrance-variant__tabs">
-                  <li class="entrance-variant__list entrance-variant__list--active" data-tab-item="1">Базовая — от 500 руб.</li>
-                  <li class="entrance-variant__list" data-tab-item="2">Оптимальная — от 800 руб.</li>
-                  <li class="entrance-variant__list" data-tab-item="3">Усиленная — от 1 320 руб.</li>
-                </ul><a class="entrance-variant__link" href="#">отличия комплектаций</a>
+                <div class="entrance-variant__choose" data-js-choose><span class="entrance-variant__choose-name"></span><img class="entrance-variant__choose-arrow" src="static/images/content/entrance/min-arrow-down.svg" alt=""></div>
+                <div class="entrance-variant__over">
+                  <ul class="entrance-variant__tabs">
+                    <li class="entrance-variant__list entrance-variant__list--active" data-tab-item="1">Базовая — от 500 руб.</li>
+                    <li class="entrance-variant__list" data-tab-item="2">Оптимальная — от 800 руб.</li>
+                    <li class="entrance-variant__list" data-tab-item="3">Усиленная — от 1 320 руб.</li>
+                  </ul>
+                </div><a class="entrance-variant__link" href="#">отличия комплектаций</a>
               </div>
-              <div class="col-xl-8 col-lg-6">
+              <div class="col-xl-8 col-lg-6 col-md-6 entrance-variant__second">
                 <div class="entrance-variant__center">
                   <div class="entrance-variant__page entrance-variant__page--active" data-tab-img="1"><img class="entrance-variant__img" src="static/images/content/entrance/variant.png" alt=""></div>
                   <div class="entrance-variant__page" data-tab-img="2"><img class="entrance-variant__img" src="static/images/content/entrance/variant.png" alt=""></div>
                   <div class="entrance-variant__page" data-tab-img="3"><img class="entrance-variant__img" src="static/images/content/entrance/variant.png" alt=""></div>
                 </div>
               </div>
-              <div class="col-xl-4 offset-xl-0 offset-lg-1 col-lg-4">
+              <div class="col-xl-4 offset-xl-0 offset-lg-1 col-lg-4 col-md-9 entrance-variant__third">
                 <div class="entrance-variant__block entrance-variant__block--active" data-tab-block="1">
                   <div class="entrance-variant__mini">
                     <div class="entrance-variant__icon"><img src="static/images/content/entrance/variant-i-1.svg" alt=""></div>
@@ -381,7 +384,7 @@
                     <div class="entrance-variant__descr">Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.</div>
                   </div>
                 </div>
-                <div class="entrance-variant__block" data-tab-block="2">
+                <div class="entrance-variant__block top" data-tab-block="2">
                   <div class="entrance-variant__mini">
                     <div class="entrance-variant__icon"><img src="static/images/content/entrance/variant-i-1.svg" alt=""></div>
                     <div class="entrance-variant__descr">3&nbsp;контура уплотнения обеспечивают высокую герметичность двери и&nbsp;не пропускают посторонний шум и&nbsp;запахи.</div>
@@ -395,7 +398,7 @@
                     <div class="entrance-variant__descr">Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.</div>
                   </div>
                 </div>
-                <div class="entrance-variant__block" data-tab-block="3">
+                <div class="entrance-variant__block top" data-tab-block="3">
                   <div class="entrance-variant__mini">
                     <div class="entrance-variant__icon"><img src="static/images/content/entrance/variant-i-1.svg" alt=""></div>
                     <div class="entrance-variant__descr">4&nbsp;контура уплотнения обеспечивают высокую герметичность двери и&nbsp;не пропускают посторонний шум и&nbsp;запахи.</div>
@@ -408,7 +411,7 @@
                     <div class="entrance-variant__icon"><img src="static/images/content/entrance/variant-i-3.svg" alt=""></div>
                     <div class="entrance-variant__descr">Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.</div>
                   </div>
-                </div>
+                </div><a class="entrance-variant__link mobile" href="#">отличия комплектаций</a>
               </div>
             </div>
           </div>
@@ -416,10 +419,17 @@
         <div class="entrance-size">
           <div class="container">
             <div class="row">
-              <div class="col-xl-10 col-lg-10"><img class="entrance-size__img" src="static/images/content/entrance/size-1.jpg" alt=""></div>
-              <div class="offset-xl-1 col-xl-5 offset-lg-1 col-lg-5">
-                <h2 class="entrance-size__title">Входная дверь в&nbsp;дом по&nbsp;индивидуальному размеру</h2>
-                <p class="entrance-size__text">Нестандартный размер проёма&nbsp;&mdash; возможность подчеркнуть статусность дома и&nbsp;найти интересное решение среди моделей с&nbsp;боковыми доборами и&nbsp;фрамугами.</p>
+              <div class="col-xl-10 col-lg-10 col-md-6">
+                <div class="entrance-size__mobile">
+                  <h2 class="entrance-size__title">Входная дверь в&nbsp;дом по&nbsp;индивидуальному размеру</h2>
+                  <p class="entrance-size__text">Нестандартный размер проёма&nbsp;&mdash; возможность подчеркнуть статусность дома и&nbsp;найти интересное решение среди моделей с&nbsp;боковыми доборами и&nbsp;фрамугами.</p>
+                </div><img class="entrance-size__img" src="static/images/content/entrance/size-1.jpg" alt="">
+              </div>
+              <div class="offset-xl-1 col-xl-5 offset-lg-1 col-lg-5 offset-md-0 col-md-10">
+                <div class="entrance-size__block">
+                  <h2 class="entrance-size__title">Входная дверь в&nbsp;дом по&nbsp;индивидуальному размеру</h2>
+                  <p class="entrance-size__text">Нестандартный размер проёма&nbsp;&mdash; возможность подчеркнуть статусность дома и&nbsp;найти интересное решение среди моделей с&nbsp;боковыми доборами и&nbsp;фрамугами.</p>
+                </div>
                 <figure class="entrance-size__figure"><img class="entrance-size__example" src="static/images/content/entrance/size-2.svg" alt="">
                   <figcaption class="entrance-size__figcaption">Виды, размеры доборов и&nbsp;фрамуг меняются в&nbsp;зависимости от&nbsp;параметров проёма.</figcaption>
                 </figure>
@@ -603,8 +613,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xl-11 col-lg-11"><img class="entrance-furniture__img" src="static/images/content/entrance/furniture.jpg" alt=""></div>
-              <div class="offset-xl-1 col-xl-4 col-lg-5">
+              <div class="col-xl-11 col-lg-11 col-md-16"><img class="entrance-furniture__img" src="static/images/content/entrance/furniture.jpg" alt=""></div>
+              <div class="offset-xl-1 col-xl-4 col-lg-5 entrance-furniture__col">
                 <div class="entrance-furniture__block">
                   <h3 class="entrance-furniture__subtitle">Ручка Hoppe NY</h3>
                   <div class="entrance-furniture__tip">Входит в среднюю комплектацию</div>
@@ -619,14 +629,14 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xl-5 col-lg-4">
+              <div class="col-xl-5 col-lg-4 col-md-4">
                 <div class="entrance-complect__item"><img class="entrance-complect__img" src="static/images/content/entrance/complect-3.png" alt="">
                   <h3 class="entrance-complect__title">Австрийский замок Maco с&nbsp;цилиндром Securemme</h3>
                   <div class="entrance-complect__subtitle">Входит в максимальную комплектацию</div>
                   <p class="entrance-complect__text">При закрывании замка &laquo;крюки-штыри&raquo; входят в&nbsp;отверстия ответной планки короба и&nbsp;вместе с&nbsp;ригелями цилиндра защищают от&nbsp;механического взлома.</p>
                 </div>
               </div>
-              <div class="col-xl-11 offset-xl-0 offset-lg-1 col-lg-11">
+              <div class="col-xl-11 offset-xl-0 offset-lg-1 col-lg-11 offset-md-0 col-md-12">
                 <div class="entrance-complect__block">
                   <div class="entrance-complect__item entrance-complect__item--left"><img class="entrance-complect__img entrance-complect__door" src="static/images/content/entrance/complect-1.jpg" alt="">
                     <h3 class="entrance-complect__title">Ручка GreenteQ</h3>
@@ -653,12 +663,19 @@
             <div class="row">
               <div class="col-16">
                 <div class="entrance-defence__block">
+                  <div class="entrance-variant__choose" data-js-defence><span class="entrance-variant__choose-name"></span><img class="entrance-variant__choose-arrow" src="static/images/content/entrance/min-arrow-down.svg" alt=""></div>
                   <div class="entrance-defence__left">
-                    <div class="entrance-defence__item entrance-defence__item--active" data-defence-tab="1">Optima</div>
-                    <div class="entrance-defence__item" data-defence-tab="2">Optima Plus</div>
+                    <div class="entrance-defence__over">
+                      <div class="entrance-defence__item entrance-defence__item--active" data-defence-tab="1">Optima</div>
+                      <div class="entrance-defence__item" data-defence-tab="2">Optima Plus</div>
+                    </div>
                   </div>
                   <div class="entrance-defence__center"><img class="entrance-defence__img" src="static/images/content/entrance/defence.png" alt="" data-defence-img="1"><img class="entrance-defence__img" src="static/images/content/entrance/defence.png" alt="" data-defence-img="2"></div>
                   <div class="entrance-defence__right" data-defence-page="1">
+                    <ul class="entrance-defence__list mobile">
+                      <li class="entrance-defence__bonus">+ 55 рублей к оптимальной и усиленной комплектации</li>
+                      <li class="entrance-defence__bonus">+ 35 рублей к стоимости максимальной комплектации</li>
+                    </ul>
                     <div class="entrance-defence__top">
                       <div class="entrance-defence__tech">
                         <div class="entrance-defence__single">
@@ -690,6 +707,10 @@
                   </div>
                   <div class="entrance-defence__right" data-defence-page="2">
                     <div class="entrance-defence__top">
+                      <ul class="entrance-defence__list mobile">
+                        <li class="entrance-defence__bonus">+ 55 рублей к оптимальной и усиленной комплектации</li>
+                        <li class="entrance-defence__bonus">+ 35 рублей к стоимости максимальной комплектации</li>
+                      </ul>
                       <div class="entrance-defence__tech">
                         <div class="entrance-defence__single">
                           <div class="entrance-defence__name">Верхний замок</div>

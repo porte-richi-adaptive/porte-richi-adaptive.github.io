@@ -185,15 +185,19 @@ block content
     .entrance-variant
         .container
             .row
-                .col-xl-4.col-lg-5
+                .col-xl-4.col-lg-5.col-md-9.entrance-variant__first
                     h2.entrance-variant__title Варианты комплектации выбранной двери
                     p.entrance-variant__text Комплектация двери влияет на&nbsp;технические характеристики: толщину металла, утепление полотна, уровень защиты от&nbsp;шума, холодного воздуха и&nbsp;посторонних запахов.
-                    ul.entrance-variant__tabs
-                        li(data-tab-item="1").entrance-variant__list.entrance-variant__list--active Базовая — от 500 руб.
-                        li(data-tab-item="2").entrance-variant__list Оптимальная — от 800 руб.
-                        li(data-tab-item="3").entrance-variant__list Усиленная — от 1 320 руб.
+                    .entrance-variant__choose(data-js-choose)
+                        span.entrance-variant__choose-name
+                        img(src='static/images/content/entrance/min-arrow-down.svg', alt='').entrance-variant__choose-arrow
+                    .entrance-variant__over
+                        ul.entrance-variant__tabs
+                            li(data-tab-item="1").entrance-variant__list.entrance-variant__list--active Базовая — от 500 руб.
+                            li(data-tab-item="2").entrance-variant__list Оптимальная — от 800 руб.
+                            li(data-tab-item="3").entrance-variant__list Усиленная — от 1 320 руб.
                     a(href="#").entrance-variant__link отличия комплектаций
-                .col-xl-8.col-lg-6
+                .col-xl-8.col-lg-6.col-md-6.entrance-variant__second
                     .entrance-variant__center
                         .entrance-variant__page.entrance-variant__page--active(data-tab-img='1')
                             img(src='static/images/content/entrance/variant.png', alt='').entrance-variant__img
@@ -201,7 +205,7 @@ block content
                             img(src='static/images/content/entrance/variant.png', alt='').entrance-variant__img
                         .entrance-variant__page(data-tab-img='3')
                             img(src='static/images/content/entrance/variant.png', alt='').entrance-variant__img
-                .col-xl-4.offset-xl-0.offset-lg-1.col-lg-4
+                .col-xl-4.offset-xl-0.offset-lg-1.col-lg-4.col-md-9.entrance-variant__third
                     .entrance-variant__block.entrance-variant__block--active(data-tab-block='1')
                         .entrance-variant__mini
                             .entrance-variant__icon
@@ -218,7 +222,7 @@ block content
                                 img(src='static/images/content/entrance/variant-i-3.svg', alt='')
                             .entrance-variant__descr Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.
 
-                    .entrance-variant__block(data-tab-block='2')
+                    .entrance-variant__block.top(data-tab-block='2')
                         .entrance-variant__mini
                             .entrance-variant__icon
                                 img(src='static/images/content/entrance/variant-i-1.svg', alt='')
@@ -234,7 +238,7 @@ block content
                                 img(src='static/images/content/entrance/variant-i-3.svg', alt='')
                             .entrance-variant__descr Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.
 
-                    .entrance-variant__block(data-tab-block='3')
+                    .entrance-variant__block.top(data-tab-block='3')
                         .entrance-variant__mini
                             .entrance-variant__icon
                                 img(src='static/images/content/entrance/variant-i-1.svg', alt='')
@@ -249,16 +253,20 @@ block content
                             .entrance-variant__icon
                                 img(src='static/images/content/entrance/variant-i-3.svg', alt='')
                             .entrance-variant__descr Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.
-
+                    a(href="#").entrance-variant__link.mobile отличия комплектаций
 
     .entrance-size
         .container
             .row
-                .col-xl-10.col-lg-10
+                .col-xl-10.col-lg-10.col-md-6
+                    .entrance-size__mobile
+                        h2.entrance-size__title Входная дверь в&nbsp;дом по&nbsp;индивидуальному размеру
+                        p.entrance-size__text Нестандартный размер проёма&nbsp;&mdash; возможность подчеркнуть статусность дома и&nbsp;найти интересное решение среди моделей с&nbsp;боковыми доборами и&nbsp;фрамугами.
                     img(src='static/images/content/entrance/size-1.jpg', alt='').entrance-size__img
-                .offset-xl-1.col-xl-5.offset-lg-1.col-lg-5
-                    h2.entrance-size__title Входная дверь в&nbsp;дом по&nbsp;индивидуальному размеру
-                    p.entrance-size__text Нестандартный размер проёма&nbsp;&mdash; возможность подчеркнуть статусность дома и&nbsp;найти интересное решение среди моделей с&nbsp;боковыми доборами и&nbsp;фрамугами.
+                .offset-xl-1.col-xl-5.offset-lg-1.col-lg-5.offset-md-0.col-md-10
+                    .entrance-size__block
+                        h2.entrance-size__title Входная дверь в&nbsp;дом по&nbsp;индивидуальному размеру
+                        p.entrance-size__text Нестандартный размер проёма&nbsp;&mdash; возможность подчеркнуть статусность дома и&nbsp;найти интересное решение среди моделей с&nbsp;боковыми доборами и&nbsp;фрамугами.
                     figure.entrance-size__figure
                         img(src='static/images/content/entrance/size-2.svg', alt='').entrance-size__example
                         figcaption.entrance-size__figcaption Виды, размеры доборов и&nbsp;фрамуг меняются в&nbsp;зависимости от&nbsp;параметров проёма.
@@ -407,9 +415,9 @@ block content
                 .col-16
                     h2.entrance-furniture__title Надёжная фурнитура с&nbsp;защитой от&nbsp;влаги и&nbsp;мороза
             .row
-                .col-xl-11.col-lg-11
+                .col-xl-11.col-lg-11.col-md-16
                     img(src='static/images/content/entrance/furniture.jpg', alt='').entrance-furniture__img
-                .offset-xl-1.col-xl-4.col-lg-5
+                .offset-xl-1.col-xl-4.col-lg-5.entrance-furniture__col
                     .entrance-furniture__block
                         h3.entrance-furniture__subtitle Ручка Hoppe NY
                         .entrance-furniture__tip Входит в среднюю комплектацию
@@ -422,14 +430,14 @@ block content
                         p.entrance-furniture__text.entrance-furniture__text--last Дополнительно можно установить второй замок Maco с&nbsp;цилиндром Kale
 
             .row
-                .col-xl-5.col-lg-4
+                .col-xl-5.col-lg-4.col-md-4
                     .entrance-complect__item
                         img(src='static/images/content/entrance/complect-3.png', alt='').entrance-complect__img
                         h3.entrance-complect__title Австрийский замок Maco с&nbsp;цилиндром Securemme
                         .entrance-complect__subtitle Входит в максимальную комплектацию
                         p.entrance-complect__text При закрывании замка &laquo;крюки-штыри&raquo; входят в&nbsp;отверстия ответной планки короба и&nbsp;вместе с&nbsp;ригелями цилиндра защищают от&nbsp;механического взлома.
 
-                .col-xl-11.offset-xl-0.offset-lg-1.col-lg-11
+                .col-xl-11.offset-xl-0.offset-lg-1.col-lg-11.offset-md-0.col-md-12
                     .entrance-complect__block
                         .entrance-complect__item.entrance-complect__item--left
                             img(src='static/images/content/entrance/complect-1.jpg', alt='').entrance-complect__img.entrance-complect__door
@@ -452,13 +460,20 @@ block content
             .row
                 .col-16
                     .entrance-defence__block
+                        .entrance-variant__choose(data-js-defence)
+                            span.entrance-variant__choose-name
+                            img(src='static/images/content/entrance/min-arrow-down.svg', alt='').entrance-variant__choose-arrow
                         .entrance-defence__left
-                            .entrance-defence__item.entrance-defence__item--active(data-defence-tab='1') Optima
-                            .entrance-defence__item(data-defence-tab='2') Optima Plus
+                            .entrance-defence__over
+                                .entrance-defence__item.entrance-defence__item--active(data-defence-tab='1') Optima
+                                .entrance-defence__item(data-defence-tab='2') Optima Plus
                         .entrance-defence__center
                             img(src='static/images/content/entrance/defence.png', alt='', data-defence-img='1').entrance-defence__img
                             img(src='static/images/content/entrance/defence.png', alt='', data-defence-img='2').entrance-defence__img
                         .entrance-defence__right(data-defence-page='1')
+                            ul.entrance-defence__list.mobile
+                                li.entrance-defence__bonus + 55 рублей к оптимальной и усиленной комплектации
+                                li.entrance-defence__bonus + 35 рублей к стоимости максимальной комплектации
                             .entrance-defence__top
                                 .entrance-defence__tech
                                     .entrance-defence__single
@@ -483,6 +498,9 @@ block content
 
                         .entrance-defence__right(data-defence-page='2')
                             .entrance-defence__top
+                                ul.entrance-defence__list.mobile
+                                    li.entrance-defence__bonus + 55 рублей к оптимальной и усиленной комплектации
+                                    li.entrance-defence__bonus + 35 рублей к стоимости максимальной комплектации
                                 .entrance-defence__tech
                                     .entrance-defence__single
                                         .entrance-defence__name Верхний замок

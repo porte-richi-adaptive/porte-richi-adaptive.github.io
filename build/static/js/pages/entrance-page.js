@@ -11,12 +11,20 @@
   var tabs = document.querySelectorAll('[data-tab-item]');
   var img = document.querySelectorAll('[data-tab-img]');
   var block = document.querySelectorAll('[data-tab-block]');
+  var dropdown = $('[data-js-choose]');
+  var activeTab = $('.entrance-variant__list--active').text();
+  dropdown.find('.entrance-variant__choose-name').text(activeTab);
+  dropdown.on('click', function () {
+    $('.entrance-variant__tabs').toggleClass('opened');
+  });
   tabs.forEach(function (item) {
     item.addEventListener('click', function () {
       if (item.classList.contains('entrance-variant__list--active')) {
         return false;
       }
 
+      dropdown.find('.entrance-variant__choose-name').text($(item).text());
+      $('.entrance-variant__tabs').removeClass('opened');
       var tabNumber = $(item).data('tab-item');
       removeClass(tabs, 'entrance-variant__list--active');
       item.classList.add('entrance-variant__list--active');
@@ -84,16 +92,23 @@ $('.comments__list').slick({
 var defenceTabs = $('[data-defence-tab]');
 var defenceTabsPages = $('[data-defence-page]');
 var defenceActiveTabClass = 'entrance-defence__item--active';
+var defenceActiveTab = $('.entrance-defence__item--active');
 var defenceTabsPicture = $('[data-defence-img]');
+var defenceDropdown = $('[data-js-defence]');
+defenceDropdown.find('.entrance-variant__choose-name').text(defenceActiveTab.text());
+defenceDropdown.on('click', function () {
+  $('.entrance-defence__over').toggleClass('opened');
+});
 defenceTabs.on('click', function () {
   var tabNumber = $(this).data('defence-tab');
   var page = $("[data-defence-page=".concat(tabNumber, "]"));
   var img = $("[data-defence-img=".concat(tabNumber, "]"));
+  $('.entrance-defence__over').removeClass('opened');
+  defenceDropdown.find('.entrance-variant__choose-name').text($(this).text());
   defenceTabsPages.fadeOut(0);
   page.fadeIn();
   defenceTabsPicture.fadeOut(0);
   img.fadeIn();
   defenceTabs.removeClass(defenceActiveTabClass);
   $(this).addClass(defenceActiveTabClass);
-  console.dir(img);
 });

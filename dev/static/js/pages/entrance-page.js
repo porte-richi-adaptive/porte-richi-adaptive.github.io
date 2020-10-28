@@ -10,6 +10,14 @@
     const tabs = document.querySelectorAll('[data-tab-item]');
     const img = document.querySelectorAll('[data-tab-img]');
     const block = document.querySelectorAll('[data-tab-block]');
+    const dropdown = $('[data-js-choose]');
+    const activeTab = $('.entrance-variant__list--active').text();
+
+    dropdown.find('.entrance-variant__choose-name').text(activeTab);
+
+    dropdown.on('click', function() {
+        $('.entrance-variant__tabs').toggleClass('opened');
+    });
     
 
     tabs.forEach((item) => {
@@ -18,6 +26,9 @@
             if(item.classList.contains('entrance-variant__list--active')) {
                 return false;
             }
+
+            dropdown.find('.entrance-variant__choose-name').text( $(item).text() );
+            $('.entrance-variant__tabs').removeClass('opened');
 
             const tabNumber = $(item).data('tab-item');
 
@@ -32,6 +43,9 @@
 
         });
     });
+
+
+
 }
 
 // -- Choose Carousel -- //
@@ -109,12 +123,23 @@ $('.comments__list').slick({
 const defenceTabs = $('[data-defence-tab]');
 const defenceTabsPages = $('[data-defence-page]');
 const defenceActiveTabClass = 'entrance-defence__item--active';
+const defenceActiveTab = $('.entrance-defence__item--active');
 const defenceTabsPicture = $('[data-defence-img]');
+const defenceDropdown = $('[data-js-defence]');
+
+defenceDropdown.find('.entrance-variant__choose-name').text( defenceActiveTab.text() );
+
+defenceDropdown.on('click', function() {
+    $('.entrance-defence__over').toggleClass('opened');
+});
 
 defenceTabs.on('click', function() {
     const tabNumber = $(this).data('defence-tab');
     const page = $(`[data-defence-page=${tabNumber}]`);
     const img = $(`[data-defence-img=${tabNumber}]`);
+
+    $('.entrance-defence__over').removeClass('opened');
+    defenceDropdown.find('.entrance-variant__choose-name').text( $(this).text() );
 
     defenceTabsPages.fadeOut(0);
     page.fadeIn();
@@ -124,7 +149,5 @@ defenceTabs.on('click', function() {
 
     defenceTabs.removeClass(defenceActiveTabClass);
     $(this).addClass(defenceActiveTabClass);
-
-    console.dir(img);
 
 });
