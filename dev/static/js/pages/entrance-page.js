@@ -106,13 +106,13 @@ $('.comments__list').slick({
 
 // -- Defence tabs -- //
 
-const defenceTabs = $('[data-tab-item]');
+const defenceTabs = $('[data-defence-tab]');
 const defenceTabsPages = $('[data-defence-page]');
 const defenceActiveTabClass = 'entrance-defence__item--active';
 const defenceTabsPicture = $('[data-defence-img]');
 
 defenceTabs.on('click', function() {
-    const tabNumber = $(this).data('tab-item');
+    const tabNumber = $(this).data('defence-tab');
     const page = $(`[data-defence-page=${tabNumber}]`);
     const img = $(`[data-defence-img=${tabNumber}]`);
 

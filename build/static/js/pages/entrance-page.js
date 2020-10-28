@@ -81,12 +81,12 @@ $('.comments__list').slick({
   variableWidth: true
 }); // -- Defence tabs -- //
 
-var defenceTabs = $('[data-tab-item]');
+var defenceTabs = $('[data-defence-tab]');
 var defenceTabsPages = $('[data-defence-page]');
 var defenceActiveTabClass = 'entrance-defence__item--active';
 var defenceTabsPicture = $('[data-defence-img]');
 defenceTabs.on('click', function () {
-  var tabNumber = $(this).data('tab-item');
+  var tabNumber = $(this).data('defence-tab');
   var page = $("[data-defence-page=".concat(tabNumber, "]"));
   var img = $("[data-defence-img=".concat(tabNumber, "]"));
   defenceTabsPages.fadeOut(0);
