@@ -1339,7 +1339,7 @@ ul.article-step__list li:before {
   display: none;
 }
 
-@include mQ(1196px) {
+@include media-breakpoint-down(lg) {
   .container {
     max-width: 1070px;
     padding-left: 27px;
@@ -1484,12 +1484,8 @@ ul.article-step__list li:before {
   cursor: default;
 }
 
-@include mQ(856px) {
-
-  .container {
-    max-width: 766px;
-    padding: 0;
-  }
+@include media-breakpoint-down(md) {
+  
 
   .blog__right {
     display: none;
@@ -1654,7 +1650,7 @@ ul.article-step__list li:before {
   }
 }
 
-@include betweenQuery{
+@include media-breakpoint-down(sm){
 
   .blog__title, .blog__tags, .blog__item--small{
     padding-left: 10px;
@@ -1688,8 +1684,10 @@ ul.article-step__list li:before {
   .blog__item--big{
     background-image: url("../images/360px_provance.png");
   }
-}
 
-@include mQ(360px){
-
+  .blog__text{
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
 }
