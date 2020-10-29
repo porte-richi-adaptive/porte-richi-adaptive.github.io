@@ -65,6 +65,12 @@ allCarousels.each(function () {
   };
   carousel.slick(chooseOptions);
 });
+var materialChooseDropDown = $('[data-js-material]');
+materialChooseDropDown.find('.entrance-variant__choose-name').text($('.entrance-choose__item--active .entrance-choose__name').text());
+$('.entrance-choose__tip').text($('.entrance-choose__item--active .entrance-choose__descr').text());
+materialChooseDropDown.on('click', function () {
+  $('.entrance-choose__list').toggleClass('opened');
+});
 $('.entrance-choose__item').on('click', function () {
   var chooseNum = $(this).data('choose-tab');
 
@@ -72,6 +78,9 @@ $('.entrance-choose__item').on('click', function () {
     return false;
   }
 
+  $('.entrance-choose__tip').text($('.entrance-choose__item--active .entrance-choose__descr').text());
+  materialChooseDropDown.find('.entrance-variant__choose-name').text($(this).find('.entrance-choose__name').text());
+  $('.entrance-choose__list').removeClass('opened');
   $('.entrance-choose__item').removeClass(activeItemClass);
   $(this).addClass(activeItemClass);
   $('[data-choose-carousel]').removeClass('entrance-choose__right--active');

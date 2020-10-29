@@ -90,12 +90,26 @@ allCarousels.each(function() {
 });
 
 
+const materialChooseDropDown = $('[data-js-material]');
+materialChooseDropDown.find('.entrance-variant__choose-name').text( $('.entrance-choose__item--active .entrance-choose__name').text() );
+
+$('.entrance-choose__tip').text( $('.entrance-choose__item--active .entrance-choose__descr').text() );
+materialChooseDropDown.on('click', function() {
+    $('.entrance-choose__list').toggleClass('opened');
+});
+
+
 $('.entrance-choose__item').on('click', function() {
     const chooseNum = $(this).data('choose-tab');
 
     if( $(this).hasClass(activeItemClass) ) {
         return false;
     }
+
+    $('.entrance-choose__tip').text( $('.entrance-choose__item--active .entrance-choose__descr').text() );
+    materialChooseDropDown.find('.entrance-variant__choose-name').text( $(this).find('.entrance-choose__name').text() );
+    $('.entrance-choose__list').removeClass('opened');
+
 
     $('.entrance-choose__item').removeClass(activeItemClass);
     $(this).addClass(activeItemClass);

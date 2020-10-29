@@ -1404,15 +1404,43 @@
   &-choose {
     @include section-indent;
 
+    &__tip {
+      display: none;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+
     .slick-slide img {
       @include media-breakpoint-down(lg) {
         width: 100%;
       }
     }
 
+
     &__list {
       display: flex;
       flex-direction: column;
+      transition: $transition-base;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        z-index: 2;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        border-bottom: 1px solid transparent;
+        &.opened {
+          overflow: auto;
+          opacity: 1;
+          height: auto;
+          border-top: 1px solid $gray-4;
+        }
+      }
     }
 
     .slick-dots {
@@ -1422,6 +1450,9 @@
     &__block {
       display: flex;
       justify-content: space-between;
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+      }
     }
 
     &__left {
@@ -1434,14 +1465,25 @@
         width: 321px;
         padding-left: 0;
       }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        position: relative;
+      }
     }
+
 
     &__item {
       padding-bottom: calc(27px / 2);
       cursor: pointer;
       transition: $transition-base;
       order: 2;
-
+      @include media-breakpoint-down(sm) {
+        background-color: $gray-5;
+        font-size: 20px;
+        line-height: 22px;
+        padding-left: 18px;
+        font-family: $minion-font;
+      }
 
       &:not(:first-child) {
         padding-top: calc(27px / 2);
@@ -1453,6 +1495,9 @@
 
       &--active {
         order: 1;
+        @include media-breakpoint-down(sm) {
+          padding-top: calc(27px / 2);
+        }
 
         .entrance-choose__name {
           margin-bottom: 11px;
@@ -1460,6 +1505,9 @@
           color: $gray-2;
           @include media-breakpoint-down(md) {
             margin-bottom: 9px;
+          }
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 0;
           }
         }
 
@@ -1473,6 +1521,9 @@
           @include media-breakpoint-down(md) {
             font-size: 18px;
             line-height: 24px;
+          }
+          @include media-breakpoint-down(sm) {
+            display: none;
           }
         }
 
@@ -1497,6 +1548,7 @@
     &__name {
       @include rft-txt;
       display: block;
+
     }
 
     &__descr {
@@ -1514,6 +1566,9 @@
       }
       @include media-breakpoint-down(md) {
         width: 374px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 306px;
       }
 
       &--active {
@@ -1593,6 +1648,9 @@
 
     &__arrows {
       display: flex;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
 
       &-right {
         padding-left: 27px;
@@ -1682,6 +1740,9 @@
       @include media-breakpoint-down(md) {
         display: flex;
         align-items: baseline;
+      }
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
       }
     }
 
