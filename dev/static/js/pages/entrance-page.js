@@ -75,7 +75,15 @@ allCarousels.each(function() {
         slidesToShow: 2,
         nextArrow: arrows.find('.entrance-choose__arrows-right'),
         prevArrow: arrows.find('.entrance-choose__arrows-left'),
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1195,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     };
 
     carousel.slick(chooseOptions);

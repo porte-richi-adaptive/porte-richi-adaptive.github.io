@@ -58,6 +58,10 @@
     &:not(:last-child) {
       margin-right: 106px;
     }
+    @include media-breakpoint-down(md) {
+      width: 255px;
+      height: auto;
+    }
     @include media-breakpoint-down(sm) {
       padding-right: 199px;
     }

@@ -27,6 +27,11 @@ block content
                             span.entrance-item__element Под заказ до 45 рабочих  дней
                             span.entrance-item__element Хит
                         p.entrance-item__about Для двери с&nbsp;такой фрезеровкой можно выбрать комплектацию: базовую, оптимальную, усиленную или максимальную. Это влияет на&nbsp;уровень защиты двери, возможные материалы и&nbsp;цвет отделки.
+                        .entrance-item__wrap.inside
+                            img(src='static/images/content/entrance/inside.png', alt='').entrance-item__img
+                            span.entrance-item__name Снаружи Муар, Серый графит
+                            span.entrance-item__refresh
+                                include ../static/images/content/entrance/refresh.svg
                         .entrance-item__variant
                             .entrance-item__subtitle варианты исполнения
                             .entrance-item__colors
@@ -106,6 +111,7 @@ block content
             .row.entrance-vitrage__row
                 .offset-xl-3.col-xl-13.offset-lg-2.col-lg-14.col-md-16.offset-md-0.entrance-vitrage__col
                     .entrance-vitrage__block
+                        img(src='static/images/content/entrance/entrance-vitrage.png', alt='').entrance-vitrage__pic
                         .entrance-vitrage__left
                             h2.entrance-vitrage__title Экстерьер дома с&nbsp;витражами
                             p.entrance-vitrage__text Игра оттенков и&nbsp;форм расставит акценты в&nbsp;экстерьере и&nbsp;создаст неповторимую атмосферу дома.
@@ -120,7 +126,7 @@ block content
     .entrance-decore
         .container
             .row
-                .col-xl-8.col-lg-8.col-md-8
+                .col-xl-8.col-lg-8.col-md-8.entrance-decore__first
                     .entrance-decore__left
                         figure.entrance-decore__figure
                             img(src='static/images/content/entrance/decore-1.jpg', alt='').entrance-decore__img
@@ -131,7 +137,7 @@ block content
                                     | придают двери благородный вид
 
 
-                .offset-xl-1.col-xl-7.offset-lg-1.col-lg-7.offset-md-0.col-md-8
+                .offset-xl-1.col-xl-7.offset-lg-1.col-lg-7.offset-md-0.col-md-8.entrance-decore__second
                     .entrance-decore__right
                         h2.entrance-decore__title Декоративное оформление
                         p.entrance-decore__text Входная дверь не&nbsp;просто отличается изысканным оттенком наружней отделки и&nbsp;благородством фурнитуры, но&nbsp;и&nbsp;привлекает внимание деталями. Чтобы создать яркий элемент для экстерьера дома, дверь дополнили порталом с&nbsp;многослойной филёнкой и&nbsp;решёткой с&nbsp;золотистой патиной.
@@ -253,7 +259,8 @@ block content
                             .entrance-variant__icon
                                 img(src='static/images/content/entrance/variant-i-3.svg', alt='')
                             .entrance-variant__descr Петли рассчитаны на&nbsp;300&nbsp;000 циклов открывания. Это более 20&nbsp;лет работы для семьи из&nbsp;четырёх человек.
-                    a(href="#").entrance-variant__link.mobile отличия комплектаций
+                    .entrance-variant__wrap
+                        a(href="#").entrance-variant__link.mobile отличия комплектаций
 
     .entrance-size
         .container
