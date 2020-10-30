@@ -1,9 +1,7 @@
 .filter {
   position: relative;
   z-index: 1002;
-  @include media-breakpoint-down(md) {
-    padding-top: 33px;
-  }
+
 
   &:before {
     content: '';

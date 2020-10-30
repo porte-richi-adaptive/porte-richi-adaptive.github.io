@@ -29,6 +29,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
     &:empty {
       display: none;
     }
@@ -204,6 +210,10 @@
     cursor: default;
     pointer-events: none;
 
+    @include media-breakpoint-down(lg) {
+      width: 155px;
+    }
+
     svg path {
       fill: $gray-1;
       transition: $animation-default-time;
@@ -241,9 +251,19 @@
       }
     }
     span:not(.main-filter__counter) {
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    span:not(.main-filter__counter) {
       font-size: 20px;
       margin-right: 9px;
       transition: $animation-default-time;
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
     svg {
       transition: $animation-default-time;
@@ -264,6 +284,12 @@
     justify-content: center;
     width: 100%;
     border-bottom: 1px solid $gray-5;
+    @include media-breakpoint-down(lg) {
+      width: 197px;
+      flex-grow: 1;
+      padding-left: 0;
+      padding-right: 0;
+    }
     &:hover {
       background: linear-gradient(154.67deg, #F8F8F8 13.54%, #EDEDED 86.46%);
       &:before {
@@ -301,6 +327,10 @@
     align-items: center;
     color: $black;
     transition: $animation-default-time;
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+      line-height: 24px;
+    }
     &:hover {
       color: $gold;
     }

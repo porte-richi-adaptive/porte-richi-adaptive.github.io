@@ -105,7 +105,7 @@
       </header>
       <main class="main">
         <div class="filter-mobile__popup">
-          <form>
+          <form class="filter-mobile__form">
             <div class="filter-mobile__popup-all">
               <header class="filter-mobile__popup-header">
                 <div class="filter-mobile__popup-title">фильтры</div>
@@ -223,7 +223,22 @@
 <path d="M0.5 0.5L3 3L5.5 0.5" stroke="black"/>
 </svg>
 
-                <div class="filter-mobile__material-dropdown"><a class="filter-mobile__material-text filter-mobile__material-link" href="#">для квартиры</a><a class="filter-mobile__material-text filter-mobile__material-link" href="#">для дома</a></div>
+                <div class="filter-mobile__material-dropdown">
+                  <div class="filter-mobile__material__row">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-16"><a class="filter-mobile__material-text filter-mobile__material-link" href="#">для квартиры</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-mobile__material__row">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-16"><a class="filter-mobile__material-text filter-mobile__material-link" href="#">для дома</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="filter-mobile__options"><span class="filter-mobile__options-text js-mobile-filter">Фильтры</span><svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.5 0.5L3.5 3.5L0.5 6.5" stroke="black"/>
@@ -422,7 +437,7 @@
                     </div>
                   </div><a class="main-filter__link main-filter__tab" href="#">С зеркалом</a><a class="main-filter__link main-filter__tab" href="#">Интересное решение</a>
                 </div>
-                <div class="main-filter__row"><a class="main-filter__link main-filter__tab" href="#">Со стеклом</a><a class="main-filter__link main-filter__tab" href="#">Акции и скидки</a><a class="main-filter__link main-filter__tab" href="#">Новинка</a><a class="main-filter__link main-filter__tab" href="#">Двупольные</a></div>
+                <div class="main-filter__row"><a class="main-filter__link main-filter__tab main-filter__tab--active" href="#">Со стеклом</a><a class="main-filter__link main-filter__tab" href="#">Акции и скидки</a><a class="main-filter__link main-filter__tab main-filter__tab--active" href="#">Новинка</a><a class="main-filter__link main-filter__tab" href="#">Двупольные</a></div>
                 <!--.main-filter__item.main-filter__tab
                 span Стиль
                 include ../static/images/svg/arrow-dropdown.svg
@@ -452,6 +467,72 @@
         <section class="catalog-entrance">
           <div class="container">
             <div class="row catalog-entrance__row">
+              <!-- This door can be used in the test directory-->
+              <div class="entrance-item col-xl-7 col-lg-7 col-md-7 col-16"><a class="entrance-item__favorite btn-favorite" href="#"></a><a class="entrance-item__link" href="#">
+                  <div class="entrance-item__view"><img class="entrance-item__img" src="static/images/entr-1.jpg" alt="pic"><img class="entrance-item__img" src="static/images/entr-2.jpg" alt="pic">
+                    <div class="entrance-item__discount"></div>
+                  </div>
+                  <div class="entrance-item__descr">
+                    <div class="entrance-item__descr-top">
+                      <div class="entrance-item__name">Горизонт Модерн K05</div>
+                      <div class="entrance-item__price">
+                        <div class="entrance-item__price-actual">883 руб.</div>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="entrance-item__descr-bottom">
+                  <div class="entrance-item__info">
+                    <div class="entrance-item__info-item">Для квартиры</div>
+                    <div class="entrance-item__info-item">Под заказ</div>
+                  </div>
+                  <div class="entrance-item__colors">
+                    <div class="entrance-item__color btn-color active"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color entrance-item__color btn-color btn-color--multicolor js-multicolor-tip">
+                      <div class="entrance-item__color-tip ui-tip">Ещё 25 цветов в карточке</div>
+                    </div>
+                  </div>
+                  <div class="entrance-item__price-mobile">
+                    <div class="entrance-item__price-old">887 руб</div>
+                    <div class="entrance-item__price-actual">885 руб.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="entrance-item col-xl-7 col-lg-7 col-md-7 col-16">
+                <div class="entrance-item__mask"></div><a class="entrance-item__favorite btn-favorite" href="#"></a><a class="entrance-item__link" href="#">
+                  <div class="entrance-item__view"><img class="entrance-item__img" src="static/images/entr-1.jpg" alt="pic"><img class="entrance-item__img" src="static/images/entr-2.jpg" alt="pic">
+                    <div class="entrance-item__discount"></div>
+                  </div>
+                  <div class="entrance-item__descr">
+                    <div class="entrance-item__descr-top">
+                      <div class="entrance-item__name">Горизонт Модерн K05</div>
+                      <div class="entrance-item__price">
+                        <div class="entrance-item__price-actual">883 руб.</div>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="entrance-item__descr-bottom">
+                  <div class="entrance-item__info">
+                    <div class="entrance-item__info-item">Для квартиры</div>
+                    <div class="entrance-item__info-item">Под заказ</div>
+                  </div>
+                  <div class="entrance-item__colors">
+                    <div class="entrance-item__color btn-color active"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color entrance-item__color btn-color btn-color--multicolor js-multicolor-tip">
+                      <div class="entrance-item__color-tip ui-tip">Ещё 25 цветов в карточке</div>
+                    </div>
+                  </div>
+                  <div class="entrance-item__price-mobile">
+                    <div class="entrance-item__price-old">887 руб</div>
+                    <div class="entrance-item__price-actual">885 руб.</div>
+                  </div>
+                </div>
+              </div>
               <div class="entrance-item col-xl-7 col-lg-7 col-md-7 col-16"><a class="entrance-item__favorite btn-favorite" href="#"></a><a class="entrance-item__link" href="#">
                   <div class="entrance-item__view"><img class="entrance-item__img" src="static/images/entr-1.jpg" alt="pic"><img class="entrance-item__img" src="static/images/entr-2.jpg" alt="pic">
                     <div class="entrance-item__discount"></div>
@@ -487,66 +568,41 @@
               <div class="col-xl-7 col-lg-7 col-md-7 col- factoid"><a class="factoid__overflow" href="#" target="_blank">
                   <h2 class="factoid__title">Двери в&nbsp;классическом стиле&nbsp;&mdash; благородное дополнение интерьера</h2>
                   <p class="factoid__text">Модели с&nbsp;отделками в&nbsp;древесных цветах с&nbsp;фурнитурой в&nbsp;традиционных оттенках будут органично смотреться в&nbsp;интерьере викторианского стиля, стиля барокко и&nbsp;ампир.</p><span class="factoid__link">перейти в каталог</span><img class="factoid__img factoid__img--classic" src="static/images/icons/factoid-classic.svg" alt="pic"></a></div>
-              <div class="col-xl-7 col-lg-7 col-md-7 col- entrance-item"><a class="entrance-item__link" href="#">
-                  <div class="entrance-item__favorite btn-favorite"></div>
-                  <div class="entrance-item__view"><img class="entrance-item__img" src="static/images/entr-5.jpg" alt="pic"><img class="entrance-item__img" src="static/images/entr-6.jpg" alt="pic"></div>
+              <div class="entrance-item col-xl-7 col-lg-7 col-md-7 col-16"><a class="entrance-item__favorite btn-favorite" href="#"></a><a class="entrance-item__link" href="#">
+                  <div class="entrance-item__view"><img class="entrance-item__img" src="static/images/entr-1.jpg" alt="pic"><img class="entrance-item__img" src="static/images/entr-2.jpg" alt="pic">
+                    <div class="entrance-item__discount"></div>
+                  </div>
                   <div class="entrance-item__descr">
                     <div class="entrance-item__descr-top">
-                      <div class="entrance-item__name">Геометрия Модерн K28</div>
+                      <div class="entrance-item__name">Горизонт Модерн K05</div>
                       <div class="entrance-item__price">
-                        <div class="entrance-item__price-actual">от 1 606 руб.</div>
+                        <div class="entrance-item__price-actual">883 руб.</div>
                       </div>
                     </div>
-                    <div class="entrance-item__descr-bottom">
-                      <div class="entrance-item__info">
-                        <div class="entrance-item__info-item">Для квартиры</div>
-                        <div class="entrance-item__info-item">Под заказ</div>
-                      </div>
-                      <div class="entrance-item__colors">
-                        <div class="entrance-item__color btn-color active"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                      </div>
-                      <div class="entrance-item__price-mobile">
-                        <div class="entrance-item__price-old">887 руб.</div>
-                        <div class="entrance-item__price-actual">885 руб.</div>
-                      </div>
+                  </div></a>
+                <div class="entrance-item__descr-bottom">
+                  <div class="entrance-item__info">
+                    <div class="entrance-item__info-item">Для квартиры</div>
+                    <div class="entrance-item__info-item">Под заказ</div>
+                  </div>
+                  <div class="entrance-item__colors">
+                    <div class="entrance-item__color btn-color active"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color btn-color"></div>
+                    <div class="entrance-item__color entrance-item__color btn-color btn-color--multicolor js-multicolor-tip">
+                      <div class="entrance-item__color-tip ui-tip">Ещё 25 цветов в карточке</div>
                     </div>
-                  </div></a></div>
+                  </div>
+                  <div class="entrance-item__price-mobile">
+                    <div class="entrance-item__price-old">887 руб</div>
+                    <div class="entrance-item__price-actual">885 руб.</div>
+                  </div>
+                </div>
+              </div>
               <div class="col-xl-7 col-lg-7 col-md-7 col- factoid"><a class="factoid__overflow" href="#" target="_blank">
                   <h2 class="factoid__title factoid__title--salon"> Входные двери &laquo;Порте Ричи&raquo; представлены в&nbsp;двух фирменных салонах</h2>
                   <p class="factoid__text factoid__text--salon"> Вживую удобнее рассматривать фрезеровки и&nbsp;цвет отделок, проверять плавность хода двери, работу замков и&nbsp;удобство дверных ручек. И&nbsp;всегда можно обратиться за&nbsp;консультацией к&nbsp;менеджеру.</p><span class="factoid__link">посмотреть на карте</span><img class="factoid__img factoid__img--salon" src="static/images/icons/factoid-salon.svg" alt="pic"></a></div>
-              <div class="col-xl-7 col-lg-7 col-md-7 col- entrance-item"><a class="entrance-item__link" href="#">
-                  <div class="entrance-item__mask"></div>
-                  <div class="entrance-item__favorite btn-favorite"></div>
-                  <div class="entrance-item__view"><img class="entrance-item__img" src="static/images/entr-5.jpg" alt="pic"><img class="entrance-item__img" src="static/images/entr-6.jpg" alt="pic"></div>
-                  <div class="entrance-item__descr">
-                    <div class="entrance-item__descr-top">
-                      <div class="entrance-item__name">Геометрия Модерн K28</div>
-                      <div class="entrance-item__price">
-                        <div class="entrance-item__price-actual">от 1 606 руб.</div>
-                      </div>
-                    </div>
-                    <div class="entrance-item__descr-bottom">
-                      <div class="entrance-item__info">
-                        <div class="entrance-item__info-item">Для квартиры</div>
-                        <div class="entrance-item__info-item">Под заказ</div>
-                      </div>
-                      <div class="entrance-item__colors">
-                        <div class="entrance-item__color btn-color active"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                        <div class="entrance-item__color btn-color"></div>
-                      </div>
-                      <div class="entrance-item__price-mobile">
-                        <div class="entrance-item__price-old">887 руб</div>
-                        <div class="entrance-item__price-actual">885 руб.</div>
-                      </div>
-                    </div>
-                  </div></a></div>
               <section class="action">
                 <div class="col-16 action__wrap"><img class="action__img" src="static/images/rome.png" alt="">
                   <div class="action-left">
@@ -652,7 +708,7 @@
                           <div class="entrance-item__price-old">887 руб</div>
                           <div class="entrance-item__price-actual">885 руб.</div>
                         </div>
-                      </div></a><a class="recently-view__item recently-view__item--mask recently-view__item--entrance recently-view__item--between" href="#">
+                      </div></a><a class="recently-view__item recently-view__item--mask recently-view__item--mask recently-view__item--entrance recently-view__item--between" href="#">
                       <div class="recently-view__item-mask"></div>
                       <div class="recently-view__item-img"><img class="recently-view__img" src="static/images/rec-1.jpg" alt="pic"><img class="recently-view__img" src="static/images/rec-2.png" alt="pic"></div>
                       <div class="recently-view__item-descr">

@@ -15,16 +15,30 @@
     font-size: 27px;
     line-height: 36px;
     letter-spacing: .05px;
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 27px;
+      line-height: 27px;
+    }
   }
 
   .entrance-item__view {
     margin-bottom: 11px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 18px;
+    }
   }
 
   .entrance-item__price {
     margin-bottom: 0;
     font-style: normal;
     letter-spacing: 0;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   .entrance-item__descr-top {
@@ -34,6 +48,15 @@
   .entrance-item__info {
     margin-bottom: 0;
     letter-spacing: .8px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 11px;
+    }
+  }
+
+  .entrance-item__descr-bottom .entrance-item__colors {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 21px;
+    }
   }
 
   .entrance-item__color:not(:last-child) {
@@ -51,13 +74,78 @@
   .entrance-item__descr {
     border-bottom: none;
     padding-bottom: 0;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 9px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-bottom: 5px;
+    }
   }
 
   .entrance-item__descr-bottom {
     border-bottom: 1px solid $gray-1;
     padding-bottom: 21px;
+    @include media-breakpoint-down(lg) {
+      padding-left: 5px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+    }
   }
 
+  .entrance-item__link {
+    display: inline-block;
+    height: auto;
+  }
+
+  .entrance-item__img {
+    @include media-breakpoint-down(lg) {
+      width: 220px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 156px;
+      height: 340px;
+      margin-left: unset;
+    }
+  }
+
+  .factoid {
+    @include section-indent;
+  }
+
+  .entrance-item__mask {
+    width: calc(100% + 74px);
+    left: -35px;
+
+    & ~ .entrance-item__link {
+      .entrance-item__name, .entrance-item__price-actual {
+        color: $white;
+      }
+    }
+
+    & ~ .entrance-item__descr-bottom {
+      border-bottom: none;
+
+      .entrance-item__price-old {
+        color: $white;
+        &:before {
+          background-color: $white;
+        }
+      }
+
+      .entrance-item__info-item {
+        color: $white;
+        &:after {
+          background-color: $white;
+        }
+      }
+      .btn-color:after {
+        border-color: $white;
+      }
+    }
+
+
+  }
 
 
 }

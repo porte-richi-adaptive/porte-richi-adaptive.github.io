@@ -13,6 +13,11 @@
   &--catalog {
     padding-top: 0;
     padding-bottom: 0;
+    .breadcrumbs__wrap {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 6px;
+      }
+    }
   }
 
   &__wrap {

@@ -1,13 +1,19 @@
 .filter-mobile {
   border-top: 1px solid $gray-5;
   border-bottom: 1px solid $gray-5;
-  margin-top: 12px;
+  margin-top: 11px;
   background-color: $white;
   position: relative;
   z-index: 1000;
   display: none;
   @include media-breakpoint-down(md) {
-    display: block;
+    display: flex;
+  }
+
+  &__form {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
 
   &__popup {
@@ -19,6 +25,11 @@
     left: 0;
     z-index: 10000;
     display: none;
+
+    &-all {
+      width: 100%;
+      height: 100%;
+    }
 
     &-back {
       position: absolute;
@@ -50,6 +61,10 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      position: absolute;
+      left: 0;
+      bottom: 71px;
+      width: 100%;
     }
 
     &-view {
@@ -61,6 +76,7 @@
       @include upperlink;
       outline: none;
       background-color: $white;
+      margin-bottom: 27px;
     }
 
     &-clear {
@@ -201,22 +217,14 @@
   }
 
   &__container {
-
+    display: flex;
+    justify-content: space-between;
   }
 
   &__options {
-    padding-top: 14px;
-    padding-bottom: 14px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 10;
-    @include media-breakpoint-down(sm) {
-      right: 27px;
-    }
     &:hover {
       .filter-mobile__options-text {
         color: $gold;
@@ -278,12 +286,17 @@
       z-index: 1003;
     }
 
+    &__row {
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-5;
+      }
+    }
+
     &-link {
       display: block;
       width: 100%;
       padding-top: 14px;
       padding-bottom: 14px;
-      padding-left: 28px;
       &:not(:last-child){
         border-bottom: 1px solid $gray-5;
       }
