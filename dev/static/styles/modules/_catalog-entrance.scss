@@ -8,7 +8,7 @@
     justify-content: space-between;
   }
 
-  .entrance-item__name {
+  .entrance-item .entrance-item__name {
     position: static;
     font-style: normal;
     transform: rotate(0);
@@ -23,6 +23,9 @@
       font-size: 27px;
       line-height: 27px;
     }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
   }
 
   .entrance-item {
@@ -35,6 +38,9 @@
     margin-bottom: 11px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 18px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
     }
   }
 
