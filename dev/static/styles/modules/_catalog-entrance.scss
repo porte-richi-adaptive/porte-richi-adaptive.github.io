@@ -1,11 +1,61 @@
 .catalog-entrance {
-  padding-top: 64px;
+  padding-top: 63px;
   overflow: hidden;
   @include media-breakpoint-down(md) {
     padding-top: 36px;
   }
   &__row {
     justify-content: space-between;
+  }
+
+  .entrance-item__name {
+    position: static;
+    font-style: normal;
+    transform: rotate(0);
+    font-size: 27px;
+    line-height: 36px;
+    letter-spacing: .05px;
+  }
+
+  .entrance-item__view {
+    margin-bottom: 11px;
+  }
+
+  .entrance-item__price {
+    margin-bottom: 0;
+    font-style: normal;
+    letter-spacing: 0;
+  }
+
+  .entrance-item__descr-top {
+    margin-bottom: 0;
+  }
+
+  .entrance-item__info {
+    margin-bottom: 0;
+    letter-spacing: .8px;
+  }
+
+  .entrance-item__color:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  .entrance-item__descr {
+    padding-bottom: 16px;
+  }
+
+  .entrance-item__link:not(:last-child)::after {
+    display: none;
+  }
+
+  .entrance-item__descr {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .entrance-item__descr-bottom {
+    border-bottom: 1px solid $gray-1;
+    padding-bottom: 21px;
   }
 
 
