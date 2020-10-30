@@ -42,16 +42,7 @@ $(document).ready(function () {
     arrows: false,
     infinite: true,
     swipeToSlide: true
-  }); // ---  Main Filter Slider For Tabs
-
-  var mainFilterOptions = {
-    horizontal: 1,
-    itemNav: 'basic',
-    speed: 300,
-    mouseDragging: 1,
-    touchDragging: 1
-  };
-  $('.main-filter__list-wrap').sly(mainFilterOptions); // --- Mobile Material Filter
+  }); // --- Mobile Material Filter
 
   $('.filter-mobile__material').on('click', function () {
     $('.filter-mobile__material-dropdown').slideToggle();

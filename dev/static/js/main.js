@@ -50,15 +50,7 @@ $(document).ready(function () {
         swipeToSlide: true
     });
 
-    // ---  Main Filter Slider For Tabs
-    const mainFilterOptions = {
-        horizontal: 1,
-        itemNav: 'basic',
-        speed: 300,
-        mouseDragging: 1,
-        touchDragging: 1
-    };
-    $('.main-filter__list-wrap').sly(mainFilterOptions);
+
 
     // --- Mobile Material Filter
     $('.filter-mobile__material').on('click', function(){

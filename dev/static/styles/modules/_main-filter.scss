@@ -4,20 +4,15 @@
   border-left: 1px solid $gray-5;
   border-right: 1px solid $gray-5;
   border-top: 1px solid $gray-5;
-  border-bottom: 1px solid $gray-5;
-  height: 45px;
   @include media-breakpoint-down(md) {
     display: none;
   }
   &:hover {
-    .main-filter__list-wrap {
-      height: 400px;
-    }
+
   }
 
   &__container {
     position: relative;
-    clip-path: inset( -100vw 0 -100vw -100vw);
     z-index: 1001;
   }
 
@@ -49,6 +44,7 @@
     padding-bottom: 40px;
     background-color: $white;
     display: none;
+    z-index: 1;
 
     &-block {
       &:not(:first-child) {
@@ -184,33 +180,45 @@
 
   &__list {
     display: flex;
-    flex-grow: 1;
     position: relative;
+    flex-wrap: wrap;
     &-wrap {
-      width: calc(100% - 45px);
-      position: absolute;
+
     }
   }
 
+  &__row {
+    width: 100%;
+    display: flex;
+  }
+
   &__clear {
-    height: 44px;
-    width: 46px;
+    height: auto;
+    width: 114px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+
     background: linear-gradient(110.79deg, #F8F8F8 13.54%, #EDEDED 86.46%);
     border-bottom: 1px solid $gray-5;
-    border-left: 1px solid $gray-5;
-    margin-left: auto;
-    z-index: 1002;
-    &:hover {
-      svg path {
-        fill: $gold;
-      }
-    }
+    cursor: default;
+    pointer-events: none;
+
     svg path {
+      fill: $gray-1;
       transition: $animation-default-time;
+    }
+    &--active {
+      cursor: pointer;
+      pointer-events: all;
+      &:hover {
+        svg path {
+          fill: $gold;
+        }
+      }
+      svg path {
+        fill: $black;
+      }
     }
   }
 
@@ -252,6 +260,10 @@
     border-right: 1px solid $gray-5;
     transition: $animation-default-time;
     position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid $gray-5;
     &:hover {
       background: linear-gradient(154.67deg, #F8F8F8 13.54%, #EDEDED 86.46%);
       &:before {

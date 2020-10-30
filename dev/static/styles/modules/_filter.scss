@@ -1,5 +1,4 @@
 .filter {
-  padding-top: 108px;
   position: relative;
   z-index: 1002;
   @include media-breakpoint-down(md) {
@@ -14,10 +13,15 @@
     width: 100%;
     height: 278px;
     background: linear-gradient(180deg, #DEE2E3 0%, rgba(222, 226, 227, 0) 100%);
+    display: none;
     @include media-breakpoint-down(md) {
       z-index: -1;
     }
   }
+
+
+
+
   &-sort {
     position: relative;
     transition: $animation-default-time;
