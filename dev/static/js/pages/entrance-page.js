@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+    alert('ready');
 
     function removeClass (collection , classForRemove ) {
         collection.forEach((item) => {
