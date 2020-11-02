@@ -1,6 +1,8 @@
 "use strict";
 
 $(document).ready(function () {
+  alert('ready');
+
   function removeClass(collection, classForRemove) {
     collection.forEach(function (item) {
       item.classList.remove(classForRemove);
