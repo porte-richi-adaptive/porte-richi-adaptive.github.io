@@ -89,10 +89,19 @@ $('.entrance-choose__item').on('click', function () {
 
 var entranceOptions = {
   infinite: false,
-  slidesToShow: 3,
+  slidesToShow: 1,
   nextArrow: $('.entrance-level__arrows-right'),
   prevArrow: $('.entrance-level__arrows-left'),
-  dots: false
+  dots: false,
+  responsive: [{
+    breakpoint: 1195,
+    settings: {
+      variableWidth: true,
+      swipeToSlide: true,
+      slidesToScroll: 1,
+      touchThreshold: 100
+    }
+  }]
 };
 $('.entrance-level__slider').slick(entranceOptions); // -- Comments Carousel -- //
 
@@ -101,7 +110,16 @@ $('.comments__list').slick({
   infinite: false,
   nextArrow: $('.comments__right'),
   prevArrow: $('.comments__left'),
-  variableWidth: true
+  variableWidth: true,
+  responsive: [{
+    breakpoint: 1195,
+    settings: {
+      variableWidth: true,
+      swipeToSlide: true,
+      slidesToScroll: 1,
+      touchThreshold: 100
+    }
+  }]
 }); // -- Defence tabs -- //
 
 var defenceTabs = $('[data-defence-tab]');
@@ -126,4 +144,29 @@ defenceTabs.on('click', function () {
   img.fadeIn();
   defenceTabs.removeClass(defenceActiveTabClass);
   $(this).addClass(defenceActiveTabClass);
+});
+/* --- First screen, colors carousel --- */
+
+$(window).on('load resize orientationchange', function () {
+  $('.js-colors-c').each(function () {
+    var $carousel = $(this);
+
+    if ($(window).width() > 856) {
+      if ($carousel.hasClass('slick-initialized')) {
+        $carousel.slick('unslick');
+      }
+    } else {
+      if (!$carousel.hasClass('slick-initialized')) {
+        $carousel.slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          mobileFirst: true,
+          dots: false,
+          arrows: false,
+          variableWidth: true,
+          infinite: false
+        });
+      }
+    }
+  });
 });

@@ -3,6 +3,14 @@
   &-item {
     @include section-indent;
 
+    &__overflow {
+      position: relative;
+      @include media-breakpoint-down(sm) {
+        height: 18px;
+      }
+    }
+
+
     .entrance-item__img {
       @include media-breakpoint-down(sm) {
         width: 100%;
@@ -25,6 +33,22 @@
       margin-top: 45px;
       @include media-breakpoint-down(lg) {
         margin-top: 27px;
+      }
+      @include media-breakpoint-down(sm) {
+        overflow: hidden;
+        margin-top: 0;
+        padding-top: 27px;
+
+        .entrance-item__colors {
+          position: absolute;
+          left: 0;
+          top: -6px;
+          width: 100vw;
+        }
+        .entrance-item__color {
+          outline: none;
+          margin-top: 6px;
+        }
       }
     }
 
@@ -264,6 +288,10 @@
       border-radius: 50%;
       cursor: pointer;
 
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 9px;
+      }
+
       &--multicolor {
         margin-left: auto;
         background-image: url(#{$img-url}/content/entrance/multicolor.png);
@@ -369,6 +397,18 @@
   &-view {
     @include section-indent;
 
+    @include media-breakpoint-down(sm) {
+      background-color: $white-1;
+    }
+
+    &__bg {
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+        mix-blend-mode: darken;
+      }
+    }
+
     &__block {
       position: relative;
       padding-top: 25px;
@@ -378,6 +418,10 @@
       @include media-breakpoint-down(lg) {
         padding-top: 23px;
         padding-left: 38px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        background-color: transparent;
       }
 
     }
@@ -433,6 +477,9 @@
       z-index: 0;
       @include media-breakpoint-down(md) {
         width: 60%;
+      }
+      @include media-breakpoint-down(sm) {
+        display: none;
       }
     }
   }
@@ -647,7 +694,7 @@
       @include media-breakpoint-down(sm) {
         display: block;
         width: 100%;
-        height: auto;
+        height: 57.500vw;
       }
     }
 
@@ -686,6 +733,9 @@
         height: auto;
         padding-top: 27px;
         flex-wrap: wrap;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-top: 0;
       }
     }
 
@@ -943,6 +993,9 @@
 
     &__upper {
       transition: $transition-base;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
     }
 
     &__cap {
@@ -951,6 +1004,12 @@
       opacity: 0;
       transition: .8s;
       color: $white;
+      @include media-breakpoint-down(sm) {
+        transform: translateY(-60px);
+        visibility: visible;
+        opacity: 1;
+        pointer-events: none;
+      }
     }
 
     &__text {
@@ -1397,7 +1456,7 @@
       @include media-breakpoint-down(md) {
         padding-left: 32px;
       }
-      @include media-breakpoint-down(sn) {
+      @include media-breakpoint-down(sm) {
         padding-left: 0;
         margin-top: 18px;
       }
@@ -1407,6 +1466,12 @@
 
   &-choose {
     @include section-indent;
+
+    &__wrap {
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
 
     &__tip {
       display: none;
@@ -1572,7 +1637,7 @@
         width: 374px;
       }
       @include media-breakpoint-down(sm) {
-        width: 306px;
+        width: 100%;
       }
 
       &--active {
@@ -1611,6 +1676,10 @@
 
       @include media-breakpoint-down(md) {
         height: 474px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        height: 383px;
       }
 
       &-name {
@@ -1893,6 +1962,7 @@
     }
     @include media-breakpoint-down(sm) {
       margin-bottom: 45px;
+
       .entrance-variant__choose {
         width: calc( 100% - 36px );
         margin: 0 auto;
@@ -1914,6 +1984,10 @@
 
     @include media-breakpoint-down(lg) {
       padding-top: 52px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
     }
 
     &__name {
@@ -2028,6 +2102,10 @@
         display: flex;
         align-items: center;
         margin-bottom: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        width: calc( 100% - 36px );
+        margin-left: 18px;
       }
 
       &:hover {
@@ -2459,9 +2537,7 @@
     padding-top: 93px;
     background-color: $white-2;
     overflow: hidden;
-    @include media-breakpoint-down(md) {
-      padding-top: 27px;
-    }
+
 
     @include media-breakpoint-down(lg) {
       padding-top: 63px;
@@ -2472,6 +2548,9 @@
           margin-bottom: 36px;
           height: 437px;
         }
+        @include media-breakpoint-down(md) {
+          height: 477px;
+        }
       }
 
       .comments__item {
@@ -2479,14 +2558,19 @@
       }
     }
 
+    @include media-breakpoint-down(md) {
+      padding-top: 27px;
+    }
+
     .comments__list {
-      width: auto;
+      width: 100%;
     }
 
     .slick-slide {
       margin: 0 60px;
       @include media-breakpoint-down(md) {
-        margin: 0 15px;
+        margin: 0;
+        margin-right: 36px;
       }
     }
     /* the parent */
@@ -2533,7 +2617,7 @@
       @include media-breakpoint-down(md) {
         position: relative;
         display: block;
-        height: 537px;
+        height: 59.444vw;
       }
     }
 
