@@ -15,13 +15,15 @@
 
     dropdown.find('.entrance-variant__choose-name').text(activeTab);
 
-    dropdown.on('click', function() {
+    dropdown.on('click touchstart', function() {
         $('.entrance-variant__tabs').toggleClass('opened');
+
     });
     
 
-    tabs.forEach((item) => {
-        item.addEventListener('click', () => {
+    tabs.forEach(function(item) {
+        item.addEventListener('click', function() {
+
 
             if(item.classList.contains('entrance-variant__list--active')) {
                 return false;

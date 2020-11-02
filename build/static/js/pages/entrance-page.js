@@ -14,7 +14,7 @@
   var dropdown = $('[data-js-choose]');
   var activeTab = $('.entrance-variant__list--active').text();
   dropdown.find('.entrance-variant__choose-name').text(activeTab);
-  dropdown.on('click', function () {
+  dropdown.on('click touchstart', function () {
     $('.entrance-variant__tabs').toggleClass('opened');
   });
   tabs.forEach(function (item) {
