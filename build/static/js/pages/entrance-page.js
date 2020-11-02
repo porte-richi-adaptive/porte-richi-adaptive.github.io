@@ -1,8 +1,6 @@
 "use strict";
 
 $(document).ready(function () {
-  alert('ready');
-
   function removeClass(collection, classForRemove) {
     collection.forEach(function (item) {
       item.classList.remove(classForRemove);
@@ -17,7 +15,6 @@ $(document).ready(function () {
   dropdown.find('.entrance-variant__choose-name').text(activeTab);
   dropdown.on('click tap', function () {
     $('.entrance-variant__tabs').toggleClass('opened');
-    alert(123);
   });
   tabs.forEach(function (item) {
     item.addEventListener('click', function () {
