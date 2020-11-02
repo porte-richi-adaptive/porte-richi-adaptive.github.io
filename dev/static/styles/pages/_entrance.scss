@@ -368,6 +368,8 @@
       align-items: center;
       justify-content: center;
       -webkit-justify-content: center;
+      position: relative;
+      text-align: center;
       transition: $transition-base;
       background-color: transparent;
       &:hover {
