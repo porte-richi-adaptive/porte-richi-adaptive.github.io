@@ -827,6 +827,7 @@
         right: 0;
         bottom: unset;
         width: 261px;
+        top: auto;
       }
       @include media-breakpoint-down(sm) {
         position: static;
