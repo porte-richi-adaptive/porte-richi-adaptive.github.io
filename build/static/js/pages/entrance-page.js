@@ -18,7 +18,8 @@
     $('.entrance-variant__tabs').toggleClass('opened');
   });
   tabs.forEach(function (item) {
-    $(item).on('touchstart tap', function () {
+    console.dir($(item));
+    $(item).on('touchstart', function () {
       alert(123);
     });
     item.addEventListener('click', function () {
