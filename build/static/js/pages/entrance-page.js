@@ -14,14 +14,10 @@
   var dropdown = $('[data-js-choose]');
   var activeTab = $('.entrance-variant__list--active').text();
   dropdown.find('.entrance-variant__choose-name').text(activeTab);
-  dropdown.on('click touchstart', function () {
+  dropdown.on('click tap', function () {
     $('.entrance-variant__tabs').toggleClass('opened');
   });
   tabs.forEach(function (item) {
-    console.dir($(item));
-    $(item).on('touchstart', function () {
-      alert(123);
-    });
     item.addEventListener('click', function () {
       if (item.classList.contains('entrance-variant__list--active')) {
         return false;
