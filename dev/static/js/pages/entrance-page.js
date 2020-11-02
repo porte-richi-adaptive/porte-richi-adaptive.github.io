@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     dropdown.on('click tap', function() {
         $('.entrance-variant__tabs').toggleClass('opened');
-
+        alert(123);
     });
     
 
@@ -199,27 +199,27 @@ defenceTabs.on('click', function() {
 
 /* --- First screen, colors carousel --- */
 
-$(window).on('load resize orientationchange', function() {
-    $('.js-colors-c').each(function(){
-        var $carousel = $(this);
-        if ($(window).width() > 856) {
-            if ($carousel.hasClass('slick-initialized')) {
-                $carousel.slick('unslick');
+    $(window).on('load resize orientationchange', function() {
+        $('.js-colors-c').each(function(){
+            var $carousel = $(this);
+            if ($(window).width() > 856) {
+                if ($carousel.hasClass('slick-initialized')) {
+                    $carousel.slick('unslick');
+                }
             }
-        }
-        else{
-            if (!$carousel.hasClass('slick-initialized')) {
-                $carousel.slick({
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                    mobileFirst: true,
-                    dots: false,
-                    arrows: false,
-                    variableWidth: true,
-                    infinite: false
-                });
+            else{
+                if (!$carousel.hasClass('slick-initialized')) {
+                    $carousel.slick({
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                        mobileFirst: true,
+                        dots: false,
+                        arrows: false,
+                        variableWidth: true,
+                        infinite: false
+                    });
+                }
             }
-        }
+        });
     });
-});
 });
