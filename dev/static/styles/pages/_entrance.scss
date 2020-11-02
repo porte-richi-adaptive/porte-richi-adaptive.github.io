@@ -1,16 +1,18 @@
 .entrance {
 
-  /* --- Single door First Screen --- */
-  .entrance-single {
-    .entrance-item__img {
-      @include ipad {
-        height: 458px;
-      }
-    }
-  }
+
 
   &-item {
     @include section-indent;
+
+    /* --- Single door First Screen --- */
+    .entrance-item--first.entrance-single {
+      .entrance-item__img {
+        @include ipad {
+          height: 458px;
+        }
+      }
+    }
 
     &__overflow {
       position: relative;
