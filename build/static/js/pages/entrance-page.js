@@ -18,6 +18,9 @@
     $('.entrance-variant__tabs').toggleClass('opened');
   });
   tabs.forEach(function (item) {
+    $(item).on('touchstart tap', function () {
+      alert(123);
+    });
     item.addEventListener('click', function () {
       if (item.classList.contains('entrance-variant__list--active')) {
         return false;

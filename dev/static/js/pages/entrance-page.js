@@ -22,9 +22,12 @@
     
 
     tabs.forEach(function(item) {
+
+        $(item).on('touchstart tap', function() {
+            alert(123);
+        });
+
         item.addEventListener('click', function() {
-
-
             if(item.classList.contains('entrance-variant__list--active')) {
                 return false;
             }
@@ -42,7 +45,6 @@
 
             $(`[data-tab-img=${tabNumber}]`).fadeIn(250);
             $(`[data-tab-block=${tabNumber}]`).fadeIn(250);
-
         });
     });
 
