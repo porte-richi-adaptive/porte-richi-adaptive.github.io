@@ -1,5 +1,14 @@
 .entrance {
 
+  /* --- Single door First Screen --- */
+  .entrance-single {
+    .entrance-item__img {
+      @include ipad {
+        height: 458px;
+      }
+    }
+  }
+
   &-item {
     @include section-indent;
 
@@ -406,6 +415,7 @@
       @include media-breakpoint-down(sm) {
         display: block;
         mix-blend-mode: darken;
+        width: 100%;
       }
     }
 
