@@ -24,7 +24,7 @@
     tabs.forEach(function(item) {
         console.dir($(item));
 
-        $(item).on('touchstart', function() {
+        $(item).on('tap', function() {
             alert(123);
         });
 
