@@ -1,5 +1,6 @@
-// -- Variant Tabs -- //
-{
+$(document).ready(function() {
+
+
 
     function removeClass (collection , classForRemove ) {
         collection.forEach((item) => {
@@ -46,7 +47,7 @@
 
 
 
-}
+
 
 // -- Choose Carousel -- //
 
@@ -220,4 +221,5 @@ $(window).on('load resize orientationchange', function() {
             }
         }
     });
+});
 });
