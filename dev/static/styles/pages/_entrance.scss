@@ -1172,6 +1172,12 @@
       }
     }
 
+    .entrance-variant__choose {
+      @include media-breakpoint-down(md) {
+        display: flex;
+      }
+    }
+
     &__first {
        @include media-breakpoint-down(md) {
 
