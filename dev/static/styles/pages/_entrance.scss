@@ -756,6 +756,7 @@
         height: auto;
         padding-top: 27px;
         flex-wrap: wrap;
+        position: relative;
       }
       @include media-breakpoint-down(sm) {
         padding-top: 0;
@@ -827,7 +828,8 @@
         right: 0;
         bottom: unset;
         width: 261px;
-        top: auto;
+        top: unset;
+        left: unset;
       }
       @include media-breakpoint-down(sm) {
         position: static;
@@ -1991,6 +1993,12 @@
       .entrance-variant__choose {
         width: calc( 100% - 36px );
         margin: 0 auto;
+      }
+    }
+
+    .entrance-variant__choose {
+      @include media-breakpoint-down(md) {
+        display: flex;
       }
     }
 
