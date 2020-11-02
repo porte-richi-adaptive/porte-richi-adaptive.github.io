@@ -16,6 +16,7 @@ $(document).ready(function() {
 
     dropdown.on('click tap', function() {
         $('.entrance-variant__tabs').toggleClass('opened');
+
     });
     
 
