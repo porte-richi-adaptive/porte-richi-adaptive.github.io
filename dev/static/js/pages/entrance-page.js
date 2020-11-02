@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    alert('ready');
-
     function removeClass (collection , classForRemove ) {
         collection.forEach((item) => {
             item.classList.remove(classForRemove);
@@ -18,7 +16,6 @@ $(document).ready(function() {
 
     dropdown.on('click tap', function() {
         $('.entrance-variant__tabs').toggleClass('opened');
-        alert(123);
     });
     
 
