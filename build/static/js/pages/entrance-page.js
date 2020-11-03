@@ -87,7 +87,7 @@ $(document).ready(function () {
 
   var entranceOptions = {
     infinite: false,
-    slidesToShow: 1,
+    slidesToShow: 3,
     nextArrow: $('.entrance-level__arrows-right'),
     prevArrow: $('.entrance-level__arrows-left'),
     dots: false,
@@ -97,6 +97,7 @@ $(document).ready(function () {
         variableWidth: true,
         swipeToSlide: true,
         slidesToScroll: 1,
+        slidesToShow: 1,
         touchThreshold: 100
       }
     }]
