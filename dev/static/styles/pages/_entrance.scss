@@ -2950,7 +2950,40 @@
         max-width: 100%;
       }
     }
+  }
 
+  &-clone {
+    @include section-indent;
+
+    background-color: $white-2;
+
+    &__row {
+      @include media-breakpoint-down(md) {
+        flex-wrap: nowrap;
+
+      }
+    }
+
+    .entrance-item__img--single {
+      @include media-breakpoint-down(md) {
+        width: 328px;
+        height: 681px;
+        margin-left: 0;
+      }
+    }
+
+    .entrance-clone__descr {
+      @include media-breakpoint-down(md) {
+        width: 402px;
+      }
+    }
+
+    .entrance-item__card {
+      @include media-breakpoint-down(md) {
+        background-color: $white;
+        padding: 36px 27px;
+      }
+    }
   }
 
 
