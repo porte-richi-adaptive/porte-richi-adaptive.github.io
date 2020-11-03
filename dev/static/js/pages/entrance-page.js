@@ -122,7 +122,7 @@ $('.entrance-choose__item').on('click', function() {
 
 const entranceOptions = {
     infinite: false,
-    slidesToShow: 1,
+    slidesToShow: 3,
     nextArrow: $('.entrance-level__arrows-right'),
     prevArrow: $('.entrance-level__arrows-left'),
     dots: false,
@@ -133,6 +133,7 @@ const entranceOptions = {
                 variableWidth: true,
                 swipeToSlide: true,
                 slidesToScroll: 1,
+                slidesToShow: 1,
                 touchThreshold: 100
             }
         }
