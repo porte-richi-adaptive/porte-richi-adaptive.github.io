@@ -1,6 +1,48 @@
 .callback {
   width: 100%;
 
+  &--second {
+    .callback__title {
+      max-width: 316px;
+    }
+
+    .callback__img img {
+      @include media-breakpoint-down(lg) {
+        object-fit: cover;
+      }
+
+      @include media-breakpoint-down(md) {
+        bottom: -66px;
+        right: 69px;
+        width: 304px;
+        height: 364px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 67.778vw;
+        height: 100%;
+      }
+    }
+
+    .callback__container {
+      @include media-breakpoint-down(md) {
+        height: 340px;
+      }
+      @include media-breakpoint-down(sm) {
+        height: auto;
+      }
+    }
+
+    .callback__about {
+      @include media-breakpoint-down(md) {
+        bottom: -49px;
+      }
+      @include media-breakpoint-down(sm) {
+        bottom: 5vw;
+        left: 59vw;
+      }
+    }
+  }
+
   &__container {
     background-color: $white-1;
     height: 260px;

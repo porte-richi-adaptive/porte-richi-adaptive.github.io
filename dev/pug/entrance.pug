@@ -156,7 +156,6 @@ block content
             .col-16
                 h2.entrance-poster__main Куда устанавливать дверь
     .entrance-poster
-
         .entrance-poster__slide
             .entrance-poster__bg
                 img(src="static/images/content/entrance/poster-1.jpg")
@@ -194,7 +193,26 @@ block content
                 h2.entrance-poster__title Возможное место для установки&nbsp;&mdash; с&nbsp;улицы в&nbsp;дом
                 p.entrance-poster__text Обязательно обустройте козырёк для защиты замков и&nbsp;петель от&nbsp;высыхания смазки, а&nbsp;декоративные панели двери от&nbsp;попадания солнечного света, снега и&nbsp;дождя. Рекомендуется установка терморазрыва полотна и&nbsp;коробки.
 
+    .entrance__callback
+        .callback.callback--second
+            .container.callback__container
+                .row.callback__row
+                    .col-xl-5.col-lg-4
+                        h2.callback__title Бесплатный замер дверного проёма
 
+                    .col-xl-5.col-lg-7
+                        p.callback__descr Замер от&nbsp;нашего специалиста&nbsp;&mdash; гарантия того, что дверь подойдёт идеально. Замерщик учтёт все нюансы, важные для дальнейших этапов.
+                        form.callback__form
+                            input(type='text', placeholder='Номер телефона').callback__input.js-phone-mask
+                            button.callback__btn.js-callback-submit.disabled Отправить
+
+                    .col-xl-6.col-lg-5
+                        .callback__img
+                            img(src='static/images/content/salons/callback-manager-2.png', alt='')
+
+                        .callback__about
+                            .callback__name Анастасия,
+                            .callback__manager менеджер по&nbsp;продажам
 
     .entrance-variant
         .container
@@ -563,7 +581,8 @@ block content
                             .entrance-level__slider
                                 .entrance-level__item
                                     .entrance-level__stars
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
 
                                     img(src='static/images/content/entrance/lock.svg', alt='').entrance-level__img
                                     .entrance-level__over
@@ -575,8 +594,10 @@ block content
 
                                 .entrance-level__item
                                     .entrance-level__stars
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
                                     img(src='static/images/content/entrance/lock.svg', alt='').entrance-level__img
                                     .entrance-level__over
                                         h3.entrance-level__subtitle Система M12R
@@ -587,9 +608,12 @@ block content
 
                                 .entrance-level__item
                                     .entrance-level__stars
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
                                     img(src='static/images/content/entrance/lock.svg', alt='').entrance-level__img
                                     .entrance-level__over
                                         h3.entrance-level__subtitle Система M12R
@@ -600,10 +624,15 @@ block content
 
                                 .entrance-level__item
                                     .entrance-level__stars
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+
 
                                     img(src='static/images/content/entrance/lock.svg', alt='').entrance-level__img
                                     .entrance-level__over
@@ -615,11 +644,16 @@ block content
 
                                 .entrance-level__item
                                     .entrance-level__stars
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
-                                        img(src='static/images/content/entrance/star.svg', alt='').entrance-level__star
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
+                                        .entrance-level__star
+                                            include ../static/images/content/entrance/star.svg
                                     img(src='static/images/content/entrance/lock.svg', alt='').entrance-level__img
                                     .entrance-level__over
                                         h3.entrance-level__subtitle Система M12R
@@ -652,5 +686,6 @@ block content
                                 p.entrance-similar__text При выборе входной двери можно заказать сразу межкомнатные с&nbsp;похожей или такой&nbsp;же отделкой.
                                 a(href="").entrance-similar__link посмотреть презентацию
 
-
+    script(src="static/js/vendor/inputmask.js", defer)
     script(src="static/js/pages/entrance-page.js", defer)
+    script(src="static/js/components/callback.js", defer)

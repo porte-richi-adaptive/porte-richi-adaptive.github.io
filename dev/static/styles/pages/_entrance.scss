@@ -2462,6 +2462,7 @@
 
     &__star {
       margin-bottom: 5px;
+      height: 13px;
     }
 
     &__arrows {
@@ -2793,7 +2794,10 @@
         padding: 0;
       }
     }
+  }
 
+  &__callback {
+    @include section-indent;
   }
 
 
