@@ -1,7 +1,6 @@
 .action {
   background-color: #232323;
   width: 100%;
-  overflow: hidden;
   margin-bottom: 200px;
   @include media-breakpoint-down(lg) {
     margin-bottom: 135px;
