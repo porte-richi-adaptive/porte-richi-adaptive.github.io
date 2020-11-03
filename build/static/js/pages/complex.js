@@ -18,4 +18,6 @@ $('.complex__slider-container').slick({
     }
   }]
 });
-var tabs = new tabsBuilder();
+var tabs = new tabsBuilder(); // Modal Init
+
+new Modal();

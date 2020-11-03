@@ -708,7 +708,11 @@ block content
     .entrance-create
          .container
              .row
-                 .col-xl-7.col-lg-7
+                 .col-xl-7.col-lg-7.col-md-8
+                     .entrance-create__block.entrance-create__block--mobile
+                         h2.entrance-create__title Создавайте завершённый образ входной двери
+                         p.entrance-create__text Внутри&nbsp;&mdash; с&nbsp;помощью доборов, снаружи&nbsp;&mdash; наличников и&nbsp;порталов.
+                         p.entrance-create__text Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.
                      figure.entrance-create__figure.entrance-create__figure--left
                          img(src='static/images/content/entrance/create-vector-1.svg', alt='').entrance-create__picture
                          .entrance-create__gallery
@@ -716,10 +720,11 @@ block content
                          figcaption.entrance-create__figcaption
                             strong.entrance-create__strong Доборы&nbsp;
                             span.entrance-create__text помогают скрыть зазоры между стеной и&nbsp;дверной коробкой. Мастера подбирают их&nbsp;под цвет и&nbsp;фактуру двери.
-                 .offset-xl-2.col-xl-6.offset-lg-2.col-lg-7
-                     h2.entrance-create__title Создавайте завершённый образ входной двери
-                     p.entrance-create__text Внутри&nbsp;&mdash; с&nbsp;помощью доборов, снаружи&nbsp;&mdash; наличников и&nbsp;порталов.
-                     p.entrance-create__text Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.
+                 .offset-xl-2.col-xl-6.offset-lg-2.col-lg-7.offset-md-0.col-md-8
+                     .entrance-create__block
+                        h2.entrance-create__title Создавайте завершённый образ входной двери
+                        p.entrance-create__text Внутри&nbsp;&mdash; с&nbsp;помощью доборов, снаружи&nbsp;&mdash; наличников и&nbsp;порталов.
+                        p.entrance-create__text Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.
                      figure.entrance-create__figure.entrance-create__figure--right
                          img(src='static/images/content/entrance/create-vector-2.svg', alt='').entrance-create__picture
                          .entrance-create__gallery
@@ -746,6 +751,17 @@ block content
                                 p.entrance-similar__text При выборе входной двери можно заказать сразу межкомнатные с&nbsp;похожей или такой&nbsp;же отделкой.
                                 a(href="").entrance-similar__link посмотреть презентацию
 
+
+    .simple-modal
+        .simple-modal__close
+
+        .simple-modal__conrainer
+
+
+
+
+
     script(src="static/js/vendor/inputmask.js", defer)
+    script(src="static/js/components/simple-modal.js", defer)
     script(src="static/js/pages/entrance-page.js", defer)
     script(src="static/js/components/callback.js", defer)

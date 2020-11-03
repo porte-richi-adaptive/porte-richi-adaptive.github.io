@@ -22,3 +22,6 @@ $('.complex__slider-container').slick({
 
 
 const tabs = new tabsBuilder;
+
+// Modal Init
+new Modal;

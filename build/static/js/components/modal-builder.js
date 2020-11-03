@@ -78,6 +78,4 @@ function () {
   }]);
 
   return Modal;
-}();
-
-new Modal();
+}(); //new Modal;
