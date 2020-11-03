@@ -86,6 +86,7 @@ $(document).ready(function () {
   }); // -- Entrance Level Carousel -- //
 
   var entranceOptions = {
+    variableWidth: true,
     infinite: false,
     slidesToShow: 3,
     nextArrow: $('.entrance-level__arrows-right'),
@@ -96,9 +97,9 @@ $(document).ready(function () {
       settings: {
         variableWidth: true,
         swipeToSlide: true,
-        slidesToScroll: 1,
         slidesToShow: 1,
-        touchThreshold: 100
+        slidesToScroll: 1,
+        touchThreshold: 500
       }
     }]
   };

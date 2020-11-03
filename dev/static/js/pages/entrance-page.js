@@ -121,6 +121,7 @@ $('.entrance-choose__item').on('click', function() {
 // -- Entrance Level Carousel -- //
 
 const entranceOptions = {
+    variableWidth: true,
     infinite: false,
     slidesToShow: 3,
     nextArrow: $('.entrance-level__arrows-right'),
@@ -132,9 +133,9 @@ const entranceOptions = {
             settings: {
                 variableWidth: true,
                 swipeToSlide: true,
-                slidesToScroll: 1,
                 slidesToShow: 1,
-                touchThreshold: 100
+                slidesToScroll: 1,
+                touchThreshold: 500
             }
         }
     ]

@@ -513,13 +513,13 @@ block content
                 .col-xl-11.offset-xl-0.offset-lg-1.col-lg-11.offset-md-0.col-md-12
                     .entrance-complect__block
                         .entrance-complect__item.entrance-complect__item--left
-                            img(src='static/images/content/entrance/complect-1.jpg', alt='').entrance-complect__img.entrance-complect__door
+                            img(src='static/images/content/entrance/complect-1.jpg', alt='', data-trigger-btn="create", data-img-src='static/images/content/entrance/complect-1.jpg').entrance-complect__img.entrance-complect__door
                             h3.entrance-complect__title Ручка GreenteQ
                             .entrance-complect__subtitle.entrance-complect__subtitle--big Входит в максимальную комплектацию
                             p.entrance-complect__text Изготовлена из&nbsp;нержавеющей стали. Устойчива при частых и&nbsp;сильных нагрузках. Сплошная стальная накладка шириной 35&nbsp;мм препятствует высверливанию цилиндра.
 
                         .entrance-complect__item
-                            img(src='static/images/content/entrance/complect-2.jpg', alt='').entrance-complect__img.entrance-complect__door
+                            img(src='static/images/content/entrance/complect-2.jpg', alt='', data-trigger-btn="create", data-img-src='static/images/content/entrance/complect-2.jpg').entrance-complect__img.entrance-complect__door
                             h3.entrance-complect__title Ручка-рейлинг
                             .entrance-complect__subtitle.entrance-complect__subtitle--big + 90 рублей к оптимальной комплектации
                             p.entrance-complect__text Ручку устанавливают снаружи, а&nbsp;внутри остаётся нажимная ручка GreenteQ. Защёлка &laquo;день-ночь&raquo; на&nbsp;ручке-рейлинг позволяет открывать незапертую дверь без ключа.
@@ -715,7 +715,7 @@ block content
                          p.entrance-create__text Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.
                      figure.entrance-create__figure.entrance-create__figure--left
                          img(src='static/images/content/entrance/create-vector-1.svg', alt='').entrance-create__picture
-                         .entrance-create__gallery
+                         .entrance-create__gallery(data-trigger-btn="create", data-img-src='static/images/content/entrance/simple-modal-single.jpg')
                              img(src='static/images/content/entrance/create-mini-1.png', alt='').entrance-create__mini
                          figcaption.entrance-create__figcaption
                             strong.entrance-create__strong Доборы&nbsp;
@@ -727,7 +727,7 @@ block content
                         p.entrance-create__text Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.
                      figure.entrance-create__figure.entrance-create__figure--right
                          img(src='static/images/content/entrance/create-vector-2.svg', alt='').entrance-create__picture
-                         .entrance-create__gallery
+                         .entrance-create__gallery(data-trigger-btn="create", data-img-src='static/images/content/entrance/simple-modal-single.jpg')
                              img(src='static/images/content/entrance/create-mini-2.png', alt='').entrance-create__mini
                          figcaption.entrance-create__figcaption
                              strong.entrance-create__strong Наличники и&nbsp;порталы&nbsp;
@@ -752,10 +752,12 @@ block content
                                 a(href="").entrance-similar__link посмотреть презентацию
 
 
-    .simple-modal
-        .simple-modal__close
-
-        .simple-modal__conrainer
+    .simple-modal(data-simple-modal='create', data-modal-type='simple')
+        .simple-modal__close(data-simple-close)
+            include ../static/images/icons/modal-close-i.svg
+        .simple-modal__container(data-simple-container)
+            .simple-modal__item
+                img(src='', alt='', data-simple-img).simple-modal__picture
 
 
 

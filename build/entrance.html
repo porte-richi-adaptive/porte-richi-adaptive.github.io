@@ -719,12 +719,12 @@
               </div>
               <div class="col-xl-11 offset-xl-0 offset-lg-1 col-lg-11 offset-md-0 col-md-12">
                 <div class="entrance-complect__block">
-                  <div class="entrance-complect__item entrance-complect__item--left"><img class="entrance-complect__img entrance-complect__door" src="static/images/content/entrance/complect-1.jpg" alt="">
+                  <div class="entrance-complect__item entrance-complect__item--left"><img class="entrance-complect__img entrance-complect__door" src="static/images/content/entrance/complect-1.jpg" alt="" data-trigger-btn="create" data-img-src="static/images/content/entrance/complect-1.jpg">
                     <h3 class="entrance-complect__title">Ручка GreenteQ</h3>
                     <div class="entrance-complect__subtitle entrance-complect__subtitle--big">Входит в максимальную комплектацию</div>
                     <p class="entrance-complect__text">Изготовлена из&nbsp;нержавеющей стали. Устойчива при частых и&nbsp;сильных нагрузках. Сплошная стальная накладка шириной 35&nbsp;мм препятствует высверливанию цилиндра.</p>
                   </div>
-                  <div class="entrance-complect__item"><img class="entrance-complect__img entrance-complect__door" src="static/images/content/entrance/complect-2.jpg" alt="">
+                  <div class="entrance-complect__item"><img class="entrance-complect__img entrance-complect__door" src="static/images/content/entrance/complect-2.jpg" alt="" data-trigger-btn="create" data-img-src="static/images/content/entrance/complect-2.jpg">
                     <h3 class="entrance-complect__title">Ручка-рейлинг</h3>
                     <div class="entrance-complect__subtitle entrance-complect__subtitle--big">+ 90 рублей к оптимальной комплектации</div>
                     <p class="entrance-complect__text">Ручку устанавливают снаружи, а&nbsp;внутри остаётся нажимная ручка GreenteQ. Защёлка &laquo;день-ночь&raquo; на&nbsp;ручке-рейлинг позволяет открывать незапертую дверь без ключа.</p>
@@ -1028,7 +1028,7 @@
                   <p class="entrance-create__text">Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.</p>
                 </div>
                 <figure class="entrance-create__figure entrance-create__figure--left"><img class="entrance-create__picture" src="static/images/content/entrance/create-vector-1.svg" alt="">
-                  <div class="entrance-create__gallery"><img class="entrance-create__mini" src="static/images/content/entrance/create-mini-1.png" alt=""></div>
+                  <div class="entrance-create__gallery" data-trigger-btn="create" data-img-src="static/images/content/entrance/simple-modal-single.jpg"><img class="entrance-create__mini" src="static/images/content/entrance/create-mini-1.png" alt=""></div>
                   <figcaption class="entrance-create__figcaption"><strong class="entrance-create__strong">Доборы&nbsp;</strong><span class="entrance-create__text">помогают скрыть зазоры между стеной и&nbsp;дверной коробкой. Мастера подбирают их&nbsp;под цвет и&nbsp;фактуру двери.</span></figcaption>
                 </figure>
               </div>
@@ -1039,7 +1039,7 @@
                   <p class="entrance-create__text">Рассчитываем стоимость и&nbsp;устанавливаем элементы после монтажа входной двери.</p>
                 </div>
                 <figure class="entrance-create__figure entrance-create__figure--right"><img class="entrance-create__picture" src="static/images/content/entrance/create-vector-2.svg" alt="">
-                  <div class="entrance-create__gallery"><img class="entrance-create__mini" src="static/images/content/entrance/create-mini-2.png" alt=""></div>
+                  <div class="entrance-create__gallery" data-trigger-btn="create" data-img-src="static/images/content/entrance/simple-modal-single.jpg"><img class="entrance-create__mini" src="static/images/content/entrance/create-mini-2.png" alt=""></div>
                   <figcaption class="entrance-create__figcaption"><strong class="entrance-create__strong">Наличники и&nbsp;порталы&nbsp;</strong><span class="entrance-create__text">обрамляют верхнюю и&nbsp;боковые части. Дополняют экстерьер квартиры или дома в&nbsp;классическом стиле.</span></figcaption>
                 </figure>
               </div>
@@ -1101,9 +1101,15 @@
             </div>
           </div>
         </div>
-        <div class="simple-modal">
-          <div class="simple-modal__close"></div>
-          <div class="simple-modal__conrainer"></div>
+        <div class="simple-modal" data-simple-modal="create" data-modal-type="simple">
+          <div class="simple-modal__close" data-simple-close><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 36L18.5 18.5M36 1L18.5 18.5M18.5 18.5L1 1L36 36" stroke="#868686" stroke-width="2"/>
+</svg>
+
+          </div>
+          <div class="simple-modal__container" data-simple-container>
+            <div class="simple-modal__item"><img class="simple-modal__picture" src="" alt="" data-simple-img></div>
+          </div>
         </div>
         <script src="static/js/vendor/inputmask.js" defer></script>
         <script src="static/js/components/simple-modal.js" defer></script>

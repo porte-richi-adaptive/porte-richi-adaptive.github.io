@@ -1,3 +1,55 @@
 .simple-modal {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  z-index: 1000;
+  display: none;
+  &.opened {
+    display: block;
+  }
+
+  // Save Context
+  $simple-modal: &;
+
+  &__close {
+    position: absolute;
+    right: 27px;
+    top: 36px;
+    cursor: pointer;
+    @include media-breakpoint-down(lg) {
+      top: 27px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: 21px;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    path {
+      transition: $transition-base;
+    }
+
+    &:hover {
+      path {
+        stroke: $gold;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 
 }
