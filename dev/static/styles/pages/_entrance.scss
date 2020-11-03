@@ -2975,6 +2975,7 @@
     .entrance-clone__descr {
       @include media-breakpoint-down(md) {
         width: 402px;
+        margin-top: 0;
       }
     }
 
