@@ -781,7 +781,7 @@ block content
                             .entrance-item__variant
                                 .entrance-item__subtitle варианты исполнения
                                 .entrance-item__overflow
-                                    .entrance-item__colors.js-colors-c
+                                    .entrance-item__colors
                                         .entrance-item__color
                                         .entrance-item__color
                                         .entrance-item__color
@@ -803,7 +803,17 @@ block content
                             .entrance-item__new
                                 include ../static/images/content/entrance/new.svg
 
-
+    .entrance-models
+        .container
+            .row
+                .col-xl-5.col-lg-5.col-md-6
+                    .entrance-models__block
+                        h2.entrance-models__title Модели дверей в&nbsp;похожем стиле
+                        p.entrance-models__text Мы&nbsp;подобрали другие двери, которые по&nbsp;стилю похожи на&nbsp;дверь &laquo;Клео&raquo;. Они подойдут интерьеру в&nbsp;стиле модерн, хай-тек и&nbsp;функционализм.
+                        a(href="#").entrance-models__link перейти в каталог
+                .col-xl-11.col-lg-11.col-md-10
+                    img(src='static/images/content/entrance/models.jpg', alt='').entrance-models__banner
+                    a(href="#").entrance-models__link.entrance-models__link--mobile перейти в каталог
 
     .simple-modal(data-simple-modal='create', data-modal-type='simple')
         .simple-modal__close(data-simple-close)
