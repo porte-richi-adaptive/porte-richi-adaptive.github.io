@@ -2913,6 +2913,8 @@
           @include media-breakpoint-down(md) {
             right: -36px;
             top: -36px;
+            cursor: default;
+            pointer-events: none;
           }
         }
       }
@@ -3007,6 +3009,7 @@
         width: 100%;
         height: auto;
       }
+
     }
 
     &__text {
