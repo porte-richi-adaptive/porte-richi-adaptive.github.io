@@ -2098,6 +2098,8 @@
       @include media-breakpoint-down(md) {
         max-width: 249px;
         margin-top: 36px;
+        cursor: default;
+        pointer-events: none;
       }
       @include media-breakpoint-down(sm) {
         max-width: 100%;
