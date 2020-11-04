@@ -222,4 +222,14 @@ defenceTabs.on('click', function() {
             }
         });
     });
+
+    /* --- Rotate Image on First Screen --- */
+    $('.js-item-resfresh').on('click', function(e) {
+        $(this).find('.js-item-rotate').toggleClass('rotate');
+    });
+
+
+
+
 });
+

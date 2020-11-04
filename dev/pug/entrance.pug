@@ -9,12 +9,16 @@ block content
     section.entrance-item.entrance-item--first.entrance-single
         .container
             .row
-                .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.offset-md-0.col-md-8
-                    .entrance-item__wrap
-                        img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
-                        span.entrance-item__name Снаружи Муар, Серый графит
-                        span.entrance-item__refresh
-                            include ../static/images/content/entrance/refresh.svg
+                .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.offset-md-0.col-md-8.js-item-resfresh
+                    .entrance-item__wrap.js-item-rotate
+                        .entrance-item__front
+                            img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                            span.entrance-item__name Снаружи Муар, Серый графит
+                        .entrance-item__back
+                            img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                            span.entrance-item__name Внутри Муар, Серый графит
+                    span.entrance-item__refresh
+                        include ../static/images/content/entrance/refresh.svg
                 .offset-xl-1.col-xl-6.offset-lg-1.col-lg-7.offset-md-0.col-md-8
                     .entrance-item__card
                         .entrance-item__nav
@@ -27,11 +31,16 @@ block content
                             span.entrance-item__element Под заказ до 45 рабочих  дней
                             span.entrance-item__element Хит
                         p.entrance-item__about Для двери с&nbsp;такой фрезеровкой можно выбрать комплектацию: базовую, оптимальную, усиленную или максимальную. Это влияет на&nbsp;уровень защиты двери, возможные материалы и&nbsp;цвет отделки.
-                        .entrance-item__wrap.inside
-                            img(src='static/images/content/entrance/inside.png', alt='').entrance-item__img
-                            span.entrance-item__name Снаружи Муар, Серый графит
+                        .entrance-item__row.js-item-resfresh
+                            .entrance-item__wrap.inside.js-item-rotate
+                                .entrance-item__front
+                                    img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                                    span.entrance-item__name Снаружи Муар, Серый графит
+                                .entrance-item__back
+                                    img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                                    span.entrance-item__name Внутри Муар, Серый графит
                             span.entrance-item__refresh
-                                include ../static/images/content/entrance/refresh.svg
+                                    include ../static/images/content/entrance/refresh.svg
                         .entrance-item__variant
                             .entrance-item__subtitle варианты исполнения
                             .entrance-item__overflow
@@ -248,6 +257,70 @@ block content
                         .callback__about
                             .callback__name Анастасия,
                             .callback__manager менеджер по&nbsp;продажам
+
+    .entrance__callback.entrance__callback--success
+        .callback.callback--second
+            .container.callback__container
+                .row.callback__row
+                    img(src='static/images/content/entrance/form-success.svg', alt='').callback__success
+                    .offset-xl-2.col-xl-8.col-lg-9.offset-lg-2.callback__middle
+                        h2.callback__special Ваша заявка принята. Специалист позвонит в&nbsp;течение одного рабочего дня, чтобы уточнить детали заказа.
+
+                    .col-xl-6.col-lg-5
+                        .callback__img
+                            img(src='static/images/content/salons/callback-manager-2.png', alt='')
+
+                        .callback__about
+                            .callback__name Анастасия,
+                            .callback__manager менеджер по&nbsp;продажам
+
+
+    .entrance-change
+        .container
+            .row
+                .col-xl-7.col-lg-7.col-md-8
+                    .entrance-change__left
+                        h2.entrance-change__title Меняйте современный дизайн двери на&nbsp;классический с&nbsp;помощью рамок и&nbsp;витражей.
+                        .entrance-change__block
+                            .entrance-change__name Декоративная рамка С-К
+                            img(src='static/images/content/entrance/change-1.jpg', alt='').entrance-change__img
+                            .entrance-change__price + 642 рубля
+                        .entrance-change__row
+                            .entrance-change__door(data-trigger-btn="create", data-img-src='static/images/content/entrance/change-2.jpg')
+                                .entrance-change__name Без окна
+                                img(src='static/images/content/entrance/change-2.jpg', alt='').entrance-change__mini
+                                .entrance-change__price + 642 рубля
+                            .entrance-change__door(data-trigger-btn="create", data-img-src='static/images/content/entrance/change-3.jpg')
+                                .entrance-change__name С окно С–К
+                                img(src='static/images/content/entrance/change-3.jpg', alt='').entrance-change__mini
+                                .entrance-change__price + 1172 рубля
+                            .entrance-change__door(data-trigger-btn="create", data-img-src='static/images/content/entrance/change-4.jpg')
+                                .entrance-change__name С витражом
+                                img(src='static/images/content/entrance/change-4.jpg', alt='').entrance-change__mini
+                                .entrance-change__price + 642 рубля
+
+                .offset-xl-2.col-xl-7.offset-lg-2.col-lg-7.col-md-8.offset-md-0
+                    .entrance-change__right
+                        .entrance-change__block
+                            .entrance-change__name Декоративная рамка В-К
+                            img(src='static/images/content/entrance/change-5.jpg', alt='').entrance-change__img
+                            .entrance-change__price + 642 рубля
+
+                        .entrance-change__row
+                            .entrance-change__door(data-trigger-btn="create", data-img-src='static/images/content/entrance/change-6.jpg')
+                                .entrance-change__name Без окна
+                                img(src='static/images/content/entrance/change-6.jpg', alt='').entrance-change__mini
+                                .entrance-change__price + 642 рубля
+                            .entrance-change__door(data-trigger-btn="create", data-img-src='static/images/content/entrance/change-7.jpg')
+                                .entrance-change__name С окно С–К
+                                img(src='static/images/content/entrance/change-7.jpg', alt='').entrance-change__mini
+                                .entrance-change__price + 1172 рубля
+                            .entrance-change__door(data-trigger-btn="create", data-img-src='static/images/content/entrance/change-8.jpg')
+                                .entrance-change__name С витражом
+                                img(src='static/images/content/entrance/change-8.jpg', alt='').entrance-change__mini
+                                .entrance-change__price + 642 рубля
+
+                        h2.entrance-change__title Традиционные рамки придают фасаду и&nbsp;интерьеру классические мотивы.
 
     .entrance-variant
         .container
@@ -755,11 +828,16 @@ block content
         .container
             .row.entrance-clone__row
                 .offset-xl-1.col-xl-5.offset-lg-1.col-lg-6.offset-md-0.entrance-clone__left
-                    .entrance-clone__product
-                        .entrance-item__wrap
-                            img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img.entrance-item__img--front.entrance-item__img--single
-                            span.entrance-item__refresh
-                                include ../static/images/content/entrance/refresh.svg
+                    .entrance-clone__product.js-item-resfresh
+                        .entrance-item__wrap.js-item-rotate
+                            .entrance-item__front
+                                img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img.entrance-item__img--front.entrance-item__img--single
+                                span.entrance-item__name Снаружи Муар, Серый графит
+                            .entrance-item__back
+                                img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img.entrance-item__img--front.entrance-item__img--single
+                                span.entrance-item__name Внутри Муар, Серый графит
+                        span.entrance-item__refresh
+                            include ../static/images/content/entrance/refresh.svg
                 .offset-xl-3.col-xl-6.offset-lg-1.col-lg-7.offset-md-0.entrance-clone__right
                     .entrance-clone__descr
                         .entrance-item__card
@@ -773,9 +851,14 @@ block content
                                 span.entrance-item__element Под заказ до 45 рабочих  дней
                                 span.entrance-item__element Хит
                             p.entrance-item__about Для двери с&nbsp;такой фрезеровкой можно выбрать комплектацию: базовую, оптимальную, усиленную или максимальную. Это влияет на&nbsp;уровень защиты двери, возможные материалы и&nbsp;цвет отделки.
-                            .entrance-item__wrap.inside
-                                img(src='static/images/content/entrance/inside.png', alt='').entrance-item__img
-                                span.entrance-item__name Снаружи Муар, Серый графит
+                            .entrance-item__row.js-item-resfresh
+                                .entrance-item__wrap.inside.js-item-rotate
+                                    .entrance-item__front
+                                        img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                                        span.entrance-item__name Снаружи Муар, Серый графит
+                                    .entrance-item__back
+                                        img(src='static/images/content/entrance/item.jpg', alt='').entrance-item__img
+                                        span.entrance-item__name Внутри Муар, Серый графит
                                 span.entrance-item__refresh
                                     include ../static/images/content/entrance/refresh.svg
                             .entrance-item__variant
@@ -814,6 +897,8 @@ block content
                 .col-xl-11.col-lg-11.col-md-10
                     img(src='static/images/content/entrance/models.jpg', alt='').entrance-models__banner
                     a(href="#").entrance-models__link.entrance-models__link--mobile перейти в каталог
+
+
 
     .simple-modal(data-simple-modal='create', data-modal-type='simple')
         .simple-modal__close(data-simple-close)

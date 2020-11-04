@@ -18,6 +18,8 @@
   $entrance-item: '.entrance-item';
 
   &__img {
+    transition: .4s;
+
     @include media-breakpoint-down(lg) {
       width: 220px;
       height: 479px;

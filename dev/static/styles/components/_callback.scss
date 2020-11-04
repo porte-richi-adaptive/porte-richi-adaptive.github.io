@@ -59,9 +59,19 @@
 
   &__row {
     height: 100%;
+    position: relative;
     @include media-breakpoint-down(md) {
       height: auto;
     }
+  }
+
+  &__middle {
+    display: flex;
+    align-items: center;
+  }
+
+  &__special {
+    padding-left: 82px;
   }
 
   &__title {
@@ -268,5 +278,20 @@
       color: $white;
     }
   }
+
+  &__success {
+    position: absolute;
+    left: 50px;
+    bottom: 53px;
+    @include media-breakpoint-down(md) {
+      position: static;
+    }
+  }
+
+  &__special {
+    
+  }
+
+
 
 }
