@@ -70,6 +70,9 @@
       padding-top: 81px;
     }
 
+    .entrance-item__wrap {
+      bottom: -5px;
+    }
 
     .entrance-item__wrap {
       @include media-breakpoint-down(sm) {
@@ -249,10 +252,92 @@
   }
 
   &-poster {
+    @include section-indent;
 
     &__wrap {
       position: relative;
+    }
 
+    &__title {
+      margin-bottom: 39px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 9px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 27px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 9px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__block {
+      width: 862px;
+      background-color: $white;
+      padding: 27px 76px 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 270px;
+      display: flex;
+      @include media-breakpoint-down(lg) {
+        padding-top: 0;
+        padding-right: 55px;
+        padding-bottom: 0;
+        align-items: center;
+        height: 238px;
+        width: 798px;
+      }
+      @include media-breakpoint-down(md) {
+        position: static;
+        margin-top: 27px;
+        padding: 0;
+        width: 100%;
+        align-items: flex-start;
+        height: auto;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__mini {
+      width: 375px;
+      @include media-breakpoint-down(lg) {
+        width: 315px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 298px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+      &--small {
+        width: 308px;
+        margin-left: 97px;
+        @include media-breakpoint-down(lg) {
+          width: 270px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-left: 94px;
+          width: 306px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-top: 27px;
+          margin-left: 0;
+        }
+      }
     }
 
   }
