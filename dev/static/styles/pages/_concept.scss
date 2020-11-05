@@ -64,6 +64,7 @@
   &-facade {
     padding-top: 136px;
     background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
+    @include section-indent;
 
     @include media-breakpoint-down(lg) {
       padding-top: 81px;
@@ -119,7 +120,7 @@
         margin-bottom: 18px;
         max-width: 303px;
       }
-      @include media-breakpoint-down(md      ) {
+      @include media-breakpoint-down(md) {
          max-width: 100%;
        }
     }
@@ -147,7 +148,112 @@
         max-width: 100% ;
       }
     }
+  }
 
+  &-simple {
+    @include section-indent;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 90px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 27px;
+    }
+
+
+    &__figcaption {
+      font-size: 18px;
+      line-height: 27px;
+      font-style: italic;
+      margin-top: 27px;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 18px;
+      }
+      @include media-breakpoint-down(md) {
+        line-height: 18px;
+        margin-top: 9px;
+      }
+    }
+
+    .concept-simple__figcaption {
+      max-width: 344px;
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__left {
+      position: relative;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
+
+      .concept-simple__figure {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include media-breakpoint-down(md) {
+          position: static;
+        }
+      }
+
+      .concept-simple__img {
+        object-fit: fill;
+        width: 54vw;
+        max-height: 640px;
+        @include media-breakpoint-down(md) {
+          width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .concept-simple__figcaption {
+        text-align: right;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-big {
+    @include section-indent;
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__block {
+      height: 100%;
+      position: relative;
+      @include media-breakpoint-down(sm) {
+        margin: 12px;
+      }
+    }
+
+    &__descr {
+     @include typography('descr-multi');
+      font-style: italic;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include media-breakpoint-down(sm) {
+        position: static;
+      }
+    }
+  }
+
+  &-poster {
+
+    &__wrap {
+      position: relative;
+
+    }
 
   }
 
