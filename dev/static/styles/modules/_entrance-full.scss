@@ -2,6 +2,9 @@
   width: 100%;
   padding-left: 9px;
   padding-right: 9px;
+
+
+
   @include media-breakpoint-down(sm) {
     padding-left: 0;
     padding-right: 0;
@@ -17,6 +20,10 @@
   .btn-favorite {
     left: 4px;
     top: -16px;
+    @include media-breakpoint-down(sm) {
+      left: -8px;
+      top: -16px;
+    }
   }
 
   #{$entrance-item}__info {
@@ -36,7 +43,7 @@
       top: -16px;
       left: auto;
       @include media-breakpoint-down(sm) {
-        left: 4px;
+        left: -8px;
         top: -16px;
         right: auto;
       }
@@ -47,6 +54,9 @@
     margin-left: 6px;
     .btn-color--multicolor {
       margin-left: 0;
+      @include media-breakpoint-down(sm) {
+        margin-left: auto;
+      }
     }
   }
 
@@ -95,6 +105,8 @@
     justify-content: center;
     @include media-breakpoint-down(sm) {
       order: 2;
+      padding-bottom: 18px;
+      border-bottom: 1px solid $gray-1;
     }
   }
   &__title {

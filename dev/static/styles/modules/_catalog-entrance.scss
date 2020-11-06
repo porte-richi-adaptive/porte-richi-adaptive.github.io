@@ -107,6 +107,7 @@
     }
     @include media-breakpoint-down(md) {
       padding-left: 0;
+      width: 100%;
     }
   }
 
