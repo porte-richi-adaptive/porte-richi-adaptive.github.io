@@ -39,6 +39,9 @@
     margin-bottom: 6px;
     border-bottom: none;
     color: $gray-6;
+    @include media-breakpoint-down(lg) {
+      padding-left: 0;
+    }
   }
 
   .entrance-item__price {
