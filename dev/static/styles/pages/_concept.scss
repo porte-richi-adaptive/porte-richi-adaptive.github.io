@@ -234,6 +234,8 @@
     &__block {
       height: 100%;
       position: relative;
+      display: flex;
+      align-items: flex-end;
       @include media-breakpoint-down(sm) {
         margin: 12px;
       }
@@ -242,9 +244,6 @@
     &__descr {
      @include typography('descr-multi');
       font-style: italic;
-      position: absolute;
-      left: 0;
-      bottom: 0;
       @include media-breakpoint-down(sm) {
         position: static;
       }
