@@ -136,10 +136,10 @@
 
   &__new {
     position: absolute;
-    top: -21px;
-    right: -13px;
-    width: 112px;
-    height: 112px;
+    top: -27px;
+    right: -18px;
+    width: 111px;
+    height: 111px;
     background-image: url('../../static/images/icons/new-label.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -148,11 +148,12 @@
       width: 82px;
       height: 82px;
       background-size: cover;
-      background-image: url('../../static/images/icons/new-label-mobile.svg');
+      top: -27px!important;
+      right: -18px!important;
     }
     @include media-breakpoint-down(sm) {
-      top: -23px;
-      right: -15px;
+      top: -18px!important;
+      right: -9px!important;
     }
   }
 
