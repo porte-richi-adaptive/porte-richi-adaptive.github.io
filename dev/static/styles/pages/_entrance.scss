@@ -3457,12 +3457,25 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       transition: $transition-base;
+      cursor: pointer;
+      &:hover {
+        color: $gold;
+      }
       &--active {
         color: $gray-2;
+        cursor: default;
+        pointer-events: none;
+        &:hover {
+          color: $gray-2;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 47px;
       }
     }
-
   }
+
+
 
 
 }

@@ -1,0 +1,433 @@
+extends template/main
+
+block variables
+    - var title = 'Входная и межкомнатные двери в одном стиле';
+    - var headerGrayBackground = true;
+    - var headerGrayBackgroundBig = false;
+
+block content
+    .filter-mobile__popup
+        form.filter-mobile__form
+            .filter-mobile__popup-all
+                header.filter-mobile__popup-header
+                    .filter-mobile__popup-title фильтры
+                    .filter-mobile__popup-close
+                        include ../static/images/icons/close.svg
+                .filter-mobile__popup-list
+                    .filter-mobile__popup-item.js-filter-inner
+                        span Сортировать
+                    .filter-mobile__popup-item.js-filter-inner
+                        span Стиль
+                    .filter-mobile__popup-item.js-filter-inner
+                        span Фрезеровка
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Двупольные
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Акции и скидки
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Интересные решения
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Образцы в салоне
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Со стеклом
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='checkbox').filter-mobile__popup-checkbox
+                            span.filter-mobile__popup-text Новинки
+
+
+
+                footer.filter-mobile__popup-footer
+                    button.filter-mobile__popup-view показать 10 дверей
+                    button.filter-mobile__popup-clear Сбросить фильтры
+            .filter-mobile__popup-sort
+                header.filter-mobile__popup-header
+                    .filter-mobile__popup-title сортировать
+                    .filter-mobile__popup-close
+                        include ../static/images/icons/close.svg
+                    .filter-mobile__popup-back
+                        include ../static/images/icons/arrow-left-mobile.svg
+                .filter-mobile__popup-list
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='radio' name="1").filter-mobile__popup-radio
+                            span.filter-mobile__popup-text по возрастанию цены
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='radio' name="1").filter-mobile__popup-radio
+                            span.filter-mobile__popup-text по убыванию цены
+                    .filter-mobile__popup-item
+                        label.filter-mobile__popup-label
+                            input(type='radio' name="1").filter-mobile__popup-radio
+                            span.filter-mobile__popup-text по популярности
+                footer.filter-mobile__popup-footer
+                    button.filter-mobile__popup-view сортировать
+                    button.filter-mobile__popup-clear по умолчанию
+
+
+    section.filter
+        .breadcrumbs.breadcrumbs--catalog
+            .container
+                include modules/breadcrumbs
+        .container
+            h1.filter__title Входные двери
+        .material-nav__wrap
+            .container
+                .material-nav
+                    a(href="#").material-nav__link все модели
+                    a(href="#").material-nav__link.material-nav__link--active для квартиры
+                    a(href="#").material-nav__link для дома
+                .filter-sort
+                    .filter-sort__wrap
+                        a(href="#").filter-sort__active по возрастанию цены
+                        include ../static/images/svg/arrow-dropdown.svg
+                        .filter-sort__dropown
+                            form.filter-sort__dropown-form
+                                a(href="#").filter-sort__dropown-link по убыванию цены
+                                a(href="#").filter-sort__dropown-link по популярности
+        .filter-mobile
+            .container.filter-mobile__container
+                .filter-mobile__material
+                    a(href="#").filter-mobile__material-text все модели
+                    include ../static/images/svg/arrow-dropdown.svg
+                    .filter-mobile__material-dropdown
+                        .filter-mobile__material__row
+                            .container
+                                .row
+                                    .col-16
+                                        a(href="#").filter-mobile__material-text.filter-mobile__material-link для квартиры
+
+                        .filter-mobile__material__row
+                            .container
+                                .row
+                                    .col-16
+                                        a(href="#").filter-mobile__material-text.filter-mobile__material-link для дома
+                .filter-mobile__options
+                    span.filter-mobile__options-text.js-mobile-filter Фильтры
+                    include ../static/images/icons/arrow-right-mobile.svg
+
+
+
+
+
+
+    .container.main-filter__container
+        .main-filter
+            .main-filter__list-wrap
+                .main-filter__list
+                    .main-filter__row
+                        .main-filter__item.main-filter__tab
+                            span.main-filter__counter 2
+                            span Стиль
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown.main-filter__dropdown--long
+                                form
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-img
+                                        img(src='static/images/door3.png', alt='pic').entrance-item__img
+
+                        .main-filter__item.main-filter__tab
+                            span.main-filter__counter
+                            span Фрезеровка
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown.main-filter__dropdown--long
+                                form
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-img
+                                        img(src='static/images/door3.png', alt='pic').entrance-item__img
+
+                        .main-filter__item.main-filter__tab
+                            span.main-filter__counter
+                            span Образцы в салоне
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown.main-filter__dropdown--long
+                                form
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-img
+                                        img(src='static/images/door3.png', alt='pic').entrance-item__img
+
+
+                        a(href="#").main-filter__link.main-filter__tab С зеркалом
+                        a(href="#").main-filter__link.main-filter__tab Интересное решение
+
+                    .main-filter__row
+                        a(href="#").main-filter__link.main-filter__tab.main-filter__tab--active Со стеклом
+                        a(href="#").main-filter__link.main-filter__tab Акции и скидки
+                        a(href="#").main-filter__link.main-filter__tab.main-filter__tab--active Новинка
+                        a(href="#").main-filter__link.main-filter__tab Двупольные
+
+
+                    //.main-filter__item.main-filter__tab
+                        span Стиль
+                        include ../static/images/svg/arrow-dropdown.svg
+                        .main-filter__dropdown
+                            form
+                                label.main-filter__dropdown-label
+                                    input(type='checkbox').main-filter__dropdown-checkbox
+                                    span.main-filter__dropdown-text современный
+                                label.main-filter__dropdown-label
+                                    input(type='checkbox').main-filter__dropdown-checkbox
+                                    span.main-filter__dropdown-text классический
+                                label.main-filter__dropdown-label
+                                    input(type='checkbox').main-filter__dropdown-checkbox
+                                    span.main-filter__dropdown-text с дизайнерский
+
+
+            .main-filter__clear.main-filter__clear--active
+                include ../static/images/icons/trash.svg
+
+
+    .catalog-entrance.catalog-entrance--empty
+        section.catalog-entrance__empty
+            h1.catalog-entrance__empty-title
+                | По&nbsp;вашему запросу дверей не&nbsp;найдено.&nbsp
+                a(href="#").catalog-entrance__empty-link Сбросьте фильтры
+                |, чтобы выбрать новые.
+        .container
+            .row
+                .col-16
+                    h2.recently-view__title Вы недавно просматривали
+        section.recently-view.section-margin
+            .container
+                .recently-view__wrap
+                    a(href="#").recently-view__item.recently-view__item--invisible
+                        h2 Дверь-невидимка
+                        span 4 323 руб.
+
+                    a(href="#").recently-view__item.recently-view__item--single
+                        .recently-view__item-img
+                            .recently-view__collection
+                            img(src='static/images/rec-7.jpg', alt='pic').recently-view__img
+                        .recently-view__item-descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Геометрия
+                                .entrance-item__price
+                                    .entrance-item__price-actual 1 606 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+
+                    a(href="#").recently-view__item.recently-view__item--mask.recently-view__item--mask.recently-view__item--entrance.recently-view__item--between
+                        .recently-view__item-mask
+                        .recently-view__item-img
+                            img(src='static/images/rec-1.jpg', alt='pic').recently-view__img
+                            img(src='static/images/rec-2.png', alt='pic').recently-view__img
+                        .recently-view__item-descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Геометрия Модерн K28
+                                .entrance-item__price
+                                    .entrance-item__price-actual 1 606 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+                    a(href="#").recently-view__item.recently-view__item--entrance.recently-view__item--between
+                        .recently-view__item-img
+                            img(src='static/images/rec-1.jpg', alt='pic').recently-view__img
+                            img(src='static/images/rec-2.png', alt='pic').recently-view__img
+                        .recently-view__item-descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Геометрия Модерн K28
+                                .entrance-item__price
+                                    .entrance-item__price-actual 1 606 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.
+
+
+                    a(href="#").recently-view__item.recently-view__item--big.recently-view__item--between
+                        .recently-view__item-img
+                            img(src='static/images/rec-3.jpg', alt='pic').recently-view__img
+                            img(src='static/images/rec-4.jpg', alt='pic').recently-view__img
+                        .recently-view__item-descr
+                            .entrance-item__descr-top
+                                .entrance-item__name Геометрия Модерн K28
+                                .entrance-item__price
+                                    .entrance-item__price-actual 1 606 руб.
+                            .entrance-item__descr-bottom
+                                .entrance-item__info
+                                    .entrance-item__info-item Для квартиры
+                                    .entrance-item__info-item Под заказ
+                                .entrance-item__colors
+                                    .entrance-item__color.btn-color.active
+                                    .entrance-item__color.btn-color
+                                    .entrance-item__color.btn-color
+                            .entrance-item__price-mobile
+                                .entrance-item__price-old 887 руб
+                                .entrance-item__price-actual 885 руб.

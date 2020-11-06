@@ -4,6 +4,11 @@
   @include media-breakpoint-down(md) {
     padding-top: 36px;
   }
+
+  &--empty {
+    padding-top: 0;
+  }
+
   &__row {
     justify-content: space-between;
   }
@@ -162,9 +167,46 @@
         border-color: $white;
       }
     }
+  }
 
+  .catalog-entrance--empty{
+    padding-top: 0;
+  }
+
+
+  &__empty {
+    &-title {
+      margin: 0 auto;
+      width: 766px;
+      padding-top: 180px;
+      @include section-indent;
+      text-align: center;
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 135px;
+        width: 663px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-top: 72px;
+        width: 374px;
+        font-size: 27px;
+        line-height: 37px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-top: 45px;
+        width: 100%;
+      }
+    }
+
+    &-link {
+      color: $gold;
+    }
 
   }
+
+
 
 
 }
