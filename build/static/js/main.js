@@ -21,6 +21,9 @@ $(document).ready(function () {
     mouseleave: function mouseleave() {
       $(this).find('.ui-tip').fadeOut(0);
     }
+  });
+  $(".js-multicolor-tip").on('touchleave touchcancel', function () {
+    $(this).find('.ui-tip').fadeOut(0);
   }); // --- Mobile Menu close
 
   $('.header__menu > svg').on('click', function () {

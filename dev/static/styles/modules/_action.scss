@@ -1,5 +1,5 @@
 .action {
-  background-color: #232323;
+
   width: 100%;
   margin-bottom: 200px;
   @include media-breakpoint-down(lg) {
@@ -49,6 +49,7 @@
     padding-left: 72px;
     padding-top: 34px;
     padding-bottom: 51px;
+    background-color: $black-2;
     @include media-breakpoint-down(lg) {
       padding-left: 64px;
       padding-bottom: 46px;

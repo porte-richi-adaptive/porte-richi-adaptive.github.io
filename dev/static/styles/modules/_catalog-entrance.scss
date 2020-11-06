@@ -135,6 +135,12 @@
 
   .factoid {
     @include section-indent;
+    margin-right: 9px;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
+
   }
 
   .entrance-item__mask {

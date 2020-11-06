@@ -18,7 +18,7 @@
 
   &__popup {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $white;
     position: absolute;
     top: 0;
@@ -29,6 +29,9 @@
     &-all {
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     &-back {
@@ -44,11 +47,12 @@
       }
     }
 
+    &-list {
+      flex-grow: 1;
+    }
+
     &-sort {
       display: none;
-    }
-    &-all {
-
     }
     &-title {
       @include upperlink-title;
@@ -61,10 +65,8 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      position: absolute;
-      left: 0;
-      bottom: 71px;
       width: 100%;
+      margin-top: auto;
     }
 
     &-view {
@@ -77,6 +79,10 @@
       outline: none;
       background-color: $white;
       margin-bottom: 27px;
+      @include xs {
+        height: 45px;
+        margin-bottom: 18px;
+      }
     }
 
     &-clear {
@@ -88,10 +94,14 @@
       @include upperlink;
       outline: none;
       background-color: transparent;
+      color: $gray-2;
+      @include xs {
+        height: 27px;
+      }
     }
 
     &-list {
-      margin-bottom: 97px;
+
     }
 
     &-item {
@@ -225,10 +235,27 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    &-counter {
+      font-size: 15px;
+      line-height: 1;
+      width: 19px;
+      height: 19px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      background-color: $gray-2;
+      border-radius: 50%;
+      font-family: $minion-display;
+      margin-right: 9px;
+    }
+
     &:hover {
       .filter-mobile__options-text {
         color: $gold;
       }
+
       svg path {
         stroke: $gold;
       }
@@ -237,6 +264,7 @@
       font-size: 16px;
       margin-right: 9px;
     }
+
     svg {
        width: 3px;
        height: 6px;
