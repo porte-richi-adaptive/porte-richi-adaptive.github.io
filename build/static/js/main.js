@@ -44,7 +44,8 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     infinite: true,
-    swipeToSlide: true
+    swipeToSlide: true,
+    touchThreshold: 100
   }); // --- Mobile Material Filter
 
   $('.filter-mobile__material').on('click', function () {

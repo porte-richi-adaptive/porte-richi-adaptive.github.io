@@ -51,7 +51,8 @@ $(document).ready(function () {
         dots: false,
         arrows: false,
         infinite: true,
-        swipeToSlide: true
+        swipeToSlide: true,
+        touchThreshold: 100
     });
 
 
