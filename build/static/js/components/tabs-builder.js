@@ -10,9 +10,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     tab class js-tab
     set rel dataName for pages
 */
-var tabsBuilder =
-/*#__PURE__*/
-function () {
+var tabsBuilder = /*#__PURE__*/function () {
   function tabsBuilder(tabDataName) {
     _classCallCheck(this, tabsBuilder);
 
