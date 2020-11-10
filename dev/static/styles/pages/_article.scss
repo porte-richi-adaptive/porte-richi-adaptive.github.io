@@ -324,7 +324,7 @@ ul.article-step__list {
   line-height: 36px;
 }
 
-ul.article-step__list li:before {
+.article-about ul li:before {
   content: '';
   position: relative;
   width: 15px;
@@ -864,4 +864,24 @@ ul.article-step__list li:before {
 
 .article-about__text a:hover {
   color: #CBA576;
+}
+
+
+//My styles
+.article-about__content__pictures {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.article-about__content__pictures img {
+  margin-bottom: 18px;
+}
+
+.article-about__text {
+  margin-bottom: 45px;
+}
+
+.on-full-width{
+  width: 100%;
 }
