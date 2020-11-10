@@ -1,11 +1,13 @@
 extends template/main
 
 block variables
-    - var title = 'Главная страница'
+    - var title = 'Главная страница';
+    - var headerGrayBackground = true;
+    - var headerGrayBackgroundBig = false;
 
 block content
     .filter-mobile__popup
-        form
+        form.filter-mobile__form
             .filter-mobile__popup-all
                 header.filter-mobile__popup-header
                     .filter-mobile__popup-title фильтры
@@ -73,14 +75,6 @@ block content
                     button.filter-mobile__popup-clear по умолчанию
 
 
-
-
-
-
-
-
-
-
     section.filter
         .breadcrumbs.breadcrumbs--catalog
             .container
@@ -107,12 +101,20 @@ block content
                     a(href="#").filter-mobile__material-text все модели
                     include ../static/images/svg/arrow-dropdown.svg
                     .filter-mobile__material-dropdown
-                        .filter-mobile__material-wrap
-                            a(href="#").filter-mobile__material-text.filter-mobile__material-link.container для квартиры
-                        .filter-mobile__material-wrap
-                            a(href="#").filter-mobile__material-text.filter-mobile__material-link.container для дома
+                        .filter-mobile__material__row
+                            .container
+                                .row
+                                    .col-16
+                                        a(href="#").filter-mobile__material-text.filter-mobile__material-link для квартиры
+
+                        .filter-mobile__material__row
+                            .container
+                                .row
+                                    .col-16
+                                        a(href="#").filter-mobile__material-text.filter-mobile__material-link для дома
                 .filter-mobile__options
                     span.filter-mobile__options-text.js-mobile-filter Фильтры
+                    span.filter-mobile__options-counter 1
                     include ../static/images/icons/arrow-right-mobile.svg
 
 
@@ -121,16 +123,74 @@ block content
 
 
     .container.main-filter__container
-            .main-filter
-                .main-filter__list-wrap
-                    .main-filter__list
+        .main-filter
+            .main-filter__list-wrap
+                .main-filter__list
+                    .main-filter__row
                         .main-filter__item.main-filter__tab
                             span.main-filter__counter 2
+                            span Стиль
+                            include ../static/images/svg/arrow-dropdown.svg
+                            .main-filter__dropdown.main-filter__dropdown--long
+                                form
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-img
+                                        img(src='static/images/door3.png', alt='pic').entrance-item__img
+
+                        .main-filter__item.main-filter__tab
+                            span.main-filter__counter
                             span Фрезеровка
                             include ../static/images/svg/arrow-dropdown.svg
                             .main-filter__dropdown.main-filter__dropdown--long
                                 form
-                                   .main-filter__dropdown-block
+                                    .main-filter__dropdown-block
                                         label.main-filter__dropdown-label
                                             input(type='checkbox').main-filter__dropdown-checkbox
                                             span.main-filter__dropdown-text Авангард
@@ -146,7 +206,7 @@ block content
                                         label.main-filter__dropdown-label
                                             input(type='checkbox').main-filter__dropdown-checkbox
                                             span.main-filter__dropdown-text Авангард
-                                   .main-filter__dropdown-block
+                                    .main-filter__dropdown-block
                                         label.main-filter__dropdown-label
                                             input(type='checkbox').main-filter__dropdown-checkbox
                                             span.main-filter__dropdown-text Авангард
@@ -162,7 +222,7 @@ block content
                                         label.main-filter__dropdown-label
                                             input(type='checkbox').main-filter__dropdown-checkbox
                                             span.main-filter__dropdown-text Авангард
-                                   .main-filter__dropdown-block
+                                    .main-filter__dropdown-block
                                         label.main-filter__dropdown-label
                                             input(type='checkbox').main-filter__dropdown-checkbox
                                             span.main-filter__dropdown-text Авангард
@@ -178,48 +238,95 @@ block content
                                         label.main-filter__dropdown-label
                                             input(type='checkbox').main-filter__dropdown-checkbox
                                             span.main-filter__dropdown-text Авангард
-                                   .main-filter__dropdown-img
+                                    .main-filter__dropdown-img
                                         img(src='static/images/door3.png', alt='pic').entrance-item__img
 
-                        a(href="#").main-filter__link.main-filter__tab Стиль
                         .main-filter__item.main-filter__tab
-                            span Стиль
+                            span.main-filter__counter
+                            span Образцы в салоне
                             include ../static/images/svg/arrow-dropdown.svg
-                            .main-filter__dropdown
+                            .main-filter__dropdown.main-filter__dropdown--long
                                 form
-                                    label.main-filter__dropdown-label
-                                        input(type='checkbox').main-filter__dropdown-checkbox
-                                        span.main-filter__dropdown-text современный
-                                    label.main-filter__dropdown-label
-                                        input(type='checkbox').main-filter__dropdown-checkbox
-                                        span.main-filter__dropdown-text классический
-                                    label.main-filter__dropdown-label
-                                        input(type='checkbox').main-filter__dropdown-checkbox
-                                        span.main-filter__dropdown-text с дизайнерский
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-block
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                        label.main-filter__dropdown-label
+                                            input(type='checkbox').main-filter__dropdown-checkbox
+                                            span.main-filter__dropdown-text Авангард
+                                    .main-filter__dropdown-img
+                                        img(src='static/images/door3.png', alt='pic').entrance-item__img
 
-                        .main-filter__item.main-filter__tab
-                            span Система
-                            include ../static/images/svg/arrow-dropdown.svg
-                            .main-filter__dropdown
-                                form
-                                    label.main-filter__dropdown-label
-                                        input(type='radio', name="drop", value="1").main-filter__dropdown-radio
-                                        span.main-filter__dropdown-text двери-купе
-                                    label.main-filter__dropdown-label
-                                        input(type='radio', name="drop", value="2").main-filter__dropdown-radio
-                                        span.main-filter__dropdown-text внутрипроёмные
-                                    label.main-filter__dropdown-label
-                                        input(type='radio', name="drop", value="3").main-filter__dropdown-radio
-                                        span.main-filter__dropdown-text с двери-пеналы
 
+                        a(href="#").main-filter__link.main-filter__tab С зеркалом
+                        a(href="#").main-filter__link.main-filter__tab Интересное решение
 
-                        a(href="#").main-filter__link.main-filter__tab.main-filter__tab--active Образцы в салоне
+                    .main-filter__row
+                        a(href="#").main-filter__link.main-filter__tab.main-filter__tab--active Со стеклом
                         a(href="#").main-filter__link.main-filter__tab Акции и скидки
-                        a(href="#").main-filter__link.main-filter__tab Акции и скидки
-                .main-filter__clear
-                    include ../static/images/icons/trash.svg
+                        a(href="#").main-filter__link.main-filter__tab.main-filter__tab--active Новинка
+                        a(href="#").main-filter__link.main-filter__tab Двупольные
 
 
+                    //.main-filter__item.main-filter__tab
+                        span Стиль
+                        include ../static/images/svg/arrow-dropdown.svg
+                        .main-filter__dropdown
+                            form
+                                label.main-filter__dropdown-label
+                                    input(type='checkbox').main-filter__dropdown-checkbox
+                                    span.main-filter__dropdown-text современный
+                                label.main-filter__dropdown-label
+                                    input(type='checkbox').main-filter__dropdown-checkbox
+                                    span.main-filter__dropdown-text классический
+                                label.main-filter__dropdown-label
+                                    input(type='checkbox').main-filter__dropdown-checkbox
+                                    span.main-filter__dropdown-text с дизайнерский
+
+
+            .main-filter__clear.main-filter__clear--active
+                include ../static/images/icons/trash.svg
     section.catalog-interior
         .container
             .row.catalog-interior__row

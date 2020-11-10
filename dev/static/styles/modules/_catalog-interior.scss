@@ -13,4 +13,109 @@
       padding-top: 67px;
     }
   }
+
+  .interior-item .entrance-item__color:not(:last-child) {
+    @include media-breakpoint-down(md) {
+      margin-right: 23px;
+    }
+  }
+
+  .entrance-item__colors {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 13px;
+    }
+  }
+
+  .entrance-item__name {
+    position: static;
+    font-style: normal;
+    transform: rotate(0);
+    font-size: 27px;
+    line-height: 36px;
+    letter-spacing: .05px;
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 27px;
+      line-height: 27px;
+    }
+  }
+
+  .entrance-item__price {
+    margin-bottom: 0;
+    font-style: normal;
+    letter-spacing: 0;
+    font-size: 27px;
+    line-height: 36px;
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .entrance-item__info {
+    margin-bottom: 0;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 7px;
+    }
+  }
+
+  .entrance-item__descr-top {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 4px;
+    }
+  }
+
+
+  /*  Item  */
+  .interior-item {
+    .entrance-item__new {
+      top: -27px;
+      right: -20px;
+      @include media-breakpoint-down(lg) {
+        right: -15px;
+      }
+      @include media-breakpoint-down(md) {
+        top: -21px!important;
+      }
+    }
+
+    .entrance-item__favorite {
+      left: 0;
+      top: 67px;
+      @include media-breakpoint-down(lg) {
+        top: 32px;
+      }
+    }
+
+    .entrance-item__info {
+      @include media-breakpoint-down(lg) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .interior-item__view {
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 9px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 11px;
+      }
+    }
+
+    .entrance-item__descr-bottom {
+      @include media-breakpoint-down(lg) {
+        align-items: flex-start;
+      }
+    }
+
+  }
+
+
 }
