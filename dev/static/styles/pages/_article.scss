@@ -49,6 +49,21 @@
   margin-right: 43px;
 }
 
+.breadcrumbs__link:not(:last-child)::after{
+  content: '';
+  width: 3px;
+  height: 3px;
+  background-color: #868686;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 9px;
+  margin-right: 9px;
+  position: relative;
+  top: 9px;
+}
 
 .article-blog__title {
   margin-bottom: 30px;
@@ -884,4 +899,110 @@ ul.article-step__list {
 
 .on-full-width{
   width: 100%;
+}
+
+@include media-breakpoint-down(lg){
+  .top-article-container{
+    margin-left: 64px;
+    width: 532px;
+  }
+
+  .article-blog__breadcrumb{
+    padding-bottom: 5px;
+  }
+
+  .breadcrumbs__list{
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .article-blog{
+    display: flex;
+    margin-bottom: 130px;
+  }
+
+  .article-blog__text{
+    font-family: Minion Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 106px;
+    width: 382px;
+  }
+
+  .article-blog__right{
+    position: static;
+    height: 564px;
+    width: 737px;
+  }
+
+  .article-blog__title{
+    margin-bottom: 18px;
+  }
+
+  .article-blog__tags{
+    padding-top: 0;
+    flex-wrap: wrap;
+  }
+  .article-blog__tag{
+    margin-bottom: 18px;
+  }
+
+  .article-about{
+    margin-top: 0;
+    padding-left: 18px;
+  }
+
+  .article-about__title{
+    margin-bottom: 22px;
+  }
+
+  .article-about__text:last-child {
+    margin-bottom: 113px;
+  }
+
+  .article-about__descr{
+    margin-top: 7px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 138px;
+  }
+
+  .article-video__wrap{
+  padding: 32px 0 50px 54px;
+
+  }
+
+  .article-video__title{
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 285px;
+    margin-right: 68px;
+  }
+
+  .article-video__text{
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 253px;
+    font-weight: normal;
+    padding-top: 5px;
+  }
+
+  .article-video__img{
+    width: 353px;
+  }
+
+  .article-video__play{
+    top: calc(50% - 23px);
+    left: calc(50% - 9px);
+    width: 28px;
+    height: 44px;
+  }
+
+  .article-video__link{
+    position: relative;
+    bottom: 8px;
+  }
 }
