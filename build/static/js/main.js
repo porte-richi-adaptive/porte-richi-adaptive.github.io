@@ -15,10 +15,10 @@ $(document).ready(function () {
   }); // --- Multicolor tip block hover
 
   $(".js-multicolor-tip").on({
-    mouseenter: function mouseenter() {
+    mouseover: function mouseover() {
       $(this).find('.ui-tip').css("display", "flex").fadeIn();
     },
-    mouseleave: function mouseleave() {
+    mouseout: function mouseout() {
       $(this).find('.ui-tip').fadeOut(0);
     }
   });
