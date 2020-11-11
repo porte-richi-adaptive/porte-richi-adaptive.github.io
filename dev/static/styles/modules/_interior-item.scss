@@ -22,6 +22,12 @@
     height: auto;
   }
 
+  &:hover {
+    .entrance-item__name {
+      color: $gold;
+    }
+  }
+
   &__block {
     @include media-breakpoint-down(sm) {
       width: 306px;
@@ -147,11 +153,17 @@
       right: 0;
     }
     @include mobile {
-      width: 220px;
+      width: 260px;
       height: 560px;
       bottom: 5px;
       top: auto;
       left: 11.602vw;
     }
+
+    @include xs {
+      width: 220px;
+    }
+
+
   }
 }
