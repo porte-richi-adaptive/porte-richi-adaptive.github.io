@@ -11,21 +11,32 @@
     width: 228px;
   }
   @include media-breakpoint-down(sm) {
-    width: 45.029vw;
+    width: 100%;
     height: auto;
   }
   @include mobile-between {
-    margin-right: 10vw;
-    margin-bottom: 13.450vw;
+    margin-bottom: 45px;
   }
   @include mobile {
     width: 100%;
     height: auto;
   }
 
+  &__block {
+    @include media-breakpoint-down(sm) {
+      width: 306px;
+      margin: 0 auto;
+      position: relative;
+    }
+    @include xs {
+      width: 100%;
+    }
+  }
+
   .entrance-item__discount {
     @include mobile-between {
-      height: 45vw;
+      height: 220px;
+      bottom: 6px;
     }
   }
 
@@ -37,16 +48,8 @@
       top: 33px;
     }
     @include media-breakpoint-down(sm) {
-      left: -1px;
-      bottom: 0;
-    }
-    @include mobile-between {
-      top: 3.860vw;
-    }
-    @include mobile {
-      left: -1px;
-      bottom: auto;
-      top: 41px;
+      top: 33px;
+      left: -9px;
     }
   }
 
@@ -62,10 +65,10 @@
       right: -18px;
     }
     @include media-breakpoint-down(sm) {
-      width: 9.591vw;
-      height: 9.591vw;
-      top: -2.105vw;
-      right: -18px;
+      width: 82px;
+      height: 82px;
+      top: 0;
+      right: 0;
     }
     @include mobile {
       width: 82px;
@@ -92,9 +95,6 @@
       margin-bottom: 10px;
     }
     @include media-breakpoint-down(sm) {
-      padding-top: 6.550vw;
-    }
-    @include mobile {
       padding-top: 60px;
     }
   }
@@ -115,12 +115,8 @@
       height: 385.31px;
     }
     @include media-breakpoint-down(sm) {
-      width: 33vw;
-      height: 80vw;
-    }
-    @include mobile {
-      width: 58.611vw;
-      height: 138.889vw;
+      width: 211px;
+      height: 500px;
     }
   }
 
@@ -145,14 +141,14 @@
       right: -1px;
     }
     @include media-breakpoint-down(sm) {
-      width: 35.222vw;
-      height: 86.556vw;
+      width: 260px;
+      height: 560px;
       bottom: 5px;
-      left: 7.602vw;
+      right: 0;
     }
     @include mobile {
-      width: 72.222vw;
-      height: 155.556vw;
+      width: 220px;
+      height: 560px;
       bottom: 5px;
       top: auto;
       left: 11.602vw;

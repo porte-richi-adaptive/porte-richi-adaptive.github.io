@@ -52,7 +52,7 @@ $(document).ready(function () {
         arrows: false,
         infinite: true,
         swipeToSlide: true,
-        touchThreshold: 100
+        touchThreshold: 1000
     });
 
 

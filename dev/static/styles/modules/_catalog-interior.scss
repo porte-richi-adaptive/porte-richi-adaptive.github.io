@@ -1,4 +1,6 @@
 .catalog-interior {
+  overflow: hidden;
+
   &__row {
     padding-top: 72px;
     justify-content: space-between;
@@ -83,6 +85,10 @@
       @include media-breakpoint-down(md) {
         top: -21px!important;
       }
+      @include media-breakpoint-down(sm) {
+        top: -18px!important;
+        right: -18px!important;
+      }
     }
 
     .entrance-item__favorite {
@@ -90,6 +96,10 @@
       top: 67px;
       @include media-breakpoint-down(lg) {
         top: 32px;
+      }
+      @include media-breakpoint-down(sm) {
+        top: 42px;
+        left: -9px;
       }
     }
 
