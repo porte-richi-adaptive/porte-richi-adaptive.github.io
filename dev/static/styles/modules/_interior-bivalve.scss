@@ -13,6 +13,12 @@
     margin-bottom: 45px;
   }
 
+  &:hover {
+    .entrance-item__name {
+      color: $gold;
+    }
+  }
+
 
   & .entrance-item__discount {
     @include media-breakpoint-down(md) {

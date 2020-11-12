@@ -58,7 +58,7 @@ $(document).ready(function () {
 
 
     // --- Mobile Material Filter
-    $('.filter-mobile__material').on('click', function(){
+    $('.filter-mobile__material').on('click', function() {
         $('.filter-mobile__material-dropdown').slideToggle();
         $(this).toggleClass('opened');
     });

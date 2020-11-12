@@ -1,5 +1,7 @@
 .entrance-concept {
 
+
+
   .entrance-item {
     @include section-indent;
   }
@@ -71,6 +73,12 @@
 
     @include media-breakpoint-down(lg) {
       padding-top: 81px;
+    }
+
+    &__left {
+      [data-facade='back'] {
+        display: none;
+      }
     }
 
     .entrance-item__wrap {

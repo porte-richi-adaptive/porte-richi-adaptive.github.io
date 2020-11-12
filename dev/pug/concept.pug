@@ -35,16 +35,20 @@ block content
                                 include ../static/images/content/entrance/new.svg
 
 
-        .concept-facade
+        .concept-facade.js-facade
             .container
                 .row
                     .offset-xl-1.col-xl-5.offset-lg-1.col-lg-6.offset-md-0.col-md-8.concept-facade__left
-                        .concept-facade__block
+                        .concept-facade__block(data-facade='front').js-facade-opened
                             .concept-facade__type отделка снаружи
                             h2.concept-facade__title SteelLak, &laquo;Чёрно-серый&raquo; с&nbsp;глянцем
                             p.concept-facade__text Хаотичные линии и&nbsp;выверенные пропорции обеспечивают эстетическую привлекательность модели. Игра плоских и&nbsp;объёмных квадратов придаёт фрезеровке глубину, оживляет интерьер.
                             p.concept-facade__text Дверь отлично впишется в&nbsp;современный интерьер, в&nbsp;котором преобладают акценты  на&nbsp;геометрических деталях оформления.
-
+                        .concept-facade__block(data-facade='back')
+                            .concept-facade__type отделка внутри
+                            h2.concept-facade__title SteelLak, &laquo;Чёрно-серый&raquo; с&nbsp;глянцем
+                            p.concept-facade__text Хаотичные линии и&nbsp;выверенные пропорции обеспечивают эстетическую привлекательность модели. Игра плоских и&nbsp;объёмных квадратов придаёт фрезеровке глубину, оживляет интерьер.
+                            p.concept-facade__text Дверь отлично впишется в&nbsp;современный интерьер, в&nbsp;котором преобладают акценты  на&nbsp;геометрических деталях оформления.
                     .offset-xl-3.col-xl-5.offset-lg-1.col-lg-6.offset-md-0.col-md-6.concept-facade__right
                         .concept-facade__right.js-item-resfresh
                             .entrance-item__wrap.js-item-rotate

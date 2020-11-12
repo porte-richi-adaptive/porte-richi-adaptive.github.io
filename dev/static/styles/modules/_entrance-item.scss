@@ -252,6 +252,7 @@
     pointer-events: none;
     display: flex;
     align-items: flex-end;
+    cursor: default;
     @include media-breakpoint-down(md) {
       display: none;
     }
@@ -306,6 +307,7 @@
     display: flex;
     align-items: center;
     pointer-events: none;
+    cursor: default;
     @include media-breakpoint-down(md) {
       width: 100%;
       margin-bottom: 10px;

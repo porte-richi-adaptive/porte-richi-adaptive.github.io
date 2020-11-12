@@ -225,8 +225,33 @@ defenceTabs.on('click', function() {
     });
 
     /* --- Rotate Image on First Screen --- */
-    $('.js-item-resfresh').on('click', function(e) {
+    $('.js-item-resfresh').on('click', function() {
+        const wrapper = $(this).closest('.js-facade');
+        const frontDescr = wrapper.find("[data-facade=front]");
+        const backDescr = wrapper.find("[data-facade=back]");
+        const openClass = 'js-facade-opened';
+
+        if( frontDescr.hasClass(openClass) ) {
+
+            frontDescr.fadeOut(0);
+            backDescr.fadeIn(250);
+
+            frontDescr.removeClass(openClass);
+            backDescr.addClass(openClass);
+
+        } else {
+
+            backDescr.fadeOut(0);
+            frontDescr.fadeIn(250);
+
+            backDescr.removeClass(openClass);
+            frontDescr.addClass(openClass);
+        }
+
+
         $(this).find('.js-item-rotate').toggleClass('rotate');
+        console.dir(wrapper);
+        console.dir(frontDescr);
     });
 
     /* --- Search Tabs --- */
