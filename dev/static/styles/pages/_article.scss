@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
   width: 54%;
-  height: 767px;
+  height: 707px;
   position: absolute;
   right: 0;
   top: 0;
@@ -901,12 +901,11 @@ ul.article-step__list {
   width: 100%;
 }
 
-@include media-breakpoint-down(lg) {
-  .top-article-container {
-    margin-left: 64px;
-    width: 532px;
-  }
+.black{
+  color: #000000!important;
+}
 
+@include media-breakpoint-down(lg) {
   .article-blog__breadcrumb {
     padding-bottom: 5px;
   }
@@ -933,9 +932,8 @@ ul.article-step__list {
   }
 
   .article-blog__right {
-    position: static;
-    height: 564px;
-    width: 737px;
+    height: 563px;
+    width: 55%;
   }
 
   .article-blog__title {
@@ -945,6 +943,7 @@ ul.article-step__list {
   .article-blog__tags {
     padding-top: 0;
     flex-wrap: wrap;
+    padding-bottom: 75px;
   }
   .article-blog__tag {
     margin-bottom: 18px;
@@ -984,6 +983,11 @@ ul.article-step__list {
     line-height: 40px;
     max-width: 285px;
     margin-right: 68px;
+  }
+
+  .article-about__text b{
+    font-size: 20px;
+    line-height: 27px;
   }
 
   .article-video__text {
@@ -1096,17 +1100,6 @@ ul.article-step__list {
     margin-bottom: 11px;
   }
 
-  .article__slider-wrap.owl-carousel {
-    width: 794px;
-  }
-
-  .owl-item {
-    width: 793px !important;
-  }
-
-  .owl-stage {
-    width: 7762px !important;
-  }
 }
 
 @include media-breakpoint-down(md) {
@@ -1122,11 +1115,6 @@ ul.article-step__list {
 
   .breadcrumbs__list {
     margin-bottom: 5px;
-  }
-
-  .top-article-container {
-    margin-left: 45px;
-    width: 618px;
   }
 
   .article-blog__title {
@@ -1297,10 +1285,6 @@ ul.article-step__list {
     line-height: 18px;
   }
 
-  .owl-item {
-    width: 766px !important;
-  }
-
   .article__slider-img {
     margin-bottom: 27px;
   }
@@ -1343,6 +1327,7 @@ ul.article-step__list {
   .article-blog__right {
     height: 198px;
     width: 306px;
+    margin-left: 27px;
   }
 
   .article-about {
@@ -1428,18 +1413,13 @@ ul.article-step__list {
     height: 297px;
     padding-left: 28px;
     padding-top: 37px;
-    width: 306px;
-    margin-left: 26px;
+    width: auto;
+    margin: 0 27px;
+    padding-right: 32px;
   }
 
   .article-step__comment p {
-    width: 246px;
-  }
-
-  .owl-item{
-    width: 306px!important;
-    height: 424px;
-    margin-left: 24px;
+    width: auto;
   }
 }
 
