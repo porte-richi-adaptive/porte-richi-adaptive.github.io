@@ -250,37 +250,45 @@ defenceTabs.on('click', function() {
 
 
         $(this).find('.js-item-rotate').toggleClass('rotate');
-        console.dir(wrapper);
-        console.dir(frontDescr);
     });
 
     /* --- Search Tabs --- */
 
     const searchTabs = $('[data-search-tab]');
     const activeTabClass = 'entrance-search__item--active';
+    const searchEntranceSection = $('.entrance-search');
+    const searchEntrancePages = $('[data-search-page]');
 
-    const searchTabsOptions = {
-        variableWidth: true,
-        infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        nextArrow: $('.entrance-search__arrows-right'),
-        prevArrow: $('.entrance-search__arrows-left'),
-        dots: false,
-        responsive: [
-           /* {
-                breakpoint: 1195,
-                settings: {
-                    variableWidth: true,
-                    swipeToSlide: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    touchThreshold: 500
+    searchEntrancePages.each(function(i, el) {
+        const carousel = $(el).find('.entrance-search__carousel');
+
+        const nextArrow = $(el).find('.entrance-search__arrows-right');
+        const prevArrow = $(el).find('.entrance-search__arrows-left');
+
+        const searchTabsOptions = {
+            variableWidth: true,
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            nextArrow: nextArrow,
+            prevArrow: prevArrow,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 856,
+                    settings: {
+                        variableWidth: true,
+                        swipeToSlide: true,
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        touchThreshold: 100
+                    }
                 }
-            }*/
-        ]
-    };
+            ]
+        };
 
+        carousel.slick(searchTabsOptions);
+    });
 
 
     searchTabs.removeClass(activeTabClass);
@@ -288,14 +296,25 @@ defenceTabs.on('click', function() {
 
     searchTabs.on('click', function() {
         const tabNumber = $(this).data('search-tab');
+        const activePage = $(`[data-search-page=${tabNumber}]`);
 
         if( $(this).hasClass(activeTabClass) ) {
             return false;
         }
 
+        searchEntrancePages.removeClass('opened');
+        activePage.addClass('opened');
+
         searchTabs.removeClass(activeTabClass);
         $(this).addClass(activeTabClass);
 
+       $('.entrance-search__controll').removeClass('opened');
+       $('.entrance-search__dropdown-text ').text( $(this).text() );
+
+    });
+
+    $('.entrance-search__dropdown').on('click', function() {
+        $('.entrance-search__controll').toggleClass('opened');
     });
 
 

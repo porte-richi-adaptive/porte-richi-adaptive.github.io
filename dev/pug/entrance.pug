@@ -562,25 +562,100 @@ block content
                    h2.entrance-search__title Подбирайте фурнитуру к цвету отделки и интерьеру
             .row
                 .col-xl-16
-                    .entrance-search__controll
-                        .entrance-search__item.entrance-search__item--active(data-search-tab='1') «бронза»
-                        .entrance-search__item(data-search-tab='2') «хром»
-                        .entrance-search__item(data-search-tab='3') «золото»
-                        .entrance-search__item(data-search-tab='4') «сатин»
+                    .entrance-search__dropdown
+                        .entrance-search__dropdown-text «бронза»
+                        img(src='static/images/content/entrance/min-arrow-down.svg', alt='').entrance-search__dropdown-arrow
+                    .entrance-search__controll-block
+                        .entrance-search__controll
+                            .entrance-search__item.entrance-search__item--active(data-search-tab='1') «бронза»
+                            .entrance-search__item(data-search-tab='2') «хром»
+                            .entrance-search__item(data-search-tab='3') «золото»
+                            .entrance-search__item(data-search-tab='4') «сатин»
             .row
-                .col-xl-4
+                .col-xl-4.col-lg-4.entrance-search__left
                     .entrance-search__view
                         .entrance-search__view-img
-                        p.entrance-search__view-text Накладка и&nbsp;броненакладка подбираются под цвет ручек. Предотвращают взлом входной двери механическим способом.
-                        .entrance-search__view-tip Входят в стоимость
-                .offset-xl-2.col-xl-9
-                    .entrance-search__block(data-search-page='1')
+                        .entrance-search__view-block
+                            p.entrance-search__view-text Накладка и&nbsp;броненакладка подбираются под цвет ручек. Предотвращают взлом входной двери механическим способом.
+                            .entrance-search__view-tip Входят в стоимость
+                .offset-xl-2.col-xl-9.offset-lg-1.col-lg-10.entrance-search__right
+                    .entrance-search__block(data-search-page='1').opened
+                            .entrance-search__arrows
+                                .arrow.entrance-search__arrows-left
+                                    include ../static/images/content/entrance/level-arrow-left.svg
+                                .arrow.entrance-search__arrows-right
+                                    include ../static/images/content/entrance/level-arrow-right.svg
+                            .entrance-search__carousel
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava11
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava12
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava13
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava14
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+
+                    .entrance-search__block(data-search-page='2')
+                            .entrance-search__arrows
+                                .arrow.entrance-search__arrows-left
+                                    include ../static/images/content/entrance/level-arrow-left.svg
+                                .arrow.entrance-search__arrows-right
+                                    include ../static/images/content/entrance/level-arrow-right.svg
+                            .entrance-search__carousel
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava2
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__slide
+                                    img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                    p.entrance-search__view-text Ручка Armadillo Pava
+                                    .entrance-search__view-tip Входит в максимальную комплектацию
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                    .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+
+                    .entrance-search__block(data-search-page='3')
                         .entrance-search__arrows
                             .arrow.entrance-search__arrows-left
                                 include ../static/images/content/entrance/level-arrow-left.svg
                             .arrow.entrance-search__arrows-right
                                 include ../static/images/content/entrance/level-arrow-right.svg
-                            .entrance-search__carousel
+                        .entrance-search__carousel
+                            .entrance-search__slide
+                                img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                p.entrance-search__view-text Ручка Armadillo Pava3
+                                .entrance-search__view-tip Входит в максимальную комплектацию
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                             .entrance-search__slide
                                 img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
                                 p.entrance-search__view-text Ручка Armadillo Pava
@@ -588,19 +663,31 @@ block content
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                             .entrance-search__slide
+                                img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
                                 p.entrance-search__view-text Ручка Armadillo Pava
-                                img(src='static/images/content/entrance/furniture-3.png', alt='').entrance-search__slide-img
+                                .entrance-search__view-tip Входит в максимальную комплектацию
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                            .entrance-search__slide
+                                img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                p.entrance-search__view-text Ручка Armadillo Pava
                                 .entrance-search__view-tip Входит в максимальную комплектацию
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
 
-                    .entrance-search__block(data-search-page='2')
+                    .entrance-search__block(data-search-page='4')
                         .entrance-search__arrows
                             .arrow.entrance-search__arrows-left
                                 include ../static/images/content/entrance/level-arrow-left.svg
                             .arrow.entrance-search__arrows-right
                                 include ../static/images/content/entrance/level-arrow-right.svg
-                            .entrance-search__carousel
+                        .entrance-search__carousel
+                            .entrance-search__slide
+                                img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                p.entrance-search__view-text Ручка Armadillo Pava4
+                                .entrance-search__view-tip Входит в максимальную комплектацию
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                             .entrance-search__slide
                                 img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
                                 p.entrance-search__view-text Ручка Armadillo Pava
@@ -608,8 +695,14 @@ block content
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                             .entrance-search__slide
+                                img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
                                 p.entrance-search__view-text Ручка Armadillo Pava
-                                img(src='static/images/content/entrance/furniture-3.png', alt='').entrance-search__slide-img
+                                .entrance-search__view-tip Входит в максимальную комплектацию
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                                .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
+                            .entrance-search__slide
+                                img(src='static/images/content/entrance/furniture-2.png', alt='').entrance-search__slide-img
+                                p.entrance-search__view-text Ручка Armadillo Pava
                                 .entrance-search__view-tip Входит в максимальную комплектацию
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации
                                 .entrance-search__view-tip + 35&nbsp;рублей к&nbsp;базовой или оптимальной компектации

@@ -3414,25 +3414,202 @@
   }
 
   &-search {
+    @include section-indent;
+    @include media-breakpoint-down(sm) {
+      overflow: hidden;
+    }
+
+    &__dropdown {
+      font-family: $minion-display;
+      font-size: 21px;
+      line-height: 22px;
+      height: 45px;
+      background-color: $gray-5;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 18px;
+      padding-right: 18px;
+      display: none;
+      cursor: pointer;
+      margin-bottom: 36px;
+
+      @include media-breakpoint-down(sm) {
+        display: flex;
+      }
+    }
+
+    &__carousel {
+      @include media-breakpoint-down(lg) {
+
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: 0;
+      }
+    }
+
+    &__left {
+      @include media-breakpoint-down(md) {
+        order: 2;
+      }
+    }
+
+    &__right {
+      @include media-breakpoint-down(md) {
+        order: 1;
+      }
+    }
 
     &__title {
       text-align: center;
       margin-bottom: 36px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 27px;
+      }
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+      }
+    }
+
+    &__block {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      will-change: height, visibility, opacity;
+
+      @include media-breakpoint-down(md) {
+        width: 652px;
+        margin: 0 auto;
+      }
+
+      &:not(.opened) {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    &__arrows {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      & .arrow {
+        cursor: pointer;
+
+        &:hover {
+          path {
+            fill: $gold;
+          }
+        }
+
+        path {
+          fill: $gray;
+          transition: $transition-base;
+        }
+
+        &.slick-disabled {
+          cursor: default;
+          path {
+            fill: $gray-1;
+          }
+          &:hover {
+            path {
+              fill: $gray-1;
+            }
+          }
+        }
+      }
+
+      &-left {
+        position: absolute;
+        left: -92px;
+        top: calc( 50% - 24px );
+        transition: $transition-base;
+        @include media-breakpoint-down(lg) {
+          left: -45px;
+          top: calc( 50% - 38px );
+        }
+      }
+
+      &-right {
+        position: absolute;
+        right: -81px;
+        top: calc( 50% - 24px );
+        transition: $transition-base;
+        @include media-breakpoint-down(lg) {
+          top: calc( 50% - 38px );
+          right: -46px;
+        }
+      }
     }
 
     &__view {
       background-image: linear-gradient(110.37deg, #F8F8F8 13.54%, #EDEDED 86.46%);
       border-radius: 9px;
       padding: 4px 33px 18px 27px;
+      margin-top: -12px;
+      @include media-breakpoint-down(lg) {
+        margin-top: -40px;
+        padding: 4px 27px 18px 18px;
+      }
+      @include media-breakpoint-down(md) {
+        display: flex;
+        padding: 0 118px 0 27px;
+        margin-top: 45px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 18px 9px 27px 18px;
+        flex-direction: column;
+      }
+
+      .entrance-search__view-text {
+        @include media-breakpoint-down(lg) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+
+      .entrance-search__view-tip {
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+
+      &-block {
+        @include media-breakpoint-down(md) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+
       &-img {
         margin-bottom: 13px;
         display: block;
         width: 179px;
         height: 188px;
         object-fit: fill;
+        background-color: $gray;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 21px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 113px;
+          height: 118px;
+          margin-bottom: 0;
+          margin-right: 27px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 9px;
+        }
       }
       &-text {
         margin-bottom: 9px;
+        @include media-breakpoint-down(lg) {
+          font-size: 20px;
+          line-height: 27px;
+        }
       }
       &-tip {
         margin-bottom: 5px;
@@ -3441,19 +3618,79 @@
         line-height: 22px;
         font-family: $rft-font;
         font-weight: $semi-bold;
+        @include media-breakpoint-down(lg) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 9px;
+        }
       }
     }
 
     &__slide {
+      width: 333px;
+      outline: none;
+      @include media-breakpoint-down(lg) {
+        width: 317px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 297px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 218px;
+      }
+
+      &.slick-slide {
+        display: block;
+        margin: 0 54px;
+        @include media-breakpoint-down(lg) {
+          margin: 0 14px;
+        }
+        @include media-breakpoint-down(md) {
+          margin: 0 16px;
+        }
+      }
+
       &-img {
         margin-bottom: 27px;
+        width: 100%;
+        height: auto;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 36px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 9px;
+        }
       }
     }
 
     &__controll {
       display: flex;
       justify-content: center;
-      margin-bottom: 84px;
+      margin-bottom: 94px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 78px;
+      }
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+        display: none;
+        position: absolute;
+        top: -36px;
+        left: 0;
+
+        &.opened {
+          display: block;
+          width: 100%;
+          height: auto;
+          z-index: 10;
+        }
+
+        &-block {
+          position: relative;
+        }
+      }
+
     }
 
     &__item {
@@ -3465,6 +3702,16 @@
       text-transform: uppercase;
       transition: $transition-base;
       cursor: pointer;
+
+      @include media-breakpoint-down(sm) {
+        height: 45px;
+        background-color: $gray-5;
+        padding-left: 18px;
+        width: 100%;
+        align-items: center;
+        display: flex;
+      }
+
       &:hover {
         color: $gold;
       }
@@ -3478,6 +3725,9 @@
       }
       &:not(:last-child) {
         margin-right: 47px;
+        @include media-breakpoint-down(sm) {
+          margin-right: 0;
+        }
       }
     }
   }
