@@ -3548,12 +3548,12 @@
       border-radius: 9px;
       padding: 4px 33px 18px 27px;
       margin-top: -12px;
+      display: none;
       @include media-breakpoint-down(lg) {
         margin-top: -40px;
         padding: 4px 27px 18px 18px;
       }
       @include media-breakpoint-down(md) {
-        display: flex;
         padding: 0 118px 0 27px;
         margin-top: 45px;
       }
@@ -3561,6 +3561,15 @@
         padding: 18px 9px 27px 18px;
         flex-direction: column;
       }
+
+      &--open {
+        display: block;
+        @include media-breakpoint-down(md) {
+          display: flex;
+        }
+      }
+
+
 
       .entrance-search__view-text {
         @include media-breakpoint-down(lg) {

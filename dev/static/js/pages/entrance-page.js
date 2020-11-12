@@ -297,10 +297,14 @@ defenceTabs.on('click', function() {
     searchTabs.on('click', function() {
         const tabNumber = $(this).data('search-tab');
         const activePage = $(`[data-search-page=${tabNumber}]`);
+        const activeDescr = $(`[data-search-block=${tabNumber}]`);
 
         if( $(this).hasClass(activeTabClass) ) {
             return false;
         }
+
+        $('[data-search-block]').removeClass('entrance-search__view--open');;
+        activeDescr.addClass('entrance-search__view--open');
 
         searchEntrancePages.removeClass('opened');
         activePage.addClass('opened');

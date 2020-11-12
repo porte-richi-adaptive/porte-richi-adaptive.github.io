@@ -228,11 +228,15 @@ $(document).ready(function () {
   searchTabs.on('click', function () {
     var tabNumber = $(this).data('search-tab');
     var activePage = $("[data-search-page=".concat(tabNumber, "]"));
+    var activeDescr = $("[data-search-block=".concat(tabNumber, "]"));
 
     if ($(this).hasClass(activeTabClass)) {
       return false;
     }
 
+    $('[data-search-block]').removeClass('entrance-search__view--open');
+    ;
+    activeDescr.addClass('entrance-search__view--open');
     searchEntrancePages.removeClass('opened');
     activePage.addClass('opened');
     searchTabs.removeClass(activeTabClass);
