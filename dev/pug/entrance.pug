@@ -513,6 +513,10 @@ block content
                                         img(src='static/images/content/entrance/choose-2.png', alt='')
                                         .entrance-choose__slide-name PVC
                                         .entrance-choose__slide-color «Дуб миндальный»
+                                    .entrance-choose__slide
+                                        img(src='static/images/content/entrance/choose-2.png', alt='')
+                                        .entrance-choose__slide-name PVC
+                                        .entrance-choose__slide-color «Дуб миндальный»
 
                                 .entrance-choose__controll
                                     .entrance-choose__numbers
@@ -1067,10 +1071,20 @@ block content
                     img(src='static/images/content/entrance/models.jpg', alt='').entrance-models__banner
                     a(href="#").entrance-models__link.entrance-models__link--mobile перейти в каталог
 
-    .material-gallery
+    .material-gallery.js-material-gallery
+        .material-gallery__close
+            include ../static/images/icons/modal-close-i.svg
         .material-gallery__container
-            .material-gallery__list
-                .material-gallery__item
+            .material-gallery__controll
+                .material-gallery__left.arrow
+                    include ../static/images/content/entrance/material-left.svg
+                .material-gallery__right.arrow
+                    include ../static/images/content/entrance/material-right.svg
+
+            .material-gallery__list.js-material-gallery-list
+               // .material-gallery__item
+                    img(src='static/images/content/entrance/material.png', alt='').material-gallery__img
+                    span.material-gallery__name PVC, «Дуб грей»
 
 
     .simple-modal(data-simple-modal='create', data-modal-type='simple')
@@ -1079,6 +1093,8 @@ block content
         .simple-modal__container(data-simple-container)
             .simple-modal__item
                 img(src='', alt='', data-simple-img).simple-modal__picture
+
+
 
 
 

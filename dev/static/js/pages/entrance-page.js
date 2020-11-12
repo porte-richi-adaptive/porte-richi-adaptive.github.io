@@ -322,6 +322,64 @@ defenceTabs.on('click', function() {
     });
 
 
+    /* --- Material Gallery Pop-Up --- */
+
+    $('.entrance-choose__slide').on('click', function() {
+
+        const materialGalleryCarousel = $(this).closest('.entrance-choose__carousel');
+        const materialGalleryCollection = materialGalleryCarousel.find('.entrance-choose__slide');
+        const modalCarousel = $('.js-material-gallery-list');
+        const gallery = $('.js-material-gallery');
+        let modalCollection = [];
+
+        materialGalleryCollection.each(function(i, el) {
+            const item = $(el);
+            const itemImg = item.find('img').attr('src');
+            const itemName = item.find('.entrance-choose__slide-name').text();
+            const itemColor = item.find('.entrance-choose__slide-color').text();
+            const result = {
+                src: itemImg,
+                name: `${itemName}, ${itemColor}`
+            };
+
+            modalCollection.push(result);
+            return true;
+        });
+
+        modalCollection.forEach(function(e, i) {
+            const scheme =
+             `
+                <div class="material-gallery__item">
+                    <img src="${e.src}" alt="${e.name}">
+                    <span class="material-gallery__name">
+                        ${e.name}
+                    </span>
+                </div>
+            `;
+            modalCarousel.append(scheme);
+        });
+
+        $('.js-material-gallery-list').slick({
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            nextArrow: $('.material-gallery__right'),
+            prevArrow: $('.material-gallery__left'),
+            dots: true,
+        });
+
+        gallery.addClass('opened');
+    });
+
+    $('.material-gallery__close').on('click', function() {
+        const carousel = $('.js-material-gallery-list ');
+
+        carousel.slick('unslick');
+        $('.material-gallery__item').remove();
+        $('.js-material-gallery').removeClass('opened');
+    });
+
+
 
 
 });

@@ -247,4 +247,44 @@ $(document).ready(function () {
   $('.entrance-search__dropdown').on('click', function () {
     $('.entrance-search__controll').toggleClass('opened');
   });
+  /* --- Material Gallery Pop-Up --- */
+
+  $('.entrance-choose__slide').on('click', function () {
+    var materialGalleryCarousel = $(this).closest('.entrance-choose__carousel');
+    var materialGalleryCollection = materialGalleryCarousel.find('.entrance-choose__slide');
+    var modalCarousel = $('.js-material-gallery-list');
+    var gallery = $('.js-material-gallery');
+    var modalCollection = [];
+    materialGalleryCollection.each(function (i, el) {
+      var item = $(el);
+      var itemImg = item.find('img').attr('src');
+      var itemName = item.find('.entrance-choose__slide-name').text();
+      var itemColor = item.find('.entrance-choose__slide-color').text();
+      var result = {
+        src: itemImg,
+        name: "".concat(itemName, ", ").concat(itemColor)
+      };
+      modalCollection.push(result);
+      return true;
+    });
+    modalCollection.forEach(function (e, i) {
+      var scheme = "\n                <div class=\"material-gallery__item\">\n                    <img src=\"".concat(e.src, "\" alt=\"").concat(e.name, "\">\n                    <span class=\"material-gallery__name\">\n                        ").concat(e.name, "\n                    </span>\n                </div>\n            ");
+      modalCarousel.append(scheme);
+    });
+    $('.js-material-gallery-list').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: $('.material-gallery__right'),
+      prevArrow: $('.material-gallery__left'),
+      dots: true
+    });
+    gallery.addClass('opened');
+  });
+  $('.material-gallery__close').on('click', function () {
+    var carousel = $('.js-material-gallery-list ');
+    carousel.slick('unslick');
+    $('.material-gallery__item').remove();
+    $('.js-material-gallery').removeClass('opened');
+  });
 });

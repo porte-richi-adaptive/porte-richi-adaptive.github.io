@@ -3493,6 +3493,10 @@
       height: 100%;
       position: absolute;
 
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+
       & .arrow {
         cursor: pointer;
 
