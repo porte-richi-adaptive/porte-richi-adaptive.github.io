@@ -3590,9 +3590,9 @@
         width: 179px;
         height: 188px;
         object-fit: fill;
-        background-color: $gray;
         @include media-breakpoint-down(lg) {
           margin-bottom: 21px;
+
         }
         @include media-breakpoint-down(md) {
           width: 113px;
