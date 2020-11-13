@@ -2,6 +2,38 @@
   width: 100%;
 
   &--second {
+
+    .callback__over {
+      @include media-breakpoint-down(md) {
+        height: 100%;
+
+        .callback__pic {
+          bottom: 0;
+        }
+
+        .callback__about {
+          bottom: 18px;
+        }
+
+        .callback__special {
+          padding-left: 208px;
+          max-width: 444px;
+        }
+
+      }
+      @include media-breakpoint-down(sm) {
+        .callback__special {
+          padding-left: 18px;
+          padding-right: 18px;
+          max-width: 100%;
+          margin-top: 18px;
+          margin-bottom: 27px;
+
+        }
+      }
+    }
+
+
     .callback__title {
       max-width: 316px;
     }
@@ -288,6 +320,11 @@
       width: 149px;
       height: 172px;
       top: 27px;
+    }
+    @include media-breakpoint-down(sm) {
+      position: static;
+      margin-top: -27px;
+      padding-left: 18px;
     }
   }
 
