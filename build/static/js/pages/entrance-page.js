@@ -254,7 +254,9 @@ $(document).ready(function () {
     var materialGalleryCollection = materialGalleryCarousel.find('.entrance-choose__slide');
     var modalCarousel = $('.js-material-gallery-list');
     var gallery = $('.js-material-gallery');
+    var sliderIndex = $(this).index();
     var modalCollection = [];
+    console.dir(sliderIndex);
     materialGalleryCollection.each(function (i, el) {
       var item = $(el);
       var itemImg = item.find('img').attr('src');
@@ -279,12 +281,15 @@ $(document).ready(function () {
       prevArrow: $('.material-gallery__left'),
       dots: true
     });
+    $('.js-material-gallery-list').slick('slickGoTo', sliderIndex);
     gallery.addClass('opened');
+    $('body').css('overflow', 'hidden');
   });
   $('.material-gallery__close').on('click', function () {
     var carousel = $('.js-material-gallery-list ');
     carousel.slick('unslick');
     $('.material-gallery__item').remove();
     $('.js-material-gallery').removeClass('opened');
+    $('body').css('overflow', 'auto');
   });
 });

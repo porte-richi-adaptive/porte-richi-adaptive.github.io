@@ -284,12 +284,17 @@
     left: 50px;
     bottom: 53px;
     @include media-breakpoint-down(md) {
-      position: static;
+      position: absolute;
+      width: 149px;
+      height: 172px;
+      top: 27px;
     }
   }
 
   &__special {
-    
+    @include media-breakpoint-down(md) {
+
+    }
   }
 
 

@@ -330,7 +330,10 @@ defenceTabs.on('click', function() {
         const materialGalleryCollection = materialGalleryCarousel.find('.entrance-choose__slide');
         const modalCarousel = $('.js-material-gallery-list');
         const gallery = $('.js-material-gallery');
+        const sliderIndex = $(this).index();
         let modalCollection = [];
+        console.dir(sliderIndex);
+
 
         materialGalleryCollection.each(function(i, el) {
             const item = $(el);
@@ -368,7 +371,10 @@ defenceTabs.on('click', function() {
             dots: true,
         });
 
+        $('.js-material-gallery-list').slick('slickGoTo', sliderIndex);
+
         gallery.addClass('opened');
+        $('body').css('overflow', 'hidden');
     });
 
     $('.material-gallery__close').on('click', function() {
@@ -377,6 +383,7 @@ defenceTabs.on('click', function() {
         carousel.slick('unslick');
         $('.material-gallery__item').remove();
         $('.js-material-gallery').removeClass('opened');
+        $('body').css('overflow', 'auto');
     });
 
 
