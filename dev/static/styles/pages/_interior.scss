@@ -1,0 +1,252 @@
+.interior {
+  padding-top: 81px;
+
+  &-first {
+
+    .entrance-item__new {
+      right: -18px;
+    }
+
+    &__description {
+      width: 386px;
+    }
+    
+    &__variant {
+      width: 422px;
+    }
+
+    &__picture {
+      position: relative;
+
+      .entrance-item__name {
+        bottom: 56px;
+        top: auto;
+        left: -27px;
+        right: calc(100% + 27px);
+      }
+    }
+
+    &--single {
+      background-image: url('#{$img-url}/content/interior/interior-first-bg.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+
+      .interior-first__description {
+        margin-right: 36px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 31px;
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__breadcrumbs {
+      margin-top: 4px;
+      margin-bottom: 18px;
+
+      .breadcrumbs__wrap {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &__table {
+      border-top: 1px solid $gray-1;
+      border-bottom: 1px solid $gray-1;
+    }
+
+    &__row {
+
+      display: flex;
+      justify-content: space-between;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      &:not(:last-child){
+        border-bottom: 1px solid $gray-1;
+      }
+    }
+
+    &__char {
+      @include rft-txt;
+      color: $gray;
+    }
+
+    &__val {
+      position: relative;
+      &:hover {
+        .interior-first__brand {
+          visibility: visible;
+          opacity: 1;
+          height: auto;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &__simple {
+      @include rft-txt;
+    }
+
+    &__brand {
+      position: absolute;
+      top: calc(100% + 18px);
+      left: 0;
+      width: 269px;
+      min-height: 284px;
+      background-color: $gray-2;
+      padding: 22px 18px 27px;
+      z-index: 100;
+      transition: $transition-base;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transform: translateY(30px);
+      &:before {
+        content: '';
+        width: 100%;
+        height: 18px;
+        position: absolute;
+        top: -18px;
+        left: 0;
+      }
+      &-logo {
+        margin-bottom: 18px;
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 22px;
+        color: $white;
+        text-transform: none;
+      }
+
+      & + .interior-first__simple {
+        display: inline-block;
+        border-bottom: 1px dashed $black;
+        cursor: pointer;
+      }
+    }
+
+    &__block {
+      background-color: $white;
+      padding: 27px 27px 36px;
+    }
+
+    &__section {
+      margin-bottom: 27px;
+    }
+
+    &__material {
+      @include rft-txt;
+      color: $gray;
+      margin-bottom: 9px;
+    }
+
+    &__item {
+      margin-bottom: 18px;
+    }
+    
+    &__colors {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__subtitle {
+      margin-bottom: 9px;
+    }
+
+    &__tip {
+      position: absolute;
+      padding: 9px;
+      font-size: 14px;
+      line-height: 14px;
+      color: $white;
+      font-style: italic;
+      bottom: calc( 100% + 9px);
+      left: 0;
+      background-color: $gray-6;
+      z-index: 1;
+      white-space: nowrap;
+      transition: $transition-base;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    &__color {
+      width: 20px;
+      height: 20px;
+      background-color: #D2C8BC;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .interior-first__tip {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+
+      &--active {
+        cursor: default;
+        pointer-events: none;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          border-radius: 50%;
+          width: 28px;
+          height: 28px;
+          border: 1px solid $gray;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    &--square {
+      margin-top: 15px;
+      margin-bottom: 24px;
+
+      .interior-first__color {
+        border-radius: 0;
+        background-image: url(#{$img-url}/content/interior/interior-color.jpg);
+
+        &--active {
+
+          &:first-child {
+            margin-left: 4px;
+          }
+
+          &:before {
+            border-radius: 0;
+            width: 30px;
+            height: 30px;
+            left: -5px;
+            top: -5px;
+          }
+        }
+      }
+    }
+
+    &__form {
+      display: none;
+    }
+
+  }
+
+
+}

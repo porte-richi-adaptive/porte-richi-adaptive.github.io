@@ -387,7 +387,24 @@ defenceTabs.on('click', function() {
     });
 
 
+    /* --- Item Color Picker --- */
+    $('.js-item-color').on('click', function() {
+        const src = $(this).data('item-color');
+        const pic = $('.js-first-screen');
+        const wrap = $(this).closest('.interior-first__colors');
+        const coll = wrap.find('.interior-first__color');
 
+
+        console.dir(coll);
+        coll.removeClass('interior-first__color--active');
+        $(this).addClass('interior-first__color--active');
+
+        pic.fadeOut(250, function() {
+            $(this).attr('src',src);
+        })
+            .fadeIn(250)
+
+    });
 
 });
 

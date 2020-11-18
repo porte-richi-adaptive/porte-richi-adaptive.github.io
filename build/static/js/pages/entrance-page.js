@@ -292,4 +292,18 @@ $(document).ready(function () {
     $('.js-material-gallery').removeClass('opened');
     $('body').css('overflow', 'auto');
   });
+  /* --- Item Color Picker --- */
+
+  $('.js-item-color').on('click', function () {
+    var src = $(this).data('item-color');
+    var pic = $('.js-first-screen');
+    var wrap = $(this).closest('.interior-first__colors');
+    var coll = wrap.find('.interior-first__color');
+    console.dir(coll);
+    coll.removeClass('interior-first__color--active');
+    $(this).addClass('interior-first__color--active');
+    pic.fadeOut(250, function () {
+      $(this).attr('src', src);
+    }).fadeIn(250);
+  });
 });
