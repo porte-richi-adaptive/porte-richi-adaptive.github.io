@@ -7,6 +7,7 @@ block variables
 - var grayModifierBig = '';
 - var grayModifierBig = '';
 - var entranceFirstScreenBg = '';
+- var whiteModifier = '';
 
 if headerGrayBackground
     - var grayModifier = 'main-container--gray';
@@ -16,6 +17,9 @@ if headerGrayBackgroundBig
 
 if conceptEntranceFirst
     - var entranceFirstScreenBg = 'main-container--entrance-concept';
+
+if headerWhite
+    - var whiteModifier = 'main-container--white';
 
 doctype html
 html(lang="ru-RU")
@@ -33,7 +37,7 @@ html(lang="ru-RU")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
         <![endif]-->
     body
-        div(class=`main-container ${grayModifier} ${grayModifierBig} ${entranceFirstScreenBg}`)
+        div(class=`main-container ${grayModifier} ${grayModifierBig} ${entranceFirstScreenBg} ${whiteModifier}`)
             include ../modules/header/header
             main.main
                 block content

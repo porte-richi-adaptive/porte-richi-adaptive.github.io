@@ -4,6 +4,29 @@
     padding-top: 45px;
   }
 
+  /* --- Bivalve --- */
+  .interior-first--bivalve {
+
+    .interior-first__variant {
+      width: 598px;
+    }
+
+
+
+    .entrance-item__name {
+      bottom: 56px;
+      top: auto;
+      left: calc(100% + 18px);
+      right: calc(100% + 18px);
+    }
+
+    .interior-first__mobile.interior-first__none {
+      display: block;
+    }
+
+  }
+
+
   /* --- Simple --- */
   .interior-first--simple {
     @include media-breakpoint-down(sm) {
@@ -25,6 +48,9 @@
 
   &-first {
     @include section-indent;
+    background-color: $white-1;
+    
+    
     @include media-breakpoint-down(md) {
       margin-bottom: 0;
       overflow: hidden;
@@ -484,7 +510,25 @@
     &__form {
       display: none;
     }
+  }
 
+  &-classic {
+    @include section-indent;
+
+    &__left {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      &:before {
+        content: '';
+        width: 536px;
+        height: 737px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid $gold;
+      }
+    }
   }
 
 

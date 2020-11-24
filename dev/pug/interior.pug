@@ -2,17 +2,18 @@ extends template/main
 
 block variables
     - var title = 'Входная и межкомнатные двери в одном стиле';
-    - var headerGrayBackground = true;
-    - var headerGrayBackgroundBig = true;
+    - var headerGrayBackground = false;
+    - var headerGrayBackgroundBig = false;
+    - var headerWhite = true;
 
 block content
     .interior
-        section.interior-first.interior-first--single.interior-first--simple
+        section.interior-first.interior-first--single.interior-first--bivalve
             .container
                 .row
                     .col-16
                         .interior-first__wrap
-                            .interior-first__description
+                            //.interior-first__description
                                 .interior-first__controll
                                     .interior-first__breadcrumbs
                                     .breadcrumbs__wrap
@@ -44,7 +45,7 @@ block content
 
 
                             .interior-first__picture
-                                img(src='static/images/content/interior/interior-single.jpg', alt='').interior-first__door.js-first-screen
+                                img(src='static/images/content/interior/interior-bivalve.jpg', alt='').interior-first__door.js-first-screen
                                 span.entrance-item__name Строганный шпон, Американский орех
 
                             .interior-first__variant
@@ -71,22 +72,6 @@ block content
                                                 .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single.jpg')
                                                     .interior-first__tip Лакобель, 6 мм
 
-                                        .interior-first__item
-                                            .interior-first__material Шпон и эмаль
-                                            .interior-first__colors
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.interior-first__color--active
-
-                                        .interior-first__item
-                                            .interior-first__material Строганный шпон
-                                            .interior-first__colors
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.interior-first__color--active
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
 
                                     h3.interior-first__subtitle Стекло
                                     .interior-first__section
@@ -104,19 +89,6 @@ block content
                                                 .interior-first__color.interior-first__color--active
                                                 .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
 
-                                        .interior-first__item
-                                            .interior-first__material Каленое стекло
-                                            .interior-first__colors.interior-first--square
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.interior-first__color--active
-
-                                        .interior-first__item
-                                            .interior-first__material Каленое стекло
-                                            .interior-first__colors.interior-first--square
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
-                                                .interior-first__color.js-item-color(data-item-color='static/images/content/interior/interior-single-2.png')
 
                                     .interior-first__controll
                                         .entrance-item__price
@@ -249,6 +221,30 @@ block content
                                         .interior-first__offer
                                             .entrance-item__btn.interior-first__add Добавить к заказу
                                             a(href="#").entrance-item__btn.interior-first__form перейти к оформлению
+
+
+        .entrance-view
+            .container
+                .row
+                    .col-16
+                        .entrance-view__block
+                            h2.entrance-view__title Посмотрите образец по адресу
+                            .entrance-view__address пр-те Дзержинского, 125
+                            .entrance-view__address пр-те Олешева, 1
+                            .entrance-view__img
+            img(src='static/images/content/entrance/view-m.png', alt='').entrance-view__bg
+
+
+        .interior-classic
+           .container
+               .row
+                    .offset-xl-1.col-xl-9
+                        .interior-classic__left
+                            img(src='static/images/content/interior/classic.jpg', alt='').interior-classic__pic
+                    .offset-xl-1.col-xl-4
+
+
+
 
 
     script(src="static/js/pages/entrance-page.js", defer)

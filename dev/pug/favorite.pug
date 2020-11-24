@@ -1,0 +1,261 @@
+extends template/main
+
+block variables
+    - var title = 'Избранное';
+    - var headerGrayBackground = false;
+
+block content
+    section.favorite
+        .container
+            .row
+                .col-16
+                    h1.favorite__title Избранное
+
+        .result-tabs
+            .container.result-tabs__header-container
+                .result-tabs__header
+                    a(href="#", data-tab='entrance').result-tabs__tab
+                        .result-tabs__name входные двери
+                        .result-tabs__counter 243
+                    a(href="#", data-tab='interior').result-tabs__tab.result-tabs__tab--disabled
+                        .result-tabs__name межкомнатные
+                        .result-tabs__counter 243
+
+            .result-tabs__wrap
+                .result-tabs__page.catalog-entrance(data-tabs-page='entrance')
+                    .container
+                        .row
+                            .result-tabs__body
+                                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                                    a(href='#').entrance-item__link
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__new
+                                        .entrance-item__view
+                                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                                            .entrance-item__discount
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name Горизонт Модерн K05
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 883 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                    .entrance-item__info-item Под заказ
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+
+                                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                                    a(href='#').entrance-item__link
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__view
+                                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name Горизонт Модерн K05
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 883 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                    .entrance-item__info-item Под заказ
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+
+                                .entrance-full.section-margin
+                                    a(href="#").entrance-full__link
+                                        .row
+                                            .col-xl-9.col-lg-9.col-md-10.entrance-full__gallery
+                                                .entrance-item__favorite.btn-favorite
+                                                img(src='static/images/entrance-full-1.jpg', alt='pic').entrance-full__img
+                                                img(src='static/images/entrance-full-2.jpg', alt='pic').entrance-full__img
+                                            .offset-xl-1.col-xl-6.offset-lg-1.col-lg-6.offset-md-1.col-md-5.entrance-full__descr
+                                                h2.entrance-full__title.h2 Горизонт Модерн G01
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                    .entrance-item__info-item Под заказ
+                                                    .entrance-item__info-item Хит
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 1 606 руб.
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+                                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                                    a(href='#').entrance-item__link
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__view
+                                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name Горизонт Модерн K05
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 883 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                    .entrance-item__info-item Под заказ
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+
+                                .entrance-item.col-xl-7.col-lg-7.col-md-7.col-16
+                                    a(href='#').entrance-item__link
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__view
+                                            img(src='static/images/entr-1.jpg', alt='pic').entrance-item__img
+                                            img(src='static/images/entr-2.jpg', alt='pic').entrance-item__img
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name Горизонт Модерн K05
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 883 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                    .entrance-item__info-item Под заказ
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+
+                                include modules/pagination
+
+
+                .result-tabs__page.catalog-interior(data-tabs-page='interior')
+                    .container
+                        .row
+                            .result-tabs__body.catalog-interior__row
+                                a(href="#").interior-item.section-margin
+                                    .interior-item__block
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__new
+                                        .interior-item__view
+                                            .interior-item__img-wrap
+                                                img(src='static/images/int-1.jpg', alt='pic').interior-item__img
+                                                .entrance-item__discount
+                                            .interior-item__mask
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name НК256В2
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 4 323 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+                                a(href="#").interior-item.section-margin
+                                    .interior-item__block
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__new
+                                        .interior-item__view
+                                            .interior-item__img-wrap
+                                                img(src='static/images/int-1.jpg', alt='pic').interior-item__img
+                                                .entrance-item__discount
+                                            .interior-item__mask
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name НК256В2
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 4 323 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+                                a(href="#").interior-item.section-margin
+                                    .interior-item__block
+                                        .entrance-item__favorite.btn-favorite
+                                        .entrance-item__new
+                                        .interior-item__view
+                                            .interior-item__img-wrap
+                                                img(src='static/images/int-1.jpg', alt='pic').interior-item__img
+                                                .entrance-item__discount
+                                            .interior-item__mask
+                                        .entrance-item__descr
+                                            .entrance-item__descr-top
+                                                .entrance-item__name НК256В2
+                                                .entrance-item__price
+                                                    .entrance-item__price-actual 4 323 руб.
+                                            .entrance-item__descr-bottom
+                                                .entrance-item__info
+                                                    .entrance-item__info-item Для квартиры
+                                                .entrance-item__colors
+                                                    .entrance-item__color.btn-color.active
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.btn-color
+                                                    .entrance-item__color.entrance-item__color.btn-color.btn-color--multicolor.js-multicolor-tip
+                                                        .entrance-item__color-tip.ui-tip Ещё 25 цветов в карточке
+
+                                                .entrance-item__price-mobile
+                                                    .entrance-item__price-old 887 руб
+                                                    .entrance-item__price-actual 885 руб.
+
+                                include modules/pagination
+
+    script(src="static/js/components/result-tabs.js", defer)

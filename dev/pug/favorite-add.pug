@@ -1,0 +1,46 @@
+extends template/main
+
+block variables
+    - var title = 'Избранное';
+    - var headerGrayBackground = false;
+
+block content
+    section.favorite
+        .container
+            .row
+                .col-16
+                    h1.favorite__title Избранное
+
+        .result-tabs
+            .container.result-tabs__header-container
+                .result-tabs__header
+                    a(href="#", data-tab='entrance').result-tabs__tab
+                        .result-tabs__name входные двери
+                        .result-tabs__counter 0
+                    a(href="#", data-tab='interior').result-tabs__tab.result-tabs__tab--disabled
+                        .result-tabs__name межкомнатные
+                        .result-tabs__counter 0
+
+            .result-tabs__wrap
+                .result-tabs__page.catalog-entrance(data-tabs-page='entrance')
+                    .container
+                        .row
+                            .result-tabs__body
+                                h2.favorite-add
+                                    | Нравится дверь, но&nbsp;пока не&nbsp;готовы её&nbsp;купить?<br/> Нажмите️
+                                    .entrance-item__favorite.btn-favorite
+                                    | &nbsp;в&nbsp;каталоге или карточке модели, чтобы она не&nbsp;потерялась.&nbsp;
+                                    a(href="#").favorite-add__link Межкомнатная&nbsp;
+                                    | или&nbsp;
+                                    a(href="#").favorite-add__link входная дверь&nbsp;
+                                    | появится здесь, и&nbsp;вы&nbsp;сможете вернуться к&nbsp;ней позже.
+
+
+
+
+                .result-tabs__page.catalog-interior(data-tabs-page='interior')
+                    .container
+                        .row
+                            .result-tabs__body.catalog-interior__row
+
+

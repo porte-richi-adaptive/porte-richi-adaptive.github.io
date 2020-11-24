@@ -1,0 +1,132 @@
+.favorite {
+
+  &__title {
+    margin-top: 45px;
+    margin-bottom: 27px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 27px;
+      margin-bottom: 9px;
+      font-size: 42px;
+      line-height: 45px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 27px;
+      margin-bottom: 9px;
+      font-size: 42px;
+      line-height: 45px;
+    }
+  }
+
+  .catalog-interior {
+
+    .interior-item__img-wrap {
+      z-index: 1;
+    }
+
+    .entrance-item__favorite {
+      z-index: 2;
+    }
+
+    .interior-item__mask {
+      z-index: 0;
+    }
+  }
+
+  .result-tabs__page {
+    @include media-breakpoint-down(sm) {
+      padding-top: 27px;
+    }
+  }
+
+  .result-tabs__body {
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+    }
+  }
+
+
+  .result-tabs {
+
+    &:before {
+      height: 350px;
+      top: 0;
+      transform: rotate(0deg);
+      background: linear-gradient(180deg, #DEE2E3 0%, rgba(222, 226, 227, 0) 100%);
+      @include media-breakpoint-down(md) {
+        z-index: -1;
+        height: 200px;
+      }
+    }
+  }
+
+  &-add {
+    width: 1035px;
+    text-align: center;
+    margin-bottom: 217px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 135px;
+      width: 780px;
+      margin-top: -36px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 90px;
+      width: 598px;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: auto;
+      margin-top: 27px;
+      margin-bottom: 72px;
+    }
+
+    .entrance-item__favorite {
+      position: relative;
+      display: inline-flex;
+      left: 0;
+      top: 18px;
+      right: 0;
+      bottom: 0;
+      margin-top: -18px;
+      @include media-breakpoint-down(lg) {
+        width: 36px;
+        height: 36px;
+        margin-top: -9px;
+        top: 9px;
+
+        &:before {
+          width: 12px;
+          height: 11px;
+          top: calc(50% - 5px);
+          left: calc(50% - 6px);
+        }
+      }
+    }
+
+    &__link {
+      color: $gold;
+      position: relative;
+      &:before {
+        content: '';
+        bottom: 8px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $gold;
+        @include media-breakpoint-down(lg) {
+          bottom: 6px;
+        }
+      }
+    }
+
+  }
+
+
+}
