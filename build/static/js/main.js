@@ -71,6 +71,8 @@ $(document).ready(function () {
     $('.filter-mobile__popup-sort').fadeOut(250);
     $('.filter-mobile__popup-all').fadeIn(250);
   });
+  /* --- Search Page --- */
+
   $('.search__field').on('keyup', function () {
     var fieldLength = $(this).val().length;
     var closeBtn = $('.search__close');
@@ -83,6 +85,12 @@ $(document).ready(function () {
       $(this).removeClass('active');
       closeBtn.fadeOut(0);
     }
+  });
+  $('.search__close').on('click', function () {
+    var searchFiled = $('.search__field');
+    searchFiled.val('');
+    searchFiled.removeClass('active');
+    $(this).fadeOut(0);
   });
 }); // Полифилы
 // forEach IE 11

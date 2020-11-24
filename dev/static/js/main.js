@@ -87,7 +87,7 @@ $(document).ready(function () {
         $('.filter-mobile__popup-all').fadeIn(250);
     });
 
-
+    /* --- Search Page --- */
     $('.search__field').on('keyup', function() {
         const fieldLength = $(this).val().length;
         const closeBtn = $('.search__close');
@@ -102,7 +102,15 @@ $(document).ready(function () {
             $(this).removeClass('active');
             closeBtn.fadeOut(0);
         }
+    });
 
+    $('.search__close').on('click', function() {
+        const searchFiled = $('.search__field');
+
+        searchFiled.val('');
+        searchFiled.removeClass('active');
+
+        $(this).fadeOut(0);
 
     });
 
