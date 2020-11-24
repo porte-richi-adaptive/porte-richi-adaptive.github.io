@@ -71,6 +71,19 @@ $(document).ready(function () {
     $('.filter-mobile__popup-sort').fadeOut(250);
     $('.filter-mobile__popup-all').fadeIn(250);
   });
+  $('.search__field').on('keyup', function () {
+    var fieldLength = $(this).val().length;
+    var closeBtn = $('.search__close');
+
+    if (fieldLength) {
+      $(this).addClass('active');
+      closeBtn.css("display", "flex");
+      closeBtn.fadeIn();
+    } else {
+      $(this).removeClass('active');
+      closeBtn.fadeOut(0);
+    }
+  });
 }); // Полифилы
 // forEach IE 11
 

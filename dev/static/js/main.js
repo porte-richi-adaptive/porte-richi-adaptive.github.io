@@ -88,7 +88,23 @@ $(document).ready(function () {
     });
 
 
+    $('.search__field').on('keyup', function() {
+        const fieldLength = $(this).val().length;
+        const closeBtn = $('.search__close');
 
+        if( fieldLength ) {
+
+            $(this).addClass('active');
+            closeBtn.css("display", "flex")
+            closeBtn.fadeIn();
+
+        } else {
+            $(this).removeClass('active');
+            closeBtn.fadeOut(0);
+        }
+
+
+    });
 
 });
 
