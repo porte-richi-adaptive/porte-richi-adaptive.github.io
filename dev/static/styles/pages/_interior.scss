@@ -615,6 +615,231 @@
         height: 72px;
       }
     }
+  }
+
+  &-standarts {
+    @include section-indent;
+
+    &__title {
+      width: 470px;
+      margin: 0 auto 54px;
+      text-align: center;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 45px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 36px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+        width: auto;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__item {
+      width: 412px;
+      @include media-breakpoint-down(lg) {
+        width: 323px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 234px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 36px;
+        }
+
+      }
+
+      &:last-child {
+        width: 480px;
+        @include media-breakpoint-down(lg) {
+          width: 381px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 275px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+
+      &:first-child {
+        width: 279px;
+        @include media-breakpoint-down(lg) {
+          width: 217px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 157px;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__number {
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 36px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 9px;
+        text-align: center;
+      }
+    }
+
+    &__name {
+      font-size: 27px;
+      line-height: 36px;
+      font-family: $minion-display;
+      margin-bottom: 36px;
+      @include media-breakpoint-down(lg) {
+        font-size: 24px;
+        line-height: 34px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 27px;
+      }
+      @include media-breakpoint-down(sm) {
+        line-height: 22px;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+    }
+
+    &__img {
+      margin-bottom: 18px;
+      @include media-breakpoint-down(lg) {
+        width: auto;
+        height: 415px;
+        object-fit: fill;
+      }
+      @include media-breakpoint-down(md) {
+        height: 299px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-complete {
+    @include section-indent;
+
+    &__wrap {
+      display: flex;
+      background-color: $white-1;
+      padding: 81px 0 81px 73px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__left {
+      width: 312px;
+      margin-right: 143px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      flex-grow: 1;
+    }
+
+    &__title {
+      margin-bottom: 18px;
+    }
+
+    &__link {
+      @include rft-link;
+      display: inline-block;
+      width: max-content;
+    }
+
+    &__figure {
+      width: 318px;
+      display: inline-flex;
+      flex-direction: column;
+
+
+      &:first-child {
+        margin-right: 117px;
+
+        .interior-complete__block {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            right: 100%;
+            width: 100vh;
+            height: 19px;
+            background-image: url(#{$img-url}/content/interior/plintus.svg);
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 100%;
+            width: 121px;
+            height: 19px;
+            background-image: url(#{$img-url}/content/interior/plintus.svg);
+          }
+        }
+
+      }
+
+      &:last-child {
+        width: 310px;
+
+        .interior-complete__block {
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: calc(100% - 35px );
+            width: 100vw;
+            height: 19px;
+            background-image: url(#{$img-url}/content/interior/plintus.svg);
+          }
+        }
+
+
+      }
+    }
+
+    &__img {
+    }
+
+    &__figcaption {
+      margin-top: 18px;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+
 
 
   }
