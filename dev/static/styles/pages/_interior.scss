@@ -613,6 +613,7 @@
       }
       @include media-breakpoint-down(md) {
         height: 72px;
+        width: 100%;
       }
     }
   }
@@ -745,12 +746,29 @@
   &-complete {
     @include section-indent;
 
+    @include media-breakpoint-down(md) {
+      overflow: hidden;
+      background-color: $white-1;
+    }
+
     &__wrap {
       display: flex;
       background-color: $white-1;
       padding: 81px 0 81px 73px;
       position: relative;
       overflow: hidden;
+      @include media-breakpoint-down(lg) {
+        padding-top: 52px;
+        padding-left: 44px;
+      }
+      @include media-breakpoint-down(md) {
+        padding-top: 38px;
+        overflow: visible;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 36px 0 45px;
+        flex-wrap: wrap;
+      }
     }
 
     &__left {
@@ -758,30 +776,94 @@
       margin-right: 143px;
       display: flex;
       flex-direction: column;
+      @include media-breakpoint-down(lg) {
+        width: 241px;
+        margin-right: 121px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 231px;
+        margin-right: 50px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin-right: 0;
+
+        .interior-complete__link {
+          display: none;
+        }
+      }
+    }
+
+    &__right {
+
+      & .interior-complete__link {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          display: block;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
     }
 
     &__text {
       flex-grow: 1;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
     }
 
     &__title {
       margin-bottom: 18px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 21px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 9px;
+      }
     }
 
     &__link {
       @include rft-link;
       display: inline-block;
       width: max-content;
+      &--m {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          display: block;
+        }
+      }
     }
 
     &__figure {
       width: 318px;
       display: inline-flex;
       flex-direction: column;
+      @include media-breakpoint-down(lg) {
+        width: 244px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 195px;
+      }
+
 
 
       &:first-child {
         margin-right: 117px;
+        @include media-breakpoint-down(lg) {
+          margin-right: 90px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-right: 71px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-right: 0;
+          width: 38.889vw;
+        }
 
         .interior-complete__block {
           position: relative;
@@ -794,6 +876,9 @@
             width: 100vh;
             height: 19px;
             background-image: url(#{$img-url}/content/interior/plintus.svg);
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
           }
           &:after {
             content: '';
@@ -803,6 +888,15 @@
             width: 121px;
             height: 19px;
             background-image: url(#{$img-url}/content/interior/plintus.svg);
+            @include media-breakpoint-down(lg) {
+              width: 93px;
+            }
+            @include media-breakpoint-down(md) {
+              width: 76px;
+            }
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
           }
         }
 
@@ -810,6 +904,27 @@
 
       &:last-child {
         width: 310px;
+        @include media-breakpoint-down(lg) {
+          width: 210px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 169px;
+          position: relative;
+          .interior-complete__figcaption {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 219px;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          width: 38.889vw;
+
+          .interior-complete__figcaption {
+            position: static;
+            width: auto;
+          }
+        }
 
         .interior-complete__block {
           position: relative;
@@ -822,6 +937,12 @@
             width: 100vw;
             height: 19px;
             background-image: url(#{$img-url}/content/interior/plintus.svg);
+            @include media-breakpoint-down(lg) {
+              left: 100%;
+            }
+            @include media-breakpoint-down(sm) {
+              display: none;
+            }
           }
         }
 
@@ -830,6 +951,13 @@
     }
 
     &__img {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+      @include media-breakpoint-down(sm) {
+        height: 75.833vw;
+      }
+
     }
 
     &__figcaption {
@@ -837,12 +965,25 @@
       font-style: italic;
       font-size: 18px;
       line-height: 27px;
+      strong {
+        font-weight: $bold;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      @include media-breakpoint-down(md) {
+        line-height: 22px;
+        margin-top: 13px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        margin-top: 9px;
+        margin-bottom: 36px;
+      }
     }
-
-
-
-
   }
+
 
 
 }
