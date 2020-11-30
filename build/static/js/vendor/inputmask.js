@@ -1758,7 +1758,7 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
     }), exports.iphone = exports.iemobile = exports.mobile = exports.ie = exports.ua = void 0;
     var ua = window.navigator && window.navigator.userAgent || "",
         ie = 0 < ua.indexOf("MSIE ") || 0 < ua.indexOf("Trident/"),
-        mobile = "ontouchstart" in window,
+        mobile = ("ontouchstart" in window),
         iemobile = /iemobile/i.test(ua),
         iphone = /iphone/i.test(ua) && !iemobile;
     exports.iphone = iphone, exports.iemobile = iemobile, exports.mobile = mobile, exports.ie = ie, exports.ua = ua;

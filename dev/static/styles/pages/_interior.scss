@@ -645,7 +645,7 @@
       &:hover {
         color: $gold;
       }
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(sm) {
         height: 72px;
         width: 100%;
       }
