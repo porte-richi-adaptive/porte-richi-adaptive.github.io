@@ -1162,7 +1162,9 @@
       display: none;
       min-height: 45px;
       width: 100%;
-      border: 1px solid $gray-5;
+      border-top: 1px solid $gray-5;
+      border-left: 1px solid $gray-5;
+      border-right: 1px solid $gray-5;
 
       @include media-breakpoint-down(md) {
         display: block;
@@ -1197,6 +1199,10 @@
       height: 45px;
       cursor: pointer;
       transition: $transition-base;
+
+      &--last {
+        border-bottom: none;
+      }
       
       &--active {
         background-color: $gray-5;
