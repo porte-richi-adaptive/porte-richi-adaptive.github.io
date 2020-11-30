@@ -427,6 +427,30 @@ defenceTabs.on('click', function() {
         slidesToScroll: 1
     });
 
+    $('.interior-complect__item').on('click', function() {
+        const activeTabClass = 'interior-complect__item--active';
+        const tabNumber = $(this).data('complectTab');
+        const contentPage = $(`[data-complect-content=${tabNumber}]`);
+        const allTabs = $('.interior-complect__item');
+        const allPages = $('[data-complect-content]');
+
+        if( $(this).hasClass(activeTabClass) ) {
+            $(this).removeClass(activeTabClass);
+            contentPage.slideUp(250);
+            return true;
+        }
+
+        allTabs.removeClass(activeTabClass);
+        allPages.slideUp(250);
+
+        $(this).addClass(activeTabClass);
+        contentPage.slideDown(250);
+
+
+
+
+    });
+
 
 
 

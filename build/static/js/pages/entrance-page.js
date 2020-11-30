@@ -321,4 +321,22 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+  $('.interior-complect__item').on('click', function () {
+    var activeTabClass = 'interior-complect__item--active';
+    var tabNumber = $(this).data('complectTab');
+    var contentPage = $("[data-complect-content=".concat(tabNumber, "]"));
+    var allTabs = $('.interior-complect__item');
+    var allPages = $('[data-complect-content]');
+
+    if ($(this).hasClass(activeTabClass)) {
+      $(this).removeClass(activeTabClass);
+      contentPage.slideUp(250);
+      return true;
+    }
+
+    allTabs.removeClass(activeTabClass);
+    allPages.slideUp(250);
+    $(this).addClass(activeTabClass);
+    contentPage.slideDown(250);
+  });
 });

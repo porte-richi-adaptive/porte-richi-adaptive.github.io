@@ -1097,6 +1097,10 @@
 
     &__table {
       @include rft-txt;
+      @include media-breakpoint-down(md) {
+        border-top: 1px solid $gray-1;
+        margin-bottom: 18px;
+      }
     }
 
     &__row {
@@ -1105,6 +1109,14 @@
       border-bottom: 1px solid $gray-1;
       padding-top: 18px;
       padding-bottom: 18px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 10px;
+        line-height: 16px;
+        border-left: 1px solid $gray-1;
+        border-right: 1px solid $gray-1;
+        padding: 9px;
+      }
 
     }
 
@@ -1158,6 +1170,21 @@
 
     }
 
+    &__pic {
+      display: block;
+      width: 100%;
+    }
+
+    &__content {
+      padding: 18px 18px 9px;
+      border-bottom: 1px solid $gray-5;
+      display: none;
+    }
+
+    &__view {
+      transition: $transition-base;
+    }
+
     &__item {
       font-size: 20px;
       line-height: 22px;
@@ -1169,15 +1196,23 @@
       padding-right: 18px;
       height: 45px;
       cursor: pointer;
+      transition: $transition-base;
+      
+      &--active {
+        background-color: $gray-5;
+        .interior-complect__view {
+          transform: rotate(90deg);
+        }
+      }
+      
       &:not(:last-child) {
         border-bottom: 1px solid $gray-5;
       }
+      
       span {
         font-family: $minion-display;
-        @include media-breakpoint-down(sm) {
-
-        }
       }
+      
     }
 
     &__result {
