@@ -37,3 +37,5 @@ $('.comments__list').slick({
     prevArrow: commentPrev,
     nextArrow: commentNext,
 });
+
+

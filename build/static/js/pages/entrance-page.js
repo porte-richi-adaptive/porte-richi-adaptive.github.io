@@ -306,4 +306,11 @@ $(document).ready(function () {
       $(this).attr('src', src);
     }).fadeIn(250);
   });
+  $('.interior-complect__slider').slick({
+    prevArrow: $('.interior-complect__nav-left'),
+    nextArrow: $('.interior-complect__nav-right'),
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 });
