@@ -1018,10 +1018,27 @@
     }
   }
 
+
+
   &-complect {
     @include section-indent;
     background-color: $white-1;
     padding-top: 91px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 54px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    &__wrap {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
 
     &__col {
       display: flex;
@@ -1030,18 +1047,52 @@
 
     &__left {
       width: 335px;
+
+      @include media-breakpoint-down(lg) {
+        width: 254px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
     }
 
     &__right {
       width: 335px;
+
+      @include media-breakpoint-down(lg) {
+        width: 268px;
+      }
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+
     }
 
     &__title {
       margin-bottom: 9px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 18px;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 9px;
+      }
     }
 
     &__descr {
       margin-bottom: 36px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 27px;
+      }
+      @include media-breakpoint-down(md) {
+        max-width: 544px;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+        margin-bottom: 18px;
+      }
     }
 
     &__table {
@@ -1054,10 +1105,19 @@
       border-bottom: 1px solid $gray-1;
       padding-top: 18px;
       padding-bottom: 18px;
+
     }
 
     &__center {
       position: relative;
+
+      @include media-breakpoint-down(lg) {
+        max-width: 290px;
+      }
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
 
     &__name {
@@ -1086,8 +1146,53 @@
       color: $gray-6;
     }
 
+    &__tabs {
+      display: none;
+      min-height: 45px;
+      width: 100%;
+      border: 1px solid $gray-5;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+
+    }
+
+    &__item {
+      font-size: 20px;
+      line-height: 22px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 18px;
+      padding-right: 18px;
+      height: 45px;
+      cursor: pointer;
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-5;
+      }
+      span {
+        font-family: $minion-display;
+        @include media-breakpoint-down(sm) {
+
+        }
+      }
+    }
+
     &__result {
       margin-top: 187px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 117px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: 36px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 18px;
+      }
 
       &-text {
         @include rft-txt;
@@ -1098,6 +1203,14 @@
         font-size: 36px;
         line-height: 47px;
         font-family: $minion-display;
+        @include media-breakpoint-down(lg) {
+          font-size: 32px;
+          line-height: 40px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 27px;
+          line-height: 36px;
+        }
       }
     }
 
@@ -1113,6 +1226,9 @@
 
     &__block {
       margin-bottom: 45px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 36px;
+      }
     }
 
     &__nav {
@@ -1120,6 +1236,9 @@
       align-items: center;
       margin-top: 105px;
       justify-content: flex-end;
+      @include media-breakpoint-down(lg) {
+        margin-top: 36px;
+      }
     }
 
     &__counter {
@@ -1135,6 +1254,21 @@
 
     &__arrow {
       cursor: pointer;
+
+      &.slick-disabled {
+        cursor: default;
+
+        &:hover {
+          path {
+            fill: $gray-1;
+          }
+        }
+        path {
+          fill: $gray-1;
+
+        }
+      }
+
       &:hover {
         path {
           fill: $gold;
@@ -1149,6 +1283,7 @@
     &__slide {
       flex-direction: column;
       outline: none;
+
     }
 
   }

@@ -242,27 +242,56 @@ block content
                         .interior-complect__left
                             h2.interior-complect__title Что входит в стоимость
                             p.interior-complect__descr Мы&nbsp;предлагаем полный дверной комплект. В&nbsp;него включены все необходимые для монтажа элементы, кроме доборов и&nbsp;фурнитуры.
-                            .interior-complect__table
-                                .interior-complect__head.interior-complect__row
-                                    .interior-complect__element элемент
-                                    .interior-complect__price цена, руб
+                            .interior-complect__wrap
+                                .interior-complect__table
+                                    .interior-complect__head.interior-complect__row
+                                        .interior-complect__element элемент
+                                        .interior-complect__price цена, руб
 
-                                .interior-complect__row
-                                    .interior-complect__element дверное полотно
-                                    .interior-complect__price 600
+                                    .interior-complect__row
+                                        .interior-complect__element дверное полотно
+                                        .interior-complect__price 600
 
-                                .interior-complect__row
-                                    .interior-complect__element коробка
-                                    .interior-complect__price 200
+                                    .interior-complect__row
+                                        .interior-complect__element коробка
+                                        .interior-complect__price 200
 
-                                .interior-complect__row
-                                    .interior-complect__element наличники
-                                    .interior-complect__price 200
+                                    .interior-complect__row
+                                        .interior-complect__element наличники
+                                        .interior-complect__price 200
+
+                            .interior-complect__tabs
+                                .interior-complect__item(data-complect-tab='1')
+                                    span Дверное полотно —  2 300 руб.
+                                    .interior-complect__view
+                                        include ../static/images/content/interior/complect-tab.svg
+
+                                .interior-complect__item(data-complect-tab='2')
+                                    span Коробка — 2 300 руб.
+                                    .interior-complect__view
+                                        include ../static/images/content/interior/complect-tab.svg
+
+                                .interior-complect__item(data-complect-tab='3')
+                                    span Фурнитура — 60 руб.
+                                    .interior-complect__view
+                                        include ../static/images/content/interior/complect-tab.svg
+
+                                .interior-complect__item(data-complect-tab='4')
+                                    span Декоративные элементы — 60 руб.
+                                    .interior-complect__view
+                                        include ../static/images/content/interior/complect-tab.svg
+
+
+
+
 
 
                             .interior-complect__result
                                 .interior-complect__result-text цена комплекта
                                 .interior-complect__result-price 1685 рублей
+
+
+
 
                         .interior-complect__center
                             img(src='static/images/content/interior/complect-1.jpg', alt='').interior-complect__img
@@ -332,7 +361,7 @@ block content
                                 .interior-complect__nav-left.interior-complect__arrow
                                     include ../static/images/content/interior/complect-left.svg
 
-                                .interior-complect__counter 2/2
+                                .interior-complect__counter
 
                                 .interior-complect__nav-right.interior-complect__arrow
                                     include ../static/images/content/interior/complect-right.svg

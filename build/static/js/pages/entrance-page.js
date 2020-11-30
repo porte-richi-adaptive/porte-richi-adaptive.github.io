@@ -306,6 +306,14 @@ $(document).ready(function () {
       $(this).attr('src', src);
     }).fadeIn(250);
   });
+  $('.interior-complect__slider').on('init', function (event, slick, currentSlide, nextSlide) {
+    var res = "".concat(slick.currentSlide + 1, " / ").concat(slick.slideCount);
+    $('.interior-complect__counter ').html(res);
+  });
+  $('.interior-complect__slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    var res = "".concat(currentSlide + 1, " / ").concat(slick.slideCount);
+    $('.interior-complect__counter ').html(res);
+  });
   $('.interior-complect__slider').slick({
     prevArrow: $('.interior-complect__nav-left'),
     nextArrow: $('.interior-complect__nav-right'),
