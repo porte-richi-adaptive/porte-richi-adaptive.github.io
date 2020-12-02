@@ -256,7 +256,6 @@ $(document).ready(function () {
     var gallery = $('.js-material-gallery');
     var sliderIndex = $(this).index();
     var modalCollection = [];
-    console.dir(sliderIndex);
     materialGalleryCollection.each(function (i, el) {
       var item = $(el);
       var itemImg = item.find('img').attr('src');

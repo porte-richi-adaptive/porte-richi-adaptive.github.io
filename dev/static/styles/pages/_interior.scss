@@ -11,8 +11,90 @@
   /* --- Bivalve --- */
   .interior-first--bivalve {
 
+      background-image: url('#{$img-url}/content/interior/bivalve-first.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+
+      @include media-breakpoint-down(md) {
+        background-image: none;
+        padding-top: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        background-image: none;
+        padding-top: 18px;
+      }
+
+
+    .interior-first__section {
+      margin-bottom: 33px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .interior-first__table {
+      margin-bottom: 11px;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    .interior-first__title {
+      margin-bottom: 20px;
+    }
+
+    .interior-first__block {
+      padding: 27px 36px 36px;
+
+      @include media-breakpoint-down(lg) {
+        padding: 14px 27px 27px;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+
+    }
+
+    .interior-first__door {
+      @include media-breakpoint-down(lg) {
+        width: 529px;
+        height: 708px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 427px;
+        height: 571px;
+      }
+    }
+
+    .entrance-item__name {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+
     .interior-first__variant {
       width: 598px;
+      @include media-breakpoint-down(lg) {
+        width: 505px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 278px;
+      }
+    }
+
+    .interior-first__breadcrumbs {
+      margin-top: 12px;
+      @include media-breakpoint-down(md) {
+        margin-top: 0;
+      }
+    }
+
+    .interior-first__picture {
+
     }
 
 
@@ -63,6 +145,7 @@
 
     &__top {
       display: none;
+      width: 100%;
 
       .breadcrumbs__wrap {
         margin: 0;
@@ -243,6 +326,7 @@
         top: auto;
         left: -27px;
         right: calc(100% + 27px);
+        color: $gray;
         @include media-breakpoint-down(md) {
           bottom: 100%;
           top: 0;
@@ -340,6 +424,12 @@
     &__val {
       position: relative;
       &:hover {
+
+        .interior-first__simple {
+          color: $gold;
+          border-color: $gold;
+        }
+
         .interior-first__brand {
           visibility: visible;
           opacity: 1;
@@ -351,6 +441,7 @@
 
     &__simple {
       @include rft-txt;
+      transition: $transition-base;
     }
 
     &__brand {
@@ -472,7 +563,7 @@
       font-style: italic;
       bottom: calc( 100% + 9px);
       left: 0;
-      background-color: $gray-6;
+      background-color: $gray-2;
       z-index: 1;
       white-space: nowrap;
       transition: $transition-base;

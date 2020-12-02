@@ -332,7 +332,6 @@ defenceTabs.on('click', function() {
         const gallery = $('.js-material-gallery');
         const sliderIndex = $(this).index();
         let modalCollection = [];
-        console.dir(sliderIndex);
 
 
         materialGalleryCollection.each(function(i, el) {
@@ -446,10 +445,9 @@ defenceTabs.on('click', function() {
         $(this).addClass(activeTabClass);
         contentPage.slideDown(250);
 
-
-
-
     });
+
+
 
 
 
