@@ -88,11 +88,19 @@
         width: 427px;
         height: 571px;
       }
+      @include media-breakpoint-down(sm) {
+        width: 277px;
+        height: 369px;
+      }
+
     }
 
     .entrance-item__name {
       @include media-breakpoint-down(lg) {
         display: none;
+      }
+      @include media-breakpoint-down(md) {
+        display: block;
       }
     }
 
@@ -126,7 +134,7 @@
       top: auto;
       left: calc(100% + 18px);
       right: calc(100% + 18px);
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         display: block;
         bottom: 100%;
         top: 0;
