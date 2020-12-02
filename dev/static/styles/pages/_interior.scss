@@ -1,7 +1,7 @@
 .interior {
   padding-top: 81px;
   @include media-breakpoint-down(lg) {
-    padding-top: 45px;
+    padding-top: 0;
   }
 
   /* --- Bivalve --- */
@@ -54,6 +54,35 @@
     @include media-breakpoint-down(md) {
       margin-bottom: 0;
       overflow: hidden;
+      padding-top: 18px;
+    }
+
+    &__top {
+      display: none;
+
+      .breadcrumbs__wrap {
+        margin: 0;
+      }
+
+      .interior-first__title {
+        font-size: 42px;
+        line-height: 45px;
+        margin-bottom: 36px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+
+    &__bg {
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+        position: absolute;
+        right: -27px;
+        top: 0;
+      }
     }
 
     &__none {
@@ -170,6 +199,15 @@
       display: flex;
       justify-content: flex-end;
 
+      .entrance-item__new {
+        display: none;
+        @include media-breakpoint-down(md) {
+          display: block;
+          top: -9px !important;
+          right: -9px !important;
+        }
+      }
+
       @include media-breakpoint-down(md) {
         width: 50%;
         order: 2;
@@ -205,8 +243,9 @@
           bottom: 100%;
           top: 0;
           left: calc(100% + 27px);
-          right: 0;
+          right: 27px;
           transform: rotate(90deg);
+          color: $gray;
         }
       }
     }
@@ -230,6 +269,8 @@
         }
       }
     }
+
+
 
     &__title {
       margin-bottom: 31px;
