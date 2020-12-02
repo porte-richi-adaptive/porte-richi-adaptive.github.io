@@ -685,19 +685,40 @@ block content
 
         .interior-defend
             .container
-                .row
-                    .col-xl-4.interior-defend__left
+                .row.interior-defend__row
+                    .col-xl-4.col-lg-4.interior-defend__left
                         h2.interior-defend__title Выпадающий порог защитит от&nbsp;шума и&nbsp;сквозняков
                         .interior-defend__img
                             .interior-defend__name AGB Eclipse 3.0
                             .interior-defend__price от 39 руб.
                         p.interior-defend__text Во&nbsp;время закрывания двери, уплотнитель перекрывает щель между дверью и&nbsp;полом. Так система защищает помещение от&nbsp;лишних звуков за&nbsp;дверью и&nbsp;сохраняет тепло.
-                    .offset-xl-1.col-xl-11.interior-defend__right
+                    .offset-xl-1.col-xl-11.offset-lg-1.col-lg-11.interior-defend__right
                         .interior-defend__door.interior-defend__close
                             img(src='static/images/content/interior/defend-1.svg', alt='')
                         p.interior-defend__text Когда дверь открыта, порог незаметен. Он&nbsp;не&nbsp;создаёт преград, не&nbsp;мешает движению между комнатами.
-                        .interior-defend__door
+                        .interior-defend__door.interior-defend__open
                             img(src='static/images/content/interior/defend-2.svg', alt='')
+
+                .row.interior-defend__mobile
+                    .col-16
+                        .interior-defend__top
+                            h2.interior-defend__title Выпадающий порог защитит от&nbsp;шума и&nbsp;сквозняков
+                            .interior-defend__block
+                                .interior-defend__door.interior-defend__close
+                                    img(src='static/images/content/interior/defend-1.svg', alt='')
+                                p.interior-defend__text Во&nbsp;время закрывания двери, уплотнитель перекрывает щель между дверью и&nbsp;полом. Так система защищает помещение от&nbsp;лишних звуков за&nbsp;дверью и&nbsp;сохраняет тепло.
+
+                        .interior-defend__bottom
+                            .interior-defend__block
+                                .interior-defend__wrap
+                                    p.interior-defend__text Когда дверь открыта, порог незаметен. Он&nbsp;не&nbsp;создаёт преград, не&nbsp;мешает движению между комнатами.
+                                    .interior-defend__img
+                                        .interior-defend__name AGB Eclipse 3.0
+                                        .interior-defend__price от 39 руб.
+                                .interior-defend__door.interior-defend__open
+                                    img(src='static/images/content/interior/defend-2.svg', alt='')
+
+
 
 
 

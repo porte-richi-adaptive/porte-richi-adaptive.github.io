@@ -1710,6 +1710,14 @@
     overflow: hidden;
     @include section-indent;
 
+    @include media-breakpoint-down(lg) {
+      padding-top: 54px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 45px;
+    }
+
     &:after {
       content: '';
       width: 100%;
@@ -1719,6 +1727,19 @@
       bottom: 0;
       left: 0;
       display: block;
+      @include media-breakpoint-down(lg) {
+        height: 109px;
+        z-index: -1;
+      }
+
+      @include media-breakpoint-down(md) {
+        height: 127px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        height: 36px;
+      }
+
     }
 
     &__right {
@@ -1726,25 +1747,220 @@
       justify-content: space-between;
       padding-top: 20px;
 
+      @include media-breakpoint-down(lg) {
+        padding-top: 5px;
+      }
+
+      @include media-breakpoint-down(md) {
+        flex-grow: 1;
+        margin-left: 9px;
+      }
+
       .interior-defend__text {
         width: 199px;
         align-self: flex-end;
         padding-bottom: 127px;
         margin-left: -31px;
+
+        @include media-breakpoint-down(lg) {
+          width: 322px;
+          padding-bottom: 0;
+          margin-left: 0;
+          left: 212px;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 230px;
+          left: 154px;
+          bottom: -113px;
+        }
       }
+    }
+
+    &__open {
+      position: relative;
+
+
+      @include media-breakpoint-down(lg) {
+        width: 231px;
+        height: 602px;
+        margin-right: 61px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 165px;
+        height: 431px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 145px;
+        height: 377px;
+      }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 91px;
+          left: 100%;
+          width: 100vw;
+          height: 31px;
+          background-image: url(#{$img-url}/content/interior/plintus2.svg);
+          background-position: center;
+
+          @include media-breakpoint-down(lg) {
+            bottom: 61px;
+          }
+
+          @include media-breakpoint-down(md) {
+            background-image: url(#{$img-url}/content/interior/plintus3.svg);
+            height: 15px;
+            bottom: 45px;
+          }
+        }
     }
 
     &__close {
       position: relative;
+
+      @include media-breakpoint-down(lg) {
+        width: 230px;
+        height: 542px;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 164px;
+        height: 388px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 144px;
+        height: 340px;
+      }
+
       &:before {
         content: '';
         position: absolute;
-        bottom: 0;
-        left: 100%;
+        bottom: 91px;
+        right: 100%;
         width: 100vw;
         height: 31px;
         background-image: url(#{$img-url}/content/interior/plintus2.svg);
         background-position: center;
+
+        @include media-breakpoint-down(lg) {
+          bottom: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+          background-image: url(#{$img-url}/content/interior/plintus3.svg);
+          height: 15px;
+          bottom: 2px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          bottom: 0;
+        }
+
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 91px;
+        left: 100%;
+        width: 293px;
+        height: 31px;
+        background-image: url(#{$img-url}/content/interior/plintus2.svg);
+        background-position: center;
+
+        @include media-breakpoint-down(lg) {
+          bottom: 1px;
+          width: 208px;
+        }
+
+        @include media-breakpoint-down(md) {
+          background-image: url(#{$img-url}/content/interior/plintus3.svg);
+          height: 15px;
+          width: 130px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 100vw;
+        }
+      }
+    }
+
+    &__block {
+      position: relative;
+      width: 100%;
+    }
+
+    &__top {
+      margin-bottom: 36px;
+
+      .interior-defend__close:before {
+        bottom: 1px;
+      }
+
+      .interior-defend__text {
+        @include media-breakpoint-down(sm) {
+          width: 144px;
+          left: unset;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &__bottom {
+
+      .interior-defend__text {
+        margin-bottom: 27px;
+      }
+
+      .interior-defend__open {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100vw;
+          right: 100%;
+          bottom: 37px;
+          height: 15px;
+          background-image: url(#{$img-url}/content/interior/plintus3.svg);
+          background-position: center;
+        }
+        &:after {
+          bottom: 37px;
+        }
+      }
+
+      .interior-defend__block {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .interior-defend__name {
+        display: none;
+      }
+
+      .interior-defend__price {
+        margin-bottom: 24px;
+      }
+
+      .interior-defend__text {
+        width: 144px;
+        position: static;
+      }
+      .interior-defend__open {
+        margin-right: 0;
       }
     }
 
@@ -1752,10 +1968,36 @@
 
     &__left {
       position: relative;
+
+      @include media-breakpoint-down(md) {
+        width: 342px;
+      }
+    }
+
+    &__row {
+      flex-wrap: nowrap;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &__mobile {
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
     }
 
     &__title {
       margin-bottom: 27px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 88px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 33px;
+      }
     }
 
     &__img {
@@ -1770,6 +2012,23 @@
       height: 300px;
       border-radius: 50%;
       margin-bottom: 90px;
+
+      @include media-breakpoint-down(lg) {
+        width: 254px;
+        height: 254px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 144px;
+        height: 144px;
+      }
+
     }
 
     &__name {
@@ -1786,11 +2045,36 @@
       font-family: $rft-font;
       font-weight: $semi-bold;
       margin-bottom: 36px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 27px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 18px;
+      }
+
     }
     
     &__text {
       font-style: italic;
       margin-bottom: 36px;
+
+      @include media-breakpoint-down(lg) {
+        position: absolute;
+        bottom: -83px;
+        left: 0;
+        width: 458px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 302px;
+        left: 9px;
+        bottom: -114px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
     }
 
 
