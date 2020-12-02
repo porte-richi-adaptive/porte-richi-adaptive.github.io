@@ -1,6 +1,10 @@
 .interior {
   padding-top: 81px;
   @include media-breakpoint-down(lg) {
+    padding-top: 45px;
+  }
+
+  @include media-breakpoint-down(sm) {
     padding-top: 0;
   }
 
