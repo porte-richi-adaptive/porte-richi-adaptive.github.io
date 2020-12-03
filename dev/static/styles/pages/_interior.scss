@@ -1719,6 +1719,24 @@
     &__right {
       display: flex;
       overflow: hidden;
+      @include media-breakpoint-down(sm) {
+          display: none;
+      }
+    }
+
+    &__mobile {
+      display: none;
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        .slick-list {
+          padding-top: 18px;
+        }
+        .interior-item {
+          width: 306px;
+          outline: none;
+
+        }
+      }
     }
 
     &__title {

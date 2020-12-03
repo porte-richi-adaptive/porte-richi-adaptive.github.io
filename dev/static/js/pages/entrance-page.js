@@ -393,8 +393,6 @@ defenceTabs.on('click', function() {
         const wrap = $(this).closest('.interior-first__colors');
         const coll = wrap.find('.interior-first__color');
 
-
-        console.dir(coll);
         coll.removeClass('interior-first__color--active');
         $(this).addClass('interior-first__color--active');
 
@@ -478,7 +476,14 @@ defenceTabs.on('click', function() {
     });
 
 
-
+    $('.interior-similar__mobile').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        touchThreshold: 100
+    });
 
 });
 

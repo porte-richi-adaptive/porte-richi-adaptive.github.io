@@ -298,7 +298,6 @@ $(document).ready(function () {
     var pic = $('.js-first-screen');
     var wrap = $(this).closest('.interior-first__colors');
     var coll = wrap.find('.interior-first__color');
-    console.dir(coll);
     coll.removeClass('interior-first__color--active');
     $(this).addClass('interior-first__color--active');
     pic.fadeOut(250, function () {
@@ -358,5 +357,13 @@ $(document).ready(function () {
   });
   $('.interior-choose__dropdown').on('click', function () {
     $('.interior-choose__list').toggleClass('open');
+  });
+  $('.interior-similar__mobile').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    arrows: false,
+    touchThreshold: 100
   });
 });
