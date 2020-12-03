@@ -8,6 +8,7 @@
     padding-top: 0;
   }
 
+
   /* --- Bivalve --- */
   .interior-first--bivalve {
 
@@ -19,6 +20,8 @@
       .interior-first__picture:after {
         @include media-breakpoint-down(sm) {
           width: 200vw;
+          background-image: url('#{$img-url}/content/interior/plintus4.svg');
+          height: 20px;
         }
       }
 
@@ -155,16 +158,17 @@
     @include media-breakpoint-down(sm) {
 
       .interior-first__door {
-        width: auto;
+        width: 160px;
         height: 368px;
       }
 
       .interior-first__picture:after {
         width: calc( 100vw + 27px );
         transform: translateX(-34px);
-        background-size: cover;
+        background-size: contain;
       }
     }
+
   }
 
 
@@ -178,6 +182,17 @@
       margin-bottom: 0;
       overflow: hidden;
       padding-top: 18px;
+    }
+
+    &__room {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &__over {
+      position: relative;
+      width: 100%;
     }
 
     &__top {
@@ -356,6 +371,12 @@
         width: auto;
         transform: translateX(0);
         justify-content: flex-start;
+
+        &:after {
+          background-image: url('#{$img-url}/content/interior/plintus4.svg');
+          height: 20px;
+        }
+
       }
 
       .entrance-item__name {
@@ -2082,9 +2103,98 @@
         font-size: 16px;
         line-height: 24px;
       }
+    }
+  }
+
+  &-hidden {
+    @include section-indent;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__left {
+      width: 437px;
+      display: flex;
+      flex-direction: column;
+      @include media-breakpoint-down(lg) {
+        width: 458px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 274px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
 
     }
 
+    &__right {
+      width: 686px;
+      @include media-breakpoint-down(lg) {
+        width: 526px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 440px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 18px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 9px;
+      }
+    }
+
+    &__text {
+      flex-grow: 1;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
+    }
+
+    &__descr, &__caption {
+      font-size: 18px;
+      line-height: 27px;
+      color: $black-1;
+      font-style: italic;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      @include media-breakpoint-down(md) {
+        line-height: 18px;
+      }
+    }
+
+    &__descr {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 27px;
+      }
+    }
+
+    &__img {
+      margin-bottom: 18px;
+      width: 100%;
+      display: block;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 9px;
+      }
+    }
+
+    &__caption {
+      max-width: 507px;
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
+    }
 
   }
 
