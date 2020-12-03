@@ -447,8 +447,32 @@ defenceTabs.on('click', function() {
 
     });
 
+    /* --- Choose Tab  --- */
+    $('.interior-choose__item').on('click', function() {
 
+        const items = $('[data-choose-item]');
+        const tabs = $('[data-choose-tab]');
+        const pages = $('[data-choose-descr]');
 
+        const number = $(this).data('chooseItem');
+        const activeTab = $(`[data-choose-tab=${number}]`);
+        const activePage = $(`[data-choose-descr=${number}]`);
+
+        items.removeClass('interior-choose__item--active');
+        $(this).addClass('interior-choose__item--active');
+
+        activeTab.css("display", "flex");
+        tabs.fadeOut(0);
+        activeTab.fadeIn(250);
+
+        pages.fadeOut(0);
+        activePage.fadeIn(250);
+
+    });
+
+    $('.interior-choose__dropdown').on('click', function() {
+        $('.interior-choose__list').addClass('open');
+    });
 
 
 
