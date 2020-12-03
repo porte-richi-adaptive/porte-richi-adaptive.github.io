@@ -468,10 +468,13 @@ defenceTabs.on('click', function() {
         pages.fadeOut(0);
         activePage.fadeIn(250);
 
+        $('.js-choose-list').removeClass('open');
+
     });
 
     $('.interior-choose__dropdown').on('click', function() {
-        $('.interior-choose__list').addClass('open');
+        $('.interior-choose__list').toggleClass('open');
+
     });
 
 

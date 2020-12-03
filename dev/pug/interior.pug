@@ -726,10 +726,11 @@ block content
                    .col-16.interior-choose__wrap
                        .interior-choose__mobile
                            h2.interior-choose__title Выбирайте коробку, которая подходит к&nbsp;вашему дизайну
-                           .interior-choose__dropdown
-                               span Телескопическая
-                               include ../static/images/content/interior/complect-tab.svg
-                               ul.interior-choose__list
+                           .interior-choose__over
+                               .interior-choose__dropdown
+                                   span Телескопическая
+                                   include ../static/images/content/interior/complect-tab.svg
+                               ul.interior-choose__list.js-choose-list
                                    li.interior-choose__item.interior-choose__item--active(data-choose-item='1') Телескопическая
                                    li.interior-choose__item(data-choose-item='2') Скрытого монтажа
                                    li.interior-choose__item(data-choose-item='3') Гвоздевая

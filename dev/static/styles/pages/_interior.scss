@@ -2282,12 +2282,17 @@
         opacity: 0;
         visibility: hidden;
         transition: $transition-base;
+        z-index: 10;
         &.open {
           height: auto;
           opacity: 1;
           visibility: visible;
         }
       }
+    }
+
+    &__over {
+      position: relative;
     }
 
     &__item {
