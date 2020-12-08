@@ -213,12 +213,12 @@
 
     img {
       display: block;
-      width: calc( 100% - 27px );
+      width: calc(100% - 27px);
       position: relative;
       z-index: 1;
 
       @include media-breakpoint-down(md) {
-        width: calc( 100% - 22px );
+        width: calc(100% - 22px);
       }
     }
 
@@ -227,14 +227,14 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: calc( 100% - 27px );
-      height: calc( 100% - 27px );
+      width: calc(100% - 27px);
+      height: calc(100% - 27px);
       border: 1px solid $gold;
       z-index: -1;
 
       @include media-breakpoint-down(md) {
-        width: calc( 100% - 22px );
-        height: calc( 100% - 22px );
+        width: calc(100% - 22px);
+        height: calc(100% - 22px);
       }
     }
   }
@@ -304,5 +304,21 @@
       }
     }
   }
+}
 
+
+.invisible-set {
+  height: 992px;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  background-image: url(#{$img-url}/content/invisible/set.jpg);
+  @include media-breakpoint-down(lg) {
+    height: 836px;
+  }
+  @include media-breakpoint-down(md) {
+    height: auto;
+    background-image: none;
+    color: $black;
+  }
 }
