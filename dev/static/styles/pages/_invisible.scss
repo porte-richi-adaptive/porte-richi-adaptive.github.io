@@ -1015,5 +1015,12 @@
       display: none;
     }
   }
+}
 
+.invisible-use {
+  
+  &__top {
+    background-color: $gray-11;
+  }
+  
 }
