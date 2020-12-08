@@ -2478,8 +2478,116 @@
         display: none;
       }
     }
+  }
 
+  &-search {
 
+    &__subtext {
+      font-size: 25px;
+      line-height: 36px;
+      text-align: center;
+      width: 840px;
+      margin: 0 auto 66px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 48px;
+        font-size: 20px;
+        line-height: 27px;
+        width: 723px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .entrance-search__slide {
+      @include media-breakpoint-down(sm) {
+        width: 240px;
+      }
+    }
+
+    .entrance-search__dropdown {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    .entrance-search__view {
+      margin-top: 0;
+    }
+
+    .entrance-search__view-text {
+      font-size: 24px;
+      line-height: 36px;
+      font-family: $minion-display;
+      @include media-breakpoint-down(lg) {
+        font-size: 20px;
+        line-height: 27px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+
+    &__link {
+      @include rft-txt;
+      color: $black;
+      border-bottom: 1px solid $black;
+      transition: $transition-base;
+      margin-top: 18px;
+      outline: none;
+      display: inline-block;
+
+      svg {
+        margin-left: 9px;
+      }
+
+      path {
+        transition: $transition-base;
+      }
+
+      &:hover {
+        color: $gold;
+        border-bottom-color: $gold;
+        svg {
+          path {
+            fill: $gold;
+          }
+        }
+      }
+    }
+
+    .entrance-search__view {
+      padding: 36px 36px 36px 27px;
+      margin-bottom: 0;
+      @include media-breakpoint-down(md) {
+        margin-top: 36px;
+        padding: 18px;
+      }
+
+      .entrance-search__view-text {
+        font-size: 20px;
+        line-height: 27px;
+        font-family: $minion-font;
+        @include media-breakpoint-down(lg) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .entrance-search__title {
+      margin-bottom: 18px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 9px;
+      }
+    }
 
   }
 
