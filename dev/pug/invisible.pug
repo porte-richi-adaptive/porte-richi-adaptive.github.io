@@ -1,0 +1,59 @@
+extends template/main
+
+block variables
+    - var title = 'Карточка входная концепт';
+    - var headerGrayBackground = false;
+    - var headerGrayBackgroundBig = false;
+    - var invisibleFirst = true;
+
+block content
+    .entrance-concept.invisible-page
+        section.entrance-item.entrance-item--first.entrance-single
+            .container
+                .row
+                    .offset-xl-8.col-xl-6.offset-lg-7.col-lg-8.offset-md-0.col-md-16
+                        .entrance-item__card
+                            .entrance-item__nav
+                                a(href="#").entrance-item__link Главная
+                                a(href="#").entrance-item__link Межкомнтатные двери
+                                a(href="#").entrance-item__link Дверь-невидимка
+                            h1.entrance-item__title Дверь-невидимка РДА10
+                            img(src='static/images/content/invisible/first-bg.jpg', alt='').entrance-item__concept-img
+                            .entrance-item__info
+                                span.entrance-item__element Под заказ до 45 рабочих  дней
+
+                            .invisible-row
+                                p.entrance-item__about Для двери с&nbsp;такой фрезеровкой можно выбрать комплектацию: базовую, оптимальную, усиленную или максимальную. Это влияет на&nbsp;уровень защиты двери, возможные материалы и&nbsp;цвет отделки.
+
+                                p.entrance-item__address
+                                    | Примеры дверей-невидимок установлены в&nbsp;фирменных салонах на&nbsp;
+                                    a(href="") пр-те Дзержинского, 122&nbsp;
+                                    | и&nbsp;
+                                    a(href="") Кальварийской, 7Б, ТЦ&nbsp;&laquo;Трюм&raquo;
+
+                            .entrance-item__price
+                                .entrance-item__price-actual от 1685 руб.
+
+                            .interior-first__table
+                                .interior-first__row
+                                    .interior-first__char количество
+                                    .interior-first__val
+                                        .interior-first__counter
+                                            .minus.button
+                                                include ../static/images/content/invisible/minus.svg
+                                            .number 1
+                                            .plus.button
+                                                include ../static/images/content/invisible/plus.svg
+
+                                .interior-first__row.interior-first__move
+                                    .interior-first__char что входит в стоимость
+                                    .interior-first__val
+                                        include ../static/images/content/invisible/arrow-down.svg
+
+                            a(href="#").entrance-item__btn Добавить к заказу
+
+                            p.entrance-item__address.entrance-item__address--mobile
+                                | Примеры дверей-невидимок установлены в&nbsp;фирменных салонах на&nbsp;
+                                a(href="") пр-те Дзержинского, 122&nbsp;
+                                | и&nbsp;
+                                a(href="") Кальварийской, 7Б, ТЦ&nbsp;&laquo;Трюм&raquo;
