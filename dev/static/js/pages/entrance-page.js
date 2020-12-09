@@ -493,7 +493,13 @@ defenceTabs.on('click', function() {
         }, 1500);
     });
 
-
+    (function() {
+        $("*").on( 'touchstart', function() {
+            $(this).trigger('hover') ;
+        } ).on('touchend', function() {
+            $(this).trigger('hover') ;
+        } ) ;
+    })() ;
 
 });
 
