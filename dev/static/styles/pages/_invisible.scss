@@ -1018,9 +1018,243 @@
 }
 
 .invisible-use {
+  @include section-indent;
+  overflow: hidden;
   
   &__top {
     background-color: $gray-11;
   }
+
+  &__bottom {
+    background-color: $green-3;
+    @include media-breakpoint-down(sm) {
+      .invisible-use__descr {
+        order: 1;
+      }
+    }
+  }
+
+  &__pic {
+    @include media-breakpoint-down(sm) {
+      order: 2;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    .invisible-use__img {
+      width: 54.647vw;
+      height: 100%;
+      display: block;
+      align-self: flex-end;
+      @include media-breakpoint-down(sm) {
+        width: 100vw;
+        height: auto;
+        align-self: auto;
+        transform: translateX(-50%);
+        left: 50%;
+        position: relative;
+      }
+    }
+  }
+
+  &__right {
+
+    .invisible-use__img {
+      width: 54.647vw;
+      height: 100%;
+      display: block;
+      @include media-breakpoint-down(sm) {
+        width: 100vw;
+        height: auto;
+        transform: translateX(-50%);
+        left: 50%;
+        position: relative;
+      }
+    }
+  }
+
+  &__title {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 91px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    font-style: italic;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__descr {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      padding-top: 54px;
+      padding-bottom: 63px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 36px;
+      padding-bottom: 45px;
+    }
+  }
+}
+
+
+.invisible-threshold {
+  @include section-indent;
+  overflow: hidden;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 85px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 18px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 387px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include media-breakpoint-down(md) {
+      width: 474px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    flex-direction: column;
+    display: flex;
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      margin-bottom: 54px;
+    }
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      margin-bottom: 0;
+      padding-bottom: 59px;
+    }
+  }
+
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  &__price {
+    @include rft-txt;
+    color: $gray;
+    margin-bottom: 45px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 27px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 18px;
+      font-weight: $regular;
+      letter-spacing: inherit;
+      text-transform: capitalize;
+
+    }
+  }
   
+  &__container {
+    @include media-breakpoint-down(lg) {
+      position: relative;
+    }
+  }
+
+  &__product {
+    background-color: $gray-9;
+    background-image: url(#{$img-url}/content/invisible/threshold-price.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 298px;
+    max-height: 298px;
+    width: 17.529vw;
+    height: 17.529vw;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    @include media-breakpoint-down(lg) {
+      max-width: none;
+      max-height: none;
+      width: 220px;
+      height: 220px;
+      position: absolute;
+      right: 0;
+      top: -85px;
+      z-index: 1;
+      background-size: contain;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 200px;
+      height: 200px;
+      top: unset;
+      bottom: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 144px;
+      height: 144px;
+      bottom: unset;
+      top: calc( 100% - 41px );
+    }
+
+  }
+
+  &__img {
+    display: block;
+    width: 65vw;
+    height: auto;
+
+    @include media-breakpoint-down(lg) {
+      width: calc( 100% - 100px );
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      left: -27px;
+    }
+  }
+
+
 }
