@@ -366,4 +366,11 @@ $(document).ready(function () {
     arrows: false,
     touchThreshold: 100
   });
+  /* --- Scroll To block  --- */
+
+  $(".interior-first__move").on('click', function () {
+    $('html, body').animate({
+      scrollTop: $(".interior-complect").offset().top
+    }, 1500);
+  });
 });

@@ -460,6 +460,9 @@
       color: $black;
       transition: $transition-base;
       background-color: transparent;
+      @include media-breakpoint-down(md) {
+        height: 72px;
+      }
       &:hover {
         background-color: $gray;
         color: $white;
