@@ -150,6 +150,7 @@
       }
       @include media-breakpoint-down(sm) {
         position: static;
+        display: block;
       }
     }
   }

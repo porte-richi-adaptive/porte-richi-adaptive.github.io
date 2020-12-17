@@ -36,6 +36,7 @@ $('.comments__list').slick({
     infinite: false,
     prevArrow: commentPrev,
     nextArrow: commentNext,
+    touchThreshold: 100
 });
 
 
