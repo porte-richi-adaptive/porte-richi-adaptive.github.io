@@ -374,6 +374,7 @@ $(document).ready(function () {
       scrollTop: $(".interior-complect").offset().top
     }, 1500);
   });
+  /* Add for hover in Safari  */
 
   (function () {
     $("*").on('touchstart', function () {

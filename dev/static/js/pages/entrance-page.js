@@ -494,13 +494,14 @@ defenceTabs.on('click', function() {
         }, 1500);
     });
 
+    /* Add for hover in Safari  */
     (function() {
         $("*").on( 'touchstart', function() {
             $(this).trigger('hover') ;
         } ).on('touchend', function() {
             $(this).trigger('hover') ;
         } ) ;
-    })() ;
+    })();
 
 });
 
