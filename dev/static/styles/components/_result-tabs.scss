@@ -75,12 +75,19 @@
     @include media-breakpoint-down(sm) {
       height: 53px;
       padding: 18px;
+      &:not( .result-tabs__tab--disabled ) {
+        order: 1
+      }
     }
 
     &--disabled {
       background-color: transparent;
       cursor: pointer;
       pointer-events: all;
+
+      @include media-breakpoint-down(sm) {
+        order: 2;
+      }
 
       &:hover {
         #{$result-tabs}__name {
