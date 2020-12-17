@@ -260,6 +260,7 @@
       font-size: 20px;
       margin-right: 9px;
       transition: $animation-default-time;
+      white-space: nowrap;
       @include media-breakpoint-down(lg) {
         font-size: 18px;
         line-height: 24px;

@@ -34,6 +34,13 @@
   }
 
   .entrance-item {
+
+    &:hover {
+      .entrance-item__mask ~ .entrance-item__link .entrance-item__name {
+        color: $gold;
+      }
+    }
+
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
     }
@@ -143,6 +150,7 @@
     }
 
   }
+
 
   .entrance-item__mask {
     width: calc(100% + 74px);
