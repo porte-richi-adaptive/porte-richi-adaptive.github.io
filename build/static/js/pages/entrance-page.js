@@ -377,6 +377,7 @@ $(document).ready(function () {
   /* --- Extras popup  ---  */
 
   $('.interior-complete__link').on('click', function () {
+    $('body').css('overflow', 'hidden');
     $('.extras__popup').fadeIn(0, function () {
       $(this).css('display', 'flex');
       $('.extras__popup-slider').slick({
@@ -389,6 +390,7 @@ $(document).ready(function () {
   $('.extras__popup-close').on('click', function () {
     $('.extras__popup').fadeOut(0);
     $('.extras__popup-slider').slick('unslick');
+    $('body').css('overflow', 'inherit');
     $('html, body').animate({
       scrollTop: $('.interior-complete').offset().top
     }, 0);

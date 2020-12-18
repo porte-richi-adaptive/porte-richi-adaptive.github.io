@@ -2664,9 +2664,6 @@
     display: flex;
     justify-content: center;
     margin-top: 18px;
-    @include media-breakpoint-down(sm) {
-      margin-top: 9px;
-    }
 
     & li.slick-active {
       button {
