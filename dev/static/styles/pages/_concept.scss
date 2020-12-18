@@ -2,8 +2,22 @@
 
 
 
+
+
   .entrance-item {
     @include section-indent;
+
+    &__concept-over {
+      position: relative;
+
+      .entrance-item__new {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+      }
+    }
   }
 
   .entrance-item__concept-img {
