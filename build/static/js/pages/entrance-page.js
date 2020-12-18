@@ -388,6 +388,10 @@ $(document).ready(function () {
   });
   $('.extras__popup-close').on('click', function () {
     $('.extras__popup').fadeOut(0);
+    $('.extras__popup-slider').slick('unslick');
+    $('html, body').animate({
+      scrollTop: $('.interior-complete').offset().top
+    }, 0);
   });
   /* Add for hover in Safari  */
 
