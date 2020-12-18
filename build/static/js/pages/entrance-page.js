@@ -374,6 +374,21 @@ $(document).ready(function () {
       scrollTop: $(".interior-complect").offset().top
     }, 1500);
   });
+  /* --- Extras popup  ---  */
+
+  $('.interior-complete__link').on('click', function () {
+    $('.extras__popup').fadeIn(0, function () {
+      $(this).css('display', 'flex');
+      $('.extras__popup-slider').slick({
+        prevArrow: $('.extras__popup-left'),
+        nextArrow: $('.extras__popup-right'),
+        dots: true
+      });
+    });
+  });
+  $('.extras__popup-close').on('click', function () {
+    $('.extras__popup').fadeOut(0);
+  });
   /* Add for hover in Safari  */
 
   (function () {
