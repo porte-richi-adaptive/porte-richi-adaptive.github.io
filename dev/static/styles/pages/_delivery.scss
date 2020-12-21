@@ -589,6 +589,9 @@
 
   &__row {
     @include section-indent;
+    & > div:last-child {
+      padding-left: 7px;
+    }
   }
 
   &__choose {
